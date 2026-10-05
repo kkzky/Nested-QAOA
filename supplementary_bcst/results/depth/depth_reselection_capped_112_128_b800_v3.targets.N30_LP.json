@@ -1,0 +1,252 @@
+{
+  "cells": [
+    {
+      "N": 30,
+      "cell_id": "lp_N30_seed840030011_p112_b800_reselect_cap128",
+      "locked_record_sha256": "32DE895232D7529D06CAC885248B722DA8EC5B6539CB243E63723F97967ECA00",
+      "method": "learned_projector",
+      "metrics": {
+        "evaluation_role": "post_lock_read_only",
+        "ground_degeneracy": 1,
+        "primary_target": "best2",
+        "probability_norm": 1.0000000000000004,
+        "secondary_targets": [
+          "ground",
+          "best8"
+        ],
+        "target_hashes": {
+          "best2": "d6b50f2b62c6a127bd8401780725fc5c87ddf025cb3da58d3337d5c56cbc06e5",
+          "best8": "3fc641bf8dd05011943ce50d59cf2cd30fd1ea75b2a1fb916263f68642c8823a",
+          "ground": "6202005c0bc60b26b215110e57b25be3eae3812462660ab10f713f20db681e6c"
+        },
+        "targets": {
+          "best2": {
+            "RTS99": {
+              "integer_decimal": "3",
+              "kind": "finite"
+            },
+            "configuration_count": 2,
+            "probability": 0.8324017028294428,
+            "total_logical_cost": {
+              "integer_decimal": "5261565",
+              "kind": "finite"
+            }
+          },
+          "best8": {
+            "RTS99": {
+              "integer_decimal": "2",
+              "kind": "finite"
+            },
+            "configuration_count": 8,
+            "probability": 0.9751351862850839,
+            "total_logical_cost": {
+              "integer_decimal": "3507710",
+              "kind": "finite"
+            }
+          },
+          "ground": {
+            "RTS99": {
+              "integer_decimal": "8",
+              "kind": "finite"
+            },
+            "configuration_count": 1,
+            "probability": 0.4751526690830255,
+            "total_logical_cost": {
+              "integer_decimal": "14030840",
+              "kind": "finite"
+            }
+          }
+        },
+        "terminal_RU": 1753855,
+        "unique_ground_applicable": true
+      },
+      "problem_seed": 840030011
+    },
+    {
+      "N": 30,
+      "cell_id": "lp_N30_seed840030011_p128_b800_reselect_cap128",
+      "locked_record_sha256": "871ADA4F5783794D909677C10BE67749BDD289C30AB55D3E3CDDA580326AE8A2",
+      "method": "learned_projector",
+      "metrics": {
+        "evaluation_role": "post_lock_read_only",
+        "ground_degeneracy": 1,
+        "primary_target": "best2",
+        "probability_norm": 0.9999999999999998,
+        "secondary_targets": [
+          "ground",
+          "best8"
+        ],
+        "target_hashes": {
+          "best2": "d6b50f2b62c6a127bd8401780725fc5c87ddf025cb3da58d3337d5c56cbc06e5",
+          "best8": "3fc641bf8dd05011943ce50d59cf2cd30fd1ea75b2a1fb916263f68642c8823a",
+          "ground": "6202005c0bc60b26b215110e57b25be3eae3812462660ab10f713f20db681e6c"
+        },
+        "targets": {
+          "best2": {
+            "RTS99": {
+              "integer_decimal": "3",
+              "kind": "finite"
+            },
+            "configuration_count": 2,
+            "probability": 0.8968114051608265,
+            "total_logical_cost": {
+              "integer_decimal": "6007485",
+              "kind": "finite"
+            }
+          },
+          "best8": {
+            "RTS99": {
+              "integer_decimal": "2",
+              "kind": "finite"
+            },
+            "configuration_count": 8,
+            "probability": 0.9849886047543088,
+            "total_logical_cost": {
+              "integer_decimal": "4004990",
+              "kind": "finite"
+            }
+          },
+          "ground": {
+            "RTS99": {
+              "integer_decimal": "6",
+              "kind": "finite"
+            },
+            "configuration_count": 1,
+            "probability": 0.5453142985505472,
+            "total_logical_cost": {
+              "integer_decimal": "12014970",
+              "kind": "finite"
+            }
+          }
+        },
+        "terminal_RU": 2002495,
+        "unique_ground_applicable": true
+      },
+      "problem_seed": 840030011
+    },
+    {
+      "N": 30,
+      "cell_id": "lp_N30_seed840030012_p112_b800_reselect_cap128",
+      "locked_record_sha256": "BD7E70D35EAA1DE67F74708AB771784DDC92418482B345FCC150DB46BCCF53D5",
+      "method": "learned_projector",
+      "metrics": {
+        "evaluation_role": "post_lock_read_only",
+        "ground_degeneracy": 1,
+        "primary_target": "best2",
+        "probability_norm": 0.9999999999999996,
+        "secondary_targets": [
+          "ground",
+          "best8"
+        ],
+        "target_hashes": {
+          "best2": "190f28469a1af1017080decf55777294480c543f5d7c0c7ef2cfb6709a380998",
+          "best8": "047526426bb0ed724ecffd4c8bd64cc0cba797111750082290190eb737bb8425",
+          "ground": "2c061419b0ccba9580a64e84be137347fe3fed53c55402a8f3522a2402d40729"
+        },
+        "targets": {
+          "best2": {
+            "RTS99": {
+              "integer_decimal": "4",
+              "kind": "finite"
+            },
+            "configuration_count": 2,
+            "probability": 0.7516927696051556,
+            "total_logical_cost": {
+              "integer_decimal": "7015420",
+              "kind": "finite"
+            }
+          },
+          "best8": {
+            "RTS99": {
+              "integer_decimal": "2",
+              "kind": "finite"
+            },
+            "configuration_count": 8,
+            "probability": 0.9790643076894545,
+            "total_logical_cost": {
+              "integer_decimal": "3507710",
+              "kind": "finite"
+            }
+          },
+          "ground": {
+            "RTS99": {
+              "integer_decimal": "8",
+              "kind": "finite"
+            },
+            "configuration_count": 1,
+            "probability": 0.4510478308396989,
+            "total_logical_cost": {
+              "integer_decimal": "14030840",
+              "kind": "finite"
+            }
+          }
+        },
+        "terminal_RU": 1753855,
+        "unique_ground_applicable": true
+      },
+      "problem_seed": 840030012
+    },
+    {
+      "N": 30,
+      "cell_id": "lp_N30_seed840030012_p128_b800_reselect_cap128",
+      "locked_record_sha256": "4BF4CB4A9A8147869A829B1B2B3CFB326BA9D25C9F7065A9D810368E504365E9",
+      "method": "learned_projector",
+      "metrics": {
+        "evaluation_role": "post_lock_read_only",
+        "ground_degeneracy": 1,
+        "primary_target": "best2",
+        "probability_norm": 0.9999999999999997,
+        "secondary_targets": [
+          "ground",
+          "best8"
+        ],
+        "target_hashes": {
+          "best2": "190f28469a1af1017080decf55777294480c543f5d7c0c7ef2cfb6709a380998",
+          "best8": "047526426bb0ed724ecffd4c8bd64cc0cba797111750082290190eb737bb8425",
+          "ground": "2c061419b0ccba9580a64e84be137347fe3fed53c55402a8f3522a2402d40729"
+        },
+        "targets": {
+          "best2": {
+            "RTS99": {
+              "integer_decimal": "4",
+              "kind": "finite"
+            },
+            "configuration_count": 2,
+            "probability": 0.7712292022605381,
+            "total_logical_cost": {
+              "integer_decimal": "8009980",
+              "kind": "finite"
+            }
+          },
+          "best8": {
+            "RTS99": {
+              "integer_decimal": "2",
+              "kind": "finite"
+            },
+            "configuration_count": 8,
+            "probability": 0.9795630212664318,
+            "total_logical_cost": {
+              "integer_decimal": "4004990",
+              "kind": "finite"
+            }
+          },
+          "ground": {
+            "RTS99": {
+              "integer_decimal": "7",
+              "kind": "finite"
+            },
+            "configuration_count": 1,
+            "probability": 0.48831280591535575,
+            "total_logical_cost": {
+              "integer_decimal": "14017465",
+              "kind": "finite"
+            }
+          }
+        },
+        "terminal_RU": 2002495,
+        "unique_ground_applicable": true
+      },
+      "problem_seed": 840030012
+    }
+  ]
+}

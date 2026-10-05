@@ -1,0 +1,282 @@
+{
+  "schema": "bcst-lean-execution-plan-v1",
+  "status": "prelaunch_review_candidate",
+  "date": "2026-07-30",
+  "priority": "Complete the N=30 then N=25 numerical experiment efficiently. Reproducibility machinery is secondary to correct method definitions, fair optimization, and interpretable held-out results.",
+  "authoritative_user_choices": {
+    "restarts": "Exactly three isolated independent random starts for every scientific optimizer run.",
+    "continuation": "Prohibited: no continuation, ramp, zero/identity optimizer start, interpolation, history append, or cross-method angle transfer.",
+    "zero_angle": "Diagnostic only and never optimizer-eligible.",
+    "primary_target": "best2",
+    "warm_baseline": "The sole warm baseline is Direct-XY initialized from the exact same Stage-1 state as LP.",
+    "other_required_baselines": [
+      "ordinary native Direct-XY",
+      "decoupled Direct-XY"
+    ],
+    "diagnostic": "Stage-1-only is recorded.",
+    "budget_policy": "Start with the declared budget. If the energy-only calibration diagnostic shows general budget insufficiency, run the one predeclared uniform doubled-budget audit."
+  },
+  "restart_and_incumbent_rule": {
+    "distribution": "At every scientific depth and phase, each scalar angle of each of the three starts is independently Uniform[-pi,pi] from the source-implemented SHA-256 KDF. The complete checkpoint-zero vector is reconstructed and byte-compared before optimization.",
+    "within_restart": "Evaluate theta_0. Select the minimum expected training energy among theta_0 and every optimizer-eligible iterate; probes are ineligible. Exact energy ties choose the earlier checkpoint.",
+    "across_restarts": "Select the lowest expected training energy among the three restart incumbents; exact ties choose lower restart index.",
+    "forbidden": "No vector may be overwritten after KDF generation, and no checkpoint, angle, moment, or optimizer state may be imported from another depth, restart, method, or phase."
+  },
+  "problem": {
+    "family": "Random five-block BCST on the exact product shell with two selected labels per block and cycle conflicts between equal labels in adjacent blocks.",
+    "sizes": [
+      30,
+      25
+    ],
+    "maximum_objective_degree": 6,
+    "objective": "Signed random local degree-4 plus degree-6 terms from conflict-feasible projection pools, using support-keyed SHA-256 dyadic coefficients. No degree above six.",
+    "normalization": "Use the exact H_C, H_F, H_D, H_D_obj, H_D_conf, and normalized complete-block H_XY definitions implemented and golden-tested in bcst_v2.instance_core and bcst_v2.dynamics.",
+    "target_order": "Among conflict-feasible states, sort by exact integer raw-objective numerator and then packed bitstring. Best2 is the first two configurations.",
+    "candidate_settings": [
+      {
+        "label": "d4_1of2_r6_1of16",
+        "d4_num": 1,
+        "d4_den": 2,
+        "r6_num": 1,
+        "r6_den": 16
+      },
+      {
+        "label": "d4_1of2_r6_2of16",
+        "d4_num": 1,
+        "d4_den": 2,
+        "r6_num": 2,
+        "r6_den": 16
+      },
+      {
+        "label": "d4_3of4_r6_1of16",
+        "d4_num": 3,
+        "d4_den": 4,
+        "r6_num": 1,
+        "r6_den": 16
+      },
+      {
+        "label": "d4_3of4_r6_2of16",
+        "d4_num": 3,
+        "d4_den": 4,
+        "r6_num": 2,
+        "r6_den": 16
+      }
+    ]
+  },
+  "stage1": {
+    "one_state_per_N": "Generate one fresh state for each N because the conflict problem is objective-seed independent. Optimize it from exactly three random starts and reuse the serialized state byte-for-byte for LP, Warm-XY, and Stage-1-only at that N.",
+    "depth": 12,
+    "optimizer": "Adam",
+    "learning_rate": 0.035,
+    "maximum_steps": 400,
+    "patience": 160,
+    "cost": "H_C",
+    "mixer": "H_XY",
+    "minimum_feasible_mass": 0.5
+  },
+  "methods": {
+    "LP": {
+      "source_id": "learned_projector",
+      "initial_state": "frozen Stage-1 state",
+      "cost": "H_F",
+      "mixer": "I-|phi><phi| projector mixer"
+    },
+    "StdXY": {
+      "source_id": "ordinary_native_direct",
+      "initial_state": "native product-shell uniform state",
+      "cost": "H_D",
+      "mixer": "H_XY"
+    },
+    "dXY": {
+      "source_id": "decoupled_native_direct",
+      "initial_state": "native product-shell uniform state",
+      "cost": "separate H_D_conf and H_D_obj angles; training energy H_D",
+      "mixer": "H_XY"
+    },
+    "WarmXY": {
+      "source_id": "same_stage1_state_direct",
+      "initial_state": "the exact same frozen Stage-1 state used by LP",
+      "cost": "H_D",
+      "mixer": "H_XY"
+    },
+    "Stage1Only": {
+      "source_id": "stage1_only",
+      "initial_state": "the frozen Stage-1 state",
+      "optimizer": "none",
+      "headline_baseline": false
+    }
+  },
+  "optimizer": {
+    "Adam": {
+      "learning_rate_arms": [
+        0.01,
+        0.02,
+        0.035
+      ],
+      "base_steps": 200,
+      "patience": 80,
+      "beta1": 0.9,
+      "beta2": 0.999,
+      "epsilon": 1e-08,
+      "gradient": "exact complex128 reverse-mode"
+    },
+    "SPSA": {
+      "c_arms": [
+        0.02,
+        0.05,
+        0.1
+      ],
+      "base_updates": 160,
+      "alpha": 0.602,
+      "gamma": 0.101,
+      "A": 16.0,
+      "calibration_directions": 8,
+      "target_first_update_rms": 0.05,
+      "maximum_update_rms": 0.1,
+      "early_stopping": false
+    },
+    "arm_selection": "At N=30, p=12, and the reference setting d4=1/2,r6=1/16, choose each method's scalar arm by the lower geometric-mean normalized training energy over calibration seeds. For a fixed method/optimizer/seed, all scalar arms use the same three KDF checkpoint-zero vectors and reset optimizer state; the scalar arm is excluded from that calibration initializer domain. Target probabilities are not used. Score ties within 1e-10 choose the smaller scalar arm.",
+    "budget_diagnostic": "A method is limited if on both calibration seeds its best checkpoint lies in the last 10 percent and best-so-far energy improves by at least 1 percent of (H_max-H_min) over the final 20 percent. If at least three of four methods are limited for an optimizer, run paired B and 2B audits for all four methods from the same three fresh audit-domain starts. For each method define improvement=mean over the two seeds of (E_B-E_2B)/max(H_max-H_min,1e-12). Adopt 2B uniformly only if at least three methods have improvement at least 0.02. No further budget change is allowed.",
+    "audit_prefix": "For SPSA, A remains 16 and the paired B and 2B runs use identical initial vectors and perturbation prefixes. They are independent runs with reset optimizer state; 2B never resumes B."
+  },
+  "fixed_seed_roles": {
+    "stage1_optimizer_N30": 830000030,
+    "stage1_optimizer_N25": 830000025,
+    "capacity_only": 830009999,
+    "optimizer_calibration_N30": [
+      830001001,
+      830001002
+    ],
+    "setting_screen_N30": [
+      830002001,
+      830002002,
+      830002003
+    ],
+    "depth_selection_N30": [
+      830003001,
+      830003002
+    ],
+    "depth_selection_N25": [
+      830004001,
+      830004002
+    ],
+    "confirmation_N30": [
+      830005001,
+      830005002,
+      830005003,
+      830005004,
+      830005005,
+      830005006,
+      830005007,
+      830005008,
+      830005009,
+      830005010
+    ],
+    "confirmation_N25": [
+      830006001,
+      830006002,
+      830006003,
+      830006004,
+      830006005,
+      830006006,
+      830006007,
+      830006008,
+      830006009,
+      830006010
+    ],
+    "rule": "Roles are disjoint. Before launch, grep all prior local and remote campaign artifacts; any previously used or outcome-inspected seed is replaced once, before scientific execution, and the replacement list is frozen."
+  },
+  "execution": {
+    "order": [
+      "finish source and unit/integration tests",
+      "one concise independent prelaunch review",
+      "A800 smoke and timing benchmark",
+      "fresh Stage-1 N30 and N25",
+      "optimizer calibration and optional doubled-budget audit",
+      "N30 setting screen and setting choice",
+      "N30 depth selection",
+      "N25 depth selection with the N30-selected setting and optimizer arms",
+      "held-out N30 confirmation",
+      "held-out N25 confirmation",
+      "analysis and independent outcome review"
+    ],
+    "setting_screen": "Run all four settings, all four optimized methods, both optimizers, all three screen seeds, p=12, and exactly three random starts. A candidate is usable only if every method/optimizer has all three finite best2 costs, every seed best2 probability at least max(100*(2/native_shell_dimension),1e-5), geometric-mean best2 probability at least 0.005, every seed feasible mass at least 0.1, geometric-mean feasible mass at least 0.5, selected training energy no worse than its zero-angle diagnostic within 1e-9, and no two-of-three adopted-budget tail-saturation finding. Per seed set C_native=min(C_StdXY,C_dXY). For each optimizer compute the three-seed geometric means of C_native/C_LP and C_WarmXY/C_LP. Candidate score is the minimum of those four values. Maximize score; exact ties choose smaller r6 then smaller d4. If no candidate is usable, terminate without relaxing a gate.",
+    "full_depth_grid": [
+      1,
+      2,
+      4,
+      8,
+      12,
+      16,
+      24,
+      36
+    ],
+    "compact_depth_grid": [
+      2,
+      4,
+      8,
+      12,
+      24,
+      36
+    ],
+    "boundary_extension": "If depth 36 is selected or its two-seed extended-integer cost product is within 10 percent of the finite minimum and no larger than depth 24, add depths 48 and 64. After extension, mark depth unresolved if 64 is selected or its product is within 10 percent of the finite minimum while no larger than depth 48. An unresolved required baseline makes the comparison inconclusive.",
+    "depth_selection": "Separately for each N, method, and optimizer, set a seed cost to +infinity when q=0 and a depth product to +infinity when either seed is infinite. Minimize the exact product of the two finite integer best2 total costs; ties choose shallower depth. If every product is infinite, mark the stratum unresolved. Every depth receives its own three KDF-derived random starts.",
+    "capacity_branch": {
+      "benchmark": "On the A800 and the largest candidate, benchmark target-free objective and value-plus-gradient calls for all four methods at every possible depth in the union of full grid and {48,64}, plus Stage-1 at p=12. At each point use three KDF vectors, two warm-ups and five synchronized timed calls. Record the maximum timed seconds, instance/setup seconds, and peak allocated memory; no scientific outcome is computed.",
+      "projection": "For each possible job, use the measured maximum seconds at its exact method/depth and the exact optimizer call formula. Project the maximum authorized branch: both optimizer doubled-budget audits occur, both optimizers adopt 2B, every boundary extension occurs, all zero diagnostics/replays/SPSA calibration calls occur, and all Stage-1, calibration, setting, depth, confirmation, and Stage-1-only jobs execute. Add measured instance/setup time per job, then multiply the complete sum by safety factor 1.25. Compute the full and compact projections before scientific runs and save the arithmetic table.",
+      "full": "Use the full depth grid and ten confirmation seeds if the conservative projected total is at most 72 A800 hours.",
+      "compact": "Use the compact depth grid and the first eight declared confirmation seeds per N if projection is over 72 but at most 120 A800 hours.",
+      "stop": "If compact projection exceeds 120 A800 hours or peak allocated memory exceeds 64 GiB, stop and report computational infeasibility before scientific runs."
+    },
+    "confirmation": "The selected setting, optimizer arms/budgets, depth per N/method/optimizer, capacity branch, and confirmation seed prefix are fixed before confirmation. Optimize confirmation by training energy only. Compute best2/best8/ground probabilities after each complete job; do not change any choice in response.",
+    "device": "Remote A800 only for numerical science; complex128 amplitudes, float64 parameters, deterministic Torch algorithms, TF32 off, sequential restarts and one scientific process."
+  },
+  "records_required": [
+    "the three actual checkpoint-zero vectors and their independently reconstructed hashes",
+    "all eligible energy checkpoints and selected restart/checkpoint",
+    "zero-angle training-energy diagnostic kept separate",
+    "objective and exact-gradient or SPSA perturbation call counts",
+    "selected-state norm, feasible mass, best2/best8/ground probabilities",
+    "Stage-1 amplitude hash shared by LP, Warm-XY, and Stage-1-only",
+    "logical terminal resource units, integer RTS99, and total logical cost",
+    "wall time and peak GPU memory"
+  ],
+  "primary_analysis": {
+    "metric": "best2 integer RTS99 times logical terminal resource units under the frozen resource_model below",
+    "native_baseline": "Per seed, the lower cost of Std-XY and d-XY at their own frozen depths.",
+    "comparisons": [
+      "native envelope divided by LP",
+      "Warm-XY divided by LP"
+    ],
+    "descriptive_positive_result": "For every reported N-by-optimizer cell, geometric-mean ratio exceeds 1, LP wins a strict majority of paired seeds, and all required baselines are healthy. This label is descriptive only, not paper-facing confirmation.",
+    "strong_paper_facing_result": "Geometric-mean ratio is at least 1.25, the paired bootstrap 95 percent lower bound exceeds 1, and LP wins at least 8/10 seeds in the full branch or 7/8 in the compact branch.",
+    "baseline_health": "At each selected N/method/optimizer depth, require every confirmation seed best2 probability at least max(100*(2/native_shell_dimension),1e-5), geometric-mean best2 probability at least 0.005, every seed feasible mass at least 0.1, geometric-mean feasible mass at least 0.5, selected training energy no worse than zero-angle within 1e-9, and no unresolved saturation. Unresolved saturation means both depth-tuning seeds satisfy the exact late-checkpoint plus final-20%-drop predicate. Any failed Std-XY, d-XY, or Warm-XY health gate makes its comparison inconclusive.",
+    "bootstrap": "The paired unit is the confirmation master seed, never a restart. For each N, optimizer, and comparison, use 100000 deterministic bootstrap replicates seeded by integer 20260730, sample the frozen seed cohort with replacement, compute the mean paired log(cost_baseline/cost_LP), and report the two-sided percentile 95 percent interval after exponentiation. Any nonfinite paired primary cost fails the paper-facing positive gate.",
+    "negative_policy": "Report negative or inconclusive results honestly. A failed, unhealthy, saturated, or depth-unresolved baseline cannot create an LP advantage. Only strong_paper_facing_result may be called paper-facing positive."
+  },
+  "resource_model": {
+    "symbols": "B=5 blocks; C=N conflict edges; X=5*choose(K,2); O=14*m4+22*m6; S=N^2; P1=B+12*(C+X).",
+    "terminal_RU": {
+      "Stage1Only": "P1+O",
+      "LP_depth_p": "P1+p*(O+2*P1+S)+O",
+      "StdXY_depth_p": "B+p*(C+O+X)+O",
+      "dXY_depth_p": "B+p*(C+O+X)+O",
+      "WarmXY_depth_p": "P1+p*(C+O+X)+O"
+    },
+    "charges": "A degree-d objective phase costs 4d-2, so degree-4 and degree-6 terms cost 14 and 22. LP charges initial Stage-1 preparation plus preparation, unpreparation, and N^2 reflection per projector layer. Warm charges initial Stage-1 preparation. d-XY split phases do not duplicate the term inventory.",
+    "RTS99": "q=0 gives +infinity; q=1 gives 1; otherwise max(1,ceil(log(0.01)/log1p(-q))). Total cost is RTS99*terminal_RU."
+  },
+  "minimal_prelaunch_audit": {
+    "scope": [
+      "method equations and parameter order",
+      "three random starts actually used at checkpoint zero",
+      "Adam and SPSA recurrence plus doubled-budget prefix",
+      "same Stage-1 state identity for LP and Warm-XY",
+      "d-XY implementation",
+      "small full-space versus reduced-space equivalence",
+      "finite-difference gradients",
+      "seed-role disjointness"
+    ],
+    "review_policy": "One independent reviewer returns GO or a short launch-blocker list. Fix only correctness/fairness blockers, rerun focused tests, and then launch. Do not add cryptographic sealing, a public randomness beacon, external timestamps, or elaborate reproduction infrastructure."
+  }
+}

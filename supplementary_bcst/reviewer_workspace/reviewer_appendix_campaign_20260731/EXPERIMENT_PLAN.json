@@ -1,0 +1,278 @@
+{
+  "schema": "lp-qaoa-reviewer-appendix-plan-v2",
+  "status": "amended_and_frozen_before_scientific_launch",
+  "supersedes_plan_sha256": "6D1C47256A217F417BE357E81D9F23F3248290B3114C5D88ED846E4CF8950A6E",
+  "date": "2026-07-31",
+  "purpose": "Answer the highest-priority shared objections from three independent manuscript reviewers with a compact causal and strong-baseline experiment, while preserving the user's three-restart no-continuation rule.",
+  "prelaunch_audit_resolution": {
+    "timing": "prospective amendment made before any scientific cell was launched",
+    "resolved_blockers": [
+      "add a same-initial-state KnownProjector_HD control so learned projector reference is not confounded with initialization, phase, loss, depth, optimizer, or parameter count",
+      "make Stage1Only resource accounting and health treatment explicit",
+      "make the optimizer-budget audit determine the new campaign budget and require depth reselection before validation when the budget changes",
+      "lock all optimizer records before deriving or evaluating target identities",
+      "apply claim rules separately to each comparison and each N",
+      "retire external-validation seed 840025101 after a prelaunch unit test derived its target and replace it prospectively with untouched seed 840025111"
+    ],
+    "seed_rotation": {
+      "N": 25,
+      "retired_seed": 840025101,
+      "replacement_seed": 840025111,
+      "reason": "strict held-out blindness after prelaunch test-only target derivation",
+      "scientific_cells_launched_before_rotation": 0
+    }
+  },
+  "evidence_boundary": {
+    "predecessor_campaign": "corrected_bcst_campaign_20260730_v2",
+    "predecessor_report_sha256": "0EBB4E586B5D11A20ADDA0B46743417001283043AE555478A77A76937AE418D4",
+    "new_campaign_role": "prospective appendix evidence on fresh objective seeds",
+    "historical_spsa_role": "exploratory_only",
+    "no_posthoc_target_switch": "best2 remains primary; ground and best8 are secondary diagnostics",
+    "claim_scope": "size-specific best2 post-training logical sampling cost on this BCST setting under the frozen optimizer, depth, and resource protocol; no scaling, hardware-advantage, cross-family, or universal Grover-mixer claim"
+  },
+  "fixed_problem": {
+    "family": "same five-block two-selected-label BCST construction",
+    "sizes": [25, 30],
+    "setting": {
+      "label": "d4_1of2_r6_1of16",
+      "d4_num": 1,
+      "d4_den": 2,
+      "r6_num": 1,
+      "r6_den": 16
+    },
+    "primary_target": "best2",
+    "secondary_targets": ["ground", "best8"],
+    "objective_training_rule": "expected energy of the method-specific phase Hamiltonian; target identities are never optimizer inputs"
+  },
+  "randomness": {
+    "restart_count": 3,
+    "restart_role": "independent_random",
+    "initializer_distribution": "each scalar independently Uniform[-pi,pi] from a SHA-256 counter KDF",
+    "budget_pairing_rule": "the optimizer budget is excluded from the initializer KDF domain so 400, 800, and 1600 runs within a method-size-seed-restart cell have byte-identical checkpoint-zero parameters while resetting Adam state",
+    "forbidden": [
+      "continuation",
+      "ramp initialization",
+      "zero or identity optimizer start",
+      "interpolation",
+      "history append",
+      "checkpoint transfer",
+      "optimizer-moment transfer",
+      "cross-method angle transfer"
+    ],
+    "zero_angles": "diagnostic_only",
+    "seed_domains": {
+      "stage1_N25": 840025000,
+      "stage1_N30": 840030000,
+      "depth_and_budget_tuning_N25": [840025001, 840025002],
+      "depth_and_budget_tuning_N30": [840030001, 840030002],
+      "external_validation_N25": [840025102, 840025103, 840025104, 840025105, 840025106, 840025107, 840025108, 840025109, 840025110, 840025111],
+      "external_validation_N30": [840030101, 840030102, 840030103, 840030104, 840030105, 840030106, 840030107, 840030108, 840030109, 840030110],
+      "causal_ablation_N25": [840025201, 840025202, 840025203],
+      "causal_ablation_N30": [840030201, 840030202, 840030203]
+    },
+    "disjointness_rule": "all listed seeds and KDF phase/method domains must be pairwise distinct and must not occur in predecessor artifacts"
+  },
+  "stage1": {
+    "fresh_state_per_N": true,
+    "shared_within_N": true,
+    "depth": 12,
+    "cost": "H_C",
+    "mixer": "H_XY",
+    "optimizer": "Adam",
+    "learning_rate": 0.035,
+    "candidate_budgets": [400, 800, 1600],
+    "maximum_steps": "the prospectively adopted Stage-1 budget selected by the budget_audit rules",
+    "early_stopping": false,
+    "selection": "lowest expected H_C across exactly three independent starts",
+    "identity_requirement": "LP, WarmXY, both same-state causal controls, and Stage1Only at a given N use the identical serialized Stage-1 amplitude vector"
+  },
+  "existing_methods_external_validation": {
+    "LP": {
+      "initial_state": "fresh frozen Stage-1 state",
+      "phase_and_loss": "H_F",
+      "mixer": "I-|phi><phi|",
+      "transferred_depths": {"25": 12, "30": 80}
+    },
+    "StdXY": {
+      "initial_state": "native product-shell uniform state",
+      "phase_and_loss": "H_D",
+      "mixer": "H_XY",
+      "transferred_depths": {"25": 4, "30": 4}
+    },
+    "dXY": {
+      "initial_state": "native product-shell uniform state",
+      "phase": "independent H_D_conf and H_D_obj angles",
+      "loss": "H_D",
+      "mixer": "H_XY",
+      "transferred_depths": {"25": 12, "30": 24}
+    },
+    "WarmXY": {
+      "initial_state": "same fresh frozen Stage-1 state as LP",
+      "phase_and_loss": "H_D",
+      "mixer": "H_XY",
+      "transferred_depths": {"25": 1, "30": 1}
+    },
+    "Stage1Only": {
+      "initial_state": "same fresh frozen Stage-1 state as LP",
+      "stage2_optimizer": "none",
+      "formal_eligibility": "eligible both alone and inside the best-Stage-1-use envelope",
+      "terminal_RU": "P1 + O, using the same one-time Stage-1 preparation and terminal objective-verification conventions as LP",
+      "stage2_health": "not_applicable; require a finite normalized frozen Stage-1 state, verified amplitude hash, finite H_C, and exact resource accounting"
+    }
+  },
+  "new_strong_baseline": {
+    "name": "NativeGrover-d",
+    "purpose": "strong end-to-end native known-state global-projector baseline",
+    "interpretation_limit": "LP versus NativeGrover-d is an algorithm-level comparison only; it does not isolate learned-reference value because initialization, phase Hamiltonian, and parameterization also differ",
+    "initial_state_and_projector_reference": "native product-shell uniform state",
+    "phase": "independent H_D_conf and H_D_obj angles",
+    "loss": "H_D",
+    "mixer": "I-|s><s|",
+    "parameter_count": "3p",
+    "depth_grid": [1, 2, 4, 8, 12, 16, 24, 36],
+    "first_boundary_extension": [48, 64],
+    "second_boundary_extension": [80, 96],
+    "extension_rule": "extend when the upper boundary is selected or is within 10 percent of the finite minimum while cost is non-increasing from the preceding boundary",
+    "selection_rule": "minimize the exact product of the two tuning-seed integer best2 logical costs; ties choose shallower depth",
+    "terminal_RU": "B + p*(C + O + 2*B + S) + O"
+  },
+  "causal_ablation": {
+    "purpose": "cross mixer and phase Hamiltonian from the identical Stage-1 state so the projector effect is not confounded with H_F versus H_D",
+    "methods": {
+      "Projector_HF": {"initial_state": "phi", "mixer": "I-|phi><phi|", "phase_and_loss": "H_F"},
+      "Projector_HD": {"initial_state": "phi", "mixer": "I-|phi><phi|", "phase_and_loss": "H_D"},
+      "KnownProjector_HD": {"initial_state": "phi", "mixer": "I-|s><s|", "phase_and_loss": "H_D", "parameter_count": "2p", "causal_role": "relative to Projector_HD, only the projector reference changes from phi to s"},
+      "XY_HF": {"initial_state": "phi", "mixer": "H_XY", "phase_and_loss": "H_F"},
+      "XY_HD": {"initial_state": "phi", "mixer": "H_XY", "phase_and_loss": "H_D"}
+    },
+    "common_depths": {
+      "25": [1, 12, 24],
+      "30": [1, 24, 80]
+    },
+    "problem_seeds_per_N": 3,
+    "planned_contrasts": [
+      "Projector_HF versus XY_HF at common depth",
+      "Projector_HD versus XY_HD at common depth",
+      "Projector_HF versus Projector_HD at common depth",
+      "XY_HF versus XY_HD at common depth",
+      "Projector_HD versus KnownProjector_HD at common depth as the isolated projector-reference contrast",
+      "each Stage-2 method versus Stage1Only",
+      "Pareto comparison versus terminal_RU"
+    ],
+    "terminal_RU": {
+      "Projector_HF": "P1 + p*(O + 2*P1 + S) + O",
+      "Projector_HD": "P1 + p*(C + O + 2*P1 + S) + O",
+      "KnownProjector_HD": "P1 + p*(C + O + 2*B + S) + O",
+      "XY_HF": "P1 + p*(O + X) + O",
+      "XY_HD": "P1 + p*(C + O + X) + O"
+    },
+    "scientific_role": "mechanistic exploratory evidence; no broad causal claim is permitted beyond the explicitly matched contrast"
+  },
+  "optimizer": {
+    "name": "Adam",
+    "learning_rate": 0.035,
+    "beta1": 0.9,
+    "beta2": 0.999,
+    "epsilon": 1e-8,
+    "candidate_maximum_steps": [400, 800, 1600],
+    "early_stopping": false,
+    "exact_step_rule": "every restart executes exactly the adopted number of Adam updates; an earlier iterate may remain the selected incumbent",
+    "angle_wrapping": false,
+    "gradient": "exact complex128 reverse-mode",
+    "incumbent": "lowest expected training energy among checkpoint zero and every central iterate; exact ties choose earlier checkpoint, then lower restart index"
+  },
+  "budget_audit": {
+    "scientific_role": "prospective budget selection for the new campaign; it cannot mutate the predecessor sealed Adam-400 result",
+    "seeds": "the fresh Stage-1 seed at each N for Stage-1 and the two depth_and_budget_tuning seeds at each N for every Stage-2 method",
+    "methods": ["Stage1", "LP", "StdXY", "dXY", "WarmXY", "NativeGrover-d", "Projector_HD", "XY_HF", "KnownProjector_HD"],
+    "audit_depths": {
+      "LP": {"25": 12, "30": 80},
+      "StdXY": {"25": 4, "30": 4},
+      "dXY": {"25": 12, "30": 24},
+      "WarmXY": {"25": 1, "30": 1},
+      "NativeGrover-d": "the provisional depth selected by its exact-400 scan",
+      "Projector_HD": {"25": 12, "30": 24},
+      "XY_HF": {"25": 12, "30": 24},
+      "KnownProjector_HD": {"25": 12, "30": 24}
+    },
+    "budgets": [400, 800],
+    "pairing": "separate optimizer runs with reset Adam state and identical checkpoint-zero vectors; 800 never resumes 400",
+    "early_stopping": false,
+    "normalized_improvement": "mean over the applicable frozen audit cells of (E_short-E_long)/max(Hmax-Hmin,1e-12): one cell for Stage1 and two tuning seeds for each Stage-2 method",
+    "terminal_progress": "on each tuning seed's selected restart, selected checkpoint lies in the final 10 percent or normalized best-so-far energy drops by at least 0.01 over the final 20 percent",
+    "adam1600_trigger": "for a method-size stratum, run an independent exact-1600 batch from the same three initial vectors if mean normalized 400-to-800 improvement is at least 0.02 or terminal_progress holds on either 800-step tuning seed",
+    "adoption_rule": "adopt 400 only if the 400-to-800 improvement is below 0.02 and no applicable 800 audit cell has terminal_progress; otherwise run 1600, adopt 800 only if mean normalized 800-to-1600 improvement is below 0.02 and no applicable 800 audit cell has terminal_progress, adopt 1600 if no applicable 1600 audit cell has terminal_progress, and otherwise mark that method-size optimizer-inconclusive",
+    "stage1_regeneration_rule": "if the adopted Stage1 budget is not 400, regenerate and re-freeze phi from the same three initial vectors at the adopted budget before any Stage-2 scientific cell",
+    "depth_reselection_rule": "if an externally validated Stage-2 method-size budget changes from 400, rerun [1,2,4,8,12,16,24,36] and the same [48,64], [80,96] boundary extensions at the adopted budget before validation; if a causal-only method budget changes, rerun every frozen common-depth causal point at the adopted budget; no 400-step depth result may be retained silently",
+    "claim_gate": "a primary comparison cell is optimizer-inconclusive if either required method-size stratum is optimizer-inconclusive; it cannot receive a strong-result label"
+  },
+  "external_validation": {
+    "cohort_size_per_N": 10,
+    "methods": ["LP", "StdXY", "dXY", "WarmXY", "NativeGrover-d", "Stage1Only"],
+    "primary_metric": "integer RTS99 times terminal_RU for best2",
+    "primary_comparisons": [
+      "min(Stage1Only,WarmXY) / LP",
+      "min(StdXY,dXY) / LP",
+      "NativeGrover-d / LP"
+    ],
+    "secondary_comparisons": [
+      "Stage1Only / LP",
+      "WarmXY / LP",
+      "StdXY / LP",
+      "dXY / LP"
+    ],
+    "health_policy": {
+      "required": [
+        "finite normalized state",
+        "finite training energy and gradient",
+        "selected energy no worse than checkpoint zero",
+        "selected energy no worse than the separate zero-angle diagnostic within 1e-9",
+        "complete three-restart record",
+        "no forbidden initializer or transfer",
+        "depth resolved before validation"
+      ],
+      "not_a_health_gate": "low best2 probability is an outcome, not by itself proof of failed optimization",
+      "reported_diagnostics": [
+        "terminal selected-point gradient norm",
+        "best-so-far energy at checkpoints 0, 50, 100, 200, 400",
+        "best2, ground, best8, and feasible mass at those profile checkpoints where available"
+      ]
+    },
+    "cohort_lock": "before any target identity or target probability is computed, atomically freeze and hash a target-blind manifest containing every expected seed, method, adopted budget, frozen depth, three restart hashes, selected checkpoint/state hash, energy, gradient norm, and resource record; target evaluation is read-only after this lock",
+    "strong_result_rule": "apply separately to each named primary comparison at each N: geometric-mean comparator/LP ratio at least 1.25, paired-bootstrap 95 percent lower bound above 1, and LP wins at least 8 of 10 paired instances; no global conjunction and no pooling across N",
+    "bootstrap": "100000 deterministic paired seed-level resamples, seed 20260731; never treat depths or restarts as independent instances",
+    "negative_policy": "report negative, null, or optimizer-inconclusive outcomes without changing methods, target, depth, cohort, or thresholds"
+  },
+  "analysis_only_additions": {
+    "claim_evidence_crosswalk": "separate historical SPSA, sealed Adam400, Adam800 diagnostic, new causal ablation, and new external validation",
+    "resource_break_even": {
+      "vary": [
+        "initial preparation r0",
+        "projector selective-phase multiplier",
+        "Stage-1 replay/uncomputation multiplier",
+        "objective-oracle multiplier",
+        "terminal verification multiplier",
+        "optional amortized optimizer-evaluation charge"
+      ],
+      "output": "paired ratio surfaces and the parameter boundary at which the bootstrap lower confidence limit crosses one"
+    },
+    "depth_resource_pareto": "plot success and logical cost against depth and terminal_RU, marking transferred/selected depths and causal-grid points",
+    "paired_forest": "show every external-validation seed ratio and do not pool repeated depths"
+  },
+  "execution": {
+    "platform": "remote A800 80GB only",
+    "parallelism": "up to four independent cells concurrently; the three restarts inside each cell remain sequential",
+    "launch_order": [
+      "source and focused tests",
+      "independent read-only implementation/protocol audit",
+      "fresh Stage-1 N25 and N30",
+      "provisional 400-step depth selection for NativeGrover-d",
+      "400 versus 800 budget audit and conditional 1600 branch for Stage-1 and all named Stage-2 methods",
+      "budget adoption and any mandatory depth reselection",
+      "freeze all budgets and depths",
+      "external validation and causal ablation in parallel",
+      "target-blind cohort lock",
+      "post-lock target evaluation, analysis, independent result audit, and appendix package"
+    ]
+  }
+}

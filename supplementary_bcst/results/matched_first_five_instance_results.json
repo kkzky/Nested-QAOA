@@ -1,0 +1,4826 @@
+{
+  "per_N": {
+    "25": {
+      "problem_seeds": [
+        840025102,
+        840025103,
+        840025104,
+        840025105,
+        840025106
+      ],
+      "instance_rows": [
+        {
+          "comparisons": {
+            "best_stage1_use_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "1278359",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "stage1_only",
+                "same_stage1_state_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 1.8511998285442042,
+                "denominator_decimal": "690557",
+                "kind": "finite",
+                "numerator_decimal": "1278359"
+              },
+              "lp_cost": {
+                "integer_decimal": "690557",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win",
+              "selected_envelope_methods": [
+                "stage1_only"
+              ]
+            },
+            "d_xy_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "5136208",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "decoupled_native_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 7.437775592746146,
+                "denominator_decimal": "98651",
+                "kind": "finite",
+                "numerator_decimal": "733744"
+              },
+              "lp_cost": {
+                "integer_decimal": "690557",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            },
+            "direct_xy_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "2274048",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "same_stage1_state_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 3.293063425611499,
+                "denominator_decimal": "98651",
+                "kind": "finite",
+                "numerator_decimal": "324864"
+              },
+              "lp_cost": {
+                "integer_decimal": "690557",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            },
+            "native_grover_d_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "112626795",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "native_grover_d"
+              ],
+              "comparator_over_lp": {
+                "decimal": 163.0955808137489,
+                "denominator_decimal": "690557",
+                "kind": "finite",
+                "numerator_decimal": "112626795"
+              },
+              "lp_cost": {
+                "integer_decimal": "690557",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            },
+            "native_xy_envelope_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "5136208",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "ordinary_native_direct",
+                "decoupled_native_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 7.437775592746146,
+                "denominator_decimal": "98651",
+                "kind": "finite",
+                "numerator_decimal": "733744"
+              },
+              "lp_cost": {
+                "integer_decimal": "690557",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win",
+              "selected_envelope_methods": [
+                "decoupled_native_direct"
+              ]
+            },
+            "stage1_only_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "1278359",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "stage1_only"
+              ],
+              "comparator_over_lp": {
+                "decimal": 1.8511998285442042,
+                "denominator_decimal": "690557",
+                "kind": "finite",
+                "numerator_decimal": "1278359"
+              },
+              "lp_cost": {
+                "integer_decimal": "690557",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            },
+            "stdxy_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "6186765",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "ordinary_native_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 8.9590938908736,
+                "denominator_decimal": "690557",
+                "kind": "finite",
+                "numerator_decimal": "6186765"
+              },
+              "lp_cost": {
+                "integer_decimal": "690557",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            }
+          },
+          "ground_degeneracy": 1,
+          "methods": {
+            "decoupled_native_direct": {
+              "adopted_budget": 400,
+              "cell_id": "decoupled_native_direct_N25_seed840025102_p12_b400",
+              "depth": 12,
+              "feasible_mass": 0.9501143225712785,
+              "ground_degeneracy": 1,
+              "paper_label": "d-XY",
+              "target_hashes": {
+                "best2": "D74BEA855975D465119B6ACA9E6792C104367DC4E420B7DD9320C963EBE95214",
+                "best8": "68F75E49AFF6F926B0CA210760152074DD9C1E587BB79139F518CB5C4CD84134",
+                "ground": "98810171DD7717444EC694FE16155683A6071BB940D061EF9DAD94FDD85CA8C8"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "112",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.040560364471709534,
+                  "total_logical_cost": {
+                    "integer_decimal": "5136208",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "29",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.14774562350642118,
+                  "total_logical_cost": {
+                    "integer_decimal": "1329911",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "213",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.021455518913492018,
+                  "total_logical_cost": {
+                    "integer_decimal": "9767967",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 45859,
+              "unique_ground_applicable": true
+            },
+            "learned_projector": {
+              "adopted_budget": 800,
+              "cell_id": "learned_projector_N25_seed840025102_p16_b800",
+              "depth": 16,
+              "feasible_mass": 0.9766121155269651,
+              "ground_degeneracy": 1,
+              "paper_label": "LP-QAOA",
+              "target_hashes": {
+                "best2": "D74BEA855975D465119B6ACA9E6792C104367DC4E420B7DD9320C963EBE95214",
+                "best8": "68F75E49AFF6F926B0CA210760152074DD9C1E587BB79139F518CB5C4CD84134",
+                "ground": "98810171DD7717444EC694FE16155683A6071BB940D061EF9DAD94FDD85CA8C8"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "7",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.5248276000858079,
+                  "total_logical_cost": {
+                    "integer_decimal": "690557",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "2",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.9699005543236576,
+                  "total_logical_cost": {
+                    "integer_decimal": "197302",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "13",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.3139461651764184,
+                  "total_logical_cost": {
+                    "integer_decimal": "1282463",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 98651,
+              "unique_ground_applicable": true
+            },
+            "native_grover_d": {
+              "adopted_budget": 400,
+              "cell_id": "native_grover_d_N25_seed840025102_p24_b400",
+              "depth": 24,
+              "feasible_mass": 0.20447232439569454,
+              "ground_degeneracy": 1,
+              "paper_label": "NativeGrover-d",
+              "target_hashes": {
+                "best2": "D74BEA855975D465119B6ACA9E6792C104367DC4E420B7DD9320C963EBE95214",
+                "best8": "68F75E49AFF6F926B0CA210760152074DD9C1E587BB79139F518CB5C4CD84134",
+                "ground": "98810171DD7717444EC694FE16155683A6071BB940D061EF9DAD94FDD85CA8C8"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "1101",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.004177431026236817,
+                  "total_logical_cost": {
+                    "integer_decimal": "112626795",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "275",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.016634219321623792,
+                  "total_logical_cost": {
+                    "integer_decimal": "28131125",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "2203",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.0020886702079829997,
+                  "total_logical_cost": {
+                    "integer_decimal": "225355885",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 102295,
+              "unique_ground_applicable": true
+            },
+            "ordinary_native_direct": {
+              "adopted_budget": 800,
+              "cell_id": "ordinary_native_direct_N25_seed840025102_p8_b800",
+              "depth": 8,
+              "feasible_mass": 0.8068591374448116,
+              "ground_degeneracy": 1,
+              "paper_label": "StdXY",
+              "target_hashes": {
+                "best2": "D74BEA855975D465119B6ACA9E6792C104367DC4E420B7DD9320C963EBE95214",
+                "best8": "68F75E49AFF6F926B0CA210760152074DD9C1E587BB79139F518CB5C4CD84134",
+                "ground": "98810171DD7717444EC694FE16155683A6071BB940D061EF9DAD94FDD85CA8C8"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "195",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.023398856542084213,
+                  "total_logical_cost": {
+                    "integer_decimal": "6186765",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "50",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.08968401420332639,
+                  "total_logical_cost": {
+                    "integer_decimal": "1586350",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "383",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.01197728538468185,
+                  "total_logical_cost": {
+                    "integer_decimal": "12151441",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 31727,
+              "unique_ground_applicable": true
+            },
+            "same_stage1_state_direct": {
+              "adopted_budget": 400,
+              "cell_id": "same_stage1_state_direct_N25_seed840025102_p1_b400",
+              "depth": 1,
+              "feasible_mass": 0.9532820749194257,
+              "ground_degeneracy": 1,
+              "paper_label": "Direct-XY",
+              "target_hashes": {
+                "best2": "D74BEA855975D465119B6ACA9E6792C104367DC4E420B7DD9320C963EBE95214",
+                "best8": "68F75E49AFF6F926B0CA210760152074DD9C1E587BB79139F518CB5C4CD84134",
+                "ground": "98810171DD7717444EC694FE16155683A6071BB940D061EF9DAD94FDD85CA8C8"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "288",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.015865544570350658,
+                  "total_logical_cost": {
+                    "integer_decimal": "2274048",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "71",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.06347379860515925,
+                  "total_logical_cost": {
+                    "integer_decimal": "560616",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "579",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.007932149435925982,
+                  "total_logical_cost": {
+                    "integer_decimal": "4571784",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 7896,
+              "unique_ground_applicable": true
+            },
+            "stage1_only": {
+              "adopted_budget": null,
+              "cell_id": "stage1_only_N25_seed840025102",
+              "depth": null,
+              "feasible_mass": 0.9378781006637074,
+              "ground_degeneracy": 1,
+              "paper_label": "Stage-1-only",
+              "target_hashes": {
+                "best2": "D74BEA855975D465119B6ACA9E6792C104367DC4E420B7DD9320C963EBE95214",
+                "best8": "68F75E49AFF6F926B0CA210760152074DD9C1E587BB79139F518CB5C4CD84134",
+                "ground": "98810171DD7717444EC694FE16155683A6071BB940D061EF9DAD94FDD85CA8C8"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "293",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.015631301677728426,
+                  "total_logical_cost": {
+                    "integer_decimal": "1278359",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "72",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.06252520671091394,
+                  "total_logical_cost": {
+                    "integer_decimal": "314136",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "587",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.007815650838864163,
+                  "total_logical_cost": {
+                    "integer_decimal": "2561081",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 4363,
+              "unique_ground_applicable": true
+            }
+          },
+          "problem_seed": 840025102,
+          "target_hashes": {
+            "best2": "D74BEA855975D465119B6ACA9E6792C104367DC4E420B7DD9320C963EBE95214",
+            "best8": "68F75E49AFF6F926B0CA210760152074DD9C1E587BB79139F518CB5C4CD84134",
+            "ground": "98810171DD7717444EC694FE16155683A6071BB940D061EF9DAD94FDD85CA8C8"
+          },
+          "unique_ground_applicable": true
+        },
+        {
+          "comparisons": {
+            "best_stage1_use_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "1278359",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "stage1_only",
+                "same_stage1_state_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 3.239599699952357,
+                "denominator_decimal": "394604",
+                "kind": "finite",
+                "numerator_decimal": "1278359"
+              },
+              "lp_cost": {
+                "integer_decimal": "394604",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win",
+              "selected_envelope_methods": [
+                "stage1_only"
+              ]
+            },
+            "d_xy_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "6236824",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "decoupled_native_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 15.805273134585558,
+                "denominator_decimal": "5803",
+                "kind": "finite",
+                "numerator_decimal": "91718"
+              },
+              "lp_cost": {
+                "integer_decimal": "394604",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            },
+            "direct_xy_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "2274048",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "same_stage1_state_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 5.762860994820123,
+                "denominator_decimal": "14093",
+                "kind": "finite",
+                "numerator_decimal": "81216"
+              },
+              "lp_cost": {
+                "integer_decimal": "394604",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            },
+            "native_grover_d_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "72629450",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "native_grover_d"
+              ],
+              "comparator_over_lp": {
+                "decimal": 184.0565478302298,
+                "denominator_decimal": "197302",
+                "kind": "finite",
+                "numerator_decimal": "36314725"
+              },
+              "lp_cost": {
+                "integer_decimal": "394604",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            },
+            "native_xy_envelope_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "6155038",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "ordinary_native_direct",
+                "decoupled_native_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 15.598012184367112,
+                "denominator_decimal": "197302",
+                "kind": "finite",
+                "numerator_decimal": "3077519"
+              },
+              "lp_cost": {
+                "integer_decimal": "394604",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win",
+              "selected_envelope_methods": [
+                "ordinary_native_direct"
+              ]
+            },
+            "stage1_only_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "1278359",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "stage1_only"
+              ],
+              "comparator_over_lp": {
+                "decimal": 3.239599699952357,
+                "denominator_decimal": "394604",
+                "kind": "finite",
+                "numerator_decimal": "1278359"
+              },
+              "lp_cost": {
+                "integer_decimal": "394604",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            },
+            "stdxy_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "6155038",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "ordinary_native_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 15.598012184367112,
+                "denominator_decimal": "197302",
+                "kind": "finite",
+                "numerator_decimal": "3077519"
+              },
+              "lp_cost": {
+                "integer_decimal": "394604",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            }
+          },
+          "ground_degeneracy": 1,
+          "methods": {
+            "decoupled_native_direct": {
+              "adopted_budget": 400,
+              "cell_id": "decoupled_native_direct_N25_seed840025103_p12_b400",
+              "depth": 12,
+              "feasible_mass": 0.7805692297427572,
+              "ground_degeneracy": 1,
+              "paper_label": "d-XY",
+              "target_hashes": {
+                "best2": "B956E5DAD23C417F099D296190BE97F656DC9EA48656C7E5FC4305E79585AF81",
+                "best8": "3F4886374A3B3EDA53D50485838528D3CFCCA0185A03164C5EC8DCD4518CDDB3",
+                "ground": "3A71B379A9265E1981FB41FB3ADECAD47FB68D9FA5DB5B7184A82F7DD886D1F8"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "136",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.033441820320879063,
+                  "total_logical_cost": {
+                    "integer_decimal": "6236824",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "38",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.11495632462873072,
+                  "total_logical_cost": {
+                    "integer_decimal": "1742642",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "264",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.01733142322380182,
+                  "total_logical_cost": {
+                    "integer_decimal": "12106776",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 45859,
+              "unique_ground_applicable": true
+            },
+            "learned_projector": {
+              "adopted_budget": 800,
+              "cell_id": "learned_projector_N25_seed840025103_p16_b800",
+              "depth": 16,
+              "feasible_mass": 0.9835803442570121,
+              "ground_degeneracy": 1,
+              "paper_label": "LP-QAOA",
+              "target_hashes": {
+                "best2": "B956E5DAD23C417F099D296190BE97F656DC9EA48656C7E5FC4305E79585AF81",
+                "best8": "3F4886374A3B3EDA53D50485838528D3CFCCA0185A03164C5EC8DCD4518CDDB3",
+                "ground": "3A71B379A9265E1981FB41FB3ADECAD47FB68D9FA5DB5B7184A82F7DD886D1F8"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "4",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.7028957787159092,
+                  "total_logical_cost": {
+                    "integer_decimal": "394604",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "2",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.9760459487521409,
+                  "total_logical_cost": {
+                    "integer_decimal": "197302",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "7",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.5257394504151232,
+                  "total_logical_cost": {
+                    "integer_decimal": "690557",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 98651,
+              "unique_ground_applicable": true
+            },
+            "native_grover_d": {
+              "adopted_budget": 400,
+              "cell_id": "native_grover_d_N25_seed840025103_p24_b400",
+              "depth": 24,
+              "feasible_mass": 0.24459524432314478,
+              "ground_degeneracy": 1,
+              "paper_label": "NativeGrover-d",
+              "target_hashes": {
+                "best2": "B956E5DAD23C417F099D296190BE97F656DC9EA48656C7E5FC4305E79585AF81",
+                "best8": "3F4886374A3B3EDA53D50485838528D3CFCCA0185A03164C5EC8DCD4518CDDB3",
+                "ground": "3A71B379A9265E1981FB41FB3ADECAD47FB68D9FA5DB5B7184A82F7DD886D1F8"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "710",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.006470071579404029,
+                  "total_logical_cost": {
+                    "integer_decimal": "72629450",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "189",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.02414211230554659,
+                  "total_logical_cost": {
+                    "integer_decimal": "19333755",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "1394",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.0032983110084944876,
+                  "total_logical_cost": {
+                    "integer_decimal": "142599230",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 102295,
+              "unique_ground_applicable": true
+            },
+            "ordinary_native_direct": {
+              "adopted_budget": 800,
+              "cell_id": "ordinary_native_direct_N25_seed840025103_p8_b800",
+              "depth": 8,
+              "feasible_mass": 0.8003209357616349,
+              "ground_degeneracy": 1,
+              "paper_label": "StdXY",
+              "target_hashes": {
+                "best2": "B956E5DAD23C417F099D296190BE97F656DC9EA48656C7E5FC4305E79585AF81",
+                "best8": "3F4886374A3B3EDA53D50485838528D3CFCCA0185A03164C5EC8DCD4518CDDB3",
+                "ground": "3A71B379A9265E1981FB41FB3ADECAD47FB68D9FA5DB5B7184A82F7DD886D1F8"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "194",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.023482108186207683,
+                  "total_logical_cost": {
+                    "integer_decimal": "6155038",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "52",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.08519437748636105,
+                  "total_logical_cost": {
+                    "integer_decimal": "1649804",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "386",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.011864400082976255,
+                  "total_logical_cost": {
+                    "integer_decimal": "12246622",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 31727,
+              "unique_ground_applicable": true
+            },
+            "same_stage1_state_direct": {
+              "adopted_budget": 400,
+              "cell_id": "same_stage1_state_direct_N25_seed840025103_p1_b400",
+              "depth": 1,
+              "feasible_mass": 0.9532463744684528,
+              "ground_degeneracy": 1,
+              "paper_label": "Direct-XY",
+              "target_hashes": {
+                "best2": "B956E5DAD23C417F099D296190BE97F656DC9EA48656C7E5FC4305E79585AF81",
+                "best8": "3F4886374A3B3EDA53D50485838528D3CFCCA0185A03164C5EC8DCD4518CDDB3",
+                "ground": "3A71B379A9265E1981FB41FB3ADECAD47FB68D9FA5DB5B7184A82F7DD886D1F8"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "288",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.015866640693550788,
+                  "total_logical_cost": {
+                    "integer_decimal": "2274048",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "71",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.06347652262973605,
+                  "total_logical_cost": {
+                    "integer_decimal": "560616",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "579",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.007932192694014253,
+                  "total_logical_cost": {
+                    "integer_decimal": "4571784",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 7896,
+              "unique_ground_applicable": true
+            },
+            "stage1_only": {
+              "adopted_budget": null,
+              "cell_id": "stage1_only_N25_seed840025103",
+              "depth": null,
+              "feasible_mass": 0.9378781006637074,
+              "ground_degeneracy": 1,
+              "paper_label": "Stage-1-only",
+              "target_hashes": {
+                "best2": "B956E5DAD23C417F099D296190BE97F656DC9EA48656C7E5FC4305E79585AF81",
+                "best8": "3F4886374A3B3EDA53D50485838528D3CFCCA0185A03164C5EC8DCD4518CDDB3",
+                "ground": "3A71B379A9265E1981FB41FB3ADECAD47FB68D9FA5DB5B7184A82F7DD886D1F8"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "293",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.01563130167772855,
+                  "total_logical_cost": {
+                    "integer_decimal": "1278359",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "72",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.06252520671091424,
+                  "total_logical_cost": {
+                    "integer_decimal": "314136",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "587",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.007815650838864293,
+                  "total_logical_cost": {
+                    "integer_decimal": "2561081",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 4363,
+              "unique_ground_applicable": true
+            }
+          },
+          "problem_seed": 840025103,
+          "target_hashes": {
+            "best2": "B956E5DAD23C417F099D296190BE97F656DC9EA48656C7E5FC4305E79585AF81",
+            "best8": "3F4886374A3B3EDA53D50485838528D3CFCCA0185A03164C5EC8DCD4518CDDB3",
+            "ground": "3A71B379A9265E1981FB41FB3ADECAD47FB68D9FA5DB5B7184A82F7DD886D1F8"
+          },
+          "unique_ground_applicable": true
+        },
+        {
+          "comparisons": {
+            "best_stage1_use_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "1278359",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "stage1_only",
+                "same_stage1_state_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 4.319466266603143,
+                "denominator_decimal": "295953",
+                "kind": "finite",
+                "numerator_decimal": "1278359"
+              },
+              "lp_cost": {
+                "integer_decimal": "295953",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win",
+              "selected_envelope_methods": [
+                "stage1_only"
+              ]
+            },
+            "d_xy_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "6466119",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "decoupled_native_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 21.848465803691802,
+                "denominator_decimal": "98651",
+                "kind": "finite",
+                "numerator_decimal": "2155373"
+              },
+              "lp_cost": {
+                "integer_decimal": "295953",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            },
+            "direct_xy_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "2289840",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "same_stage1_state_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 7.737174483786277,
+                "denominator_decimal": "14093",
+                "kind": "finite",
+                "numerator_decimal": "109040"
+              },
+              "lp_cost": {
+                "integer_decimal": "295953",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            },
+            "native_grover_d_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "88280585",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "native_grover_d"
+              ],
+              "comparator_over_lp": {
+                "decimal": 298.29258361969636,
+                "denominator_decimal": "295953",
+                "kind": "finite",
+                "numerator_decimal": "88280585"
+              },
+              "lp_cost": {
+                "integer_decimal": "295953",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            },
+            "native_xy_envelope_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "4759050",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "ordinary_native_direct",
+                "decoupled_native_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 16.08042493233723,
+                "denominator_decimal": "98651",
+                "kind": "finite",
+                "numerator_decimal": "1586350"
+              },
+              "lp_cost": {
+                "integer_decimal": "295953",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win",
+              "selected_envelope_methods": [
+                "ordinary_native_direct"
+              ]
+            },
+            "stage1_only_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "1278359",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "stage1_only"
+              ],
+              "comparator_over_lp": {
+                "decimal": 4.319466266603143,
+                "denominator_decimal": "295953",
+                "kind": "finite",
+                "numerator_decimal": "1278359"
+              },
+              "lp_cost": {
+                "integer_decimal": "295953",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            },
+            "stdxy_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "4759050",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "ordinary_native_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 16.08042493233723,
+                "denominator_decimal": "98651",
+                "kind": "finite",
+                "numerator_decimal": "1586350"
+              },
+              "lp_cost": {
+                "integer_decimal": "295953",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            }
+          },
+          "ground_degeneracy": 1,
+          "methods": {
+            "decoupled_native_direct": {
+              "adopted_budget": 400,
+              "cell_id": "decoupled_native_direct_N25_seed840025104_p12_b400",
+              "depth": 12,
+              "feasible_mass": 0.7215131721352702,
+              "ground_degeneracy": 1,
+              "paper_label": "d-XY",
+              "target_hashes": {
+                "best2": "D3CE73A995E14B6CEA35E1EA9446E605D0AC099B58A2C6F40DFB7FB221E56B47",
+                "best8": "25F34A70EAC28CECFB13917E5A86EF3643BB8FAB019BDEE3D69673C8FB83920C",
+                "ground": "E27F3EB1CFED3CD38E9404B15EBB462F83F7CA45B0FCA2074AD1031FE0CFAF8D"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "141",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.03227745215688069,
+                  "total_logical_cost": {
+                    "integer_decimal": "6466119",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "40",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.11097041512300668,
+                  "total_logical_cost": {
+                    "integer_decimal": "1834360",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "287",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.01592454962388206,
+                  "total_logical_cost": {
+                    "integer_decimal": "13161533",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 45859,
+              "unique_ground_applicable": true
+            },
+            "learned_projector": {
+              "adopted_budget": 800,
+              "cell_id": "learned_projector_N25_seed840025104_p16_b800",
+              "depth": 16,
+              "feasible_mass": 0.985096999355992,
+              "ground_degeneracy": 1,
+              "paper_label": "LP-QAOA",
+              "target_hashes": {
+                "best2": "D3CE73A995E14B6CEA35E1EA9446E605D0AC099B58A2C6F40DFB7FB221E56B47",
+                "best8": "25F34A70EAC28CECFB13917E5A86EF3643BB8FAB019BDEE3D69673C8FB83920C",
+                "ground": "E27F3EB1CFED3CD38E9404B15EBB462F83F7CA45B0FCA2074AD1031FE0CFAF8D"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "3",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.8054970949008078,
+                  "total_logical_cost": {
+                    "integer_decimal": "295953",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "2",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.9741810972866216,
+                  "total_logical_cost": {
+                    "integer_decimal": "197302",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "6",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.556868787749353,
+                  "total_logical_cost": {
+                    "integer_decimal": "591906",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 98651,
+              "unique_ground_applicable": true
+            },
+            "native_grover_d": {
+              "adopted_budget": 400,
+              "cell_id": "native_grover_d_N25_seed840025104_p24_b400",
+              "depth": 24,
+              "feasible_mass": 0.23399239373167063,
+              "ground_degeneracy": 1,
+              "paper_label": "NativeGrover-d",
+              "target_hashes": {
+                "best2": "D3CE73A995E14B6CEA35E1EA9446E605D0AC099B58A2C6F40DFB7FB221E56B47",
+                "best8": "25F34A70EAC28CECFB13917E5A86EF3643BB8FAB019BDEE3D69673C8FB83920C",
+                "ground": "E27F3EB1CFED3CD38E9404B15EBB462F83F7CA45B0FCA2074AD1031FE0CFAF8D"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "863",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.005323739722701186,
+                  "total_logical_cost": {
+                    "integer_decimal": "88280585",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "221",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.020714246243800874,
+                  "total_logical_cost": {
+                    "integer_decimal": "22607195",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "1720",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.0026742516766666987,
+                  "total_logical_cost": {
+                    "integer_decimal": "175947400",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 102295,
+              "unique_ground_applicable": true
+            },
+            "ordinary_native_direct": {
+              "adopted_budget": 800,
+              "cell_id": "ordinary_native_direct_N25_seed840025104_p8_b800",
+              "depth": 8,
+              "feasible_mass": 0.9093860278441271,
+              "ground_degeneracy": 1,
+              "paper_label": "StdXY",
+              "target_hashes": {
+                "best2": "D3CE73A995E14B6CEA35E1EA9446E605D0AC099B58A2C6F40DFB7FB221E56B47",
+                "best8": "25F34A70EAC28CECFB13917E5A86EF3643BB8FAB019BDEE3D69673C8FB83920C",
+                "ground": "E27F3EB1CFED3CD38E9404B15EBB462F83F7CA45B0FCA2074AD1031FE0CFAF8D"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "150",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.030294386070547116,
+                  "total_logical_cost": {
+                    "integer_decimal": "4759050",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "39",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.11152903011997284,
+                  "total_logical_cost": {
+                    "integer_decimal": "1237353",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "317",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.01445224256782283,
+                  "total_logical_cost": {
+                    "integer_decimal": "10057459",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 31727,
+              "unique_ground_applicable": true
+            },
+            "same_stage1_state_direct": {
+              "adopted_budget": 400,
+              "cell_id": "same_stage1_state_direct_N25_seed840025104_p1_b400",
+              "depth": 1,
+              "feasible_mass": 0.9475439227974055,
+              "ground_degeneracy": 1,
+              "paper_label": "Direct-XY",
+              "target_hashes": {
+                "best2": "D3CE73A995E14B6CEA35E1EA9446E605D0AC099B58A2C6F40DFB7FB221E56B47",
+                "best8": "25F34A70EAC28CECFB13917E5A86EF3643BB8FAB019BDEE3D69673C8FB83920C",
+                "ground": "E27F3EB1CFED3CD38E9404B15EBB462F83F7CA45B0FCA2074AD1031FE0CFAF8D"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "290",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.015804977138691736,
+                  "total_logical_cost": {
+                    "integer_decimal": "2289840",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "71",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.06321263313700623,
+                  "total_logical_cost": {
+                    "integer_decimal": "560616",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "581",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.00790167787383535,
+                  "total_logical_cost": {
+                    "integer_decimal": "4587576",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 7896,
+              "unique_ground_applicable": true
+            },
+            "stage1_only": {
+              "adopted_budget": null,
+              "cell_id": "stage1_only_N25_seed840025104",
+              "depth": null,
+              "feasible_mass": 0.9378781006637074,
+              "ground_degeneracy": 1,
+              "paper_label": "Stage-1-only",
+              "target_hashes": {
+                "best2": "D3CE73A995E14B6CEA35E1EA9446E605D0AC099B58A2C6F40DFB7FB221E56B47",
+                "best8": "25F34A70EAC28CECFB13917E5A86EF3643BB8FAB019BDEE3D69673C8FB83920C",
+                "ground": "E27F3EB1CFED3CD38E9404B15EBB462F83F7CA45B0FCA2074AD1031FE0CFAF8D"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "293",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.015631301677728495,
+                  "total_logical_cost": {
+                    "integer_decimal": "1278359",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "72",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.06252520671091384,
+                  "total_logical_cost": {
+                    "integer_decimal": "314136",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "587",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.007815650838864228,
+                  "total_logical_cost": {
+                    "integer_decimal": "2561081",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 4363,
+              "unique_ground_applicable": true
+            }
+          },
+          "problem_seed": 840025104,
+          "target_hashes": {
+            "best2": "D3CE73A995E14B6CEA35E1EA9446E605D0AC099B58A2C6F40DFB7FB221E56B47",
+            "best8": "25F34A70EAC28CECFB13917E5A86EF3643BB8FAB019BDEE3D69673C8FB83920C",
+            "ground": "E27F3EB1CFED3CD38E9404B15EBB462F83F7CA45B0FCA2074AD1031FE0CFAF8D"
+          },
+          "unique_ground_applicable": true
+        },
+        {
+          "comparisons": {
+            "best_stage1_use_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "1278359",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "stage1_only",
+                "same_stage1_state_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 4.319466266603143,
+                "denominator_decimal": "295953",
+                "kind": "finite",
+                "numerator_decimal": "1278359"
+              },
+              "lp_cost": {
+                "integer_decimal": "295953",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win",
+              "selected_envelope_methods": [
+                "stage1_only"
+              ]
+            },
+            "d_xy_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "10639288",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "decoupled_native_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 35.94924869827304,
+                "denominator_decimal": "295953",
+                "kind": "finite",
+                "numerator_decimal": "10639288"
+              },
+              "lp_cost": {
+                "integer_decimal": "295953",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            },
+            "direct_xy_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "2274048",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "same_stage1_state_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 7.683814659760165,
+                "denominator_decimal": "14093",
+                "kind": "finite",
+                "numerator_decimal": "108288"
+              },
+              "lp_cost": {
+                "integer_decimal": "295953",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            },
+            "native_grover_d_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "114570400",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "native_grover_d"
+              ],
+              "comparator_over_lp": {
+                "decimal": 387.12363111710306,
+                "denominator_decimal": "42279",
+                "kind": "finite",
+                "numerator_decimal": "16367200"
+              },
+              "lp_cost": {
+                "integer_decimal": "295953",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            },
+            "native_xy_envelope_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "4885958",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "ordinary_native_direct",
+                "decoupled_native_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 16.50923626386622,
+                "denominator_decimal": "42279",
+                "kind": "finite",
+                "numerator_decimal": "697994"
+              },
+              "lp_cost": {
+                "integer_decimal": "295953",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win",
+              "selected_envelope_methods": [
+                "ordinary_native_direct"
+              ]
+            },
+            "stage1_only_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "1278359",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "stage1_only"
+              ],
+              "comparator_over_lp": {
+                "decimal": 4.319466266603143,
+                "denominator_decimal": "295953",
+                "kind": "finite",
+                "numerator_decimal": "1278359"
+              },
+              "lp_cost": {
+                "integer_decimal": "295953",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            },
+            "stdxy_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "4885958",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "ordinary_native_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 16.50923626386622,
+                "denominator_decimal": "42279",
+                "kind": "finite",
+                "numerator_decimal": "697994"
+              },
+              "lp_cost": {
+                "integer_decimal": "295953",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            }
+          },
+          "ground_degeneracy": 1,
+          "methods": {
+            "decoupled_native_direct": {
+              "adopted_budget": 400,
+              "cell_id": "decoupled_native_direct_N25_seed840025105_p12_b400",
+              "depth": 12,
+              "feasible_mass": 0.740387931395196,
+              "ground_degeneracy": 1,
+              "paper_label": "d-XY",
+              "target_hashes": {
+                "best2": "77BDBEEFE82931249911C7A8BB3E44B29D5BBEE4070329BEFABCF8CC4507E2ED",
+                "best8": "33D3CF502543DCE509D3EDE7FDF7E72E5A21E1EC4E5CB8F0E206435FBC864D0A",
+                "ground": "F72BFE8E6C68802EA518802D5EBAB82C25455902B194A4078462E09381EFB0C0"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "232",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.019726269311988013,
+                  "total_logical_cost": {
+                    "integer_decimal": "10639288",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "61",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.07312340526241587,
+                  "total_logical_cost": {
+                    "integer_decimal": "2797399",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "458",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.010016948195215576,
+                  "total_logical_cost": {
+                    "integer_decimal": "21003422",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 45859,
+              "unique_ground_applicable": true
+            },
+            "learned_projector": {
+              "adopted_budget": 800,
+              "cell_id": "learned_projector_N25_seed840025105_p16_b800",
+              "depth": 16,
+              "feasible_mass": 0.9267612703352619,
+              "ground_degeneracy": 1,
+              "paper_label": "LP-QAOA",
+              "target_hashes": {
+                "best2": "77BDBEEFE82931249911C7A8BB3E44B29D5BBEE4070329BEFABCF8CC4507E2ED",
+                "best8": "33D3CF502543DCE509D3EDE7FDF7E72E5A21E1EC4E5CB8F0E206435FBC864D0A",
+                "ground": "F72BFE8E6C68802EA518802D5EBAB82C25455902B194A4078462E09381EFB0C0"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "3",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.8464627321029281,
+                  "total_logical_cost": {
+                    "integer_decimal": "295953",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "3",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.8934662500616535,
+                  "total_logical_cost": {
+                    "integer_decimal": "295953",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "4",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.7571899375079405,
+                  "total_logical_cost": {
+                    "integer_decimal": "394604",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 98651,
+              "unique_ground_applicable": true
+            },
+            "native_grover_d": {
+              "adopted_budget": 400,
+              "cell_id": "native_grover_d_N25_seed840025105_p24_b400",
+              "depth": 24,
+              "feasible_mass": 0.20426540665609305,
+              "ground_degeneracy": 1,
+              "paper_label": "NativeGrover-d",
+              "target_hashes": {
+                "best2": "77BDBEEFE82931249911C7A8BB3E44B29D5BBEE4070329BEFABCF8CC4507E2ED",
+                "best8": "33D3CF502543DCE509D3EDE7FDF7E72E5A21E1EC4E5CB8F0E206435FBC864D0A",
+                "ground": "F72BFE8E6C68802EA518802D5EBAB82C25455902B194A4078462E09381EFB0C0"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "1120",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.0041047912708913736,
+                  "total_logical_cost": {
+                    "integer_decimal": "114570400",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "284",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.016134476373443722,
+                  "total_logical_cost": {
+                    "integer_decimal": "29051780",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "2225",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.0020685117718174306,
+                  "total_logical_cost": {
+                    "integer_decimal": "227606375",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 102295,
+              "unique_ground_applicable": true
+            },
+            "ordinary_native_direct": {
+              "adopted_budget": 800,
+              "cell_id": "ordinary_native_direct_N25_seed840025105_p8_b800",
+              "depth": 8,
+              "feasible_mass": 0.9546392902290983,
+              "ground_degeneracy": 1,
+              "paper_label": "StdXY",
+              "target_hashes": {
+                "best2": "77BDBEEFE82931249911C7A8BB3E44B29D5BBEE4070329BEFABCF8CC4507E2ED",
+                "best8": "33D3CF502543DCE509D3EDE7FDF7E72E5A21E1EC4E5CB8F0E206435FBC864D0A",
+                "ground": "F72BFE8E6C68802EA518802D5EBAB82C25455902B194A4078462E09381EFB0C0"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "154",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.029549302440312404,
+                  "total_logical_cost": {
+                    "integer_decimal": "4885958",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "40",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.11101900898262129,
+                  "total_logical_cost": {
+                    "integer_decimal": "1269080",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "299",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.015330366701788362,
+                  "total_logical_cost": {
+                    "integer_decimal": "9486373",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 31727,
+              "unique_ground_applicable": true
+            },
+            "same_stage1_state_direct": {
+              "adopted_budget": 400,
+              "cell_id": "same_stage1_state_direct_N25_seed840025105_p1_b400",
+              "depth": 1,
+              "feasible_mass": 0.9512651175544429,
+              "ground_degeneracy": 1,
+              "paper_label": "Direct-XY",
+              "target_hashes": {
+                "best2": "77BDBEEFE82931249911C7A8BB3E44B29D5BBEE4070329BEFABCF8CC4507E2ED",
+                "best8": "33D3CF502543DCE509D3EDE7FDF7E72E5A21E1EC4E5CB8F0E206435FBC864D0A",
+                "ground": "F72BFE8E6C68802EA518802D5EBAB82C25455902B194A4078462E09381EFB0C0"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "288",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.015863513071602622,
+                  "total_logical_cost": {
+                    "integer_decimal": "2274048",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "71",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.06345585449490214,
+                  "total_logical_cost": {
+                    "integer_decimal": "560616",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "579",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.007932475186827591,
+                  "total_logical_cost": {
+                    "integer_decimal": "4571784",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 7896,
+              "unique_ground_applicable": true
+            },
+            "stage1_only": {
+              "adopted_budget": null,
+              "cell_id": "stage1_only_N25_seed840025105",
+              "depth": null,
+              "feasible_mass": 0.9378781006637074,
+              "ground_degeneracy": 1,
+              "paper_label": "Stage-1-only",
+              "target_hashes": {
+                "best2": "77BDBEEFE82931249911C7A8BB3E44B29D5BBEE4070329BEFABCF8CC4507E2ED",
+                "best8": "33D3CF502543DCE509D3EDE7FDF7E72E5A21E1EC4E5CB8F0E206435FBC864D0A",
+                "ground": "F72BFE8E6C68802EA518802D5EBAB82C25455902B194A4078462E09381EFB0C0"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "293",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.01563130167772852,
+                  "total_logical_cost": {
+                    "integer_decimal": "1278359",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "72",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.06252520671091383,
+                  "total_logical_cost": {
+                    "integer_decimal": "314136",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "587",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.007815650838864268,
+                  "total_logical_cost": {
+                    "integer_decimal": "2561081",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 4363,
+              "unique_ground_applicable": true
+            }
+          },
+          "problem_seed": 840025105,
+          "target_hashes": {
+            "best2": "77BDBEEFE82931249911C7A8BB3E44B29D5BBEE4070329BEFABCF8CC4507E2ED",
+            "best8": "33D3CF502543DCE509D3EDE7FDF7E72E5A21E1EC4E5CB8F0E206435FBC864D0A",
+            "ground": "F72BFE8E6C68802EA518802D5EBAB82C25455902B194A4078462E09381EFB0C0"
+          },
+          "unique_ground_applicable": true
+        },
+        {
+          "comparisons": {
+            "best_stage1_use_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "1278359",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "stage1_only",
+                "same_stage1_state_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 4.319466266603143,
+                "denominator_decimal": "295953",
+                "kind": "finite",
+                "numerator_decimal": "1278359"
+              },
+              "lp_cost": {
+                "integer_decimal": "295953",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win",
+              "selected_envelope_methods": [
+                "stage1_only"
+              ]
+            },
+            "d_xy_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "8392197",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "decoupled_native_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 28.35651944734468,
+                "denominator_decimal": "98651",
+                "kind": "finite",
+                "numerator_decimal": "2797399"
+              },
+              "lp_cost": {
+                "integer_decimal": "295953",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            },
+            "direct_xy_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "2297736",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "same_stage1_state_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 7.763854395799333,
+                "denominator_decimal": "14093",
+                "kind": "finite",
+                "numerator_decimal": "109416"
+              },
+              "lp_cost": {
+                "integer_decimal": "295953",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            },
+            "native_grover_d_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "98612380",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "native_grover_d"
+              ],
+              "comparator_over_lp": {
+                "decimal": 333.20283964007797,
+                "denominator_decimal": "295953",
+                "kind": "finite",
+                "numerator_decimal": "98612380"
+              },
+              "lp_cost": {
+                "integer_decimal": "295953",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            },
+            "native_xy_envelope_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "5234955",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "ordinary_native_direct",
+                "decoupled_native_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 17.688467425570952,
+                "denominator_decimal": "98651",
+                "kind": "finite",
+                "numerator_decimal": "1744985"
+              },
+              "lp_cost": {
+                "integer_decimal": "295953",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win",
+              "selected_envelope_methods": [
+                "ordinary_native_direct"
+              ]
+            },
+            "stage1_only_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "1278359",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "stage1_only"
+              ],
+              "comparator_over_lp": {
+                "decimal": 4.319466266603143,
+                "denominator_decimal": "295953",
+                "kind": "finite",
+                "numerator_decimal": "1278359"
+              },
+              "lp_cost": {
+                "integer_decimal": "295953",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            },
+            "stdxy_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "5234955",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "ordinary_native_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 17.688467425570952,
+                "denominator_decimal": "98651",
+                "kind": "finite",
+                "numerator_decimal": "1744985"
+              },
+              "lp_cost": {
+                "integer_decimal": "295953",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            }
+          },
+          "ground_degeneracy": 1,
+          "methods": {
+            "decoupled_native_direct": {
+              "adopted_budget": 400,
+              "cell_id": "decoupled_native_direct_N25_seed840025106_p12_b400",
+              "depth": 12,
+              "feasible_mass": 0.7097959846039602,
+              "ground_degeneracy": 1,
+              "paper_label": "d-XY",
+              "target_hashes": {
+                "best2": "D55173CE9905C0824641EC2C21290E7E97725A3A91BDE8FB464EE22FB688954C",
+                "best8": "FFD69801EDAA6789D101E7735411B2BFFA611BF636CFD3E0898CC1DE3313F839",
+                "ground": "144877643DCD2DE4A5AE03FA70546EB30C0837C34166F9DF260A3D99885EBE19"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "183",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.024891490562037648,
+                  "total_logical_cost": {
+                    "integer_decimal": "8392197",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "50",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.08902750835682471,
+                  "total_logical_cost": {
+                    "integer_decimal": "2292950",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "400",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.011470189216140523,
+                  "total_logical_cost": {
+                    "integer_decimal": "18343600",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 45859,
+              "unique_ground_applicable": true
+            },
+            "learned_projector": {
+              "adopted_budget": 800,
+              "cell_id": "learned_projector_N25_seed840025106_p16_b800",
+              "depth": 16,
+              "feasible_mass": 0.980905777317205,
+              "ground_degeneracy": 1,
+              "paper_label": "LP-QAOA",
+              "target_hashes": {
+                "best2": "D55173CE9905C0824641EC2C21290E7E97725A3A91BDE8FB464EE22FB688954C",
+                "best8": "FFD69801EDAA6789D101E7735411B2BFFA611BF636CFD3E0898CC1DE3313F839",
+                "ground": "144877643DCD2DE4A5AE03FA70546EB30C0837C34166F9DF260A3D99885EBE19"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "3",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.8693123120958318,
+                  "total_logical_cost": {
+                    "integer_decimal": "295953",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "2",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.9659528647738188,
+                  "total_logical_cost": {
+                    "integer_decimal": "197302",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "4",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.726067256917225,
+                  "total_logical_cost": {
+                    "integer_decimal": "394604",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 98651,
+              "unique_ground_applicable": true
+            },
+            "native_grover_d": {
+              "adopted_budget": 400,
+              "cell_id": "native_grover_d_N25_seed840025106_p24_b400",
+              "depth": 24,
+              "feasible_mass": 0.19510537814485332,
+              "ground_degeneracy": 1,
+              "paper_label": "NativeGrover-d",
+              "target_hashes": {
+                "best2": "D55173CE9905C0824641EC2C21290E7E97725A3A91BDE8FB464EE22FB688954C",
+                "best8": "FFD69801EDAA6789D101E7735411B2BFFA611BF636CFD3E0898CC1DE3313F839",
+                "ground": "144877643DCD2DE4A5AE03FA70546EB30C0837C34166F9DF260A3D99885EBE19"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "964",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.004770156106658667,
+                  "total_logical_cost": {
+                    "integer_decimal": "98612380",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "252",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.018161295613778352,
+                  "total_logical_cost": {
+                    "integer_decimal": "25778340",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "1889",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.0024361170509947187,
+                  "total_logical_cost": {
+                    "integer_decimal": "193235255",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 102295,
+              "unique_ground_applicable": true
+            },
+            "ordinary_native_direct": {
+              "adopted_budget": 800,
+              "cell_id": "ordinary_native_direct_N25_seed840025106_p8_b800",
+              "depth": 8,
+              "feasible_mass": 0.8777697058151558,
+              "ground_degeneracy": 1,
+              "paper_label": "StdXY",
+              "target_hashes": {
+                "best2": "D55173CE9905C0824641EC2C21290E7E97725A3A91BDE8FB464EE22FB688954C",
+                "best8": "FFD69801EDAA6789D101E7735411B2BFFA611BF636CFD3E0898CC1DE3313F839",
+                "ground": "144877643DCD2DE4A5AE03FA70546EB30C0837C34166F9DF260A3D99885EBE19"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "165",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.027587537188030746,
+                  "total_logical_cost": {
+                    "integer_decimal": "5234955",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "43",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.10271215421819277,
+                  "total_logical_cost": {
+                    "integer_decimal": "1364261",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "358",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.012782787662523578,
+                  "total_logical_cost": {
+                    "integer_decimal": "11358266",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 31727,
+              "unique_ground_applicable": true
+            },
+            "same_stage1_state_direct": {
+              "adopted_budget": 400,
+              "cell_id": "same_stage1_state_direct_N25_seed840025106_p1_b400",
+              "depth": 1,
+              "feasible_mass": 0.94203045615128,
+              "ground_degeneracy": 1,
+              "paper_label": "Direct-XY",
+              "target_hashes": {
+                "best2": "D55173CE9905C0824641EC2C21290E7E97725A3A91BDE8FB464EE22FB688954C",
+                "best8": "FFD69801EDAA6789D101E7735411B2BFFA611BF636CFD3E0898CC1DE3313F839",
+                "ground": "144877643DCD2DE4A5AE03FA70546EB30C0837C34166F9DF260A3D99885EBE19"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "291",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.015705224625306297,
+                  "total_logical_cost": {
+                    "integer_decimal": "2297736",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "71",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.06281856824993567,
+                  "total_logical_cost": {
+                    "integer_decimal": "560616",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "585",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.007852781606319437,
+                  "total_logical_cost": {
+                    "integer_decimal": "4619160",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 7896,
+              "unique_ground_applicable": true
+            },
+            "stage1_only": {
+              "adopted_budget": null,
+              "cell_id": "stage1_only_N25_seed840025106",
+              "depth": null,
+              "feasible_mass": 0.9378781006637074,
+              "ground_degeneracy": 1,
+              "paper_label": "Stage-1-only",
+              "target_hashes": {
+                "best2": "D55173CE9905C0824641EC2C21290E7E97725A3A91BDE8FB464EE22FB688954C",
+                "best8": "FFD69801EDAA6789D101E7735411B2BFFA611BF636CFD3E0898CC1DE3313F839",
+                "ground": "144877643DCD2DE4A5AE03FA70546EB30C0837C34166F9DF260A3D99885EBE19"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "293",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.015631301677728488,
+                  "total_logical_cost": {
+                    "integer_decimal": "1278359",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "72",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.06252520671091402,
+                  "total_logical_cost": {
+                    "integer_decimal": "314136",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "587",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.007815650838864326,
+                  "total_logical_cost": {
+                    "integer_decimal": "2561081",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 4363,
+              "unique_ground_applicable": true
+            }
+          },
+          "problem_seed": 840025106,
+          "target_hashes": {
+            "best2": "D55173CE9905C0824641EC2C21290E7E97725A3A91BDE8FB464EE22FB688954C",
+            "best8": "FFD69801EDAA6789D101E7735411B2BFFA611BF636CFD3E0898CC1DE3313F839",
+            "ground": "144877643DCD2DE4A5AE03FA70546EB30C0837C34166F9DF260A3D99885EBE19"
+          },
+          "unique_ground_applicable": true
+        }
+      ]
+    },
+    "30": {
+      "problem_seeds": [
+        840030101,
+        840030102,
+        840030103,
+        840030104,
+        840030105
+      ],
+      "instance_rows": [
+        {
+          "comparisons": {
+            "best_stage1_use_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "219323250",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "stage1_only",
+                "same_stage1_state_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 48.569639553153536,
+                "denominator_decimal": "301043",
+                "kind": "finite",
+                "numerator_decimal": "14621550"
+              },
+              "lp_cost": {
+                "integer_decimal": "4515645",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win",
+              "selected_envelope_methods": [
+                "stage1_only"
+              ]
+            },
+            "d_xy_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "251851875",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "decoupled_native_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 55.77317858246164,
+                "denominator_decimal": "301043",
+                "kind": "finite",
+                "numerator_decimal": "16790125"
+              },
+              "lp_cost": {
+                "integer_decimal": "4515645",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            },
+            "direct_xy_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "417296130",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "same_stage1_state_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 92.41119042794551,
+                "denominator_decimal": "301043",
+                "kind": "finite",
+                "numerator_decimal": "27819742"
+              },
+              "lp_cost": {
+                "integer_decimal": "4515645",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            },
+            "native_grover_d_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "4318881940",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "native_grover_d"
+              ],
+              "comparator_over_lp": {
+                "decimal": 956.4263665545011,
+                "denominator_decimal": "903129",
+                "kind": "finite",
+                "numerator_decimal": "863776388"
+              },
+              "lp_cost": {
+                "integer_decimal": "4515645",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            },
+            "native_xy_envelope_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "251851875",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "ordinary_native_direct",
+                "decoupled_native_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 55.77317858246164,
+                "denominator_decimal": "301043",
+                "kind": "finite",
+                "numerator_decimal": "16790125"
+              },
+              "lp_cost": {
+                "integer_decimal": "4515645",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win",
+              "selected_envelope_methods": [
+                "decoupled_native_direct"
+              ]
+            },
+            "stage1_only_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "219323250",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "stage1_only"
+              ],
+              "comparator_over_lp": {
+                "decimal": 48.569639553153536,
+                "denominator_decimal": "301043",
+                "kind": "finite",
+                "numerator_decimal": "14621550"
+              },
+              "lp_cost": {
+                "integer_decimal": "4515645",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            },
+            "stdxy_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "542677500",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "ordinary_native_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 120.17718399032697,
+                "denominator_decimal": "301043",
+                "kind": "finite",
+                "numerator_decimal": "36178500"
+              },
+              "lp_cost": {
+                "integer_decimal": "4515645",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            }
+          },
+          "ground_degeneracy": 1,
+          "methods": {
+            "decoupled_native_direct": {
+              "adopted_budget": 400,
+              "cell_id": "decoupled_native_direct_N30_seed840030101_p24_b400",
+              "depth": 24,
+              "feasible_mass": 0.9686795624154203,
+              "ground_degeneracy": 1,
+              "paper_label": "d-XY",
+              "target_hashes": {
+                "best2": "2EC5E38566DE3404A2B4E511A2B994C8946DCCE1998CFC0BA883433371FAE7EE",
+                "best8": "EA26530F5477B7A536BA024ECF2608AE2C85F25BD945FBA78B6FBE3FCCFA37A3",
+                "ground": "6C3C4FCA1521BE6B906378F72EAFE0C40425C785BCDBFCA88C0264C55BA0C0E8"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "825",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.005570672086895764,
+                  "total_logical_cost": {
+                    "integer_decimal": "251851875",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "278",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.01643362335485995,
+                  "total_logical_cost": {
+                    "integer_decimal": "84866450",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "1507",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.003051446615754968,
+                  "total_logical_cost": {
+                    "integer_decimal": "460049425",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 305275,
+              "unique_ground_applicable": true
+            },
+            "learned_projector": {
+              "adopted_budget": 800,
+              "cell_id": "learned_projector_N30_seed840030101_p96_b800",
+              "depth": 96,
+              "feasible_mass": 0.9794715444056996,
+              "ground_degeneracy": 1,
+              "paper_label": "LP-QAOA",
+              "target_hashes": {
+                "best2": "2EC5E38566DE3404A2B4E511A2B994C8946DCCE1998CFC0BA883433371FAE7EE",
+                "best8": "EA26530F5477B7A536BA024ECF2608AE2C85F25BD945FBA78B6FBE3FCCFA37A3",
+                "ground": "6C3C4FCA1521BE6B906378F72EAFE0C40425C785BCDBFCA88C0264C55BA0C0E8"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "3",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.8497698489561574,
+                  "total_logical_cost": {
+                    "integer_decimal": "4515645",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "2",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.9620190906372061,
+                  "total_logical_cost": {
+                    "integer_decimal": "3010430",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "6",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.5919499144843234,
+                  "total_logical_cost": {
+                    "integer_decimal": "9031290",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 1505215,
+              "unique_ground_applicable": true
+            },
+            "native_grover_d": {
+              "adopted_budget": 400,
+              "cell_id": "native_grover_d_N30_seed840030101_p24_b400",
+              "depth": 24,
+              "feasible_mass": 0.986105091642603,
+              "ground_degeneracy": 1,
+              "paper_label": "NativeGrover-d",
+              "target_hashes": {
+                "best2": "2EC5E38566DE3404A2B4E511A2B994C8946DCCE1998CFC0BA883433371FAE7EE",
+                "best8": "EA26530F5477B7A536BA024ECF2608AE2C85F25BD945FBA78B6FBE3FCCFA37A3",
+                "ground": "6C3C4FCA1521BE6B906378F72EAFE0C40425C785BCDBFCA88C0264C55BA0C0E8"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "13276",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.0003468238350682052,
+                  "total_logical_cost": {
+                    "integer_decimal": "4318881940",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "3368",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.001366476254059233,
+                  "total_logical_cost": {
+                    "integer_decimal": "1095660920",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "26444",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.000174133352368369,
+                  "total_logical_cost": {
+                    "integer_decimal": "8602629860",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 325315,
+              "unique_ground_applicable": true
+            },
+            "ordinary_native_direct": {
+              "adopted_budget": 400,
+              "cell_id": "ordinary_native_direct_N30_seed840030101_p4_b400",
+              "depth": 4,
+              "feasible_mass": 0.8973544549570606,
+              "ground_degeneracy": 1,
+              "paper_label": "StdXY",
+              "target_hashes": {
+                "best2": "2EC5E38566DE3404A2B4E511A2B994C8946DCCE1998CFC0BA883433371FAE7EE",
+                "best8": "EA26530F5477B7A536BA024ECF2608AE2C85F25BD945FBA78B6FBE3FCCFA37A3",
+                "ground": "6C3C4FCA1521BE6B906378F72EAFE0C40425C785BCDBFCA88C0264C55BA0C0E8"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "8900",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.0005173258368285655,
+                  "total_logical_cost": {
+                    "integer_decimal": "542677500",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "2408",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.0019109873434901726,
+                  "total_logical_cost": {
+                    "integer_decimal": "146827800",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "16158",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.00028497834528741316,
+                  "total_logical_cost": {
+                    "integer_decimal": "985234050",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 60975,
+              "unique_ground_applicable": true
+            },
+            "same_stage1_state_direct": {
+              "adopted_budget": 400,
+              "cell_id": "same_stage1_state_direct_N30_seed840030101_p1_b400",
+              "depth": 1,
+              "feasible_mass": 0.9738288813476926,
+              "ground_degeneracy": 1,
+              "paper_label": "Direct-XY",
+              "target_hashes": {
+                "best2": "2EC5E38566DE3404A2B4E511A2B994C8946DCCE1998CFC0BA883433371FAE7EE",
+                "best8": "EA26530F5477B7A536BA024ECF2608AE2C85F25BD945FBA78B6FBE3FCCFA37A3",
+                "ground": "6C3C4FCA1521BE6B906378F72EAFE0C40425C785BCDBFCA88C0264C55BA0C0E8"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "16307",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.00028237217456328204,
+                  "total_logical_cost": {
+                    "integer_decimal": "417296130",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "4016",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.001146246161395029,
+                  "total_logical_cost": {
+                    "integer_decimal": "102769440",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "29625",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.0001554391836738951,
+                  "total_logical_cost": {
+                    "integer_decimal": "758103750",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 25590,
+              "unique_ground_applicable": true
+            },
+            "stage1_only": {
+              "adopted_budget": null,
+              "cell_id": "stage1_only_N30_seed840030101",
+              "depth": null,
+              "feasible_mass": 0.9724174059679849,
+              "ground_degeneracy": 1,
+              "paper_label": "Stage-1-only",
+              "target_hashes": {
+                "best2": "2EC5E38566DE3404A2B4E511A2B994C8946DCCE1998CFC0BA883433371FAE7EE",
+                "best8": "EA26530F5477B7A536BA024ECF2608AE2C85F25BD945FBA78B6FBE3FCCFA37A3",
+                "ground": "6C3C4FCA1521BE6B906378F72EAFE0C40425C785BCDBFCA88C0264C55BA0C0E8"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "16398",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.0002808063249978401,
+                  "total_logical_cost": {
+                    "integer_decimal": "219323250",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "4042",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.0011388632323024906,
+                  "total_logical_cost": {
+                    "integer_decimal": "54061750",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "29790",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.00015457801917406815,
+                  "total_logical_cost": {
+                    "integer_decimal": "398441250",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 13375,
+              "unique_ground_applicable": true
+            }
+          },
+          "problem_seed": 840030101,
+          "target_hashes": {
+            "best2": "2EC5E38566DE3404A2B4E511A2B994C8946DCCE1998CFC0BA883433371FAE7EE",
+            "best8": "EA26530F5477B7A536BA024ECF2608AE2C85F25BD945FBA78B6FBE3FCCFA37A3",
+            "ground": "6C3C4FCA1521BE6B906378F72EAFE0C40425C785BCDBFCA88C0264C55BA0C0E8"
+          },
+          "unique_ground_applicable": true
+        },
+        {
+          "comparisons": {
+            "best_stage1_use_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "219323250",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "stage1_only",
+                "same_stage1_state_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 48.569639553153536,
+                "denominator_decimal": "301043",
+                "kind": "finite",
+                "numerator_decimal": "14621550"
+              },
+              "lp_cost": {
+                "integer_decimal": "4515645",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win",
+              "selected_envelope_methods": [
+                "stage1_only"
+              ]
+            },
+            "d_xy_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "155995525",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "decoupled_native_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 34.54556879471261,
+                "denominator_decimal": "903129",
+                "kind": "finite",
+                "numerator_decimal": "31199105"
+              },
+              "lp_cost": {
+                "integer_decimal": "4515645",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            },
+            "direct_xy_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "414788310",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "same_stage1_state_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 91.85582790498367,
+                "denominator_decimal": "301043",
+                "kind": "finite",
+                "numerator_decimal": "27652554"
+              },
+              "lp_cost": {
+                "integer_decimal": "4515645",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            },
+            "native_grover_d_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "4152320660",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "native_grover_d"
+              ],
+              "comparator_over_lp": {
+                "decimal": 919.5409869464938,
+                "denominator_decimal": "903129",
+                "kind": "finite",
+                "numerator_decimal": "830464132"
+              },
+              "lp_cost": {
+                "integer_decimal": "4515645",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            },
+            "native_xy_envelope_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "155995525",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "ordinary_native_direct",
+                "decoupled_native_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 34.54556879471261,
+                "denominator_decimal": "903129",
+                "kind": "finite",
+                "numerator_decimal": "31199105"
+              },
+              "lp_cost": {
+                "integer_decimal": "4515645",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win",
+              "selected_envelope_methods": [
+                "decoupled_native_direct"
+              ]
+            },
+            "stage1_only_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "219323250",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "stage1_only"
+              ],
+              "comparator_over_lp": {
+                "decimal": 48.569639553153536,
+                "denominator_decimal": "301043",
+                "kind": "finite",
+                "numerator_decimal": "14621550"
+              },
+              "lp_cost": {
+                "integer_decimal": "4515645",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            },
+            "stdxy_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "604079325",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "ordinary_native_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 133.77475975192914,
+                "denominator_decimal": "301043",
+                "kind": "finite",
+                "numerator_decimal": "40271955"
+              },
+              "lp_cost": {
+                "integer_decimal": "4515645",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            }
+          },
+          "ground_degeneracy": 1,
+          "methods": {
+            "decoupled_native_direct": {
+              "adopted_budget": 400,
+              "cell_id": "decoupled_native_direct_N30_seed840030102_p24_b400",
+              "depth": 24,
+              "feasible_mass": 0.9665697086025233,
+              "ground_degeneracy": 1,
+              "paper_label": "d-XY",
+              "target_hashes": {
+                "best2": "7AA2A2743E47B8808A52F786A88C763FCDFB46263ED339235961B8ADE81FA674",
+                "best8": "BED964012C7326FE52CF0627987A973B400A7B750DAAF5D2FC13A733568F40D6",
+                "ground": "31D75DA891A5F0566F68F5CADCF8777019ADA8553BFDF231B4BD80D054D01B9E"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "511",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.008985237405255767,
+                  "total_logical_cost": {
+                    "integer_decimal": "155995525",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "193",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.023613889094521626,
+                  "total_logical_cost": {
+                    "integer_decimal": "58918075",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "807",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.005692107712887006,
+                  "total_logical_cost": {
+                    "integer_decimal": "246356925",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 305275,
+              "unique_ground_applicable": true
+            },
+            "learned_projector": {
+              "adopted_budget": 800,
+              "cell_id": "learned_projector_N30_seed840030102_p96_b800",
+              "depth": 96,
+              "feasible_mass": 0.9919372473126258,
+              "ground_degeneracy": 1,
+              "paper_label": "LP-QAOA",
+              "target_hashes": {
+                "best2": "7AA2A2743E47B8808A52F786A88C763FCDFB46263ED339235961B8ADE81FA674",
+                "best8": "BED964012C7326FE52CF0627987A973B400A7B750DAAF5D2FC13A733568F40D6",
+                "ground": "31D75DA891A5F0566F68F5CADCF8777019ADA8553BFDF231B4BD80D054D01B9E"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "3",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.8286839530889846,
+                  "total_logical_cost": {
+                    "integer_decimal": "4515645",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "2",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.9426021809623129,
+                  "total_logical_cost": {
+                    "integer_decimal": "3010430",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "5",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.6771962582165311,
+                  "total_logical_cost": {
+                    "integer_decimal": "7526075",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 1505215,
+              "unique_ground_applicable": true
+            },
+            "native_grover_d": {
+              "adopted_budget": 400,
+              "cell_id": "native_grover_d_N30_seed840030102_p24_b400",
+              "depth": 24,
+              "feasible_mass": 0.6753660555790693,
+              "ground_degeneracy": 1,
+              "paper_label": "NativeGrover-d",
+              "target_hashes": {
+                "best2": "7AA2A2743E47B8808A52F786A88C763FCDFB46263ED339235961B8ADE81FA674",
+                "best8": "BED964012C7326FE52CF0627987A973B400A7B750DAAF5D2FC13A733568F40D6",
+                "ground": "31D75DA891A5F0566F68F5CADCF8777019ADA8553BFDF231B4BD80D054D01B9E"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "12764",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.0003607467470515429,
+                  "total_logical_cost": {
+                    "integer_decimal": "4152320660",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "3343",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.0013768373268463693,
+                  "total_logical_cost": {
+                    "integer_decimal": "1087528045",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "24984",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.00018431286080972058,
+                  "total_logical_cost": {
+                    "integer_decimal": "8127669960",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 325315,
+              "unique_ground_applicable": true
+            },
+            "ordinary_native_direct": {
+              "adopted_budget": 400,
+              "cell_id": "ordinary_native_direct_N30_seed840030102_p4_b400",
+              "depth": 4,
+              "feasible_mass": 0.8232520263047074,
+              "ground_degeneracy": 1,
+              "paper_label": "StdXY",
+              "target_hashes": {
+                "best2": "7AA2A2743E47B8808A52F786A88C763FCDFB46263ED339235961B8ADE81FA674",
+                "best8": "BED964012C7326FE52CF0627987A973B400A7B750DAAF5D2FC13A733568F40D6",
+                "ground": "31D75DA891A5F0566F68F5CADCF8777019ADA8553BFDF231B4BD80D054D01B9E"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "9907",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.0004647630532139041,
+                  "total_logical_cost": {
+                    "integer_decimal": "604079325",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "2768",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.0016626191609052715,
+                  "total_logical_cost": {
+                    "integer_decimal": "168778800",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "18144",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.00025378228993184565,
+                  "total_logical_cost": {
+                    "integer_decimal": "1106330400",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 60975,
+              "unique_ground_applicable": true
+            },
+            "same_stage1_state_direct": {
+              "adopted_budget": 400,
+              "cell_id": "same_stage1_state_direct_N30_seed840030102_p1_b400",
+              "depth": 1,
+              "feasible_mass": 0.9743450163586643,
+              "ground_degeneracy": 1,
+              "paper_label": "Direct-XY",
+              "target_hashes": {
+                "best2": "7AA2A2743E47B8808A52F786A88C763FCDFB46263ED339235961B8ADE81FA674",
+                "best8": "BED964012C7326FE52CF0627987A973B400A7B750DAAF5D2FC13A733568F40D6",
+                "ground": "31D75DA891A5F0566F68F5CADCF8777019ADA8553BFDF231B4BD80D054D01B9E"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "16209",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.0002840869321855673,
+                  "total_logical_cost": {
+                    "integer_decimal": "414788310",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "4270",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.0010780622091519562,
+                  "total_logical_cost": {
+                    "integer_decimal": "109269300",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "29509",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.00015605265803512861,
+                  "total_logical_cost": {
+                    "integer_decimal": "755135310",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 25590,
+              "unique_ground_applicable": true
+            },
+            "stage1_only": {
+              "adopted_budget": null,
+              "cell_id": "stage1_only_N30_seed840030102",
+              "depth": null,
+              "feasible_mass": 0.9724174059679849,
+              "ground_degeneracy": 1,
+              "paper_label": "Stage-1-only",
+              "target_hashes": {
+                "best2": "7AA2A2743E47B8808A52F786A88C763FCDFB46263ED339235961B8ADE81FA674",
+                "best8": "BED964012C7326FE52CF0627987A973B400A7B750DAAF5D2FC13A733568F40D6",
+                "ground": "31D75DA891A5F0566F68F5CADCF8777019ADA8553BFDF231B4BD80D054D01B9E"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "16398",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.0002808063249978378,
+                  "total_logical_cost": {
+                    "integer_decimal": "219323250",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "4316",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.001066525873290765,
+                  "total_logical_cost": {
+                    "integer_decimal": "57726500",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "29790",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.00015457801917406733,
+                  "total_logical_cost": {
+                    "integer_decimal": "398441250",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 13375,
+              "unique_ground_applicable": true
+            }
+          },
+          "problem_seed": 840030102,
+          "target_hashes": {
+            "best2": "7AA2A2743E47B8808A52F786A88C763FCDFB46263ED339235961B8ADE81FA674",
+            "best8": "BED964012C7326FE52CF0627987A973B400A7B750DAAF5D2FC13A733568F40D6",
+            "ground": "31D75DA891A5F0566F68F5CADCF8777019ADA8553BFDF231B4BD80D054D01B9E"
+          },
+          "unique_ground_applicable": true
+        },
+        {
+          "comparisons": {
+            "best_stage1_use_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "208101625",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "stage1_only",
+                "same_stage1_state_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 46.08458481567971,
+                "denominator_decimal": "903129",
+                "kind": "finite",
+                "numerator_decimal": "41620325"
+              },
+              "lp_cost": {
+                "integer_decimal": "4515645",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win",
+              "selected_envelope_methods": [
+                "stage1_only"
+              ]
+            },
+            "d_xy_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "248188575",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "decoupled_native_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 54.96193234853493,
+                "denominator_decimal": "301043",
+                "kind": "finite",
+                "numerator_decimal": "16545905"
+              },
+              "lp_cost": {
+                "integer_decimal": "4515645",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            },
+            "direct_xy_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "389889240",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "same_stage1_state_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 86.34187142700544,
+                "denominator_decimal": "301043",
+                "kind": "finite",
+                "numerator_decimal": "25992616"
+              },
+              "lp_cost": {
+                "integer_decimal": "4515645",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            },
+            "native_grover_d_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "3154254240",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "native_grover_d"
+              ],
+              "comparator_over_lp": {
+                "decimal": 698.5168763266378,
+                "denominator_decimal": "301043",
+                "kind": "finite",
+                "numerator_decimal": "210283616"
+              },
+              "lp_cost": {
+                "integer_decimal": "4515645",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            },
+            "native_xy_envelope_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "248188575",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "ordinary_native_direct",
+                "decoupled_native_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 54.96193234853493,
+                "denominator_decimal": "301043",
+                "kind": "finite",
+                "numerator_decimal": "16545905"
+              },
+              "lp_cost": {
+                "integer_decimal": "4515645",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win",
+              "selected_envelope_methods": [
+                "decoupled_native_direct"
+              ]
+            },
+            "stage1_only_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "208101625",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "stage1_only"
+              ],
+              "comparator_over_lp": {
+                "decimal": 46.08458481567971,
+                "denominator_decimal": "903129",
+                "kind": "finite",
+                "numerator_decimal": "41620325"
+              },
+              "lp_cost": {
+                "integer_decimal": "4515645",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            },
+            "stdxy_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "552860325",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "ordinary_native_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 122.43219407194321,
+                "denominator_decimal": "301043",
+                "kind": "finite",
+                "numerator_decimal": "36857355"
+              },
+              "lp_cost": {
+                "integer_decimal": "4515645",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            }
+          },
+          "ground_degeneracy": 1,
+          "methods": {
+            "decoupled_native_direct": {
+              "adopted_budget": 400,
+              "cell_id": "decoupled_native_direct_N30_seed840030103_p24_b400",
+              "depth": 24,
+              "feasible_mass": 0.9723502198260268,
+              "ground_degeneracy": 1,
+              "paper_label": "d-XY",
+              "target_hashes": {
+                "best2": "A7DBAF58A25A433C12461BB4BAB6582ECAC8C1D18A89FF466DABD97923654875",
+                "best8": "5B524F1A9F77C1271E1ACBCA404E5CC4FF29F5C833786BD657D79B57A7281DBF",
+                "ground": "1240DBDBF59252BC13C93E108240D3E37D4502ECFABE16AFBDEAA009DB2A939C"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "813",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.005648510043230124,
+                  "total_logical_cost": {
+                    "integer_decimal": "248188575",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "263",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.01739657881263803,
+                  "total_logical_cost": {
+                    "integer_decimal": "80287325",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "1496",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.003075299900153359,
+                  "total_logical_cost": {
+                    "integer_decimal": "456691400",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 305275,
+              "unique_ground_applicable": true
+            },
+            "learned_projector": {
+              "adopted_budget": 800,
+              "cell_id": "learned_projector_N30_seed840030103_p96_b800",
+              "depth": 96,
+              "feasible_mass": 0.9688457880268203,
+              "ground_degeneracy": 1,
+              "paper_label": "LP-QAOA",
+              "target_hashes": {
+                "best2": "A7DBAF58A25A433C12461BB4BAB6582ECAC8C1D18A89FF466DABD97923654875",
+                "best8": "5B524F1A9F77C1271E1ACBCA404E5CC4FF29F5C833786BD657D79B57A7281DBF",
+                "ground": "1240DBDBF59252BC13C93E108240D3E37D4502ECFABE16AFBDEAA009DB2A939C"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "3",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.8066573933494222,
+                  "total_logical_cost": {
+                    "integer_decimal": "4515645",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "2",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.9303271184327875,
+                  "total_logical_cost": {
+                    "integer_decimal": "3010430",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "6",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.598428829938324,
+                  "total_logical_cost": {
+                    "integer_decimal": "9031290",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 1505215,
+              "unique_ground_applicable": true
+            },
+            "native_grover_d": {
+              "adopted_budget": 400,
+              "cell_id": "native_grover_d_N30_seed840030103_p24_b400",
+              "depth": 24,
+              "feasible_mass": 0.7282315053932902,
+              "ground_degeneracy": 1,
+              "paper_label": "NativeGrover-d",
+              "target_hashes": {
+                "best2": "A7DBAF58A25A433C12461BB4BAB6582ECAC8C1D18A89FF466DABD97923654875",
+                "best8": "5B524F1A9F77C1271E1ACBCA404E5CC4FF29F5C833786BD657D79B57A7281DBF",
+                "ground": "1240DBDBF59252BC13C93E108240D3E37D4502ECFABE16AFBDEAA009DB2A939C"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "9696",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.0004748431260630584,
+                  "total_logical_cost": {
+                    "integer_decimal": "3154254240",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "2583",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.001781592867592596,
+                  "total_logical_cost": {
+                    "integer_decimal": "840288645",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "18991",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.00024247368521228063,
+                  "total_logical_cost": {
+                    "integer_decimal": "6178057165",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 325315,
+              "unique_ground_applicable": true
+            },
+            "ordinary_native_direct": {
+              "adopted_budget": 400,
+              "cell_id": "ordinary_native_direct_N30_seed840030103_p4_b400",
+              "depth": 4,
+              "feasible_mass": 0.8317752316644818,
+              "ground_degeneracy": 1,
+              "paper_label": "StdXY",
+              "target_hashes": {
+                "best2": "A7DBAF58A25A433C12461BB4BAB6582ECAC8C1D18A89FF466DABD97923654875",
+                "best8": "5B524F1A9F77C1271E1ACBCA404E5CC4FF29F5C833786BD657D79B57A7281DBF",
+                "ground": "1240DBDBF59252BC13C93E108240D3E37D4502ECFABE16AFBDEAA009DB2A939C"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "9067",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.0005078310406851742,
+                  "total_logical_cost": {
+                    "integer_decimal": "552860325",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "2384",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.00193005666657872,
+                  "total_logical_cost": {
+                    "integer_decimal": "145364400",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "16845",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.0002733540888105693,
+                  "total_logical_cost": {
+                    "integer_decimal": "1027123875",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 60975,
+              "unique_ground_applicable": true
+            },
+            "same_stage1_state_direct": {
+              "adopted_budget": 400,
+              "cell_id": "same_stage1_state_direct_N30_seed840030103_p1_b400",
+              "depth": 1,
+              "feasible_mass": 0.9744093135683135,
+              "ground_degeneracy": 1,
+              "paper_label": "Direct-XY",
+              "target_hashes": {
+                "best2": "A7DBAF58A25A433C12461BB4BAB6582ECAC8C1D18A89FF466DABD97923654875",
+                "best8": "5B524F1A9F77C1271E1ACBCA404E5CC4FF29F5C833786BD657D79B57A7281DBF",
+                "ground": "1240DBDBF59252BC13C93E108240D3E37D4502ECFABE16AFBDEAA009DB2A939C"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "15236",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.00030221024666872464,
+                  "total_logical_cost": {
+                    "integer_decimal": "389889240",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "3566",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.0012905813984606536,
+                  "total_logical_cost": {
+                    "integer_decimal": "91253940",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "26633",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.00017289769003073262,
+                  "total_logical_cost": {
+                    "integer_decimal": "681538470",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 25590,
+              "unique_ground_applicable": true
+            },
+            "stage1_only": {
+              "adopted_budget": null,
+              "cell_id": "stage1_only_N30_seed840030103",
+              "depth": null,
+              "feasible_mass": 0.9724174059679849,
+              "ground_degeneracy": 1,
+              "paper_label": "Stage-1-only",
+              "target_hashes": {
+                "best2": "A7DBAF58A25A433C12461BB4BAB6582ECAC8C1D18A89FF466DABD97923654875",
+                "best8": "5B524F1A9F77C1271E1ACBCA404E5CC4FF29F5C833786BD657D79B57A7281DBF",
+                "ground": "1240DBDBF59252BC13C93E108240D3E37D4502ECFABE16AFBDEAA009DB2A939C"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "15559",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.0002959527462578016,
+                  "total_logical_cost": {
+                    "integer_decimal": "208101625",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "3632",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.001267408506963641,
+                  "total_logical_cost": {
+                    "integer_decimal": "48578000",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "27131",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.0001697244404340299,
+                  "total_logical_cost": {
+                    "integer_decimal": "362877125",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 13375,
+              "unique_ground_applicable": true
+            }
+          },
+          "problem_seed": 840030103,
+          "target_hashes": {
+            "best2": "A7DBAF58A25A433C12461BB4BAB6582ECAC8C1D18A89FF466DABD97923654875",
+            "best8": "5B524F1A9F77C1271E1ACBCA404E5CC4FF29F5C833786BD657D79B57A7281DBF",
+            "ground": "1240DBDBF59252BC13C93E108240D3E37D4502ECFABE16AFBDEAA009DB2A939C"
+          },
+          "unique_ground_applicable": true
+        },
+        {
+          "comparisons": {
+            "best_stage1_use_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "219323250",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "stage1_only",
+                "same_stage1_state_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 29.141783731892122,
+                "denominator_decimal": "301043",
+                "kind": "finite",
+                "numerator_decimal": "8772930"
+              },
+              "lp_cost": {
+                "integer_decimal": "7526075",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win",
+              "selected_envelope_methods": [
+                "stage1_only"
+              ]
+            },
+            "d_xy_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "384341225",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "decoupled_native_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 51.067950425686696,
+                "denominator_decimal": "301043",
+                "kind": "finite",
+                "numerator_decimal": "15373649"
+              },
+              "lp_cost": {
+                "integer_decimal": "7526075",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            },
+            "direct_xy_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "412664340",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "same_stage1_state_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 54.83128190989327,
+                "denominator_decimal": "1505215",
+                "kind": "finite",
+                "numerator_decimal": "82532868"
+              },
+              "lp_cost": {
+                "integer_decimal": "7526075",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            },
+            "native_grover_d_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "3958107605",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "native_grover_d"
+              ],
+              "comparator_over_lp": {
+                "decimal": 525.9192347937005,
+                "denominator_decimal": "1505215",
+                "kind": "finite",
+                "numerator_decimal": "791621521"
+              },
+              "lp_cost": {
+                "integer_decimal": "7526075",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            },
+            "native_xy_envelope_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "384341225",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "ordinary_native_direct",
+                "decoupled_native_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 51.067950425686696,
+                "denominator_decimal": "301043",
+                "kind": "finite",
+                "numerator_decimal": "15373649"
+              },
+              "lp_cost": {
+                "integer_decimal": "7526075",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win",
+              "selected_envelope_methods": [
+                "decoupled_native_direct"
+              ]
+            },
+            "stage1_only_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "219323250",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "stage1_only"
+              ],
+              "comparator_over_lp": {
+                "decimal": 29.141783731892122,
+                "denominator_decimal": "301043",
+                "kind": "finite",
+                "numerator_decimal": "8772930"
+              },
+              "lp_cost": {
+                "integer_decimal": "7526075",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            },
+            "stdxy_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "567128475",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "ordinary_native_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 75.35514527824928,
+                "denominator_decimal": "301043",
+                "kind": "finite",
+                "numerator_decimal": "22685139"
+              },
+              "lp_cost": {
+                "integer_decimal": "7526075",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            }
+          },
+          "ground_degeneracy": 1,
+          "methods": {
+            "decoupled_native_direct": {
+              "adopted_budget": 400,
+              "cell_id": "decoupled_native_direct_N30_seed840030104_p24_b400",
+              "depth": 24,
+              "feasible_mass": 0.9663146935392658,
+              "ground_degeneracy": 1,
+              "paper_label": "d-XY",
+              "target_hashes": {
+                "best2": "46EAC466A95D1D76CE488CA0CCC97B0280D52D11BFEA7DE8F564D6B7EFB70B75",
+                "best8": "1091525ED905D398400C1AAD43A5020D849A06B68E7087DA66129A9E7D4B88FD",
+                "ground": "72EF2A457B3021EB7F5F083E664F694FFB23C4BD842EFD99EDF263411D04DEE6"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "1259",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.003651648143556012,
+                  "total_logical_cost": {
+                    "integer_decimal": "384341225",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "333",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.013775139249782301,
+                  "total_logical_cost": {
+                    "integer_decimal": "101656575",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "2253",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.0020423319473384864,
+                  "total_logical_cost": {
+                    "integer_decimal": "687784575",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 305275,
+              "unique_ground_applicable": true
+            },
+            "learned_projector": {
+              "adopted_budget": 800,
+              "cell_id": "learned_projector_N30_seed840030104_p96_b800",
+              "depth": 96,
+              "feasible_mass": 0.977290762919564,
+              "ground_degeneracy": 1,
+              "paper_label": "LP-QAOA",
+              "target_hashes": {
+                "best2": "46EAC466A95D1D76CE488CA0CCC97B0280D52D11BFEA7DE8F564D6B7EFB70B75",
+                "best8": "1091525ED905D398400C1AAD43A5020D849A06B68E7087DA66129A9E7D4B88FD",
+                "ground": "72EF2A457B3021EB7F5F083E664F694FFB23C4BD842EFD99EDF263411D04DEE6"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "5",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.6053809226303553,
+                  "total_logical_cost": {
+                    "integer_decimal": "7526075",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "2",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.9698504893162061,
+                  "total_logical_cost": {
+                    "integer_decimal": "3010430",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "13",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.3023726138887595,
+                  "total_logical_cost": {
+                    "integer_decimal": "19567795",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 1505215,
+              "unique_ground_applicable": true
+            },
+            "native_grover_d": {
+              "adopted_budget": 400,
+              "cell_id": "native_grover_d_N30_seed840030104_p24_b400",
+              "depth": 24,
+              "feasible_mass": 0.9879242370746623,
+              "ground_degeneracy": 1,
+              "paper_label": "NativeGrover-d",
+              "target_hashes": {
+                "best2": "46EAC466A95D1D76CE488CA0CCC97B0280D52D11BFEA7DE8F564D6B7EFB70B75",
+                "best8": "1091525ED905D398400C1AAD43A5020D849A06B68E7087DA66129A9E7D4B88FD",
+                "ground": "72EF2A457B3021EB7F5F083E664F694FFB23C4BD842EFD99EDF263411D04DEE6"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "12167",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.00037844861548954353,
+                  "total_logical_cost": {
+                    "integer_decimal": "3958107605",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "3104",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.0014825249305947638,
+                  "total_logical_cost": {
+                    "integer_decimal": "1009777760",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "24266",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.00018976671129451917,
+                  "total_logical_cost": {
+                    "integer_decimal": "7894093790",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 325315,
+              "unique_ground_applicable": true
+            },
+            "ordinary_native_direct": {
+              "adopted_budget": 400,
+              "cell_id": "ordinary_native_direct_N30_seed840030104_p4_b400",
+              "depth": 4,
+              "feasible_mass": 0.8581477939083926,
+              "ground_degeneracy": 1,
+              "paper_label": "StdXY",
+              "target_hashes": {
+                "best2": "46EAC466A95D1D76CE488CA0CCC97B0280D52D11BFEA7DE8F564D6B7EFB70B75",
+                "best8": "1091525ED905D398400C1AAD43A5020D849A06B68E7087DA66129A9E7D4B88FD",
+                "ground": "72EF2A457B3021EB7F5F083E664F694FFB23C4BD842EFD99EDF263411D04DEE6"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "9301",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.0004950182774644584,
+                  "total_logical_cost": {
+                    "integer_decimal": "567128475",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "2320",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.001983775980458265,
+                  "total_logical_cost": {
+                    "integer_decimal": "141462000",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "20118",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.00022889189965799822,
+                  "total_logical_cost": {
+                    "integer_decimal": "1226695050",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 60975,
+              "unique_ground_applicable": true
+            },
+            "same_stage1_state_direct": {
+              "adopted_budget": 400,
+              "cell_id": "same_stage1_state_direct_N30_seed840030104_p1_b400",
+              "depth": 1,
+              "feasible_mass": 0.9744006499947968,
+              "ground_degeneracy": 1,
+              "paper_label": "Direct-XY",
+              "target_hashes": {
+                "best2": "46EAC466A95D1D76CE488CA0CCC97B0280D52D11BFEA7DE8F564D6B7EFB70B75",
+                "best8": "1091525ED905D398400C1AAD43A5020D849A06B68E7087DA66129A9E7D4B88FD",
+                "ground": "72EF2A457B3021EB7F5F083E664F694FFB23C4BD842EFD99EDF263411D04DEE6"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "16126",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.00028555011971472053,
+                  "total_logical_cost": {
+                    "integer_decimal": "412664340",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "3040",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.0015141687518068184,
+                  "total_logical_cost": {
+                    "integer_decimal": "77793600",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "35773",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.00012872742217104265,
+                  "total_logical_cost": {
+                    "integer_decimal": "915431070",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 25590,
+              "unique_ground_applicable": true
+            },
+            "stage1_only": {
+              "adopted_budget": null,
+              "cell_id": "stage1_only_N30_seed840030104",
+              "depth": null,
+              "feasible_mass": 0.9724174059679849,
+              "ground_degeneracy": 1,
+              "paper_label": "Stage-1-only",
+              "target_hashes": {
+                "best2": "46EAC466A95D1D76CE488CA0CCC97B0280D52D11BFEA7DE8F564D6B7EFB70B75",
+                "best8": "1091525ED905D398400C1AAD43A5020D849A06B68E7087DA66129A9E7D4B88FD",
+                "ground": "72EF2A457B3021EB7F5F083E664F694FFB23C4BD842EFD99EDF263411D04DEE6"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "16398",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.00028080632499783657,
+                  "total_logical_cost": {
+                    "integer_decimal": "219323250",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "3101",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.001484420583998805,
+                  "total_logical_cost": {
+                    "integer_decimal": "41475875",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "36481",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.00012622830582377032,
+                  "total_logical_cost": {
+                    "integer_decimal": "487933375",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 13375,
+              "unique_ground_applicable": true
+            }
+          },
+          "problem_seed": 840030104,
+          "target_hashes": {
+            "best2": "46EAC466A95D1D76CE488CA0CCC97B0280D52D11BFEA7DE8F564D6B7EFB70B75",
+            "best8": "1091525ED905D398400C1AAD43A5020D849A06B68E7087DA66129A9E7D4B88FD",
+            "ground": "72EF2A457B3021EB7F5F083E664F694FFB23C4BD842EFD99EDF263411D04DEE6"
+          },
+          "unique_ground_applicable": true
+        },
+        {
+          "comparisons": {
+            "best_stage1_use_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "181431875",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "stage1_only",
+                "same_stage1_state_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 20.089253583928762,
+                "denominator_decimal": "1806258",
+                "kind": "finite",
+                "numerator_decimal": "36286375"
+              },
+              "lp_cost": {
+                "integer_decimal": "9031290",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win",
+              "selected_envelope_methods": [
+                "stage1_only"
+              ]
+            },
+            "d_xy_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "257346825",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "decoupled_native_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 28.495023966675856,
+                "denominator_decimal": "602086",
+                "kind": "finite",
+                "numerator_decimal": "17156455"
+              },
+              "lp_cost": {
+                "integer_decimal": "9031290",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            },
+            "direct_xy_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "345925620",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "same_stage1_state_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 38.30301319080663,
+                "denominator_decimal": "301043",
+                "kind": "finite",
+                "numerator_decimal": "11530854"
+              },
+              "lp_cost": {
+                "integer_decimal": "9031290",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            },
+            "native_grover_d_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "3651010245",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "native_grover_d"
+              ],
+              "comparator_over_lp": {
+                "decimal": 404.2623196686188,
+                "denominator_decimal": "14002",
+                "kind": "finite",
+                "numerator_decimal": "5660481"
+              },
+              "lp_cost": {
+                "integer_decimal": "9031290",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            },
+            "native_xy_envelope_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "257346825",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "ordinary_native_direct",
+                "decoupled_native_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 28.495023966675856,
+                "denominator_decimal": "602086",
+                "kind": "finite",
+                "numerator_decimal": "17156455"
+              },
+              "lp_cost": {
+                "integer_decimal": "9031290",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win",
+              "selected_envelope_methods": [
+                "decoupled_native_direct"
+              ]
+            },
+            "stage1_only_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "181431875",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "stage1_only"
+              ],
+              "comparator_over_lp": {
+                "decimal": 20.089253583928762,
+                "denominator_decimal": "1806258",
+                "kind": "finite",
+                "numerator_decimal": "36286375"
+              },
+              "lp_cost": {
+                "integer_decimal": "9031290",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            },
+            "stdxy_over_lp": {
+              "comparator_cost": {
+                "integer_decimal": "524689875",
+                "kind": "finite"
+              },
+              "comparator_methods": [
+                "ordinary_native_direct"
+              ],
+              "comparator_over_lp": {
+                "decimal": 58.096891473975475,
+                "denominator_decimal": "602086",
+                "kind": "finite",
+                "numerator_decimal": "34979325"
+              },
+              "lp_cost": {
+                "integer_decimal": "9031290",
+                "kind": "finite"
+              },
+              "relation": "lp_strict_win"
+            }
+          },
+          "ground_degeneracy": 1,
+          "methods": {
+            "decoupled_native_direct": {
+              "adopted_budget": 400,
+              "cell_id": "decoupled_native_direct_N30_seed840030105_p24_b400",
+              "depth": 24,
+              "feasible_mass": 0.9747106832265255,
+              "ground_degeneracy": 1,
+              "paper_label": "d-XY",
+              "target_hashes": {
+                "best2": "5295722142F4BB330259C6352C294D2F2A464419A5C0927C775AB54EB8257314",
+                "best8": "C9FC465B650A83C95A494FE6E73F6AD168148CDA2815CD19D31221347045B73B",
+                "ground": "1599D843441532211348CA41798F95CD587347BF8BB4B442A77B32E5651BAF92"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "843",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.00544864644154274,
+                  "total_logical_cost": {
+                    "integer_decimal": "257346825",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "251",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.018205681442435062,
+                  "total_logical_cost": {
+                    "integer_decimal": "76624025",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "1347",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.003414228796746609,
+                  "total_logical_cost": {
+                    "integer_decimal": "411205425",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 305275,
+              "unique_ground_applicable": true
+            },
+            "learned_projector": {
+              "adopted_budget": 800,
+              "cell_id": "learned_projector_N30_seed840030105_p96_b800",
+              "depth": 96,
+              "feasible_mass": 0.9963804924509794,
+              "ground_degeneracy": 1,
+              "paper_label": "LP-QAOA",
+              "target_hashes": {
+                "best2": "5295722142F4BB330259C6352C294D2F2A464419A5C0927C775AB54EB8257314",
+                "best8": "C9FC465B650A83C95A494FE6E73F6AD168148CDA2815CD19D31221347045B73B",
+                "ground": "1599D843441532211348CA41798F95CD587347BF8BB4B442A77B32E5651BAF92"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "6",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.5617075030817389,
+                  "total_logical_cost": {
+                    "integer_decimal": "9031290",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "1",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.9914094297230324,
+                  "total_logical_cost": {
+                    "integer_decimal": "1505215",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "14",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.28823908163372813,
+                  "total_logical_cost": {
+                    "integer_decimal": "21073010",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 1505215,
+              "unique_ground_applicable": true
+            },
+            "native_grover_d": {
+              "adopted_budget": 400,
+              "cell_id": "native_grover_d_N30_seed840030105_p24_b400",
+              "depth": 24,
+              "feasible_mass": 0.6777585915632508,
+              "ground_degeneracy": 1,
+              "paper_label": "NativeGrover-d",
+              "target_hashes": {
+                "best2": "5295722142F4BB330259C6352C294D2F2A464419A5C0927C775AB54EB8257314",
+                "best8": "C9FC465B650A83C95A494FE6E73F6AD168148CDA2815CD19D31221347045B73B",
+                "ground": "1599D843441532211348CA41798F95CD587347BF8BB4B442A77B32E5651BAF92"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "11223",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.00041026915239641493,
+                  "total_logical_cost": {
+                    "integer_decimal": "3651010245",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "2929",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.001571088040062368,
+                  "total_logical_cost": {
+                    "integer_decimal": "952847635",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "22419",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.00020539734161147992,
+                  "total_logical_cost": {
+                    "integer_decimal": "7293236985",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 325315,
+              "unique_ground_applicable": true
+            },
+            "ordinary_native_direct": {
+              "adopted_budget": 400,
+              "cell_id": "ordinary_native_direct_N30_seed840030105_p4_b400",
+              "depth": 4,
+              "feasible_mass": 0.870974952722257,
+              "ground_degeneracy": 1,
+              "paper_label": "StdXY",
+              "target_hashes": {
+                "best2": "5295722142F4BB330259C6352C294D2F2A464419A5C0927C775AB54EB8257314",
+                "best8": "C9FC465B650A83C95A494FE6E73F6AD168148CDA2815CD19D31221347045B73B",
+                "ground": "1599D843441532211348CA41798F95CD587347BF8BB4B442A77B32E5651BAF92"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "8605",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.0005350761645467909,
+                  "total_logical_cost": {
+                    "integer_decimal": "524689875",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "2349",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.001958918074264087,
+                  "total_logical_cost": {
+                    "integer_decimal": "143230275",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "15995",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.0002878852342218944,
+                  "total_logical_cost": {
+                    "integer_decimal": "975295125",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 60975,
+              "unique_ground_applicable": true
+            },
+            "same_stage1_state_direct": {
+              "adopted_budget": 400,
+              "cell_id": "same_stage1_state_direct_N30_seed840030105_p1_b400",
+              "depth": 1,
+              "feasible_mass": 0.9729062907672497,
+              "ground_degeneracy": 1,
+              "paper_label": "Direct-XY",
+              "target_hashes": {
+                "best2": "5295722142F4BB330259C6352C294D2F2A464419A5C0927C775AB54EB8257314",
+                "best8": "C9FC465B650A83C95A494FE6E73F6AD168148CDA2815CD19D31221347045B73B",
+                "ground": "1599D843441532211348CA41798F95CD587347BF8BB4B442A77B32E5651BAF92"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "13518",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.0003406339134176457,
+                  "total_logical_cost": {
+                    "integer_decimal": "345925620",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "3703",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.0012431624122734171,
+                  "total_logical_cost": {
+                    "integer_decimal": "94759770",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "27033",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.000170340195304463,
+                  "total_logical_cost": {
+                    "integer_decimal": "691774470",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 25590,
+              "unique_ground_applicable": true
+            },
+            "stage1_only": {
+              "adopted_budget": null,
+              "cell_id": "stage1_only_N30_seed840030105",
+              "depth": null,
+              "feasible_mass": 0.9724174059679849,
+              "ground_degeneracy": 1,
+              "paper_label": "Stage-1-only",
+              "target_hashes": {
+                "best2": "5295722142F4BB330259C6352C294D2F2A464419A5C0927C775AB54EB8257314",
+                "best8": "C9FC465B650A83C95A494FE6E73F6AD168148CDA2815CD19D31221347045B73B",
+                "ground": "1599D843441532211348CA41798F95CD587347BF8BB4B442A77B32E5651BAF92"
+              },
+              "targets": {
+                "best2": {
+                  "RTS99": {
+                    "integer_decimal": "13565",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 2,
+                  "probability": 0.0003394488808680544,
+                  "total_logical_cost": {
+                    "integer_decimal": "181431875",
+                    "kind": "finite"
+                  }
+                },
+                "best8": {
+                  "RTS99": {
+                    "integer_decimal": "3711",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 8,
+                  "probability": 0.0012405104117317886,
+                  "total_logical_cost": {
+                    "integer_decimal": "49634625",
+                    "kind": "finite"
+                  }
+                },
+                "ground": {
+                  "RTS99": {
+                    "integer_decimal": "27131",
+                    "kind": "finite"
+                  },
+                  "configuration_count": 1,
+                  "probability": 0.00016972444043402904,
+                  "total_logical_cost": {
+                    "integer_decimal": "362877125",
+                    "kind": "finite"
+                  }
+                }
+              },
+              "terminal_RU": 13375,
+              "unique_ground_applicable": true
+            }
+          },
+          "problem_seed": 840030105,
+          "target_hashes": {
+            "best2": "5295722142F4BB330259C6352C294D2F2A464419A5C0927C775AB54EB8257314",
+            "best8": "C9FC465B650A83C95A494FE6E73F6AD168148CDA2815CD19D31221347045B73B",
+            "ground": "1599D843441532211348CA41798F95CD587347BF8BB4B442A77B32E5651BAF92"
+          },
+          "unique_ground_applicable": true
+        }
+      ]
+    }
+  }
+}

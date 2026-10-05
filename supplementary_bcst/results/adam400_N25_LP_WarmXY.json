@@ -1,0 +1,1011 @@
+{
+  "per_method": {
+    "N25|Adam|LP": {
+      "N": 25,
+      "method": "LP",
+      "optimizer": "Adam",
+      "per_seed": [
+        {
+          "feasible_mass": 0.9241187813748897,
+          "record_sha256": "a204d3bd2eff54f3a1aa06975bbdd4e4e09e25a36c485b62e54fd669f1fb11b6",
+          "seed": 830006001,
+          "selected_energy": 0.24845082016423703,
+          "targets": {
+            "best2": {
+              "RTS99": "11",
+              "probability": 0.35317705512482256,
+              "total_logical_cost": {
+                "integer_decimal": "825869",
+                "kind": "finite"
+              }
+            },
+            "best8": {
+              "RTS99": "4",
+              "probability": 0.7660246498214129,
+              "total_logical_cost": {
+                "integer_decimal": "300316",
+                "kind": "finite"
+              }
+            },
+            "ground": {
+              "RTS99": "23",
+              "probability": 0.18189560201786353,
+              "total_logical_cost": {
+                "integer_decimal": "1726817",
+                "kind": "finite"
+              }
+            }
+          },
+          "terminal_RU_decimal": "75079",
+          "zero_angle_energy": 0.5203199051140733
+        },
+        {
+          "feasible_mass": 0.9613728011504703,
+          "record_sha256": "1f7da828ac2d4ccbb4095787cb3d94c33a1238b752ccff6dfc8ec5f020128942",
+          "seed": 830006002,
+          "selected_energy": 0.18350486886716885,
+          "targets": {
+            "best2": {
+              "RTS99": "10",
+              "probability": 0.38703306116415215,
+              "total_logical_cost": {
+                "integer_decimal": "750790",
+                "kind": "finite"
+              }
+            },
+            "best8": {
+              "RTS99": "3",
+              "probability": 0.8926889843707543,
+              "total_logical_cost": {
+                "integer_decimal": "225237",
+                "kind": "finite"
+              }
+            },
+            "ground": {
+              "RTS99": "21",
+              "probability": 0.19844290148655042,
+              "total_logical_cost": {
+                "integer_decimal": "1576659",
+                "kind": "finite"
+              }
+            }
+          },
+          "terminal_RU_decimal": "75079",
+          "zero_angle_energy": 0.5182954003125346
+        },
+        {
+          "feasible_mass": 0.9267274056159394,
+          "record_sha256": "922ca2d3b123adb4d59a72b167d467edc908317c3f4f4359496bab0ab0334917",
+          "seed": 830006003,
+          "selected_energy": 0.21556753803086182,
+          "targets": {
+            "best2": {
+              "RTS99": "5",
+              "probability": 0.6126676103708678,
+              "total_logical_cost": {
+                "integer_decimal": "375395",
+                "kind": "finite"
+              }
+            },
+            "best8": {
+              "RTS99": "3",
+              "probability": 0.8430016288028153,
+              "total_logical_cost": {
+                "integer_decimal": "225237",
+                "kind": "finite"
+              }
+            },
+            "ground": {
+              "RTS99": "8",
+              "probability": 0.46478451540188115,
+              "total_logical_cost": {
+                "integer_decimal": "600632",
+                "kind": "finite"
+              }
+            }
+          },
+          "terminal_RU_decimal": "75079",
+          "zero_angle_energy": 0.5191087339848741
+        },
+        {
+          "feasible_mass": 0.9730569152214787,
+          "record_sha256": "c658accc2bee2adb8b115ad219e6986efd0e9f2d434c6b91fd1a912bafb49ecf",
+          "seed": 830006004,
+          "selected_energy": 0.06937001766626995,
+          "targets": {
+            "best2": {
+              "RTS99": "5",
+              "probability": 0.6220957425776298,
+              "total_logical_cost": {
+                "integer_decimal": "375395",
+                "kind": "finite"
+              }
+            },
+            "best8": {
+              "RTS99": "2",
+              "probability": 0.9578723967771546,
+              "total_logical_cost": {
+                "integer_decimal": "150158",
+                "kind": "finite"
+              }
+            },
+            "ground": {
+              "RTS99": "8",
+              "probability": 0.44510334477707614,
+              "total_logical_cost": {
+                "integer_decimal": "600632",
+                "kind": "finite"
+              }
+            }
+          },
+          "terminal_RU_decimal": "75079",
+          "zero_angle_energy": 0.5004704146832227
+        },
+        {
+          "feasible_mass": 0.9628226827340897,
+          "record_sha256": "5b548b9ebf09bd30cd5a2d4251b6651874fb9a167154988a46a82ecc4ebbd514",
+          "seed": 830006005,
+          "selected_energy": 0.21934550226018934,
+          "targets": {
+            "best2": {
+              "RTS99": "3",
+              "probability": 0.8289072129648417,
+              "total_logical_cost": {
+                "integer_decimal": "225237",
+                "kind": "finite"
+              }
+            },
+            "best8": {
+              "RTS99": "2",
+              "probability": 0.9264631645801472,
+              "total_logical_cost": {
+                "integer_decimal": "150158",
+                "kind": "finite"
+              }
+            },
+            "ground": {
+              "RTS99": "8",
+              "probability": 0.47536560590683496,
+              "total_logical_cost": {
+                "integer_decimal": "600632",
+                "kind": "finite"
+              }
+            }
+          },
+          "terminal_RU_decimal": "75079",
+          "zero_angle_energy": 0.5252331675453157
+        },
+        {
+          "feasible_mass": 0.8935224282530401,
+          "record_sha256": "d266fee5b32b1a5bedd5c445e3d68d493020118903cdf893cb6a70605fc56e27",
+          "seed": 830006006,
+          "selected_energy": 0.16683973318111667,
+          "targets": {
+            "best2": {
+              "RTS99": "6",
+              "probability": 0.5876387565963956,
+              "total_logical_cost": {
+                "integer_decimal": "450474",
+                "kind": "finite"
+              }
+            },
+            "best8": {
+              "RTS99": "3",
+              "probability": 0.8556928856109298,
+              "total_logical_cost": {
+                "integer_decimal": "225237",
+                "kind": "finite"
+              }
+            },
+            "ground": {
+              "RTS99": "9",
+              "probability": 0.43060268422433207,
+              "total_logical_cost": {
+                "integer_decimal": "675711",
+                "kind": "finite"
+              }
+            }
+          },
+          "terminal_RU_decimal": "75079",
+          "zero_angle_energy": 0.4382162536842552
+        },
+        {
+          "feasible_mass": 0.9799628671264685,
+          "record_sha256": "9b925fa09b74d51f9313ebaeb677b061b356fadda27750a5f850565ea7ab2841",
+          "seed": 830006007,
+          "selected_energy": 0.07501693377697179,
+          "targets": {
+            "best2": {
+              "RTS99": "2",
+              "probability": 0.9449881170565708,
+              "total_logical_cost": {
+                "integer_decimal": "150158",
+                "kind": "finite"
+              }
+            },
+            "best8": {
+              "RTS99": "2",
+              "probability": 0.9655755585245841,
+              "total_logical_cost": {
+                "integer_decimal": "150158",
+                "kind": "finite"
+              }
+            },
+            "ground": {
+              "RTS99": "3",
+              "probability": 0.7970554379423225,
+              "total_logical_cost": {
+                "integer_decimal": "225237",
+                "kind": "finite"
+              }
+            }
+          },
+          "terminal_RU_decimal": "75079",
+          "zero_angle_energy": 0.5132081211790351
+        },
+        {
+          "feasible_mass": 0.9637982548497634,
+          "record_sha256": "6eba11922c596563a09eaa2bc2571d980a0d9112e67f09ea0b1ff68d76f80a3b",
+          "seed": 830006008,
+          "selected_energy": 0.1590530957199784,
+          "targets": {
+            "best2": {
+              "RTS99": "5",
+              "probability": 0.6137303197232908,
+              "total_logical_cost": {
+                "integer_decimal": "375395",
+                "kind": "finite"
+              }
+            },
+            "best8": {
+              "RTS99": "2",
+              "probability": 0.9515492531798886,
+              "total_logical_cost": {
+                "integer_decimal": "150158",
+                "kind": "finite"
+              }
+            },
+            "ground": {
+              "RTS99": "11",
+              "probability": 0.3583116092491714,
+              "total_logical_cost": {
+                "integer_decimal": "825869",
+                "kind": "finite"
+              }
+            }
+          },
+          "terminal_RU_decimal": "75079",
+          "zero_angle_energy": 0.49948517399036707
+        },
+        {
+          "feasible_mass": 0.9837017037105875,
+          "record_sha256": "3b34b8d666039c9240cb01de7bf4682071e35142e77267af8c42b9fb1ad0e3b9",
+          "seed": 830006009,
+          "selected_energy": 0.1548859326727371,
+          "targets": {
+            "best2": {
+              "RTS99": "6",
+              "probability": 0.5450592228761031,
+              "total_logical_cost": {
+                "integer_decimal": "450474",
+                "kind": "finite"
+              }
+            },
+            "best8": {
+              "RTS99": "2",
+              "probability": 0.9244431253935406,
+              "total_logical_cost": {
+                "integer_decimal": "150158",
+                "kind": "finite"
+              }
+            },
+            "ground": {
+              "RTS99": "15",
+              "probability": 0.27475955569284066,
+              "total_logical_cost": {
+                "integer_decimal": "1126185",
+                "kind": "finite"
+              }
+            }
+          },
+          "terminal_RU_decimal": "75079",
+          "zero_angle_energy": 0.5268551961918045
+        },
+        {
+          "feasible_mass": 0.946343831313795,
+          "record_sha256": "9838a58bc8648b670045486c19fb46173d5ea7eac1d72a313c9fb1ece0ee70c9",
+          "seed": 830006010,
+          "selected_energy": 0.19667996908584526,
+          "targets": {
+            "best2": {
+              "RTS99": "9",
+              "probability": 0.42702517805784845,
+              "total_logical_cost": {
+                "integer_decimal": "675711",
+                "kind": "finite"
+              }
+            },
+            "best8": {
+              "RTS99": "3",
+              "probability": 0.8335405549179364,
+              "total_logical_cost": {
+                "integer_decimal": "225237",
+                "kind": "finite"
+              }
+            },
+            "ground": {
+              "RTS99": "15",
+              "probability": 0.26620451174639886,
+              "total_logical_cost": {
+                "integer_decimal": "1126185",
+                "kind": "finite"
+              }
+            }
+          },
+          "terminal_RU_decimal": "75079",
+          "zero_angle_energy": 0.48070483051776414
+        }
+      ],
+      "probability_summaries": {
+        "best2": {
+          "arithmetic_mean_probability": 0.5922322276512523,
+          "geometric_mean_probability": 0.566857653617007,
+          "maximum_probability": 0.9449881170565708,
+          "minimum_probability": 0.35317705512482256,
+          "per_seed": [
+            {
+              "probability": 0.35317705512482256,
+              "seed": 830006001
+            },
+            {
+              "probability": 0.38703306116415215,
+              "seed": 830006002
+            },
+            {
+              "probability": 0.6126676103708678,
+              "seed": 830006003
+            },
+            {
+              "probability": 0.6220957425776298,
+              "seed": 830006004
+            },
+            {
+              "probability": 0.8289072129648417,
+              "seed": 830006005
+            },
+            {
+              "probability": 0.5876387565963956,
+              "seed": 830006006
+            },
+            {
+              "probability": 0.9449881170565708,
+              "seed": 830006007
+            },
+            {
+              "probability": 0.6137303197232908,
+              "seed": 830006008
+            },
+            {
+              "probability": 0.5450592228761031,
+              "seed": 830006009
+            },
+            {
+              "probability": 0.42702517805784845,
+              "seed": 830006010
+            }
+          ]
+        },
+        "best8": {
+          "arithmetic_mean_probability": 0.8916852201979164,
+          "geometric_mean_probability": 0.8894569930046881,
+          "maximum_probability": 0.9655755585245841,
+          "minimum_probability": 0.7660246498214129,
+          "per_seed": [
+            {
+              "probability": 0.7660246498214129,
+              "seed": 830006001
+            },
+            {
+              "probability": 0.8926889843707543,
+              "seed": 830006002
+            },
+            {
+              "probability": 0.8430016288028153,
+              "seed": 830006003
+            },
+            {
+              "probability": 0.9578723967771546,
+              "seed": 830006004
+            },
+            {
+              "probability": 0.9264631645801472,
+              "seed": 830006005
+            },
+            {
+              "probability": 0.8556928856109298,
+              "seed": 830006006
+            },
+            {
+              "probability": 0.9655755585245841,
+              "seed": 830006007
+            },
+            {
+              "probability": 0.9515492531798886,
+              "seed": 830006008
+            },
+            {
+              "probability": 0.9244431253935406,
+              "seed": 830006009
+            },
+            {
+              "probability": 0.8335405549179364,
+              "seed": 830006010
+            }
+          ]
+        },
+        "ground": {
+          "arithmetic_mean_probability": 0.3892525768445272,
+          "geometric_mean_probability": 0.35515606786184045,
+          "maximum_probability": 0.7970554379423225,
+          "minimum_probability": 0.18189560201786353,
+          "per_seed": [
+            {
+              "probability": 0.18189560201786353,
+              "seed": 830006001
+            },
+            {
+              "probability": 0.19844290148655042,
+              "seed": 830006002
+            },
+            {
+              "probability": 0.46478451540188115,
+              "seed": 830006003
+            },
+            {
+              "probability": 0.44510334477707614,
+              "seed": 830006004
+            },
+            {
+              "probability": 0.47536560590683496,
+              "seed": 830006005
+            },
+            {
+              "probability": 0.43060268422433207,
+              "seed": 830006006
+            },
+            {
+              "probability": 0.7970554379423225,
+              "seed": 830006007
+            },
+            {
+              "probability": 0.3583116092491714,
+              "seed": 830006008
+            },
+            {
+              "probability": 0.27475955569284066,
+              "seed": 830006009
+            },
+            {
+              "probability": 0.26620451174639886,
+              "seed": 830006010
+            }
+          ]
+        }
+      },
+      "selected_depth": 12
+    },
+    "N25|Adam|WarmXY": {
+      "N": 25,
+      "method": "WarmXY",
+      "optimizer": "Adam",
+      "per_seed": [
+        {
+          "feasible_mass": 0.9130236935100771,
+          "record_sha256": "0eb5aba6e4cb159ea24d88982eac7cbe2d3e10788e91244e6868bc19c67ee03e",
+          "seed": 830006001,
+          "selected_energy": 0.038375423248095744,
+          "targets": {
+            "best2": {
+              "RTS99": "301",
+              "probability": 0.015193017475623884,
+              "total_logical_cost": {
+                "integer_decimal": "2376696",
+                "kind": "finite"
+              }
+            },
+            "best8": {
+              "RTS99": "74",
+              "probability": 0.06077817935054901,
+              "total_logical_cost": {
+                "integer_decimal": "584304",
+                "kind": "finite"
+              }
+            },
+            "ground": {
+              "RTS99": "605",
+              "probability": 0.007591746898200227,
+              "total_logical_cost": {
+                "integer_decimal": "4777080",
+                "kind": "finite"
+              }
+            }
+          },
+          "terminal_RU_decimal": "7896",
+          "zero_angle_energy": 0.04161027131290757
+        },
+        {
+          "feasible_mass": 0.9127550150391958,
+          "record_sha256": "7883264bd72127821226470f4988b142ccd5c9832e0e475062076b82573f7bf8",
+          "seed": 830006002,
+          "selected_energy": 0.04328326244063961,
+          "targets": {
+            "best2": {
+              "RTS99": "302",
+              "probability": 0.01516616334744032,
+              "total_logical_cost": {
+                "integer_decimal": "2384592",
+                "kind": "finite"
+              }
+            },
+            "best8": {
+              "RTS99": "74",
+              "probability": 0.060690550710152585,
+              "total_logical_cost": {
+                "integer_decimal": "584304",
+                "kind": "finite"
+              }
+            },
+            "ground": {
+              "RTS99": "606",
+              "probability": 0.007582726265937162,
+              "total_logical_cost": {
+                "integer_decimal": "4784976",
+                "kind": "finite"
+              }
+            }
+          },
+          "terminal_RU_decimal": "7896",
+          "zero_angle_energy": 0.04651217235008458
+        },
+        {
+          "feasible_mass": 0.9128772096770427,
+          "record_sha256": "26705f66b7208ff6bcfdbae5c351898b234f3dc619ae76868411ba7ae67dfb48",
+          "seed": 830006003,
+          "selected_energy": 0.043160141446483495,
+          "targets": {
+            "best2": {
+              "RTS99": "302",
+              "probability": 0.01517397002838344,
+              "total_logical_cost": {
+                "integer_decimal": "2384592",
+                "kind": "finite"
+              }
+            },
+            "best8": {
+              "RTS99": "74",
+              "probability": 0.06072708015708347,
+              "total_logical_cost": {
+                "integer_decimal": "584304",
+                "kind": "finite"
+              }
+            },
+            "ground": {
+              "RTS99": "606",
+              "probability": 0.007581509208952076,
+              "total_logical_cost": {
+                "integer_decimal": "4784976",
+                "kind": "finite"
+              }
+            }
+          },
+          "terminal_RU_decimal": "7896",
+          "zero_angle_energy": 0.04638947124448963
+        },
+        {
+          "feasible_mass": 0.9127837924584308,
+          "record_sha256": "b0d6ea876ba11ead4d958c736ec28107a3e73dd45e901876d3939f9c58dda408",
+          "seed": 830006004,
+          "selected_energy": 0.05419099481070853,
+          "targets": {
+            "best2": {
+              "RTS99": "302",
+              "probability": 0.015146238826272257,
+              "total_logical_cost": {
+                "integer_decimal": "2384592",
+                "kind": "finite"
+              }
+            },
+            "best8": {
+              "RTS99": "74",
+              "probability": 0.06066825998628443,
+              "total_logical_cost": {
+                "integer_decimal": "584304",
+                "kind": "finite"
+              }
+            },
+            "ground": {
+              "RTS99": "607",
+              "probability": 0.007565872094924685,
+              "total_logical_cost": {
+                "integer_decimal": "4792872",
+                "kind": "finite"
+              }
+            }
+          },
+          "terminal_RU_decimal": "7896",
+          "zero_angle_energy": 0.05737358082347026
+        },
+        {
+          "feasible_mass": 0.913016810999398,
+          "record_sha256": "3b6f09fece49a630815a6df9c23e74286cc3b4e4582d00ea8e6e99b150f362f4",
+          "seed": 830006005,
+          "selected_energy": 0.040194656398050886,
+          "targets": {
+            "best2": {
+              "RTS99": "302",
+              "probability": 0.015167965539526766,
+              "total_logical_cost": {
+                "integer_decimal": "2384592",
+                "kind": "finite"
+              }
+            },
+            "best8": {
+              "RTS99": "74",
+              "probability": 0.060740232685356055,
+              "total_logical_cost": {
+                "integer_decimal": "584304",
+                "kind": "finite"
+              }
+            },
+            "ground": {
+              "RTS99": "606",
+              "probability": 0.007580950636187753,
+              "total_logical_cost": {
+                "integer_decimal": "4784976",
+                "kind": "finite"
+              }
+            }
+          },
+          "terminal_RU_decimal": "7896",
+          "zero_angle_energy": 0.04344855232214425
+        },
+        {
+          "feasible_mass": 0.883569643485401,
+          "record_sha256": "0300c075f364f0f8419cebdbe05ace035a0ca071d886718d06dc589feec02305",
+          "seed": 830006006,
+          "selected_energy": 0.04221399351814659,
+          "targets": {
+            "best2": {
+              "RTS99": "311",
+              "probability": 0.014733563064974173,
+              "total_logical_cost": {
+                "integer_decimal": "2455656",
+                "kind": "finite"
+              }
+            },
+            "best8": {
+              "RTS99": "76",
+              "probability": 0.05892833734298723,
+              "total_logical_cost": {
+                "integer_decimal": "600096",
+                "kind": "finite"
+              }
+            },
+            "ground": {
+              "RTS99": "623",
+              "probability": 0.007367285491053588,
+              "total_logical_cost": {
+                "integer_decimal": "4919208",
+                "kind": "finite"
+              }
+            }
+          },
+          "terminal_RU_decimal": "7896",
+          "zero_angle_energy": 0.04234739087297527
+        },
+        {
+          "feasible_mass": 0.8967783497400706,
+          "record_sha256": "ffd4e10e0e4b8e1c58fa0bbc8ea811d87395cee60893ebbf344bb72b26862358",
+          "seed": 830006007,
+          "selected_energy": 0.05343867956515811,
+          "targets": {
+            "best2": {
+              "RTS99": "306",
+              "probability": 0.014971338658452897,
+              "total_logical_cost": {
+                "integer_decimal": "2416176",
+                "kind": "finite"
+              }
+            },
+            "best8": {
+              "RTS99": "75",
+              "probability": 0.05985517557058188,
+              "total_logical_cost": {
+                "integer_decimal": "592200",
+                "kind": "finite"
+              }
+            },
+            "ground": {
+              "RTS99": "613",
+              "probability": 0.007486353474067389,
+              "total_logical_cost": {
+                "integer_decimal": "4840248",
+                "kind": "finite"
+              }
+            }
+          },
+          "terminal_RU_decimal": "7896",
+          "zero_angle_energy": 0.05435460487173268
+        },
+        {
+          "feasible_mass": 0.913078333723844,
+          "record_sha256": "c430af9b00e956f64c0b44267c8ba814bd2d84955a22f10ddab7526f1b8cc544",
+          "seed": 830006008,
+          "selected_energy": 0.04381524847632439,
+          "targets": {
+            "best2": {
+              "RTS99": "302",
+              "probability": 0.015176737125575518,
+              "total_logical_cost": {
+                "integer_decimal": "2384592",
+                "kind": "finite"
+              }
+            },
+            "best8": {
+              "RTS99": "74",
+              "probability": 0.06075710609361294,
+              "total_logical_cost": {
+                "integer_decimal": "584304",
+                "kind": "finite"
+              }
+            },
+            "ground": {
+              "RTS99": "605",
+              "probability": 0.0075861398485147,
+              "total_logical_cost": {
+                "integer_decimal": "4777080",
+                "kind": "finite"
+              }
+            }
+          },
+          "terminal_RU_decimal": "7896",
+          "zero_angle_energy": 0.04705311852046345
+        },
+        {
+          "feasible_mass": 0.8828893051181037,
+          "record_sha256": "d865d15ca11d7cde161413d5b5cc788fbf68a49233bafc9f951b86d300ed22c3",
+          "seed": 830006009,
+          "selected_energy": 0.049264005479244886,
+          "targets": {
+            "best2": {
+              "RTS99": "311",
+              "probability": 0.01472064192594703,
+              "total_logical_cost": {
+                "integer_decimal": "2455656",
+                "kind": "finite"
+              }
+            },
+            "best8": {
+              "RTS99": "76",
+              "probability": 0.05888127292129573,
+              "total_logical_cost": {
+                "integer_decimal": "600096",
+                "kind": "finite"
+              }
+            },
+            "ground": {
+              "RTS99": "624",
+              "probability": 0.007360571817242595,
+              "total_logical_cost": {
+                "integer_decimal": "4927104",
+                "kind": "finite"
+              }
+            }
+          },
+          "terminal_RU_decimal": "7896",
+          "zero_angle_energy": 0.04938367692426566
+        },
+        {
+          "feasible_mass": 0.8935220482271164,
+          "record_sha256": "fdfbba5a4bc3a0b67e0e16bb094d6183164edc1398f1a62764f3ac860a04c425",
+          "seed": 830006010,
+          "selected_energy": 0.04324795331208487,
+          "targets": {
+            "best2": {
+              "RTS99": "307",
+              "probability": 0.014905690374978946,
+              "total_logical_cost": {
+                "integer_decimal": "2424072",
+                "kind": "finite"
+              }
+            },
+            "best8": {
+              "RTS99": "75",
+              "probability": 0.05961197401415259,
+              "total_logical_cost": {
+                "integer_decimal": "592200",
+                "kind": "finite"
+              }
+            },
+            "ground": {
+              "RTS99": "616",
+              "probability": 0.007452936917256444,
+              "total_logical_cost": {
+                "integer_decimal": "4863936",
+                "kind": "finite"
+              }
+            }
+          },
+          "terminal_RU_decimal": "7896",
+          "zero_angle_energy": 0.04386758174298605
+        }
+      ],
+      "probability_summaries": {
+        "best2": {
+          "arithmetic_mean_probability": 0.015035532636717521,
+          "geometric_mean_probability": 0.015034454668672884,
+          "maximum_probability": 0.015193017475623884,
+          "minimum_probability": 0.01472064192594703,
+          "per_seed": [
+            {
+              "probability": 0.015193017475623884,
+              "seed": 830006001
+            },
+            {
+              "probability": 0.01516616334744032,
+              "seed": 830006002
+            },
+            {
+              "probability": 0.01517397002838344,
+              "seed": 830006003
+            },
+            {
+              "probability": 0.015146238826272257,
+              "seed": 830006004
+            },
+            {
+              "probability": 0.015167965539526766,
+              "seed": 830006005
+            },
+            {
+              "probability": 0.014733563064974173,
+              "seed": 830006006
+            },
+            {
+              "probability": 0.014971338658452897,
+              "seed": 830006007
+            },
+            {
+              "probability": 0.015176737125575518,
+              "seed": 830006008
+            },
+            {
+              "probability": 0.01472064192594703,
+              "seed": 830006009
+            },
+            {
+              "probability": 0.014905690374978946,
+              "seed": 830006010
+            }
+          ]
+        },
+        "best8": {
+          "arithmetic_mean_probability": 0.06016381688320559,
+          "geometric_mean_probability": 0.06015923188937406,
+          "maximum_probability": 0.06077817935054901,
+          "minimum_probability": 0.05888127292129573,
+          "per_seed": [
+            {
+              "probability": 0.06077817935054901,
+              "seed": 830006001
+            },
+            {
+              "probability": 0.060690550710152585,
+              "seed": 830006002
+            },
+            {
+              "probability": 0.06072708015708347,
+              "seed": 830006003
+            },
+            {
+              "probability": 0.06066825998628443,
+              "seed": 830006004
+            },
+            {
+              "probability": 0.060740232685356055,
+              "seed": 830006005
+            },
+            {
+              "probability": 0.05892833734298723,
+              "seed": 830006006
+            },
+            {
+              "probability": 0.05985517557058188,
+              "seed": 830006007
+            },
+            {
+              "probability": 0.06075710609361294,
+              "seed": 830006008
+            },
+            {
+              "probability": 0.05888127292129573,
+              "seed": 830006009
+            },
+            {
+              "probability": 0.05961197401415259,
+              "seed": 830006010
+            }
+          ]
+        },
+        "ground": {
+          "arithmetic_mean_probability": 0.007515609265233663,
+          "geometric_mean_probability": 0.007515092149473956,
+          "maximum_probability": 0.007591746898200227,
+          "minimum_probability": 0.007360571817242595,
+          "per_seed": [
+            {
+              "probability": 0.007591746898200227,
+              "seed": 830006001
+            },
+            {
+              "probability": 0.007582726265937162,
+              "seed": 830006002
+            },
+            {
+              "probability": 0.007581509208952076,
+              "seed": 830006003
+            },
+            {
+              "probability": 0.007565872094924685,
+              "seed": 830006004
+            },
+            {
+              "probability": 0.007580950636187753,
+              "seed": 830006005
+            },
+            {
+              "probability": 0.007367285491053588,
+              "seed": 830006006
+            },
+            {
+              "probability": 0.007486353474067389,
+              "seed": 830006007
+            },
+            {
+              "probability": 0.0075861398485147,
+              "seed": 830006008
+            },
+            {
+              "probability": 0.007360571817242595,
+              "seed": 830006009
+            },
+            {
+              "probability": 0.007452936917256444,
+              "seed": 830006010
+            }
+          ]
+        }
+      },
+      "selected_depth": 1
+    }
+  },
+  "optimizer": {
+    "active_optimizers": [
+      "Adam"
+    ],
+    "adopted_budgets": {
+      "Adam": 400
+    },
+    "original_adam200_scientific_role": "optimization_diagnostic_only",
+    "protocol": "immutable_adam400_rescue",
+    "selection_mode": "adam_only_fallback",
+    "setting_decision_kind": "setting_rescue",
+    "spsa_included_in_LP_advantage_claims": false,
+    "spsa_optimization_inconclusive": true,
+    "spsa_optimization_status": "optimization_inconclusive"
+  },
+  "depths": {
+    "LP": 12,
+    "WarmXY": 1
+  }
+}

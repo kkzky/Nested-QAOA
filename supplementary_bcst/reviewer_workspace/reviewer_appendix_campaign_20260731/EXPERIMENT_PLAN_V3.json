@@ -1,0 +1,86 @@
+{
+  "schema": "lp-qaoa-reviewer-appendix-layered-plan-v3",
+  "status": "frozen_before_v3_scientific_launch",
+  "frozen_at_utc": "2026-08-01T02:35:00Z",
+  "campaign_id": "lp_qaoa_reviewer_appendix_v3_20260731",
+  "base_plan": {
+    "path": "EXPERIMENT_PLAN.json",
+    "sha256": "F08094101EED3EA48F7A14D28948FCEAAF1C240A7A7A592584974951AABE780C",
+    "inheritance_rule": "Every field and rule in the base plan remains binding unless this layered plan names an explicit replacement."
+  },
+  "prelaunch_amendment_sha256": "6E6B30711FBD9A03AF7D4B25003758888D990FAA725E6B63090C2736E9530DC3",
+  "postlaunch_optimizer_gate_amendment": {
+    "path": "POSTLAUNCH_OPTIMIZER_GATE_AMENDMENT_20260731.json",
+    "sha256": "20C357669F343F22AD10F927FAF633634A683FC76EC848D72DC4CBA7315F92BE"
+  },
+  "v2_exclusion_manifest": {
+    "path": "V2_EXCLUSION_MANIFEST_20260731.json",
+    "sha256": "E909AB1B1058DF8942D6ED9CF7DE2350F1F396C1A905513A5D2313C62C3156F1"
+  },
+  "explicit_replacements": {
+    "randomness.seed_domains.depth_and_budget_tuning_N25": [840025011, 840025012],
+    "randomness.seed_domains.depth_and_budget_tuning_N30": [840030011, 840030012],
+    "budget_audit.terminal_progress": "on the selected restart, normalized cumulative-best energy drop over the final 20 percent is at least 0.01",
+    "budget_audit.selected_checkpoint_final10_percent": "diagnostic warning only",
+    "execution.remote_root": "/public/home/ac4fba2wzz/lp_reviewer_appendix_v3_20260731",
+    "execution.source_package": "appendix_v3"
+  },
+  "effective_seed_domains": {
+    "stage1_N25": 840025000,
+    "stage1_N30": 840030000,
+    "depth_and_budget_tuning_N25": [840025011, 840025012],
+    "depth_and_budget_tuning_N30": [840030011, 840030012],
+    "external_validation_N25": [840025102, 840025103, 840025104, 840025105, 840025106, 840025107, 840025108, 840025109, 840025110, 840025111],
+    "external_validation_N30": [840030101, 840030102, 840030103, 840030104, 840030105, 840030106, 840030107, 840030108, 840030109, 840030110],
+    "causal_ablation_N25": [840025201, 840025202, 840025203],
+    "causal_ablation_N30": [840030201, 840030202, 840030203]
+  },
+  "optimizer_gate": {
+    "normalization_floor": 1e-12,
+    "terminal_tail_fraction": 0.2,
+    "terminal_normalized_drop_threshold": 0.01,
+    "budget_normalized_mean_improvement_threshold": 0.02,
+    "final_checkpoint_warning_fraction": 0.1,
+    "warning_affects_decision": false
+  },
+  "fresh_execution_requirement": {
+    "new_plan_hash_is_new_kdf_namespace": true,
+    "rerun_stage1": true,
+    "rerun_all_depth_and_budget_tuning": true,
+    "reuse_any_v2_optimizer_record": false,
+    "reuse_v2_native_target_file": false,
+    "external_and_causal_problem_seeds_may_remain": true,
+    "all_v3_optimizer_starts_are_new_due_to_plan_hash": true
+  },
+  "native_grover_invariance": {
+    "method": "NativeGrover-d",
+    "depth_grid": [1, 2, 4, 8, 12, 16, 24, 36],
+    "first_boundary_extension": [48, 64],
+    "second_boundary_extension": [80, 96],
+    "extension_rule": "extend when the upper boundary is selected or is within 10 percent of the finite minimum while cost is non-increasing from the preceding boundary",
+    "selection_rule": "minimize the exact product of the two tuning-seed integer best2 logical costs; ties choose shallower depth",
+    "resource_rule": "unchanged from the base plan"
+  },
+  "unchanged_scientific_contract": [
+    "same five-block two-selected-label BCST construction at N=25 and N=30",
+    "best2 primary and ground/best8 secondary",
+    "exactly three independent random restarts without continuation or transfer",
+    "Adam learning rate 0.035 and candidate budgets 400, 800, and conditional 1600",
+    "all method definitions, initial states, mixers, phase Hamiltonians, losses, parameter counts, and depth rules",
+    "all resource formulas and RTS99 conventions",
+    "all external comparisons, bootstrap rules, strong-result thresholds, and negative-result policy",
+    "target-blind locks before target evaluation"
+  ],
+  "launch_order": [
+    "freeze V3 plan and source manifest",
+    "run full local suite and independent source/protocol audit",
+    "repeat one-process and four-process A800 smoke tests under the V3 plan hash",
+    "rerun Stage1 N25 and N30 at 400, 800, and conditionally 1600",
+    "rerun NativeGrover-d exact-400 base depth grid on the fresh tuning seeds",
+    "complete all V3 budget audits and mandatory adopted-budget depth reselections",
+    "freeze V3 budgets and depths",
+    "run external validation and causal ablation in parallel",
+    "freeze target-blind cohort locks",
+    "evaluate targets, analyze, independently audit, and package"
+  ]
+}
