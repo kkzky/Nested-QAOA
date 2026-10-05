@@ -1,0 +1,328 @@
+{
+  "schema": "targeted-coherent-im3-vanilla-qaoa-b3l6-nonredundant-v2-optimizer-result",
+  "status": "COMPLETED_TARGET_BLIND_VANILLA_QAOA_CELL",
+  "manifest_sha256": "736cf713b3a6e4d51e9ada27469cde8ab90746811818f626bf974dd1e8e2ad54",
+  "table_seed": 2026081808,
+  "table_id": "pcg64_2026081808",
+  "coefficient_table_sha256": "bf9fb9ffad1fd8b3d95e4e126d249ce9102c10caa2ee861948bed2dbb0c15caf",
+  "method_id": "coherent_im3_vanilla_qaoa_B3L6__p2",
+  "depth": 2,
+  "restart_seeds": [
+    2026081100,
+    2026081101,
+    2026081102,
+    2026081103
+  ],
+  "initial_angles_sha256": "c9b17da7ed59d4fa247548bbfff6ec28c26f327388ddd6d6eb59c12d7f32114f",
+  "resource_RU": 7992,
+  "forward_evaluations_per_restart": 2400,
+  "gradient_updates_per_restart": 2399,
+  "endpoint_evaluations_per_restart": 1,
+  "best_evaluation_by_restart": [
+    1926,
+    116,
+    2017,
+    189
+  ],
+  "selected_expected_H_over_377": [
+    16.893789291381836,
+    30.162918090820312,
+    30.366596221923828,
+    30.274311065673828
+  ],
+  "initial_expected_H_over_377": [
+    30.866962432861328,
+    30.685455322265625,
+    30.65868377685547,
+    30.519733428955078
+  ],
+  "final_expected_H_over_377": [
+    16.8937931060791,
+    30.163007736206055,
+    30.366605758666992,
+    30.274324417114258
+  ],
+  "gamma_by_restart": [
+    [
+      -2.44985032081604,
+      2.283140182495117
+    ],
+    [
+      2.0024869441986084,
+      0.8023332953453064
+    ],
+    [
+      -1.1968005895614624,
+      -0.5610697269439697
+    ],
+    [
+      1.8535473346710205,
+      -0.2639622092247009
+    ]
+  ],
+  "beta_by_restart": [
+    [
+      -0.019544098526239395,
+      1.127502202987671
+    ],
+    [
+      0.793215811252594,
+      -1.4502214193344116
+    ],
+    [
+      1.2099509239196777,
+      0.2134166955947876
+    ],
+    [
+      -1.1493360996246338,
+      0.5995879769325256
+    ]
+  ],
+  "metrics": {
+    "state_norm": [
+      0.9999998807907104,
+      0.9999998807907104,
+      0.9999999403953552,
+      0.9999999403953552
+    ],
+    "feasible_mass": [
+      2.2666245058644563e-05,
+      5.597546623903327e-05,
+      8.068971510510892e-05,
+      6.428563210647553e-05
+    ],
+    "expected_raw_objective": [
+      1304.3184814453125,
+      4447.6982421875,
+      4485.30859375,
+      4481.150390625
+    ],
+    "expected_integer_penalty": [
+      13.434059143066406,
+      18.365310668945312,
+      18.469228744506836,
+      18.38797378540039
+    ]
+  },
+  "state_sha256": "3eeaf3f19f79e148ab678bab0faf0b89192dfe0f231468df42b06d1a9cd2fdb1",
+  "optimizer_trace": [
+    {
+      "evaluation": 1,
+      "post_update_endpoint": false,
+      "loss_by_restart": [
+        30.866962432861328,
+        30.685455322265625,
+        30.65868377685547,
+        30.519733428955078
+      ],
+      "gradient_l2_by_restart": [
+        5.290032863616943,
+        2.1024022102355957,
+        0.7851883769035339,
+        1.7791846990585327
+      ]
+    },
+    {
+      "evaluation": 200,
+      "post_update_endpoint": false,
+      "loss_by_restart": [
+        16.896778106689453,
+        30.162921905517578,
+        30.36660385131836,
+        30.27431869506836
+      ],
+      "gradient_l2_by_restart": [
+        0.08991234004497528,
+        7.917517359601334e-05,
+        0.00014171305519994348,
+        9.223651431966573e-05
+      ]
+    },
+    {
+      "evaluation": 400,
+      "post_update_endpoint": false,
+      "loss_by_restart": [
+        16.894248962402344,
+        30.162918090820312,
+        30.36660385131836,
+        30.274314880371094
+      ],
+      "gradient_l2_by_restart": [
+        0.029565006494522095,
+        1.5317283441618201e-06,
+        3.803900881393929e-06,
+        9.450500328966882e-06
+      ]
+    },
+    {
+      "evaluation": 600,
+      "post_update_endpoint": false,
+      "loss_by_restart": [
+        16.89386558532715,
+        30.162925720214844,
+        30.366607666015625,
+        30.27431297302246
+      ],
+      "gradient_l2_by_restart": [
+        0.010329317301511765,
+        4.29319406975992e-05,
+        4.405214895086829e-06,
+        1.3209874850872438e-05
+      ]
+    },
+    {
+      "evaluation": 800,
+      "post_update_endpoint": false,
+      "loss_by_restart": [
+        16.893802642822266,
+        30.162925720214844,
+        30.36660385131836,
+        30.274311065673828
+      ],
+      "gradient_l2_by_restart": [
+        0.0037179000210016966,
+        1.9625697404990206e-06,
+        4.017053925053915e-06,
+        1.4895697859174106e-05
+      ]
+    },
+    {
+      "evaluation": 1000,
+      "post_update_endpoint": false,
+      "loss_by_restart": [
+        16.893795013427734,
+        30.162918090820312,
+        30.366601943969727,
+        30.274316787719727
+      ],
+      "gradient_l2_by_restart": [
+        0.0012671028962358832,
+        5.646089994115755e-05,
+        3.3847834401967702e-06,
+        0.021987928077578545
+      ]
+    },
+    {
+      "evaluation": 1200,
+      "post_update_endpoint": false,
+      "loss_by_restart": [
+        16.89379119873047,
+        30.162925720214844,
+        30.36660385131836,
+        30.27431869506836
+      ],
+      "gradient_l2_by_restart": [
+        0.0007458477630279958,
+        0.02470371127128601,
+        1.6595151919318596e-06,
+        0.011242158710956573
+      ]
+    },
+    {
+      "evaluation": 1400,
+      "post_update_endpoint": false,
+      "loss_by_restart": [
+        16.8937931060791,
+        30.163211822509766,
+        30.36660385131836,
+        30.274314880371094
+      ],
+      "gradient_l2_by_restart": [
+        0.0006039154250174761,
+        0.24622377753257751,
+        1.4370255485118832e-05,
+        0.009068259038031101
+      ]
+    },
+    {
+      "evaluation": 1600,
+      "post_update_endpoint": false,
+      "loss_by_restart": [
+        16.8937931060791,
+        30.162960052490234,
+        30.366600036621094,
+        30.274328231811523
+      ],
+      "gradient_l2_by_restart": [
+        9.439529094379395e-05,
+        0.08444076031446457,
+        1.2940961823915131e-05,
+        0.04133106768131256
+      ]
+    },
+    {
+      "evaluation": 1800,
+      "post_update_endpoint": false,
+      "loss_by_restart": [
+        16.8937931060791,
+        30.16311264038086,
+        30.366600036621094,
+        30.274324417114258
+      ],
+      "gradient_l2_by_restart": [
+        0.00017698033479973674,
+        0.19363237917423248,
+        4.80890821563662e-06,
+        0.051915671676397324
+      ]
+    },
+    {
+      "evaluation": 2000,
+      "post_update_endpoint": false,
+      "loss_by_restart": [
+        16.89379119873047,
+        30.163122177124023,
+        30.366601943969727,
+        30.274564743041992
+      ],
+      "gradient_l2_by_restart": [
+        0.0009610857232473791,
+        0.1989637017250061,
+        0.00022086905664764345,
+        0.21769827604293823
+      ]
+    },
+    {
+      "evaluation": 2200,
+      "post_update_endpoint": false,
+      "loss_by_restart": [
+        16.8937931060791,
+        30.16302490234375,
+        30.366605758666992,
+        30.274322509765625
+      ],
+      "gradient_l2_by_restart": [
+        0.0011308251414448023,
+        0.14482995867729187,
+        0.00016053058789111674,
+        0.030324460938572884
+      ]
+    },
+    {
+      "evaluation": 2400,
+      "post_update_endpoint": true,
+      "loss_by_restart": [
+        16.8937931060791,
+        30.163007736206055,
+        30.366605758666992,
+        30.274324417114258
+      ]
+    }
+  ],
+  "optimizer_trace_sha256": "4b2a4a194015882b353caa331acbefe0e00f49332cc0f56c6aa9a4fea9ed4caa",
+  "elapsed_sec": 119.70329570770264,
+  "cuda_peak_memory_allocated_bytes": 433371136,
+  "cuda_peak_memory_reserved_bytes": 14183038976,
+  "checkpoint_selected_by_target_blind_loss_only": true,
+  "independent_depth_optimization_no_continuation": true,
+  "target_artifact_loaded": false,
+  "target_constructed": false,
+  "target_probability_computed": false,
+  "execution_environment": {
+    "torch_version": "2.7.0+cu118",
+    "numpy_version": "2.1.2",
+    "requested_device": "cuda",
+    "resolved_device": "cuda",
+    "cuda_device_name": "NVIDIA A800 80GB PCIe"
+  }
+}

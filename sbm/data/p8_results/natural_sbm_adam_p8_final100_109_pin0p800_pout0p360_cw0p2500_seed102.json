@@ -1,0 +1,525 @@
+{
+  "completed_at": "2026-08-28T19:20:38.709789+00:00",
+  "elapsed_seconds": 722.5219399929047,
+  "environment": {
+    "gpu": "NVIDIA A800 80GB PCIe LC",
+    "platform": "Linux-5.15.0-105-generic-x86_64-with-glibc2.35",
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:27:36) [GCC 11.2.0]",
+    "torch": "2.7.0+cu118"
+  },
+  "execution_diagnostics": {
+    "device_total_memory_bytes": 85094825984,
+    "logical_restarts": 4,
+    "max_memory_allocated_bytes": 53695620096,
+    "max_memory_reserved_bytes": 54003761152,
+    "restart_batch_size": 2,
+    "restart_result_ids": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  "instance": {
+    "centered_threshold": 0.5,
+    "coarse_fine_correlation": 0.22798553109169006,
+    "coarse_forest_edges": 0,
+    "coarse_ground_energy": -47.5,
+    "coarse_inter_weight": 0.25,
+    "coarse_intra_weight": 1.0,
+    "coarse_resource_two_body_term_count": 276,
+    "coarse_topology": "full",
+    "coarse_two_body_term_count": 260,
+    "cost_chunk_size": 2097152,
+    "dimension": 16777216,
+    "edge_probabilities": {
+      "different_macro_communities": 0.36,
+      "same_macro_community": 0.8
+    },
+    "fine_resource_two_body_term_count": 276,
+    "global_spin_flip_symmetry": true,
+    "graph_seed": 102,
+    "ground_energy": -54.0,
+    "ground_indices": [
+      986895,
+      15790320
+    ],
+    "group_size": 4,
+    "initial_state_preparation_ru": 0,
+    "model_type": "two_community_sbm",
+    "n": 24,
+    "num_coarse_ground_states": 2,
+    "num_ground_states": 2,
+    "p_in": 0.8,
+    "p_micro": null,
+    "p_out": 0.36,
+    "planted_pair_is_ground": true,
+    "precision": "single",
+    "selected_coarse_block_edges": [
+      {
+        "block_mean": -0.125,
+        "left_group": 0,
+        "right_group": 1
+      },
+      {
+        "block_mean": 0.125,
+        "left_group": 0,
+        "right_group": 2
+      },
+      {
+        "block_mean": -0.1875,
+        "left_group": 0,
+        "right_group": 3
+      },
+      {
+        "block_mean": 0.25,
+        "left_group": 0,
+        "right_group": 4
+      },
+      {
+        "block_mean": 0.0625,
+        "left_group": 0,
+        "right_group": 5
+      },
+      {
+        "block_mean": -0.125,
+        "left_group": 1,
+        "right_group": 2
+      },
+      {
+        "block_mean": 0.3125,
+        "left_group": 1,
+        "right_group": 3
+      },
+      {
+        "block_mean": 0.0,
+        "left_group": 1,
+        "right_group": 4
+      },
+      {
+        "block_mean": 0.375,
+        "left_group": 1,
+        "right_group": 5
+      },
+      {
+        "block_mean": -0.4375,
+        "left_group": 2,
+        "right_group": 3
+      },
+      {
+        "block_mean": 0.4375,
+        "left_group": 2,
+        "right_group": 4
+      },
+      {
+        "block_mean": -0.0625,
+        "left_group": 2,
+        "right_group": 5
+      },
+      {
+        "block_mean": -0.0625,
+        "left_group": 3,
+        "right_group": 4
+      },
+      {
+        "block_mean": 0.25,
+        "left_group": 3,
+        "right_group": 5
+      },
+      {
+        "block_mean": -0.1875,
+        "left_group": 4,
+        "right_group": 5
+      }
+    ],
+    "target_coarse_quantile": 0.0,
+    "target_coarse_rank": 0,
+    "target_definition": "complete_exact_ground_set",
+    "target_is_coarse_ground": true
+  },
+  "protocol": {
+    "checkpoint_selection": "minimum_expected_energy",
+    "coarse_construction": {
+      "candidate_statistic": "empirical_mean_centered_adjacency_for_each_group_pair",
+      "edge_order": "not_applicable_all_group_pairs_retained",
+      "edge_selection_uses_planted_labels_or_fine_target": false,
+      "requested_forest_edges": 0,
+      "resource_term_count": "legacy_complete_pair_register",
+      "selection": "all_group_pairs",
+      "simulation_memory": "no_additional_statevector_or_cost_tensor; small_host_metadata_only",
+      "topology": "full"
+    },
+    "direct_depth": 8,
+    "direct_restart_execution": {
+      "global_restart_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "initialization_streams": "identical_to_the_unsplit_logical_restart_set",
+      "logical_restarts": 4,
+      "optimizer_updates": "independent_restart_trajectories_merged_by_minimum_expected_energy",
+      "restart_batch_size": 2,
+      "restart_batches": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    },
+    "graph_model": {
+      "edge_probabilities": {
+        "different_macro_communities": 0.36,
+        "same_macro_community": 0.8
+      },
+      "model_type": "two_community_sbm"
+    },
+    "initialization_scheme": "per_restart_numpy_pcg64_v1_with_linear_restart_zero",
+    "instance": {
+      "centered_threshold": 0.5,
+      "coarse_forest_edges": 0,
+      "coarse_inter_weight": 0.25,
+      "coarse_intra_weight": 1.0,
+      "coarse_topology": "full",
+      "cost_chunk_size": 2097152,
+      "graph_seed": 102,
+      "group_size": 4,
+      "n": 24,
+      "p_in": 0.8,
+      "p_micro": null,
+      "p_out": 0.36,
+      "precision": "single"
+    },
+    "loss_rule": "expected_energy_only",
+    "method": "standard_qaoa",
+    "optimizer_family": "adam",
+    "optimizer_spec": {
+      "adam_lr": 0.04,
+      "name": "adam",
+      "restarts": 4,
+      "spsa_a": 0.04,
+      "spsa_alpha": 0.602,
+      "spsa_c": 0.12,
+      "spsa_gamma": 0.101,
+      "steps": 320
+    },
+    "queue_task_spec": {
+      "args": {
+        "adam-lr": 0.04,
+        "centered-threshold": 0.5,
+        "coarse-forest-edges": 0,
+        "coarse-inter-weight": 0.25,
+        "coarse-intra-weight": 1.0,
+        "coarse-topology": "full",
+        "cost-chunk-size": 2097152,
+        "depth": 8,
+        "direct-restart-batch-size": 2,
+        "edge-sign-distribution": "all_positive",
+        "edge-sign-reliability": 1.0,
+        "edge-weight-coefficient-of-variation": 0.0,
+        "edge-weight-distribution": "unit",
+        "fine-support-model": "independent_pair_bernoulli",
+        "graph-seed": 102,
+        "group-size": 4,
+        "intra-edge-scale": 1.0,
+        "intra-edge-sign-policy": "sampled",
+        "macro-assignment": "alternating_contiguous_microblocks",
+        "mixer-type": "x",
+        "n": 24,
+        "optimizer": "adam",
+        "p-in": 0.8,
+        "p-out": 0.36,
+        "restarts": 4,
+        "steps": 320
+      },
+      "name": "natural_sbm_adam_p8_final100_109_pin0p800_pout0p360_cw0p2500_seed102",
+      "runner": "run_natural_sbm_adam_direct_microbatch.py",
+      "runner_implementation_id": "sbm_standard_loss_v2_pcg64_queuebound_20260826",
+      "runner_schema_version": 2
+    },
+    "runner": "run_natural_sbm_adam_direct_microbatch.py",
+    "runner_implementation_id": "sbm_standard_loss_v2_pcg64_queuebound_20260826",
+    "runner_schema_version": 2,
+    "target_evaluation": "complete_exact_ground_set_after_optimization"
+  },
+  "records": [
+    {
+      "method": "standard_qaoa",
+      "metrics": {
+        "exact_ground_probability": 0.37326449155807495,
+        "expected_coarse_energy": -34.67828369140625,
+        "expected_fine_energy": -45.950843811035156,
+        "repetitions_to_99_percent": 10,
+        "resource_units_per_run": 2676,
+        "state_norm": 1.000005841255188,
+        "target": "complete_exact_ground_set",
+        "total_cost_to_99_percent": 26760
+      },
+      "optimization": {
+        "beta": [
+          0.7553691864013672,
+          0.09877286106348038,
+          0.0029701085295528173,
+          -0.5725139379501343,
+          -0.4971574544906616,
+          -0.46327799558639526,
+          -0.36378350853919983,
+          -0.19782409071922302
+        ],
+        "elapsed_seconds": 721.958060503006,
+        "gamma": [
+          -0.10338704288005829,
+          -0.255178302526474,
+          -0.2801420986652374,
+          0.5618441700935364,
+          0.19568537175655365,
+          0.18260134756565094,
+          0.19504478573799133,
+          0.2268340140581131
+        ],
+        "initial_beta": [
+          [
+            0.30000001192092896,
+            0.261428564786911,
+            0.22285714745521545,
+            0.1842857152223587,
+            0.14571428298950195,
+            0.1071428582072258,
+            0.06857142597436905,
+            0.029999999329447746
+          ],
+          [
+            -1.2504292726516724,
+            -0.32999521493911743,
+            1.6256215572357178,
+            2.180391311645508,
+            3.1406869888305664,
+            -0.24072222411632538,
+            2.5268898010253906,
+            1.976934790611267
+          ],
+          [
+            -2.217705011367798,
+            -2.6373987197875977,
+            -2.3161063194274902,
+            -2.3039591312408447,
+            2.3232626914978027,
+            -2.1787569522857666,
+            0.5928713083267212,
+            -0.4834457337856293
+          ],
+          [
+            1.5765436887741089,
+            0.6181164979934692,
+            -1.298409342765808,
+            2.1832010746002197,
+            -1.417263388633728,
+            1.5436705350875854,
+            -0.17211255431175232,
+            1.7436028718948364
+          ]
+        ],
+        "initial_gamma": [
+          [
+            0.029999999329447746,
+            0.06857142597436905,
+            0.1071428582072258,
+            0.14571428298950195,
+            0.1842857152223587,
+            0.22285714745521545,
+            0.261428564786911,
+            0.30000001192092896
+          ],
+          [
+            0.1727944314479828,
+            -1.2761870622634888,
+            1.24208402633667,
+            0.733382523059845,
+            0.8208875060081482,
+            -2.3041505813598633,
+            -0.6007308959960938,
+            -1.3983877897262573
+          ],
+          [
+            2.2234296798706055,
+            1.7380783557891846,
+            2.0998940467834473,
+            0.43039950728416443,
+            1.0162135362625122,
+            2.0196597576141357,
+            1.6921943426132202,
+            -0.6637515425682068
+          ],
+          [
+            -0.6619974374771118,
+            -1.5578267574310303,
+            -2.099429130554199,
+            1.7370659112930298,
+            1.259162425994873,
+            -1.2812243700027466,
+            1.0876034498214722,
+            -0.6072176694869995
+          ]
+        ],
+        "initialization_scheme": "per_restart_numpy_pcg64_v1_with_linear_restart_zero",
+        "initialization_seed": 1944053017,
+        "initialization_stream_seeds": [
+          1864216104,
+          404397758,
+          18075396,
+          1981087634
+        ],
+        "learning_rate": 0.04,
+        "objective": "expected_fine_energy",
+        "objective_evaluations_per_restart": 321,
+        "optimizer": "adam",
+        "restart_results": [
+          {
+            "best_loss": -45.950843811035156,
+            "best_step": 287,
+            "restart": 0,
+            "trace": [
+              {
+                "best_loss": 27.4500675201416,
+                "loss": 27.4500675201416,
+                "step": 0
+              },
+              {
+                "best_loss": -45.26808166503906,
+                "loss": -45.26808166503906,
+                "step": 80
+              },
+              {
+                "best_loss": -45.95073318481445,
+                "loss": -45.95073318481445,
+                "step": 160
+              },
+              {
+                "best_loss": -45.95082092285156,
+                "loss": -45.95082092285156,
+                "step": 240
+              },
+              {
+                "best_loss": -45.950843811035156,
+                "loss": -45.77471160888672,
+                "step": 320
+              }
+            ]
+          },
+          {
+            "best_loss": -24.680753707885742,
+            "best_step": 181,
+            "restart": 1,
+            "trace": [
+              {
+                "best_loss": 0.3108869791030884,
+                "loss": 0.3108869791030884,
+                "step": 0
+              },
+              {
+                "best_loss": -24.662363052368164,
+                "loss": -24.65379524230957,
+                "step": 80
+              },
+              {
+                "best_loss": -24.6806583404541,
+                "loss": -24.68061065673828,
+                "step": 160
+              },
+              {
+                "best_loss": -24.680753707885742,
+                "loss": -24.680706024169922,
+                "step": 240
+              },
+              {
+                "best_loss": -24.680753707885742,
+                "loss": -24.680662155151367,
+                "step": 320
+              }
+            ]
+          },
+          {
+            "best_loss": -19.235715866088867,
+            "best_step": 312,
+            "restart": 2,
+            "trace": [
+              {
+                "best_loss": 0.0019603781402111053,
+                "loss": 0.0019603781402111053,
+                "step": 0
+              },
+              {
+                "best_loss": -19.20155906677246,
+                "loss": -19.20155906677246,
+                "step": 80
+              },
+              {
+                "best_loss": -19.2357120513916,
+                "loss": -19.233383178710938,
+                "step": 160
+              },
+              {
+                "best_loss": -19.235713958740234,
+                "loss": -19.2353515625,
+                "step": 240
+              },
+              {
+                "best_loss": -19.235715866088867,
+                "loss": -19.235675811767578,
+                "step": 320
+              }
+            ]
+          },
+          {
+            "best_loss": -31.069955825805664,
+            "best_step": 318,
+            "restart": 3,
+            "trace": [
+              {
+                "best_loss": 0.0028597284108400345,
+                "loss": 0.0028597284108400345,
+                "step": 0
+              },
+              {
+                "best_loss": -31.054092407226562,
+                "loss": -31.054092407226562,
+                "step": 80
+              },
+              {
+                "best_loss": -31.062768936157227,
+                "loss": -31.03247833251953,
+                "step": 160
+              },
+              {
+                "best_loss": -31.064613342285156,
+                "loss": -31.064613342285156,
+                "step": 240
+              },
+              {
+                "best_loss": -31.069955825805664,
+                "loss": -31.069671630859375,
+                "step": 320
+              }
+            ]
+          }
+        ],
+        "restarts": 4,
+        "selected_loss": -45.950843811035156,
+        "selected_restart": 0,
+        "steps": 320
+      },
+      "optimizer": "adam",
+      "p1": null,
+      "p2": 8,
+      "stage1_reference_key": null,
+      "training_objective": "expected_fine_energy"
+    }
+  ],
+  "started_at": "2026-08-28T19:08:36.133010+00:00",
+  "status": "complete"
+}

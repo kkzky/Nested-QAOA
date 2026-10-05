@@ -1,0 +1,181 @@
+{
+  "activation_checkpointing": false,
+  "adam_updates": 2399,
+  "aggregation": "Geometric mean over starts, then geometric mean over instances",
+  "checkpoint": "minimum corrected loss per start",
+  "depth_grids": {
+    "lp": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64
+    ],
+    "no_feasibility": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64
+    ],
+    "two_stage": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64
+    ],
+    "uniform_projector": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64
+    ],
+    "warm_xy": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64
+    ],
+    "xy_combined": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64,
+      96
+    ],
+    "xy_separate": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64,
+      96
+    ]
+  },
+  "depth_selection": "Minimize geometric mean RTS99*RU over four test starts; smaller depth breaks exact ties; p=0 excluded",
+  "dtype": "complex64",
+  "evaluations": 2400,
+  "fixed_phase_AA_included": false,
+  "initialization": "Archived independent prefix-consistent arrays; deterministic tails to p=96; warm-start +/-0.001",
+  "learning_rate": 0.035,
+  "loss": "(O_raw+1024*(C_raw+Q_raw))/2048",
+  "lp_phase": "O_raw/2048",
+  "matrix_generator": "numpy.Generator(PCG64(seed)).integers(1,21,(5,6),dtype=int64)",
+  "method_phases": {
+    "lp": [
+      "O/2048"
+    ],
+    "no_feasibility": [
+      "O/2048"
+    ],
+    "two_stage": [
+      "Pi_F",
+      "O/2048"
+    ],
+    "uniform_projector": [
+      "Q/48",
+      "C/10",
+      "O/2048"
+    ],
+    "warm_xy": [
+      "H"
+    ],
+    "xy_combined": [
+      "H"
+    ],
+    "xy_separate": [
+      "Q/48",
+      "C/10",
+      "O/2048"
+    ]
+  },
+  "methods": {
+    "lp": "LP-QAOA",
+    "no_feasibility": "LP-QAOA without the joint-feasibility stage",
+    "two_stage": "Two-stage LP-QAOA",
+    "uniform_projector": "Uniform-state projector QAOA",
+    "warm_xy": "Warm-start block-XY QAOA",
+    "xy_combined": "Block-XY QAOA (combined phase)",
+    "xy_separate": "Block-XY QAOA (separate phases)"
+  },
+  "penalty": 1024,
+  "phase_hierarchy_note": "O-only LP phase is retained. Correct loss does not imply full-X2 phase-ground-space nesting.",
+  "phase_scale": 2048,
+  "primary_resource": "Archived native-C single-shot replay RU including terminal O measurement",
+  "protocol_sha256": "763cabc6a7f5fab190773795911ef7ee7f452ec355fe9f7d86b42d0dcb955ce4",
+  "restart_seeds": [
+    2026081100,
+    2026081101,
+    2026081102,
+    2026081103
+  ],
+  "rts99": "ceil(log(0.01)/log1p(-P)); P=0 -> infinity; P=1 -> 1",
+  "schema": "bcst-corrected-loss-20260911-v1",
+  "seeds_accepted_without_filtering": true,
+  "sources": {
+    "campaign.py": "495567dd5e0073a43848603c26a7343ebace6db2758aa8d83c312f59d9f5aa91",
+    "controller.py": "e3aed3f1c42c9b12bc8a0347dbe97fa2642d50da806598b5bcc427b9b2c7b32e",
+    "corrected_loss.py": "81f94c17d3f82e6b3e83c7014d50306a538ad779cf289a0efc3ec32a61a42859",
+    "inputs/original_manifest.json": "f135aa0c42f90ae9dd1344a5d717db7adb81b309abc3f7409dca562d751f7237",
+    "original_source/conditional_stage3_objective_launcher.py": "299b2b5f66918de09833d3e28fd1d5c52ab5fe411dee9f9506d8da95f8e66104",
+    "original_source/post_stage_a_structural_worker.py": "fd9cfa980f0563b50b69207dcbddce05e852891b2bb2218c16f1d3fc6aa89263",
+    "original_source/stage3_objective_common.py": "1055fc3523a1e02d67c86e4ad1e35d062b60917bbad818edbd5bc7a4be90f57f",
+    "original_source/target_free_structural_screen.py": "b89edeec495f5e890b167cd9386dcb543dd39d0b2d1d281fb00ece5934930580",
+    "original_source/targeted_coherent_im3_continuation.py": "5cd379bfe5b82418d8bc7756787da769b491f9eee172318d52163a8e2cf4d550",
+    "original_source/targeted_coherent_im3_continuation_score.py": "02c6f5e780c50636b40d45680309f69f4b6f0f3d6c6f54c204a60a30b7c969fb",
+    "original_source/targeted_coherent_im3_depth_sweep.py": "165f4c42b74f8e1ee91b8565be2e396a30573cc0dc0786b1d7b47a7eda3a800f",
+    "original_source/targeted_coherent_im3_depth_sweep_queue.py": "382e9a5327d917b3d27dc85e61647d3d2fb7587f9cbba895491699203a553855",
+    "original_source/targeted_coherent_im3_depth_sweep_score.py": "4e47b5cdd37a76566fdab12150dd4381b5da289e560da33a8dae67b873bf0230",
+    "original_source/targeted_coherent_im3_fixed_uniform_control.py": "8cc35ef1d44bd40964d08228c139945d2fe2bf0cceb44fba30ff0dd21e5407f1",
+    "original_source/targeted_coherent_im3_heldout.py": "6d525b61f0b6b6cc01645f7208df10ab7b62cc87a722b848a9fb2b3a2d1b702e",
+    "original_source/targeted_coherent_im3_objective.py": "a019811c51ef93f7e382a55884e228e502f4949a7be61dc8dfe33e831005543b",
+    "original_source/targeted_coherent_im3_score.py": "54b26ca831a9067bafbde15dd49e2b8081d96ad1215148d96bfda2196e66ccc6",
+    "original_source/targeted_coherent_im3_screen.py": "397b5dd24d1fe4ce1600c30c30257dcd04dab36362b1de612f2c53a60f9bddb0",
+    "original_source/targeted_coherent_im3_seed10_extension.py": "9197c91db5d45d95f9f47124c77c02ea4db7f262fc3e231d192c737dd636a980",
+    "original_source/targeted_coherent_im3_seed10_extension_queue.py": "a89d1a1014ec62e430c95dc0461ac058359e6019d820e9ac45ccdf7b6de657c3",
+    "original_source/targeted_coherent_im3_seed10_extension_score.py": "bcff498e0600023b8d6a35b1c4fc53a431d189019940e5dbef62ad2c8eb7f702",
+    "original_source/targeted_coherent_im3_seed10_extension_supervisor.py": "4bb8e4d9a74b82134df9d79bfddc215a2f94ad2d250643c0453581297ab4b4dd",
+    "original_source/targeted_coherent_im3_vanilla_qaoa.py": "e441597883b2f74fe05807f57a0027738e7dbbef26089d6ecac9c0a1e85f6e01",
+    "original_source/targeted_coherent_im3_vanilla_qaoa_queue.py": "c5d7515682d4eaa8c99668df6c41cdd1f8dcc8bbf534f83cd7e52fa089d6e3eb",
+    "original_source/targeted_coherent_im3_vanilla_qaoa_score.py": "9f82d3627fff335c9cf2d8c5bcbc8648cb753baa4dd46aa046f46087b79b3e77",
+    "original_source/targeted_coherent_im3_variational_f3.py": "dfcf38d5d3637e1340552a20eecfabee60195cdd7ba0015a55ed99f1b902fab8",
+    "original_source/targeted_three_stage_common.py": "2bee5ab00e63cc81ef40f4f7b1ed5b03426c5ab7aa1f2535546ca90e14f479dc",
+    "original_source/test_targeted_coherent_im3_seed10_extension.py": "e145edc83937246a6a0bdbb3783cb099a3f82af12a709c8abbdeef8696916746",
+    "verify_campaign.py": "34d9ad9ac5a1f393ce8078e7daa463f9bd9dfca3629c3761e319ec1e52d2757c"
+  },
+  "success": "Unconditional probability of the entire constrained ground space; no postselection",
+  "test_seed": 2026091100,
+  "training_and_checkpoint_selection_use_target_probability": false,
+  "training_resources": "Evaluation budget and wall time recorded separately; not included in RTS99*RU",
+  "validation_depth_selection": false,
+  "validation_seeds": [
+    2026091101,
+    2026091102,
+    2026091103,
+    2026091104,
+    2026091105,
+    2026091106,
+    2026091107,
+    2026091108,
+    2026091109,
+    2026091110
+  ]
+}

@@ -1,0 +1,420 @@
+{
+  "added_depths": {
+    "lp": [
+      6,
+      10,
+      12,
+      14
+    ],
+    "two_stage": [
+      24,
+      40
+    ],
+    "xy_separate": [
+      6,
+      10,
+      12,
+      14
+    ]
+  },
+  "amendment_sha256": "e4f9034c5b2a8bb3396dd7d347edb847538ba29b5cb04c86dd8f76fc55016e59",
+  "manifest_sha256": "4381a88f1284645d91df41fabe5f2616e28db29c6a7c0ce676e3fa09c8864c95",
+  "original_test_results": [
+    {
+      "cohort": "test",
+      "depth": 1,
+      "method": "lp",
+      "seed": 2026091100,
+      "success_probability": 0.004064577679918864,
+      "total_cost": 79370422.0923323
+    },
+    {
+      "cohort": "test",
+      "depth": 2,
+      "method": "lp",
+      "seed": 2026091100,
+      "success_probability": 0.008612780984945865,
+      "total_cost": 59725277.67226795
+    },
+    {
+      "cohort": "test",
+      "depth": 4,
+      "method": "lp",
+      "seed": 2026091100,
+      "success_probability": 0.02034075001428061,
+      "total_cost": 44060887.42344009
+    },
+    {
+      "cohort": "test",
+      "depth": 8,
+      "method": "lp",
+      "seed": 2026091100,
+      "success_probability": 0.054989996203012446,
+      "total_cost": 29897009.883475758
+    },
+    {
+      "cohort": "test",
+      "depth": 16,
+      "method": "lp",
+      "seed": 2026091100,
+      "success_probability": 0.10325681773627601,
+      "total_cost": 29895256.844017256
+    },
+    {
+      "cohort": "test",
+      "depth": 32,
+      "method": "lp",
+      "seed": 2026091100,
+      "success_probability": 0.1099792122371429,
+      "total_cost": 54808264.38464149
+    },
+    {
+      "cohort": "test",
+      "depth": 64,
+      "method": "lp",
+      "seed": 2026091100,
+      "success_probability": 0.11239703819331151,
+      "total_cost": 105790969.46057107
+    },
+    {
+      "cohort": "test",
+      "depth": 1,
+      "method": "two_stage",
+      "seed": 2026091100,
+      "success_probability": 0.0008592616593159744,
+      "total_cost": 192634389.40066186
+    },
+    {
+      "cohort": "test",
+      "depth": 2,
+      "method": "two_stage",
+      "seed": 2026091100,
+      "success_probability": 0.002120284795231846,
+      "total_cost": 119861523.51715994
+    },
+    {
+      "cohort": "test",
+      "depth": 4,
+      "method": "two_stage",
+      "seed": 2026091100,
+      "success_probability": 0.0040404626760340715,
+      "total_cost": 106696234.18934157
+    },
+    {
+      "cohort": "test",
+      "depth": 8,
+      "method": "two_stage",
+      "seed": 2026091100,
+      "success_probability": 0.01017853991562717,
+      "total_cost": 76987856.40454848
+    },
+    {
+      "cohort": "test",
+      "depth": 16,
+      "method": "two_stage",
+      "seed": 2026091100,
+      "success_probability": 0.025961641039147127,
+      "total_cost": 57066292.8082997
+    },
+    {
+      "cohort": "test",
+      "depth": 32,
+      "method": "two_stage",
+      "seed": 2026091100,
+      "success_probability": 0.07448882824656818,
+      "total_cost": 38061099.242015116
+    },
+    {
+      "cohort": "test",
+      "depth": 64,
+      "method": "two_stage",
+      "seed": 2026091100,
+      "success_probability": 0.10455922662281204,
+      "total_cost": 52808269.27774302
+    },
+    {
+      "cohort": "test",
+      "depth": 1,
+      "method": "xy_separate",
+      "seed": 2026091100,
+      "success_probability": 1.7584840559788118e-05,
+      "total_cost": 8215186306.497574
+    },
+    {
+      "cohort": "test",
+      "depth": 2,
+      "method": "xy_separate",
+      "seed": 2026091100,
+      "success_probability": 2.9431956023523974e-05,
+      "total_cost": 7403144849.39586
+    },
+    {
+      "cohort": "test",
+      "depth": 4,
+      "method": "xy_separate",
+      "seed": 2026091100,
+      "success_probability": 9.632177034178694e-05,
+      "total_cost": 3786379388.1123962
+    },
+    {
+      "cohort": "test",
+      "depth": 8,
+      "method": "xy_separate",
+      "seed": 2026091100,
+      "success_probability": 0.0007445272192267012,
+      "total_cost": 884146183.2723148
+    },
+    {
+      "cohort": "test",
+      "depth": 16,
+      "method": "xy_separate",
+      "seed": 2026091100,
+      "success_probability": 0.001956673698971994,
+      "total_cost": 636106113.1862969
+    },
+    {
+      "cohort": "test",
+      "depth": 32,
+      "method": "xy_separate",
+      "seed": 2026091100,
+      "success_probability": 8.16530168095989e-07,
+      "total_cost": 2964710910539.185
+    },
+    {
+      "cohort": "test",
+      "depth": 64,
+      "method": "xy_separate",
+      "seed": 2026091100,
+      "success_probability": 1.1590254470010312e-06,
+      "total_cost": 4115971763175.1353
+    },
+    {
+      "cohort": "test",
+      "depth": 1,
+      "method": "xy_combined",
+      "seed": 2026091100,
+      "success_probability": 3.2240875911376125e-06,
+      "total_cost": 44679169775.03088
+    },
+    {
+      "cohort": "test",
+      "depth": 2,
+      "method": "xy_combined",
+      "seed": 2026091100,
+      "success_probability": 6.302857255709266e-07,
+      "total_cost": 344390805915.20776
+    },
+    {
+      "cohort": "test",
+      "depth": 4,
+      "method": "xy_combined",
+      "seed": 2026091100,
+      "success_probability": 1.386347899746057e-06,
+      "total_cost": 261906419940.54776
+    },
+    {
+      "cohort": "test",
+      "depth": 8,
+      "method": "xy_combined",
+      "seed": 2026091100,
+      "success_probability": 9.134182250367957e-07,
+      "total_cost": 717254264815.3961
+    },
+    {
+      "cohort": "test",
+      "depth": 16,
+      "method": "xy_combined",
+      "seed": 2026091100,
+      "success_probability": 6.699994787262673e-07,
+      "total_cost": 1849663621311.5825
+    },
+    {
+      "cohort": "test",
+      "depth": 32,
+      "method": "xy_combined",
+      "seed": 2026091100,
+      "success_probability": 1.0278820525923706e-06,
+      "total_cost": 2342206235211.9727
+    },
+    {
+      "cohort": "test",
+      "depth": 64,
+      "method": "xy_combined",
+      "seed": 2026091100,
+      "success_probability": 8.595812888724419e-07,
+      "total_cost": 5518954857873.511
+    },
+    {
+      "cohort": "test",
+      "depth": 1,
+      "method": "no_feasibility",
+      "seed": 2026091100,
+      "success_probability": 0.000316495805175945,
+      "total_cost": 516995075.87751836
+    },
+    {
+      "cohort": "test",
+      "depth": 2,
+      "method": "no_feasibility",
+      "seed": 2026091100,
+      "success_probability": 0.000455554034534379,
+      "total_cost": 549678504.7016603
+    },
+    {
+      "cohort": "test",
+      "depth": 4,
+      "method": "no_feasibility",
+      "seed": 2026091100,
+      "success_probability": 0.0008319195164584067,
+      "total_cost": 509587795.400857
+    },
+    {
+      "cohort": "test",
+      "depth": 8,
+      "method": "no_feasibility",
+      "seed": 2026091100,
+      "success_probability": 0.0011969951005495352,
+      "total_cost": 644020019.1839901
+    },
+    {
+      "cohort": "test",
+      "depth": 16,
+      "method": "no_feasibility",
+      "seed": 2026091100,
+      "success_probability": 0.0007875117374203275,
+      "total_cost": 1860606718.5462806
+    },
+    {
+      "cohort": "test",
+      "depth": 32,
+      "method": "no_feasibility",
+      "seed": 2026091100,
+      "success_probability": 1.8218202122298808e-05,
+      "total_cost": 156682797354.6541
+    },
+    {
+      "cohort": "test",
+      "depth": 64,
+      "method": "no_feasibility",
+      "seed": 2026091100,
+      "success_probability": 4.424527859790003e-06,
+      "total_cost": 1273016707961.712
+    },
+    {
+      "cohort": "test",
+      "depth": 1,
+      "method": "warm_xy",
+      "seed": 2026091100,
+      "success_probability": 0.00018693304095841515,
+      "total_cost": 801576036.4973767
+    },
+    {
+      "cohort": "test",
+      "depth": 2,
+      "method": "warm_xy",
+      "seed": 2026091100,
+      "success_probability": 0.000287681633620988,
+      "total_cost": 774610194.3835812
+    },
+    {
+      "cohort": "test",
+      "depth": 4,
+      "method": "warm_xy",
+      "seed": 2026091100,
+      "success_probability": 0.00063562828944164,
+      "total_cost": 580206408.6161572
+    },
+    {
+      "cohort": "test",
+      "depth": 8,
+      "method": "warm_xy",
+      "seed": 2026091100,
+      "success_probability": 0.0010845813343319962,
+      "total_cost": 609171630.2372417
+    },
+    {
+      "cohort": "test",
+      "depth": 16,
+      "method": "warm_xy",
+      "seed": 2026091100,
+      "success_probability": 0.0008154940048199963,
+      "total_cost": 1526022057.0682411
+    },
+    {
+      "cohort": "test",
+      "depth": 32,
+      "method": "warm_xy",
+      "seed": 2026091100,
+      "success_probability": 0.005308222900379166,
+      "total_cost": 453677427.00340694
+    },
+    {
+      "cohort": "test",
+      "depth": 64,
+      "method": "warm_xy",
+      "seed": 2026091100,
+      "success_probability": 0.008782277852495322,
+      "total_cost": 539067540.4886398
+    },
+    {
+      "cohort": "test",
+      "depth": 1,
+      "method": "uniform_projector",
+      "seed": 2026091100,
+      "success_probability": 4.830916191182069e-06,
+      "total_cost": 30700020093.214725
+    },
+    {
+      "cohort": "test",
+      "depth": 2,
+      "method": "uniform_projector",
+      "seed": 2026091100,
+      "success_probability": 7.857528342096125e-06,
+      "total_cost": 28709229937.107674
+    },
+    {
+      "cohort": "test",
+      "depth": 4,
+      "method": "uniform_projector",
+      "seed": 2026091100,
+      "success_probability": 1.3772320488369902e-05,
+      "total_cost": 27601150610.66334
+    },
+    {
+      "cohort": "test",
+      "depth": 8,
+      "method": "uniform_projector",
+      "seed": 2026091100,
+      "success_probability": 3.329828696011888e-05,
+      "total_cost": 20698498275.66541
+    },
+    {
+      "cohort": "test",
+      "depth": 16,
+      "method": "uniform_projector",
+      "seed": 2026091100,
+      "success_probability": 6.579742122350218e-05,
+      "total_cost": 19869917645.187355
+    },
+    {
+      "cohort": "test",
+      "depth": 32,
+      "method": "uniform_projector",
+      "seed": 2026091100,
+      "success_probability": 0.00010330714057731137,
+      "total_cost": 24622667815.856358
+    },
+    {
+      "cohort": "test",
+      "depth": 64,
+      "method": "uniform_projector",
+      "seed": 2026091100,
+      "success_probability": 0.00047847191856655226,
+      "total_cost": 10482443812.984808
+    }
+  ],
+  "protocol_sha256": "763cabc6a7f5fab190773795911ef7ee7f452ec355fe9f7d86b42d0dcb955ce4",
+  "selection": "LP and separate XY interior quartiles plus user-requested p6; two-stage explicitly 24 and 40",
+  "test_seed": 2026091100,
+  "validation_results_used": false
+}

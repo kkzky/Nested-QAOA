@@ -1,0 +1,70 @@
+{
+  "resource_model": "bcst_occupation_products_two_body_1RU",
+  "rows": [
+    {
+      "cohort": "fresh7",
+      "depth": 0,
+      "probability": 3.814697265624994e-06,
+      "per_shot_RU": 2622,
+      "total_cost": 3165320351.999975,
+      "source_file": "raw/n18/vanilla_score.json"
+    },
+    {
+      "cohort": "fresh7",
+      "depth": 1,
+      "probability": 2.586176387202858e-06,
+      "per_shot_RU": 5307,
+      "total_cost": 9450088526.618286,
+      "source_file": "raw/n18/vanilla_score.json"
+    },
+    {
+      "cohort": "fresh7",
+      "depth": 2,
+      "probability": 1.3804489222237691e-06,
+      "per_shot_RU": 7992,
+      "total_cost": 26661233947.03477,
+      "source_file": "raw/n18/vanilla_score.json"
+    },
+    {
+      "cohort": "fresh7",
+      "depth": 4,
+      "probability": 1.5032400521478684e-05,
+      "per_shot_RU": 13362,
+      "total_cost": 4093010068.7220736,
+      "source_file": "raw/n18/vanilla_score.json"
+    },
+    {
+      "cohort": "fresh7",
+      "depth": 8,
+      "probability": 2.518105240914266e-06,
+      "per_shot_RU": 24102,
+      "total_cost": 44077684359.252884,
+      "source_file": "raw/n18/vanilla_score.json"
+    },
+    {
+      "cohort": "fresh7",
+      "depth": 16,
+      "probability": 1.6639172496066425e-06,
+      "per_shot_RU": 45582,
+      "total_cost": 126155709452.53833,
+      "source_file": "raw/n18/vanilla_score.json"
+    },
+    {
+      "cohort": "fresh7",
+      "depth": 32,
+      "probability": 2.104585673490035e-06,
+      "per_shot_RU": 88542,
+      "total_cost": 193743762150.17188,
+      "source_file": "raw/n18/vanilla_score.json"
+    },
+    {
+      "cohort": "fresh7",
+      "depth": 64,
+      "probability": 2.210915937356486e-06,
+      "per_shot_RU": 174462,
+      "total_cost": 363390588228.07355,
+      "source_file": "raw/n18/vanilla_score.json"
+    }
+  ],
+  "note": "Separate N=18 diagnostic, not a quantitative N=30 baseline."
+}

@@ -1,0 +1,122 @@
+{
+  "seed": 2026091100,
+  "coefficient_table": {
+    "coherent_risk_weight": 256,
+    "definition": "256*sum_{v,c} L[v,c]^2 + sum_{v,c} A[v,c] x[v,c]",
+    "directed_inter_site_links": 20,
+    "pair_lists_by_product_channel": [
+      [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      [
+        [
+          1,
+          2
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      [
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ]
+    ],
+    "phase_scale": 2048.0,
+    "service_cost": [
+      [
+        3,
+        6,
+        9,
+        15,
+        5,
+        6
+      ],
+      [
+        9,
+        3,
+        7,
+        14,
+        5,
+        8
+      ],
+      [
+        3,
+        8,
+        12,
+        16,
+        2,
+        1
+      ],
+      [
+        17,
+        5,
+        9,
+        5,
+        10,
+        2
+      ],
+      [
+        9,
+        19,
+        5,
+        15,
+        20,
+        19
+      ]
+    ],
+    "service_cost_compact_json_sha256": "dc83676a44806afc1b83a2022c297ef041f2cbcfddaaa1aa9cee1e3e5a03d24c",
+    "service_cost_draw": "integers(low=1, high=21, size=(5,6))",
+    "service_cost_generator": "numpy.random.PCG64",
+    "service_cost_seed": 2026091100
+  },
+  "score": {
+    "ground_indices": [
+      363691
+    ]
+  }
+}

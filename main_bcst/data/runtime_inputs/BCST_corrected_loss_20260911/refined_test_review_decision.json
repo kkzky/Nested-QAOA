@@ -1,0 +1,69 @@
+{
+  "amendment_sha256": "e4f9034c5b2a8bb3396dd7d347edb847538ba29b5cb04c86dd8f76fc55016e59",
+  "audit_sha256": "cb1e85965b37cddf94d0f429530b142552371f5914cc8782b9d466ac15314377",
+  "authorization": "User requested automatic validation after refinement; no performance gate",
+  "authorize_validation": true,
+  "integrity_checks_passed": true,
+  "lock_sha256": "302b28e2ee51a1465a8a08426e4fea0f77a52962551df15881ceb0eabc3baf15",
+  "positive_cost_only": true,
+  "protocol_sha256": "763cabc6a7f5fab190773795911ef7ee7f452ec355fe9f7d86b42d0dcb955ce4",
+  "review_sha256": "bea4351c0c5a6ac0679052ace490e3a7bf4965df5fd55c573db13ea105b4a09a",
+  "selected_results": [
+    {
+      "cohort": "refinement",
+      "depth": 14,
+      "method": "lp",
+      "seed": 2026091100,
+      "success_probability": 0.10090924665866437,
+      "total_cost": 26910275.416260153
+    },
+    {
+      "cohort": "test",
+      "depth": 32,
+      "method": "two_stage",
+      "seed": 2026091100,
+      "success_probability": 0.07448882824656818,
+      "total_cost": 38061099.242015116
+    },
+    {
+      "cohort": "test",
+      "depth": 16,
+      "method": "xy_separate",
+      "seed": 2026091100,
+      "success_probability": 0.001956673698971994,
+      "total_cost": 636106113.1862969
+    },
+    {
+      "cohort": "test",
+      "depth": 1,
+      "method": "xy_combined",
+      "seed": 2026091100,
+      "success_probability": 3.2240875911376125e-06,
+      "total_cost": 44679169775.03088
+    },
+    {
+      "cohort": "test",
+      "depth": 4,
+      "method": "no_feasibility",
+      "seed": 2026091100,
+      "success_probability": 0.0008319195164584067,
+      "total_cost": 509587795.400857
+    },
+    {
+      "cohort": "test",
+      "depth": 32,
+      "method": "warm_xy",
+      "seed": 2026091100,
+      "success_probability": 0.005308222900379166,
+      "total_cost": 453677427.00340694
+    },
+    {
+      "cohort": "test",
+      "depth": 64,
+      "method": "uniform_projector",
+      "seed": 2026091100,
+      "success_probability": 0.00047847191856655226,
+      "total_cost": 10482443812.984808
+    }
+  ]
+}

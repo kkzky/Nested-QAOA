@@ -1,0 +1,105 @@
+{
+  "added_test_cells": 10,
+  "amendment_sha256": "e4f9034c5b2a8bb3396dd7d347edb847538ba29b5cb04c86dd8f76fc55016e59",
+  "base_protocol_sha256": "763cabc6a7f5fab190773795911ef7ee7f452ec355fe9f7d86b42d0dcb955ce4",
+  "coarse_depths": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32,
+    64
+  ],
+  "evaluations_per_restart": 2400,
+  "excluded_original_cells": [
+    [
+      "xy_separate",
+      96
+    ],
+    [
+      "xy_combined",
+      96
+    ]
+  ],
+  "fixed_added_depths": {
+    "lp": [
+      6,
+      10,
+      12,
+      14
+    ],
+    "two_stage": [
+      24,
+      40
+    ],
+    "xy_separate": [
+      6,
+      10,
+      12,
+      14
+    ]
+  },
+  "fixed_angle_ablation_included": false,
+  "fixed_phase_AA_included": false,
+  "loss_optimizer_initialization_and_RU_changes": "No numerical changes; added-depth adapters slice archived p64 initial arrays and evaluate unchanged affine RU formulas",
+  "manuscript_scope": {
+    "additional_fixed_angle_ablation_jobs": 0,
+    "evidence": "Main-text ablation paragraph and appendix circuit-family table include no-joint-feasibility, warm-start block-XY, and uniform-state projector controls. Each current final-stage circuit is variational. The archived FIXED_UNIFORM / control_native_fixedF32_O is distinct from uniform_projector / NATIVE_PROJECTOR_SEPARATE and is NOT scheduled.",
+    "excluded_controls": [
+      "fixed-phase AA",
+      "control_native_fixedF32_O"
+    ],
+    "manuscript": "LP-QAOA related/LP_QAOA_LaTeX_upload_20260903/main.tex",
+    "manuscript_modified": false,
+    "retained_methods": [
+      "lp",
+      "two_stage",
+      "xy_separate",
+      "xy_combined",
+      "no_feasibility",
+      "warm_xy",
+      "uniform_projector"
+    ],
+    "sha256": "3493c7d7d5351df3cd698434d5d11893b9c12a3eceb9e6cd6422f5b3bc409e51",
+    "table_label": "tab:bcst_multilevel_families"
+  },
+  "manuscript_scope_sha256": "0246b79070dfa72ab8c1bdb50dfe6550cd400d84aa9e261fb5c5e1c88ad24b1f",
+  "methods": [
+    "lp",
+    "two_stage",
+    "xy_separate",
+    "xy_combined",
+    "no_feasibility",
+    "warm_xy",
+    "uniform_projector"
+  ],
+  "original_test_cells": 49,
+  "report_cost_advantage_without_using_it_as_gate": true,
+  "restarts": 4,
+  "schema": "bcst-unattended-20260911-v1",
+  "sources": {
+    "audit_loss_contract.py": "e440debbeb5cca8f25c1a12888f6d11e437bf3f83fce7a5c75bef5bf419e2b2f",
+    "launch_unattended.py": "1f793bbcab2fc756910b9dc4f07cbbc07494ede78649320e9d1391498c5fd373",
+    "prepare_unattended_handoff.py": "051de0242b03cf0fc005ded5ed6a750f052f4efcc530b8079d12c69b283b14b6",
+    "unattended_campaign.py": "f2a8ae57f03efd3874f335404719ad5349952ecd1c21f6f3d5b6cea5d73de602",
+    "verify_unattended.py": "f711e774737aba2ed18f7433edb5a9a25d3a186a9aa16af70f22c12ea9cbbdfd"
+  },
+  "test_seed": 2026091100,
+  "user_instruction": "Finish warm-start p64, cancel both p96 cells, refine, then directly validate ten seeds; no monitoring",
+  "validation_authorization": "automatic_after_integrity_checks_no_performance_gate",
+  "validation_cells": 70,
+  "validation_seeds": [
+    2026091101,
+    2026091102,
+    2026091103,
+    2026091104,
+    2026091105,
+    2026091106,
+    2026091107,
+    2026091108,
+    2026091109,
+    2026091110
+  ],
+  "workers": 2
+}

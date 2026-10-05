@@ -1,0 +1,69 @@
+{
+  "id": "bcst_occupation_products_two_body_1RU",
+  "representation": "occupation-product phases, no Pauli expansion",
+  "monomial_costs": {
+    "1": 2,
+    "2": 1,
+    "3": 10,
+    "4": 14,
+    "5": 18,
+    "6": 22
+  },
+  "components": {
+    "initial": 5,
+    "C": 30,
+    "Q": 120,
+    "O": 15420,
+    "XY": 75,
+    "selective_phase": 900,
+    "shared_Q_O_unary": 60
+  },
+  "stage1_depth": 12,
+  "three_stage_fixed_p2": 14,
+  "per_shot_affine_formulas": {
+    "lp_three_stage": {
+      "base": 66385,
+      "slope": 118250
+    },
+    "lp_two_stage_separate": {
+      "base": 16685,
+      "slope": 18970
+    },
+    "lp_two_stage_combined": {
+      "base": 16685,
+      "slope": 18910
+    },
+    "block_xy_separate": {
+      "base": 15425,
+      "slope": 15645
+    },
+    "block_xy_combined": {
+      "base": 15425,
+      "slope": 15555
+    },
+    "omit_feasibility": {
+      "base": 16685,
+      "slope": 18850
+    },
+    "warm_start_block_xy": {
+      "base": 16685,
+      "slope": 15555
+    },
+    "uniform_projector": {
+      "base": 15425,
+      "slope": 16480
+    }
+  },
+  "merged_supports": "C is contained in Q; Q and O share thirty unary terms. Merge only within a common phase block.",
+  "unchanged": [
+    "success probabilities",
+    "integer RTS99",
+    "initial preparation 5",
+    "block XY 75",
+    "selective phase 900",
+    "terminal O 15420"
+  ],
+  "n18_formula": "2622 + 2685*p",
+  "additional_two_level_BCST": "unchanged",
+  "gradient_diagnostics": "unchanged"
+}

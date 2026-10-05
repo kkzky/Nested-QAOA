@@ -1,0 +1,1614 @@
+{
+  "schema": "targeted-coherent-im3-vanilla-qaoa-b3l6-nonredundant-v2-manifest",
+  "status": "FROZEN_TARGET_BLIND_VANILLA_QAOA_DIAGNOSTIC",
+  "implementation_revision": "induced-path-balanced-quota-penalty377-r3-20260819",
+  "frozen_source_sha256": {
+    "targeted_coherent_im3_vanilla_qaoa.py": "e441597883b2f74fe05807f57a0027738e7dbbef26089d6ecac9c0a1e85f6e01",
+    "targeted_coherent_im3_vanilla_qaoa_queue.py": "c5d7515682d4eaa8c99668df6c41cdd1f8dcc8bbf534f83cd7e52fa089d6e3eb",
+    "targeted_coherent_im3_vanilla_qaoa_score.py": "9f82d3627fff335c9cf2d8c5bcbc8648cb753baa4dd46aa046f46087b79b3e77",
+    "COHERENT_IM3_SEED10_EXTENSION_PROTOCOL_20260819.md": "5cd109cceaf5db2e0d9ac7eec560d684f241225b06aa5f91b143fd559cb0dafb",
+    "targeted_coherent_im3_seed10_extension.py": "9197c91db5d45d95f9f47124c77c02ea4db7f262fc3e231d192c737dd636a980",
+    "targeted_coherent_im3_objective.py": "a019811c51ef93f7e382a55884e228e502f4949a7be61dc8dfe33e831005543b",
+    "targeted_three_stage_common.py": "2bee5ab00e63cc81ef40f4f7b1ed5b03426c5ab7aa1f2535546ca90e14f479dc"
+  },
+  "source_extension_manifest_sha256": "24b6ba7e2a4f9c3cb40999c308ac6cefd877dbf88aa8fc2748762191b5255a13",
+  "source_extension_plan_sha256": "22478654cff33a3cc84ebe59468f37bb6e993d648a680624f502e792e2182b3e",
+  "full30_memory_certificate": {
+    "full_problem_qubits": 30,
+    "full_dimension": 1073741824,
+    "one_complex64_state_bytes": 8589934592,
+    "four_restart_state_batch_bytes": 34359738368,
+    "one_float32_cost_diagonal_bytes": 4294967296,
+    "p1_noncheckpointed_autograd_lower_bound_bytes": 107374182400,
+    "A800_nominal_bytes": 85899345920,
+    "transverse_X_layer_work_ratio_N30_over_N18": 6826.666666666667,
+    "work_ratio_semantics": "exact O(N*2^N) amplitude-touch ratio, not a hardware benchmark or exact wall-time ratio",
+    "decision": "FULL30_FOUR_RESTART_BATCHED_NONCHECKPOINTED_PYTORCH_INADMISSIBLE",
+    "scope_note": "this is not a proof that every exact simulator is memory-infeasible; sequential restarts or specialized checkpointing can reduce memory but remain computationally prohibitive for the frozen 10x7x4 campaign",
+    "downsizing_rule": "use the preregistered tractable analogue B=3,L=6,N=18, preserving six labels, the exact coherent objective, and nontrivial global quota/conflict constraints while completing all 10x7x4 optimized cells"
+  },
+  "diagnostic_problem": {
+    "blocks": 3,
+    "labels": 6,
+    "qubits": 18,
+    "dimension": 262144,
+    "site_constraint": "exactly two selected labels per block",
+    "quota": [
+      2,
+      1,
+      1,
+      1,
+      1,
+      0
+    ],
+    "quota_rule": "canonical closest-to-uniform nonuniform quota; among permutations of (2,1,1,1,1,0), repeat lowest and omit highest by label-order tie-break",
+    "conflict_edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "conflict_graph_rule": "induced first-three-site path of the original five-cycle",
+    "objective": "same coherent IM3 load-square formula restricted to three sites",
+    "penalty": "H=O+377*(site_two_hot_penalty+quota_penalty+conflict_penalty)",
+    "phase_and_loss_diagonal": "H/377",
+    "initial_state": "uniform |+>^18",
+    "mixer": "standard transverse sum_j X_j",
+    "not_direct_quantitative_evidence_for_30_qubits": true
+  },
+  "table_seeds": [
+    2026081801,
+    2026081802,
+    2026081803,
+    2026081804,
+    2026081805,
+    2026081806,
+    2026081807,
+    2026081808,
+    2026081809,
+    2026081810
+  ],
+  "tables_in_seed_order": [
+    {
+      "definition": "256*sum_{v,c} L[v,c]^2 + sum_{v,c} A[v,c] x[v,c]",
+      "pair_lists_by_product_channel": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      ],
+      "service_cost": [
+        [
+          11,
+          12,
+          10,
+          13,
+          19,
+          14
+        ],
+        [
+          18,
+          14,
+          11,
+          20,
+          10,
+          6
+        ],
+        [
+          14,
+          10,
+          13,
+          9,
+          15,
+          10
+        ],
+        [
+          5,
+          18,
+          14,
+          12,
+          17,
+          12
+        ],
+        [
+          2,
+          11,
+          8,
+          20,
+          16,
+          17
+        ]
+      ],
+      "service_cost_compact_json_sha256": "ad9a3bb7b488f5b533a4e193028324539347b1845935168f1ccaa5efdca85d9b",
+      "coherent_risk_weight": 256,
+      "directed_inter_site_links": 20,
+      "phase_scale": 2048.0,
+      "service_cost_generator": "numpy.random.PCG64",
+      "service_cost_seed": 2026081801,
+      "service_cost_draw": "integers(low=1, high=21, size=(5,6))"
+    },
+    {
+      "definition": "256*sum_{v,c} L[v,c]^2 + sum_{v,c} A[v,c] x[v,c]",
+      "pair_lists_by_product_channel": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      ],
+      "service_cost": [
+        [
+          14,
+          15,
+          9,
+          12,
+          3,
+          16
+        ],
+        [
+          12,
+          19,
+          17,
+          6,
+          11,
+          5
+        ],
+        [
+          11,
+          6,
+          9,
+          2,
+          13,
+          18
+        ],
+        [
+          9,
+          15,
+          15,
+          17,
+          8,
+          5
+        ],
+        [
+          18,
+          8,
+          6,
+          10,
+          10,
+          4
+        ]
+      ],
+      "service_cost_compact_json_sha256": "fb436ba23f2c4158f15f0cb4e381988376023afa323be9a43379eac1299a271b",
+      "coherent_risk_weight": 256,
+      "directed_inter_site_links": 20,
+      "phase_scale": 2048.0,
+      "service_cost_generator": "numpy.random.PCG64",
+      "service_cost_seed": 2026081802,
+      "service_cost_draw": "integers(low=1, high=21, size=(5,6))"
+    },
+    {
+      "definition": "256*sum_{v,c} L[v,c]^2 + sum_{v,c} A[v,c] x[v,c]",
+      "pair_lists_by_product_channel": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      ],
+      "service_cost": [
+        [
+          12,
+          20,
+          11,
+          6,
+          8,
+          3
+        ],
+        [
+          20,
+          6,
+          17,
+          3,
+          16,
+          3
+        ],
+        [
+          12,
+          16,
+          7,
+          14,
+          1,
+          3
+        ],
+        [
+          6,
+          17,
+          11,
+          5,
+          3,
+          9
+        ],
+        [
+          2,
+          7,
+          10,
+          5,
+          7,
+          15
+        ]
+      ],
+      "service_cost_compact_json_sha256": "2fdf72bbfe3fb7ade62f6dd35c4500b547833b85ff6a83eb9eb75e7207bf78ba",
+      "coherent_risk_weight": 256,
+      "directed_inter_site_links": 20,
+      "phase_scale": 2048.0,
+      "service_cost_generator": "numpy.random.PCG64",
+      "service_cost_seed": 2026081803,
+      "service_cost_draw": "integers(low=1, high=21, size=(5,6))"
+    },
+    {
+      "definition": "256*sum_{v,c} L[v,c]^2 + sum_{v,c} A[v,c] x[v,c]",
+      "pair_lists_by_product_channel": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      ],
+      "service_cost": [
+        [
+          15,
+          14,
+          18,
+          20,
+          5,
+          17
+        ],
+        [
+          2,
+          15,
+          20,
+          19,
+          2,
+          10
+        ],
+        [
+          14,
+          12,
+          11,
+          20,
+          19,
+          5
+        ],
+        [
+          17,
+          18,
+          4,
+          15,
+          7,
+          8
+        ],
+        [
+          4,
+          2,
+          14,
+          8,
+          12,
+          11
+        ]
+      ],
+      "service_cost_compact_json_sha256": "934616b4edd05cf073b4f337973fa34a8d1a59d9d6cdec5fa19333ef04f622e0",
+      "coherent_risk_weight": 256,
+      "directed_inter_site_links": 20,
+      "phase_scale": 2048.0,
+      "service_cost_generator": "numpy.random.PCG64",
+      "service_cost_seed": 2026081804,
+      "service_cost_draw": "integers(low=1, high=21, size=(5,6))"
+    },
+    {
+      "definition": "256*sum_{v,c} L[v,c]^2 + sum_{v,c} A[v,c] x[v,c]",
+      "pair_lists_by_product_channel": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      ],
+      "service_cost": [
+        [
+          20,
+          1,
+          17,
+          16,
+          3,
+          8
+        ],
+        [
+          2,
+          15,
+          7,
+          5,
+          4,
+          2
+        ],
+        [
+          11,
+          7,
+          17,
+          20,
+          7,
+          14
+        ],
+        [
+          10,
+          2,
+          15,
+          13,
+          13,
+          9
+        ],
+        [
+          19,
+          7,
+          4,
+          13,
+          14,
+          2
+        ]
+      ],
+      "service_cost_compact_json_sha256": "5b2a355094fc1e88838856ab071aebd83866eb8c366f382dba6d8b81837b8c5c",
+      "coherent_risk_weight": 256,
+      "directed_inter_site_links": 20,
+      "phase_scale": 2048.0,
+      "service_cost_generator": "numpy.random.PCG64",
+      "service_cost_seed": 2026081805,
+      "service_cost_draw": "integers(low=1, high=21, size=(5,6))"
+    },
+    {
+      "definition": "256*sum_{v,c} L[v,c]^2 + sum_{v,c} A[v,c] x[v,c]",
+      "pair_lists_by_product_channel": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      ],
+      "service_cost": [
+        [
+          4,
+          6,
+          19,
+          16,
+          16,
+          17
+        ],
+        [
+          18,
+          13,
+          1,
+          19,
+          13,
+          14
+        ],
+        [
+          17,
+          14,
+          10,
+          13,
+          19,
+          18
+        ],
+        [
+          12,
+          8,
+          12,
+          15,
+          9,
+          16
+        ],
+        [
+          16,
+          1,
+          14,
+          13,
+          10,
+          18
+        ]
+      ],
+      "service_cost_compact_json_sha256": "6b35e2639d757980575c4aa2fafd747d19720473d54250be59a87f5af64ae914",
+      "coherent_risk_weight": 256,
+      "directed_inter_site_links": 20,
+      "phase_scale": 2048.0,
+      "service_cost_generator": "numpy.random.PCG64",
+      "service_cost_seed": 2026081806,
+      "service_cost_draw": "integers(low=1, high=21, size=(5,6))"
+    },
+    {
+      "definition": "256*sum_{v,c} L[v,c]^2 + sum_{v,c} A[v,c] x[v,c]",
+      "pair_lists_by_product_channel": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      ],
+      "service_cost": [
+        [
+          13,
+          10,
+          13,
+          10,
+          3,
+          20
+        ],
+        [
+          15,
+          12,
+          7,
+          3,
+          5,
+          7
+        ],
+        [
+          7,
+          12,
+          5,
+          3,
+          14,
+          10
+        ],
+        [
+          11,
+          16,
+          19,
+          12,
+          19,
+          20
+        ],
+        [
+          6,
+          18,
+          8,
+          6,
+          18,
+          10
+        ]
+      ],
+      "service_cost_compact_json_sha256": "43edd8f55682819383c874b0ac768cc9129d38e642880edda6bf070f075ad6f8",
+      "coherent_risk_weight": 256,
+      "directed_inter_site_links": 20,
+      "phase_scale": 2048.0,
+      "service_cost_generator": "numpy.random.PCG64",
+      "service_cost_seed": 2026081807,
+      "service_cost_draw": "integers(low=1, high=21, size=(5,6))"
+    },
+    {
+      "definition": "256*sum_{v,c} L[v,c]^2 + sum_{v,c} A[v,c] x[v,c]",
+      "pair_lists_by_product_channel": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      ],
+      "service_cost": [
+        [
+          8,
+          18,
+          1,
+          5,
+          19,
+          19
+        ],
+        [
+          12,
+          10,
+          13,
+          3,
+          16,
+          8
+        ],
+        [
+          11,
+          13,
+          16,
+          7,
+          11,
+          13
+        ],
+        [
+          2,
+          3,
+          13,
+          8,
+          1,
+          1
+        ],
+        [
+          8,
+          11,
+          17,
+          19,
+          14,
+          5
+        ]
+      ],
+      "service_cost_compact_json_sha256": "bf9fb9ffad1fd8b3d95e4e126d249ce9102c10caa2ee861948bed2dbb0c15caf",
+      "coherent_risk_weight": 256,
+      "directed_inter_site_links": 20,
+      "phase_scale": 2048.0,
+      "service_cost_generator": "numpy.random.PCG64",
+      "service_cost_seed": 2026081808,
+      "service_cost_draw": "integers(low=1, high=21, size=(5,6))"
+    },
+    {
+      "definition": "256*sum_{v,c} L[v,c]^2 + sum_{v,c} A[v,c] x[v,c]",
+      "pair_lists_by_product_channel": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      ],
+      "service_cost": [
+        [
+          5,
+          15,
+          12,
+          11,
+          5,
+          11
+        ],
+        [
+          4,
+          11,
+          10,
+          11,
+          5,
+          12
+        ],
+        [
+          8,
+          16,
+          12,
+          13,
+          3,
+          11
+        ],
+        [
+          7,
+          3,
+          15,
+          1,
+          5,
+          8
+        ],
+        [
+          4,
+          7,
+          20,
+          16,
+          9,
+          3
+        ]
+      ],
+      "service_cost_compact_json_sha256": "e72c8b7a1550da802430c0efd639b7c7a149618d531f2043ca72091d898f1bcd",
+      "coherent_risk_weight": 256,
+      "directed_inter_site_links": 20,
+      "phase_scale": 2048.0,
+      "service_cost_generator": "numpy.random.PCG64",
+      "service_cost_seed": 2026081809,
+      "service_cost_draw": "integers(low=1, high=21, size=(5,6))"
+    },
+    {
+      "definition": "256*sum_{v,c} L[v,c]^2 + sum_{v,c} A[v,c] x[v,c]",
+      "pair_lists_by_product_channel": [
+        [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        [
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      ],
+      "service_cost": [
+        [
+          19,
+          1,
+          11,
+          3,
+          16,
+          14
+        ],
+        [
+          7,
+          11,
+          19,
+          5,
+          15,
+          1
+        ],
+        [
+          14,
+          5,
+          3,
+          20,
+          2,
+          8
+        ],
+        [
+          7,
+          5,
+          2,
+          15,
+          7,
+          8
+        ],
+        [
+          8,
+          12,
+          3,
+          15,
+          14,
+          5
+        ]
+      ],
+      "service_cost_compact_json_sha256": "43b1757fefc3c682e9ab63f4daaf6effbc52b1716ef18305a26789c2e85f4bc9",
+      "coherent_risk_weight": 256,
+      "directed_inter_site_links": 20,
+      "phase_scale": 2048.0,
+      "service_cost_generator": "numpy.random.PCG64",
+      "service_cost_seed": 2026081810,
+      "service_cost_draw": "integers(low=1, high=21, size=(5,6))"
+    }
+  ],
+  "all_ten_tables_unfiltered": true,
+  "exact_penalty_evidence_in_seed_order": [
+    {
+      "lambda": 377,
+      "witness_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "witness_basis_index": 70277,
+      "witness_penalty": 0,
+      "witness_risk": 1,
+      "witness_service_and_objective": 340,
+      "infeasible_H_lower_bound": 377,
+      "actual_minimum_infeasible_H": 701,
+      "actual_minimum_used_for_proof_audit_only_not_target_selection": true,
+      "proof": "P is nonnegative integer; infeasible P>=1 and O>=0; witness P=0,risk=1,O<=256+120=376"
+    },
+    {
+      "lambda": 377,
+      "witness_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "witness_basis_index": 70277,
+      "witness_penalty": 0,
+      "witness_risk": 1,
+      "witness_service_and_objective": 328,
+      "infeasible_H_lower_bound": 377,
+      "actual_minimum_infeasible_H": 687,
+      "actual_minimum_used_for_proof_audit_only_not_target_selection": true,
+      "proof": "P is nonnegative integer; infeasible P>=1 and O>=0; witness P=0,risk=1,O<=256+120=376"
+    },
+    {
+      "lambda": 377,
+      "witness_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "witness_basis_index": 70277,
+      "witness_penalty": 0,
+      "witness_risk": 1,
+      "witness_service_and_objective": 301,
+      "infeasible_H_lower_bound": 377,
+      "actual_minimum_infeasible_H": 696,
+      "actual_minimum_used_for_proof_audit_only_not_target_selection": true,
+      "proof": "P is nonnegative integer; infeasible P>=1 and O>=0; witness P=0,risk=1,O<=256+120=376"
+    },
+    {
+      "lambda": 377,
+      "witness_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "witness_basis_index": 70277,
+      "witness_penalty": 0,
+      "witness_risk": 1,
+      "witness_service_and_objective": 356,
+      "infeasible_H_lower_bound": 377,
+      "actual_minimum_infeasible_H": 696,
+      "actual_minimum_used_for_proof_audit_only_not_target_selection": true,
+      "proof": "P is nonnegative integer; infeasible P>=1 and O>=0; witness P=0,risk=1,O<=256+120=376"
+    },
+    {
+      "lambda": 377,
+      "witness_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "witness_basis_index": 70277,
+      "witness_penalty": 0,
+      "witness_risk": 1,
+      "witness_service_and_objective": 331,
+      "infeasible_H_lower_bound": 377,
+      "actual_minimum_infeasible_H": 672,
+      "actual_minimum_used_for_proof_audit_only_not_target_selection": true,
+      "proof": "P is nonnegative integer; infeasible P>=1 and O>=0; witness P=0,risk=1,O<=256+120=376"
+    },
+    {
+      "lambda": 377,
+      "witness_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "witness_basis_index": 70277,
+      "witness_penalty": 0,
+      "witness_risk": 1,
+      "witness_service_and_objective": 347,
+      "infeasible_H_lower_bound": 377,
+      "actual_minimum_infeasible_H": 699,
+      "actual_minimum_used_for_proof_audit_only_not_target_selection": true,
+      "proof": "P is nonnegative integer; infeasible P>=1 and O>=0; witness P=0,risk=1,O<=256+120=376"
+    },
+    {
+      "lambda": 377,
+      "witness_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "witness_basis_index": 70277,
+      "witness_penalty": 0,
+      "witness_risk": 1,
+      "witness_service_and_objective": 318,
+      "infeasible_H_lower_bound": 377,
+      "actual_minimum_infeasible_H": 676,
+      "actual_minimum_used_for_proof_audit_only_not_target_selection": true,
+      "proof": "P is nonnegative integer; infeasible P>=1 and O>=0; witness P=0,risk=1,O<=256+120=376"
+    },
+    {
+      "lambda": 377,
+      "witness_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "witness_basis_index": 70277,
+      "witness_penalty": 0,
+      "witness_risk": 1,
+      "witness_service_and_objective": 300,
+      "infeasible_H_lower_bound": 377,
+      "actual_minimum_infeasible_H": 681,
+      "actual_minimum_used_for_proof_audit_only_not_target_selection": true,
+      "proof": "P is nonnegative integer; infeasible P>=1 and O>=0; witness P=0,risk=1,O<=256+120=376"
+    },
+    {
+      "lambda": 377,
+      "witness_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "witness_basis_index": 70277,
+      "witness_penalty": 0,
+      "witness_risk": 1,
+      "witness_service_and_objective": 306,
+      "infeasible_H_lower_bound": 377,
+      "actual_minimum_infeasible_H": 682,
+      "actual_minimum_used_for_proof_audit_only_not_target_selection": true,
+      "proof": "P is nonnegative integer; infeasible P>=1 and O>=0; witness P=0,risk=1,O<=256+120=376"
+    },
+    {
+      "lambda": 377,
+      "witness_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "witness_basis_index": 70277,
+      "witness_penalty": 0,
+      "witness_risk": 1,
+      "witness_service_and_objective": 318,
+      "infeasible_H_lower_bound": 377,
+      "actual_minimum_infeasible_H": 676,
+      "actual_minimum_used_for_proof_audit_only_not_target_selection": true,
+      "proof": "P is nonnegative integer; infeasible P>=1 and O>=0; witness P=0,risk=1,O<=256+120=376"
+    }
+  ],
+  "symbolic_support_and_resource_audit": {
+    "objective_supports": {
+      "k1": 18,
+      "k3": 72,
+      "k4": 24,
+      "k5": 84
+    },
+    "hamiltonian_union_supports": {
+      "k1": 18,
+      "k2": 63,
+      "k3": 72,
+      "k4": 24,
+      "k5": 84
+    },
+    "uniform_diagonal_RU_by_locality": {
+      "k1": 2,
+      "k2": 1,
+      "k3": 10,
+      "k4": 14,
+      "k5": 18
+    },
+    "objective_terminal_RU": 2604,
+    "hamiltonian_phase_RU": 2667,
+    "preparation_RU": 18,
+    "transverse_X_mixer_RU": 18,
+    "total_RU_formula": "2622 + 2685*p"
+  },
+  "symbolic_runtime_diagonal_equality_in_seed_order": [
+    {
+      "service_cost_compact_json_sha256": "ad9a3bb7b488f5b533a4e193028324539347b1845935168f1ccaa5efdca85d9b",
+      "basis_state_count": 262144,
+      "polynomial_term_count_including_constant": 262,
+      "exact_all_basis_states_equal": true,
+      "raw_H_int64_sha256": "f1b0e4ede214c5bba2774071528810f1a7b214ed7f7b121068e1a94e3eb40e47"
+    },
+    {
+      "service_cost_compact_json_sha256": "fb436ba23f2c4158f15f0cb4e381988376023afa323be9a43379eac1299a271b",
+      "basis_state_count": 262144,
+      "polynomial_term_count_including_constant": 262,
+      "exact_all_basis_states_equal": true,
+      "raw_H_int64_sha256": "6dde299dd7524ae2d87bd4eabe58426f0c259d2b15a2a79e6acedd38e27a5516"
+    },
+    {
+      "service_cost_compact_json_sha256": "2fdf72bbfe3fb7ade62f6dd35c4500b547833b85ff6a83eb9eb75e7207bf78ba",
+      "basis_state_count": 262144,
+      "polynomial_term_count_including_constant": 262,
+      "exact_all_basis_states_equal": true,
+      "raw_H_int64_sha256": "a19d64b74510be10f077966521b55adea418b3383dc61b5708496b72710b4bf6"
+    },
+    {
+      "service_cost_compact_json_sha256": "934616b4edd05cf073b4f337973fa34a8d1a59d9d6cdec5fa19333ef04f622e0",
+      "basis_state_count": 262144,
+      "polynomial_term_count_including_constant": 262,
+      "exact_all_basis_states_equal": true,
+      "raw_H_int64_sha256": "6aafc2b1bdf2fb5dc194206f87d6c0e71ee7b4dc764a1e5b9df867c419ce4fb1"
+    },
+    {
+      "service_cost_compact_json_sha256": "5b2a355094fc1e88838856ab071aebd83866eb8c366f382dba6d8b81837b8c5c",
+      "basis_state_count": 262144,
+      "polynomial_term_count_including_constant": 262,
+      "exact_all_basis_states_equal": true,
+      "raw_H_int64_sha256": "87d2d096c4fc27219527ae39469c4fff1a810bfbde25b4f092df673dafb16577"
+    },
+    {
+      "service_cost_compact_json_sha256": "6b35e2639d757980575c4aa2fafd747d19720473d54250be59a87f5af64ae914",
+      "basis_state_count": 262144,
+      "polynomial_term_count_including_constant": 262,
+      "exact_all_basis_states_equal": true,
+      "raw_H_int64_sha256": "2563801396989aa68526d8dc83e9669d6cbd0962bd543acc4cb0e4fa1d8c1f2b"
+    },
+    {
+      "service_cost_compact_json_sha256": "43edd8f55682819383c874b0ac768cc9129d38e642880edda6bf070f075ad6f8",
+      "basis_state_count": 262144,
+      "polynomial_term_count_including_constant": 262,
+      "exact_all_basis_states_equal": true,
+      "raw_H_int64_sha256": "f3f6403eb1a3286aa2862738b1cbebe76747432413ae8d45dcc9b9d3c6767879"
+    },
+    {
+      "service_cost_compact_json_sha256": "bf9fb9ffad1fd8b3d95e4e126d249ce9102c10caa2ee861948bed2dbb0c15caf",
+      "basis_state_count": 262144,
+      "polynomial_term_count_including_constant": 262,
+      "exact_all_basis_states_equal": true,
+      "raw_H_int64_sha256": "e392308b8d71b87e3426c0f83ae878642867d2e2892fe2ef1d16dc467567683e"
+    },
+    {
+      "service_cost_compact_json_sha256": "e72c8b7a1550da802430c0efd639b7c7a149618d531f2043ca72091d898f1bcd",
+      "basis_state_count": 262144,
+      "polynomial_term_count_including_constant": 262,
+      "exact_all_basis_states_equal": true,
+      "raw_H_int64_sha256": "2885923a62cdde66b9b88865c635aeeed31012d4b41b283363431aefea5d7b8d"
+    },
+    {
+      "service_cost_compact_json_sha256": "43b1757fefc3c682e9ab63f4daaf6effbc52b1716ef18305a26789c2e85f4bc9",
+      "basis_state_count": 262144,
+      "polynomial_term_count_including_constant": 262,
+      "exact_all_basis_states_equal": true,
+      "raw_H_int64_sha256": "cd9ba8b483f81527e95f1db4f7c70428e3851c1028021e8b73cf7fca83f573e6"
+    }
+  ],
+  "depths_in_frozen_order": [
+    0,
+    1,
+    2,
+    4,
+    8,
+    16,
+    32,
+    64
+  ],
+  "p0_semantics": "derived uniform |+>^18 anchor",
+  "restart_seeds": [
+    2026081100,
+    2026081101,
+    2026081102,
+    2026081103
+  ],
+  "optimization": {
+    "algorithm": "Adam",
+    "learning_rate": 0.035,
+    "forward_evaluations_per_restart_including_endpoint": 2400,
+    "gradient_updates_per_restart": 2399,
+    "independent_at_every_positive_depth": true,
+    "continuation_or_angle_transfer": false,
+    "checkpoint_rule": "minimum expected H/377 only",
+    "gamma_initialization": "uniform[-pi,pi]",
+    "beta_initialization": "uniform[-pi/2,pi/2]",
+    "prefix_consistent_through_p64": true,
+    "dtype": "complex64"
+  },
+  "resource_by_depth": {
+    "0": 2622,
+    "1": 5307,
+    "2": 7992,
+    "4": 13362,
+    "8": 24102,
+    "16": 45582,
+    "32": 88542,
+    "64": 174462
+  },
+  "post_completion_target_definition": "all minimum raw-O states among exact P=0 feasible bitstrings",
+  "target_artifact_loaded": false,
+  "target_constructed": false,
+  "target_probability_computed": false,
+  "manifest_sha256": "736cf713b3a6e4d51e9ada27469cde8ab90746811818f626bf974dd1e8e2ad54"
+}
