@@ -1,0 +1,186 @@
+{
+  "schema": "n30-degree6-three-block-paper-facing-spsa-contract-v1",
+  "status": "predeclared_before_p26_to_p32_outcomes",
+  "classification": "paper-facing exploratory higher-order extension; not the paper-identical random-four-qubit objective",
+  "instance_family": {
+    "N": 30,
+    "layout": [6, 6, 6, 6, 6],
+    "block_weight": 2,
+    "objective_description": "6150 frozen uniformly sampled weighted selected-pair interactions, each spanning three distinct blocks",
+    "binary_objective_description": "degree-six pseudo-Boolean objective",
+    "qubit_hamiltonian_description": "diagonal Hamiltonian with locality up to six",
+    "interaction_monomial": "x_a1*x_a2*x_b1*x_b2*x_c1*x_c2",
+    "weight_distribution": "independent Uniform[-0.5, 0.5] after frozen support sampling",
+    "generator": "all conflict-feasible active three-block selected-pair supports, sorted canonically, then deterministically shuffled and truncated",
+    "no_instance_resampling_after_qaoa": true,
+    "artificial_measurement_noise": false
+  },
+  "stages": {
+    "pilot": {
+      "seeds": [900, 901],
+      "role": "two-seed multi-depth promotion gate; seed 900 was the target-blind calibration instance and both seeds appeared in prior exploratory sparse-depth runs"
+    },
+    "confirmation": {
+      "seeds": [101, 102, 103, 104, 105, 106],
+      "role": "six fresh frozen confirmation instances, launched only if the pilot gate passes"
+    },
+    "reported_depths": [26, 27, 28, 29, 30, 31, 32],
+    "history_depth": 20,
+    "history_rule": "For each standalone method/configuration, optimize p=20 first; initialize p=26 from p=20 and every later depth from the immediately preceding optimized depth. The transferred solution occupies one restart and the remaining restarts remain independent.",
+    "all_reported_depths_run_for_every_seed": true
+  },
+  "optimizer": {
+    "name": "SPSA",
+    "restarts": 5,
+    "updates": 120,
+    "sequential_restarts": true,
+    "incumbent_preserved": true,
+    "alpha": 0.602,
+    "gamma": 0.101,
+    "stability_fraction": 0.1,
+    "calibration_directions": 8,
+    "directions_per_update": 1,
+    "expected_objective_calls_per_trial": 1291,
+    "patience": 60,
+    "dtype": "complex64",
+    "target_success_probabilities_used_for_calibration": false
+  },
+  "standalone_configurations": {
+    "lp_selected": {
+      "algorithm": "XY-LP-QAOA",
+      "penalty_kappa": 4,
+      "spsa_c": 0.05,
+      "spsa_target_step": 0.05,
+      "spsa_max_step_norm": 0.35,
+      "calibration": "final target-blind learned-projector calibration"
+    },
+    "ordinary_selected": {
+      "algorithm": "Std-XY",
+      "penalty_kappa": 6,
+      "spsa_c": 0.005,
+      "spsa_target_step": 0.05,
+      "spsa_max_step_norm": 0.25,
+      "calibration": "selected after the completed c=0.1 through c=0.0001 target-blind boundary audit"
+    },
+    "ordinary_initial_calibration": {
+      "algorithm": "Std-XY",
+      "penalty_kappa": 8,
+      "spsa_c": 0.02,
+      "spsa_target_step": 0.05,
+      "spsa_max_step_norm": 0.25,
+      "calibration": "initial target-blind calibration retained as a direct-favorable sensitivity arm"
+    },
+    "separated_selected": {
+      "algorithm": "d-XY",
+      "penalty_kappa": 8,
+      "spsa_c": 0.01,
+      "spsa_target_step": 0.05,
+      "spsa_max_step_norm": 0.25,
+      "calibration": "extended target-blind calibration"
+    },
+    "separated_initial_calibration": {
+      "algorithm": "d-XY",
+      "penalty_kappa": 6,
+      "spsa_c": 0.02,
+      "spsa_target_step": 0.05,
+      "spsa_max_step_norm": 0.25,
+      "calibration": "initial target-blind calibration retained as a direct-favorable sensitivity arm"
+    },
+    "same_state_warm_selected": {
+      "algorithm": "Warm-XY",
+      "penalty_kappa": 3,
+      "spsa_c": 0.01,
+      "spsa_target_step": 0.05,
+      "spsa_max_step_norm": 0.25,
+      "calibration": "extended target-blind calibration"
+    },
+    "same_state_warm_initial_calibration": {
+      "algorithm": "Warm-XY",
+      "penalty_kappa": 2,
+      "spsa_c": 0.02,
+      "spsa_target_step": 0.05,
+      "spsa_max_step_norm": 0.25,
+      "calibration": "initial target-blind calibration retained as a warm-control sensitivity arm"
+    }
+  },
+  "angle_transfer_control": {
+    "name": "same_state_warm_lp_angle_assisted",
+    "algorithm": "Warm-XY",
+    "initial_state": "exact same frozen Stage-1 output state used by learned-projector QAOA",
+    "second_stage_mixer": "full within-block XY mixer",
+    "penalty_kappa": 3,
+    "spsa_c": 0.01,
+    "spsa_target_step": 0.05,
+    "spsa_max_step_norm": 0.25,
+    "per_depth_rule": "At each reported depth, initialize exactly one of five Warm-XY restarts with the optimized learned-projector angles from the same seed and same depth; keep four independent Warm-XY restarts.",
+    "interpretation": "mechanistic LP-assisted transfer control, not a standalone direct baseline because obtaining its angle initializer requires the learned-projector run",
+    "excluded_from_standalone_direct_envelope": true
+  },
+  "decoupled_control_interpretation": {
+    "algorithm": "d-XY",
+    "implementation": "independently optimized phase angles for the conflict Hamiltonian and the final objective at every layer",
+    "strength": "strictly more flexible than fixing a single medium conflict/objective phase ratio"
+  },
+  "primary_metric": {
+    "name": "integer RTS99 multiplied by terminal resource units",
+    "includes": [
+      "method-specific mixer overhead",
+      "Stage-1 preparation for learned-projector and same-state warm methods",
+      "terminal objective verification"
+    ],
+    "optimizer_objective_query_count": "reported separately and never substituted for the primary metric"
+  },
+  "standalone_envelopes": {
+    "native_direct": [
+      "ordinary_selected",
+      "ordinary_initial_calibration",
+      "separated_selected",
+      "separated_initial_calibration"
+    ],
+    "same_state_warm": [
+      "same_state_warm_selected",
+      "same_state_warm_initial_calibration"
+    ],
+    "learned_projector": ["lp_selected"]
+  },
+  "pilot_gate": {
+    "evaluated_separately_for_targets": ["target_a_sqrt", "target_b_k2"],
+    "standalone_native_direct_requirements": {
+      "geometric_mean_native_direct_over_lp_cost_at_least": 1.5,
+      "lp_cell_wins_at_least_out_of_14": 10,
+      "depths_with_two_seed_geometric_mean_native_direct_over_lp_above_one_at_least_out_of_7": 5,
+      "maximum_native_direct_success_probability_strictly_below": 0.05
+    },
+    "correctness_requirements": {
+      "all_trials_independently_validated": true,
+      "identical_objective_identity_across_methods_within_seed": true,
+      "expected_optimizer_query_count_for_every_trial": 1291,
+      "finite_nonnegative_replay_probabilities": true
+    },
+    "automatic_confirmation_rule": "Launch the six fresh confirmation seeds if every correctness requirement and every standalone-native-direct requirement passes for both targets.",
+    "warm_control_result": "always report separately; it diagnoses the contribution of the learned-projector mixer but does not alter the preregistered native-direct promotion gate",
+    "angle_transfer_result": "always report separately as a dependent mechanistic control and never count it as a standalone baseline"
+  },
+  "explicit_exclusions": {
+    "stage1_only_is_a_benchmark": false,
+    "stage1_only_diagnostic_used_in_gate_or_headline": false,
+    "optimizer_noise_injection": false,
+    "target_based_hyperparameter_selection": false,
+    "post_outcome_seed_replacement": false
+  },
+  "followup_controls": {
+    "low_dimensional_standard_qaoa": "run on the smallest compatible same-family instance under a separate pre-outcome contract",
+    "true_rqaoa": "run recursive variable elimination on that same low-dimensional instance under the same separate contract"
+  },
+  "frozen_evidence": {
+    "stage1_checkpoint_sha256": "a14aeecbfcc5197efec8848dd0045dc47434c8d2a6ecfb4192c4d8a95184d0c7",
+    "initial_calibration_selection_sha256": "e512713a44025a57d27111fba002626a1b42836c1189f2bc2927beaf5853b7c0",
+    "extended_calibration_selection_sha256": "830e5ab75249fb6567fa60e2b3caac3ce31ed19726c695a18544bf42262fb776",
+    "ultrasmall_c_selection_sha256": "a6a4dfe33748a932c6ea51349838a8375cf83f80357cc3e847f9024a7d149447",
+    "prior_corrected_closure_manifest_sha256": "10aace8027743853eca4fd01b61aadb038b05f69ebbf4330424ac64c56f50974",
+    "prior_corrected_summary_sha256": "b89b84b7be4e62ba9fdd87d6cdd9dd64e50a30ac6a32e18843ab7bc89584bdc1",
+    "base_runner_sha256": "b87a87867b11a7b6e629bc5c900cfd38bc1b9f0a6f23ae2884ecba5010e7764d",
+    "paper_facing_wrapper_sha256": "09a3779ca9fbbc6156ba02b153e5f4242f108ed5abef5d865a40d81e77dc4be0",
+    "independent_validator_sha256": "1d88c87540b2dde5fd17619cd398742503eb1011fc28d831bfb6ca87e36b56dc"
+  }
+}

@@ -1,0 +1,479 @@
+{
+  "schema": "bcst-unique-primary-experiment-plan-v1",
+  "campaign_id": "bcst_unique_primary_campaign_20260809",
+  "status": "frozen_before_execution",
+  "scientific_question": "At N=25 and N=30, does learned-projector XY--LP-QAOA reduce exact unique-ground-state 99%-confidence logical sampling cost relative to every registered direct, same-Stage-1-state, and native global-projector baseline?",
+  "scope": {
+    "problem_family": "strict-hierarchy BCST",
+    "sizes": [25, 30],
+    "primary_target": "unique_ground_state",
+    "secondary_targets": ["best_two_states", "best_eight_states"],
+    "primary_metric": "integer_RTS99_times_terminal_RU",
+    "paper_editing_authorized": false,
+    "numerical_results_only": true
+  },
+  "construction": {
+    "identity": "the same five-block, exactly-two-selected-label BCST construction used by main.tex",
+    "blocks": 5,
+    "selected_labels_per_block": 2,
+    "local_cardinality_basis": {
+      "25": {
+        "block_size": 5,
+        "basis_dimension": 100000,
+        "conflict_feasible_state_count": 120,
+        "degree4_term_count": 225,
+        "degree6_term_count": 14
+      },
+      "30": {
+        "block_size": 6,
+        "basis_dimension": 759375,
+        "conflict_feasible_state_count": 6570,
+        "degree4_term_count": 788,
+        "degree6_term_count": 49
+      }
+    },
+    "fine_objective": "C_obj^(s)(x)=-sum_{T in T4^(s)} w_T product_{u in T} x_u - sum_{T in T6^(s)} w_T product_{u in T} x_u",
+    "objective_sign_convention": "The signed w_T values are reward coefficients. The diagonal cost Hamiltonian is their negative, exactly matching bcst_v2.instance_core._exact_objective_diagonal; minimizing C_obj therefore maximizes the selected signed reward sum.",
+    "support_rule": "select exactly one half of the eligible degree-four pool and one sixteenth as many degree-six terms",
+    "weight_rule": "w_T=(2*z_T+1-2^53)/2^54, where z_T is the 53-bit integer extracted from SHA-256(N, problem_seed, |T|, T)",
+    "ground_definition": "the single lowest-C_obj conflict-feasible computational-basis state",
+    "unique_ground_requirement": {
+      "required_degeneracy": 1,
+      "seed_list_frozen_before_check": true,
+      "replacement_policy": "No performance-based replacement. If a frozen seed is invalid or non-unique, stop that size stratum and issue a versioned contract amendment with a deterministic next-seed rule before any algorithm result is inspected."
+    },
+    "construction_hash_requirement": "record canonical instance hash, support hash, weight hash, feasible-set hash, ordered objective hash, exact ground energy, exact degeneracy, and ground-state hash for every seed"
+  },
+  "stage1": {
+    "depth_p1": 12,
+    "initial_state": "uniform product of the five exactly-two-excitation block states",
+    "phase_and_loss": "conflict Hamiltonian H_C",
+    "mixer": "complete within-block XY mixer H_XY",
+    "state_symbol": "phi",
+    "shared_within_size": true,
+    "identity_rule": "LP, same-Stage-1-state Direct-XY, Stage-1-only, and all reanalyzed same-state causal arms at a fixed N must consume the identical serialized phi amplitude vector",
+    "reuse_rule": "Reuse the already frozen paper-campaign Stage-1 state only after amplitude hash, normalization, feasible mass, construction version, p1=12, and resource-accounting compatibility pass. Do not regenerate Stage 1 merely to improve the unique-ground result.",
+    "failure_rule": "If either frozen Stage-1 state is absent or incompatible, block the corresponding size. Regeneration requires a new versioned contract and cannot be selected using target outcomes.",
+    "legacy_import_contract": {
+      "source_campaign": "lp_qaoa_reviewer_appendix_v3_20260731",
+      "source_plan_sha256": "20476043ADF7233C5CD721E620EC4CD620CA58C5BECFD1A192BD0495C25BAF08",
+      "source_manifest_path": "/public/home/ac4fba2wzz/lp_reviewer_appendix_v3_20260731/reviewer_appendix_campaign_20260731/SCIENTIFIC_SOURCE_MANIFEST_V3_20260731.json",
+      "source_manifest_sha256": "8AD9CEC580DE73197DC292B78CA84CE35E0827946A009533E45881EFA7E5A44F",
+      "source_queue_sha256": "E9B64EDC7C4AF10C9CB403F484E3066BF45870558F1DF36097B7F04211F1EFDB",
+      "adopted_budget_both_sizes": 400,
+      "import_mode": "read-only exact-hash binding; no legacy-plan relaxation and no broad search for alternative Stage-1 states",
+      "25": {
+        "cell_id": "stage1_N25_seed840025000_b400",
+        "problem_seed": 840025000,
+        "source_problem_seed": 840025000,
+        "depth": 12,
+        "adopted_budget": 400,
+        "legacy_plan_sha256": "20476043ADF7233C5CD721E620EC4CD620CA58C5BECFD1A192BD0495C25BAF08",
+        "source_manifest_path": "/public/home/ac4fba2wzz/lp_reviewer_appendix_v3_20260731/reviewer_appendix_campaign_20260731/SCIENTIFIC_SOURCE_MANIFEST_V3_20260731.json",
+        "source_manifest_sha256": "8AD9CEC580DE73197DC292B78CA84CE35E0827946A009533E45881EFA7E5A44F",
+        "remote_artifact_root": "/public/home/ac4fba2wzz/lp_reviewer_appendix_v3_20260731/run/stages/stage1_budget_400_800_v3/cells/stage1_N25_seed840025000_b400/attempt-0001/artifacts",
+        "record_path": "/public/home/ac4fba2wzz/lp_reviewer_appendix_v3_20260731/run/stages/stage1_budget_400_800_v3/cells/stage1_N25_seed840025000_b400/attempt-0001/artifacts/target_blind_record.json",
+        "record_sha256": "AF610B2BC5B91ED15E34DA1C0148954C0323D471D1532D2A33C514BD207087F1",
+        "state_path": "/public/home/ac4fba2wzz/lp_reviewer_appendix_v3_20260731/run/stages/stage1_budget_400_800_v3/cells/stage1_N25_seed840025000_b400/attempt-0001/artifacts/selected_state.npy",
+        "state_file_sha256": "F53EF4B2A10C21A94869EE582F539E5C0ACA21DA8B43228AAED2908F597626A7",
+        "state_amplitude_sha256": "E2602B02EEBEF1340F190A29D861A9EDD653D7185A17018DE90DE40DCD1E72DB",
+        "complete_path": "/public/home/ac4fba2wzz/lp_reviewer_appendix_v3_20260731/run/stages/stage1_budget_400_800_v3/cells/stage1_N25_seed840025000_b400/attempt-0001/artifacts/COMPLETE.json",
+        "complete_sha256": "38131BE7C0BD8FCA90DBE3A977C453A7FC4D85FECEAC544871D04D9A4D1A45DA",
+        "decision_path": "/public/home/ac4fba2wzz/lp_reviewer_appendix_v3_20260731/run/decisions/stage1_N25_budget_and_regeneration_v3.json",
+        "decision_sha256": "50CFE87AD328127B82335CE85A8068D610F956AC7D46B3DCEC5297F92EB0CB82",
+        "decision_snapshot_path": "../reviewer_appendix_campaign_20260731/remote_evidence/epoch_a_decisions_snapshot_20260801/stage1_N25_budget_and_regeneration_v3.json",
+        "decision_snapshot_sha256": "50CFE87AD328127B82335CE85A8068D610F956AC7D46B3DCEC5297F92EB0CB82",
+        "kdf_checkpoint_zero_sha256": [
+          "81F7FCE6DAD1FEAFB279B4179AE3F592ECB8982211221E5B911F3B51092A0C9F",
+          "98BFC427191D926F4FB4C4208598F9E363B253E0B37075AC01D5438ED443F57F",
+          "092E1384B5A72D759452AD28472306E94B3A0A46E241BC51F22FC37B15C85EB3"
+        ],
+        "decision_recorded_adopted_reason": "adopt_400",
+        "decision_recorded_optimizer_inconclusive": false
+      },
+      "30": {
+        "cell_id": "stage1_N30_seed840030000_b400",
+        "problem_seed": 840030000,
+        "source_problem_seed": 840030000,
+        "depth": 12,
+        "adopted_budget": 400,
+        "legacy_plan_sha256": "20476043ADF7233C5CD721E620EC4CD620CA58C5BECFD1A192BD0495C25BAF08",
+        "source_manifest_path": "/public/home/ac4fba2wzz/lp_reviewer_appendix_v3_20260731/reviewer_appendix_campaign_20260731/SCIENTIFIC_SOURCE_MANIFEST_V3_20260731.json",
+        "source_manifest_sha256": "8AD9CEC580DE73197DC292B78CA84CE35E0827946A009533E45881EFA7E5A44F",
+        "remote_artifact_root": "/public/home/ac4fba2wzz/lp_reviewer_appendix_v3_20260731/run/stages/stage1_budget_400_800_v3/cells/stage1_N30_seed840030000_b400/attempt-0001/artifacts",
+        "record_path": "/public/home/ac4fba2wzz/lp_reviewer_appendix_v3_20260731/run/stages/stage1_budget_400_800_v3/cells/stage1_N30_seed840030000_b400/attempt-0001/artifacts/target_blind_record.json",
+        "record_sha256": "2DA5156244B53B017AC0DEAB211980E666D440E4A940669B22E61E9851237FAD",
+        "state_path": "/public/home/ac4fba2wzz/lp_reviewer_appendix_v3_20260731/run/stages/stage1_budget_400_800_v3/cells/stage1_N30_seed840030000_b400/attempt-0001/artifacts/selected_state.npy",
+        "state_file_sha256": "A23FDCE25167E7B6356427F803137E37A3C647649E43BC39A608BA5C935B2CC0",
+        "state_amplitude_sha256": "ADF2AD4423773E3C36F85CB9E74EA1E4ED0E9EC619D06D5A248D3DA7AB65B007",
+        "complete_path": "/public/home/ac4fba2wzz/lp_reviewer_appendix_v3_20260731/run/stages/stage1_budget_400_800_v3/cells/stage1_N30_seed840030000_b400/attempt-0001/artifacts/COMPLETE.json",
+        "complete_sha256": "41BC69B91AB957DC69C4DA637D62CE48E8A261722D1090E710061710253D04AE",
+        "decision_path": "/public/home/ac4fba2wzz/lp_reviewer_appendix_v3_20260731/run/decisions/stage1_N30_budget_and_regeneration_v3.json",
+        "decision_sha256": "B294F698A0DB69B1FA46482C17EA31C69859F7A3A31B4EC453EF4627944AF5B1",
+        "decision_snapshot_path": "../reviewer_appendix_campaign_20260731/remote_evidence/epoch_a_decisions_snapshot_20260801/stage1_N30_budget_and_regeneration_v3.json",
+        "decision_snapshot_sha256": "B294F698A0DB69B1FA46482C17EA31C69859F7A3A31B4EC453EF4627944AF5B1",
+        "kdf_checkpoint_zero_sha256": [
+          "9D4A9F3C3E52E28BB95DD9D1252BA16793472EECA3E42A2EE416C83FF0BF6966",
+          "40094C929A68550DE213FC8B6AB90D1406E3D39DFF62EBEF838C040237FFDB31",
+          "041DDFFF6DD6F16D5ADAE63662B5E38AFFF2B03BEBA06A61179F140CD5E4C59C"
+        ],
+        "decision_recorded_adopted_reason": "adopt_400",
+        "decision_recorded_optimizer_inconclusive": false
+      },
+      "fail_closed_rule": "No phi-consuming scientific cell may start unless both exact remote COMPLETE SHA-256 values are resolved into a versioned immutable contract and every decision, record, state-file, amplitude, source-plan, source-manifest, and COMPLETE hash matches exactly."
+    },
+    "stage1_only": {
+      "role": "recorded diagnostic and registered comparator component",
+      "stage2_depth": null,
+      "stage2_optimizer": null,
+      "selected_state": "the frozen phi without Stage-2 optimization"
+    }
+  },
+  "seed_domains": {
+    "stage1_state_sources": {
+      "25": 840025000,
+      "30": 840030000
+    },
+    "fresh_depth_tuning": {
+      "25": [840025021, 840025022],
+      "30": [840030021, 840030022]
+    },
+    "fresh_heldout_validation": {
+      "25": [840025301, 840025302, 840025303, 840025304, 840025305, 840025306, 840025307, 840025308, 840025309, 840025310],
+      "30": [840030301, 840030302, 840030303, 840030304, 840030305, 840030306, 840030307, 840030308, 840030309, 840030310]
+    },
+    "freshness_gate": {
+      "local_literal_collision_audit": "required before launch",
+      "remote_artifact_collision_audit": "required before launch",
+      "tuning_validation_disjoint": true,
+      "optimizer_KDF_namespaces_disjoint": true,
+      "replacement_or_relabeling_after_results": false
+    }
+  },
+  "resource_model": {
+    "symbols": {
+      "B": "five initial block-state preparations",
+      "C": "conflict separator",
+      "X": "complete within-block XY mixer",
+      "O": "final objective separator or terminal objective verification",
+      "S": "N-qubit selective phase used by a global projector reflection",
+      "P1": "B+p1*(C+X)"
+    },
+    "constants": {
+      "25": {"B": 5, "C": 25, "X": 50, "O": 3458, "S": 625, "P1": 905},
+      "30": {"B": 5, "C": 30, "X": 75, "O": 12110, "S": 900, "P1": 1265}
+    },
+    "terminal_evaluation_rule": "Every reported replay includes one final O, including Stage-1-only.",
+    "stage1_replay_rule": "Every replay of an algorithm initialized from phi includes the full one-shot P1 preparation cost.",
+    "exact_integer_accounting": true
+  },
+  "methods": {
+    "learned_projector": {
+      "display_name": "XY--LP-QAOA",
+      "role": "focal method",
+      "initial_state": "frozen phi",
+      "phase_and_loss": "normalized final-objective Hamiltonian H_obj",
+      "mixer": "global learned-projector mixer I-|phi><phi|",
+      "angles_per_layer": 2,
+      "Adam_updates": {"25": 800, "30": 800},
+      "terminal_RU_formula": "P1+p*(O+2*P1+S)+O"
+    },
+    "stage1_only": {
+      "display_name": "Stage-1-only",
+      "role": "diagnostic and component of best-Stage-1-use envelope",
+      "initial_state": "frozen phi",
+      "phase_and_loss": null,
+      "mixer": null,
+      "angles_per_layer": 0,
+      "Adam_updates": {"25": null, "30": null},
+      "terminal_RU_formula": "P1+O"
+    },
+    "same_stage1_state_direct": {
+      "display_name": "Warm-start block-XY / same-Stage-1-state Direct-XY",
+      "role": "same-state local-mixer baseline",
+      "initial_state": "the identical frozen phi used by learned_projector",
+      "phase_and_loss": "combined conflict-plus-objective Hamiltonian H_D",
+      "mixer": "complete within-block XY mixer H_XY",
+      "angles_per_layer": 2,
+      "Adam_updates": {"25": 400, "30": 400},
+      "terminal_RU_formula": "P1+p*(C+O+X)+O"
+    },
+    "decoupled_native_direct": {
+      "display_name": "Block-XY (separate phases) / dXY",
+      "role": "native decoupled Direct-XY baseline",
+      "initial_state": "native product-shell uniform state s",
+      "phase": "independent conflict and final-objective phase angles",
+      "loss": "combined conflict-plus-objective Hamiltonian H_D",
+      "mixer": "complete within-block XY mixer H_XY",
+      "angles_per_layer": 3,
+      "Adam_updates": {"25": 400, "30": 400},
+      "terminal_RU_formula": "B+p*(C+O+X)+O"
+    },
+    "ordinary_native_direct": {
+      "display_name": "Block-XY (combined phase) / StdXY",
+      "role": "native ordinary Direct-XY baseline",
+      "initial_state": "native product-shell uniform state s",
+      "phase_and_loss": "combined conflict-plus-objective Hamiltonian H_D",
+      "mixer": "complete within-block XY mixer H_XY",
+      "angles_per_layer": 2,
+      "Adam_updates": {"25": 800, "30": 400},
+      "terminal_RU_formula": "B+p*(C+O+X)+O"
+    },
+    "native_grover_d": {
+      "display_name": "Native global-reference-projector QAOA (NativeGrover-d)",
+      "role": "native known-state global-projector baseline",
+      "initial_state": "native product-shell uniform state s",
+      "projector_reference": "the same native product-shell state s",
+      "phase": "independent conflict and final-objective phase angles",
+      "loss": "combined conflict-plus-objective Hamiltonian H_D",
+      "mixer": "global reflection generator I-|s><s|; this is not the learned-projector mixer",
+      "angles_per_layer": 3,
+      "Adam_updates": {"25": 400, "30": 400},
+      "terminal_RU_formula": "B+p*(C+O+2*B+S)+O",
+      "interpretation_limit": "This is an end-to-end algorithm comparison; it does not isolate learned-reference value because initialization, phase parameterization, and reference all differ."
+    }
+  },
+  "optimizer": {
+    "name": "Adam",
+    "learning_rate": 0.035,
+    "beta1": 0.9,
+    "beta2": 0.999,
+    "epsilon": 1e-8,
+    "precision": "complex128 state evolution and exact reverse-mode gradients",
+    "independent_restarts_per_optimized_cell": 3,
+    "continuation": false,
+    "layerwise_continuation": false,
+    "cross_depth_parameter_transfer": false,
+    "cross_method_parameter_transfer": false,
+    "optimizer_state_transfer": false,
+    "early_stopping": false,
+    "angle_wrapping": false,
+    "exact_step_rule": "Each restart executes exactly the method-size Adam update count.",
+    "checkpoint_rule": "At checkpoint zero and every central iterate, record parameters, expected training energy, gradient, gradient norm, cumulative-best energy, parameter hash, and gradient hash. Replay and hash the quantum state only for the finally selected restart/checkpoint; per-checkpoint state evolution files or state hashes are not required.",
+    "initializer_freeze_representation": "For every possible cell and each of its three restarts, freeze the deterministic KDF namespace, KDF inputs, initializer-generation rule, and resulting initializer hash before target opening. The contract does not require storing large initializer-vector files when the vector can be reproduced exactly and its hash revalidated.",
+    "restart_selection": "Select the lowest expected training-energy incumbent over checkpoint zero and every iterate across the three independent restarts; exact ties select the earlier checkpoint and then lower restart index.",
+    "forbidden_selection_inputs": [
+      "unique-ground identity",
+      "unique-ground probability",
+      "best-two probability",
+      "best-eight probability",
+      "RTS99",
+      "terminal logical cost"
+    ],
+    "zero_angle_state": "diagnostic only and never a fourth restart"
+  },
+  "depth_tuning": {
+    "applies_to": ["learned_projector", "same_stage1_state_direct", "decoupled_native_direct", "ordinary_native_direct", "native_grover_d"],
+    "applies_at_sizes": [25, 30],
+    "base_grid": [1, 2, 4, 8, 12, 16, 24, 36],
+    "first_boundary_extension": [48, 64],
+    "second_boundary_extension": [80, 96],
+    "lp_N30_capped_extension": [112, 128],
+    "all_possible_specs_and_KDF_initializer_hashes_frozen_before_any_tuning_target_is_opened": true,
+    "base_to_first_rule": "Run [48,64] iff p=36 is the finite base-grid minimum or cost(p=36)<=1.10*base_min and cost(p=36)<=cost(p=24).",
+    "first_to_second_rule": "Run [80,96] iff p=64 is the finite tested-grid minimum or cost(p=64)<=1.10*tested_min and cost(p=64)<=cost(p=48).",
+    "lp_N30_second_to_capped_rule": "For learned_projector at N=30 only, run [112,128] iff p=96 is the finite tested-grid minimum or cost(p=96)<=1.10*tested_min and cost(p=96)<=cost(p=80).",
+    "optimizer_inconclusive_candidate_rule": "For learned_projector only, a depth is selection- and extension-ineligible if either tuning seed has optimizer_inconclusive health; if no healthy finite LP depth exists, block that stratum. For same_stage1_state_direct, decoupled_native_direct, ordinary_native_direct, and native_grover_d, every finite cost remains selection- and extension-eligible regardless of optimizer health. Always disclose every candidate's per-seed health, all inconclusive candidate depths, and whether the selected depth passed health; never censor or block a finite baseline solely because its optimizer health is inconclusive.",
+    "cost_for_extension_and_selection": "the exact product of the two tuning-seed integer unique-ground RTS99*RU costs; product comparison is performed with arbitrary-precision integers",
+    "zero_probability_rule": "If P_unique=0 on either tuning seed, that depth has infinite selection cost.",
+    "depth_selection_rule": "After all deterministically triggered extensions finish and lock, choose the finite depth with minimum two-seed integer cost product; exact ties choose shallower depth.",
+    "other_strata_upper_cap_rule": "If a non-LP-N30 stratum triggers at p=96, freeze the lowest tested-cost depth for descriptive validation but mark the stratum depth-capped and prohibit an unqualified near-optimal-depth claim.",
+    "lp_N30_upper_cap_rule": "If learned_projector at N=30 triggers at p=128, freeze the lowest tested-cost depth but mark it depth-capped; describe it only as the lowest-cost depth on the capped tested grid.",
+    "budget_rule": "Every depth is optimized at the method-size budget registered in methods; no result from another budget may be substituted.",
+    "separation_rule": "Depth tuning uses only fresh_depth_tuning seeds. No heldout-validation target or result may affect depth selection."
+  },
+  "no_target_leakage_ordering": [
+    {
+      "order": 1,
+      "action": "Upload and hash-bind the complete controller/source/input package. During the zero-optimizer remote preflight, deterministically materialize and freeze all 244 possible tuning-cell specs and, for each restart, its KDF namespace, inputs, generation rule, and reproduced initializer hash before any scientific optimizer or tuning-target opening. Large initializer-vector files are not required."
+    },
+    {
+      "order": 2,
+      "action": "Generate canonical problem instances. A separate exact-target oracle verifies unique degeneracy and seals target identities and target hashes; optimizer code and queue decisions cannot read the target files."
+    },
+    {
+      "order": 3,
+      "action": "Run and atomically lock all base-grid tuning optimizations using training energy only. Lock selected restart/checkpoint, parameters, state hash, energy, gradient, health, and RU before target evaluation."
+    },
+    {
+      "order": 4,
+      "action": "The read-only target evaluator opens tuning targets, computes unique-ground terminal outcomes, and applies the already-frozen extension rule. Any activated extension cell uses its pre-frozen spec and restart vectors. Repeat lock-then-evaluate for each extension wave."
+    },
+    {
+      "order": 5,
+      "action": "Apply the frozen depth-selection rule on tuning seeds. Atomically freeze one depth and budget per optimized method-size stratum and materialize the prespecified heldout validation queue."
+    },
+    {
+      "order": 6,
+      "action": "Run every heldout validation optimizer cell target-blind. Atomically freeze a validation optimization manifest containing all expected cells, selected checkpoint/state hashes, energies, gradients, restart completeness, health, and RU. No cell can be omitted because of low target probability."
+    },
+    {
+      "order": 7,
+      "action": "Only after the complete validation optimization lock, open validation target files read-only and compute unique-ground, best-two, best-eight, feasible-mass, RTS99, cost, aggregates, contrasts, and bootstrap intervals."
+    },
+    {
+      "order": 8,
+      "action": "Publish numerical data and audit certificates only. Do not edit main.tex, the paper PDF, figures, captions, or prose."
+    }
+  ],
+  "health_gates": {
+    "optimized_cell_required": [
+      "finite normalized selected state",
+      "finite selected training energy",
+      "finite selected gradient norm",
+      "selected energy no worse than checkpoint zero within 1e-9",
+      "selected energy no worse than the separately evaluated zero-angle diagnostic within 1e-9",
+      "all three restart records complete",
+      "no continuation or transfer",
+      "selected checkpoint reproducible from stored parameters",
+      "exact terminal RU matches the method formula",
+      "depth and budget match the frozen stratum decision"
+    ],
+    "stage1_only_required": [
+      "finite normalized frozen phi",
+      "verified phi amplitude hash",
+      "finite conflict energy",
+      "exact P1+O resource accounting"
+    ],
+    "not_a_health_gate": "Low or zero target probability is a scientific outcome and never an optimization-health failure.",
+    "failure_policy": "Rerun only the identical failed cell from its same frozen spec and restart vectors when failure is operational. Never change method, seed, depth, budget, or initializer in response to target results. Persistent scientific optimizer failure is reported as optimizer-inconclusive."
+  },
+  "success_and_terminal_schema": {
+    "per_seed_method_record_required_fields": [
+      "campaign_id",
+      "plan_sha256",
+      "cell_id",
+      "N",
+      "problem_seed",
+      "instance_sha256",
+      "method",
+      "depth",
+      "Adam_updates",
+      "restart_count",
+      "restart_initial_vector_sha256s",
+      "selected_restart",
+      "selected_checkpoint",
+      "selected_parameter_sha256",
+      "selected_state_sha256",
+      "selected_training_energy",
+      "selected_gradient_norm",
+      "selected_by_training_energy_only",
+      "health_status",
+      "ground_energy_exact",
+      "ground_degeneracy",
+      "ground_state_sha256",
+      "feasible_mass",
+      "unique_probability_unconditional",
+      "unique_probability_conditional_on_feasibility",
+      "best2_probability_unconditional",
+      "best8_probability_unconditional",
+      "terminal_RU_decimal",
+      "unique_RTS99",
+      "unique_total_logical_cost",
+      "best2_RTS99",
+      "best2_total_logical_cost",
+      "best8_RTS99",
+      "best8_total_logical_cost"
+    ],
+    "probability_definition": "P_success(T)=sum_{z in T}|<z|psi>|^2 from the exact terminal state; the primary unique probability is unconditional.",
+    "RTS99_definition": "For 0<P<1, ceil(log(0.01)/log(1-P)); for P=1, 1; for P=0, infinite.",
+    "integer_encoding": "Finite RTS99, RU, and total cost are base-10 strings. Infinite quantities are objects with kind='infinite' and reason='zero_success_probability'.",
+    "rounding_rule": "Compute RTS99 and cost from unrounded probability. Display rounding never enters selection, aggregation, or contrasts.",
+    "terminal_cost_definition": "exact integer RTS99 multiplied by exact integer terminal RU"
+  },
+  "validation_and_analysis": {
+    "validation_instances_per_size": 10,
+    "optimized_methods": ["learned_projector", "same_stage1_state_direct", "decoupled_native_direct", "ordinary_native_direct", "native_grover_d"],
+    "readout_methods": ["stage1_only"],
+    "primary_comparisons_per_size": [
+      "min(stage1_only,same_stage1_state_direct) / learned_projector",
+      "min(ordinary_native_direct,decoupled_native_direct) / learned_projector",
+      "native_grover_d / learned_projector"
+    ],
+    "secondary_named_comparisons_per_size": [
+      "stage1_only / learned_projector",
+      "same_stage1_state_direct / learned_projector",
+      "ordinary_native_direct / learned_projector",
+      "decoupled_native_direct / learned_projector"
+    ],
+    "aggregation": "Geometric means across the ten prespecified paired seeds at each N; never pool N=25 and N=30.",
+    "infinite_cost_aggregation": "If any required per-seed cost is infinite, the geometric-mean cost and any comparator/LP ratio are represented with an explicit extended-real status rather than clipped.",
+    "paired_outputs": [
+      "all ten seed-separated outcomes",
+      "geometric-mean probability, RTS99, RU, and total logical cost",
+      "per-seed comparator/LP cost ratios",
+      "geometric-mean comparator/LP ratio",
+      "LP win count out of ten",
+      "100000-resample deterministic paired-bootstrap 95% interval for the geometric-mean ratio"
+    ],
+    "bootstrap_seed": 20260809,
+    "strong_result_rule": "Apply independently to each named primary comparison and each N: comparator/LP geometric-mean cost ratio >=1.25, paired-bootstrap 95% lower bound >1, and LP wins at least 8 of 10 paired seeds.",
+    "negative_result_policy": "Report null, negative, depth-capped, or optimizer-inconclusive results without changing targets, cohorts, depths, methods, budgets, or thresholds."
+  },
+  "gradient_panel": {
+    "role": "unique-target recomputation of the existing fixed-angle N=30 diagnostic; no optimization",
+    "N": 30,
+    "problem_seeds": [101, 102, 103, 104, 105, 106],
+    "methods": ["learned_projector", "ordinary_native_direct", "decoupled_native_direct", "same_stage1_state_direct"],
+    "depths": [26, 29, 32],
+    "fixed_angle_vectors_per_seed_method_depth": 12,
+    "total_fixed_angle_settings": 864,
+    "input_manifest_binding": {
+      "path": "gradient_inputs/FROZEN_ANGLE_INPUT_MANIFEST.json",
+      "schema": "bcst-fixed-angle-panel-input-manifest-v1",
+      "sha256": "5FDEC751C9D6845AE0DEAC575769857F8C86955D41A1DCC665E663C7085BCB77",
+      "normative_angle_encoding": "explicit IEEE-754 float64 hex vectors with component and length-prefixed combined SHA-256 hashes",
+      "historical_source_gate": "Every copied executable source file and Stage-1 checkpoint must match the original 1440-case trainability COMPLETE.paper_source_hashes record.",
+      "exact_target_gate": "For each seed, reconstructed support, objective, canonical target manifest, unique index, bitstring, target hash, degeneracy, and minimum energy must match the packaged historical target identities."
+    },
+    "reuse_rule": "Reuse the exact frozen angle vectors and method states from the existing panel. Do not resample angles or optimize them.",
+    "required_new_quantity": "gradient of log(unique-ground probability) at each fixed angle and cosine alignment between training-loss descent and increasing log(unique-ground probability)",
+    "numerical_stability": "Evaluate log(max(P_unique,1e-300)); record the unclipped probability and a clip flag. Any clip makes the affected alignment descriptive and must be disclosed.",
+    "reusable_quantities": ["normalized training-loss gradient RMS", "normalized common-objective gradient RMS"],
+    "aggregation": "Median over 12 fixed angles per instance, then paired geometric-mean ratios or paired alignment differences over the six instances, matching the existing panel.",
+    "runtime_output": "run/gradient/UNIQUE_FIXED_ANGLE_PANEL.json"
+  },
+  "existing_unique_ground_evidence": {
+    "role": "Hash-bound fixed-depth or exploratory supplements for every older BCST cohort named in COVERAGE_MATRIX.json; never a substitute for the fresh prospective validation.",
+    "manifest_path": "existing_evidence/EXISTING_EVIDENCE_MANIFEST.json",
+    "manifest_schema": "bcst-unique-existing-evidence-manifest-v1",
+    "manifest_sha256": "3FE475FD05BF7E9AF401E3837F640EC5349D3367259162B6E4C42D9A80A3CFA2",
+    "required_group_count": 8,
+    "required_roles": [
+      "matched_first_five",
+      "matched_second_five",
+      "lp_p80_second_five_sensitivity",
+      "n30_lp_capped_depth_grid",
+      "adam400_fixed_budget",
+      "causal_common_depth_ablation",
+      "legacy_spsa_exact_ground",
+      "historical_gradient_summary"
+    ],
+    "admission_rule": "Every listed packaged file must exist inside the campaign root and match its exact byte count and SHA-256 before any scientific optimizer queue starts.",
+    "fresh_prospective_substitution_permitted": false
+  },
+  "execution_contract": {
+    "full_remote_package_before_launch": true,
+    "package_contents": "source, immutable contracts and inputs, adaptive controller, deterministic spec/KDF generator, validation templates, post-lock evaluator, aggregation code, freeze/verification tools, and tests; generated tuning specs and initializer hashes are preflight artifacts rather than pre-upload package files",
+    "preflight_spec_materialization": "The zero-optimizer remote preflight deterministically materializes, hashes, and freezes all 244 possible tuning specs and all three restart initializer hashes per spec before any scientific optimizer cell or tuning-target opening.",
+    "remote_autonomy": "The remote controller must advance base tuning, deterministic extension waves, depth selection, heldout validation, target evaluation, and aggregation without a desktop connection.",
+    "maximum_concurrent_optimizer_cells": 4,
+    "restarts_within_a_cell": "sequential",
+    "atomic_state_transitions": true,
+    "resumable_idempotent_queue": true,
+    "completed_cell_policy": "A completed cell is skipped only when its spec hash, output hash, and success certificate all validate.",
+    "paper_files_must_not_be_modified": ["main.tex", "main.pdf", "paper figures", "captions", "manuscript prose"]
+  },
+  "source_basis": [
+    {"path": "../main.tex", "lines": "939-951", "supports": "BCST logical-resource model"},
+    {"path": "../main.tex", "lines": "966-983", "supports": "success, RTS99, cost, restart selection, and geometric-mean aggregation"},
+    {"path": "../main.tex", "lines": "998-1009", "supports": "construction, objective, targets, p1=12, and method definitions"},
+    {"path": "../main.tex", "lines": "1011-1037", "supports": "paper BCST cohort registry and SPSA robustness scope"},
+    {"path": "../main.tex", "lines": "1063-1143", "supports": "matched comparison methods, budgets, depths, seeds, and existing unique-ground outcomes"},
+    {"path": "../main.tex", "lines": "1145-1186", "supports": "N=30 LP capped depth grid and tuning seeds"},
+    {"path": "../main.tex", "lines": "1192-1213", "supports": "causal ablation definitions and resource substitutions"},
+    {"path": "../main.tex", "lines": "1275-1304", "supports": "fixed-angle gradient panel"},
+    {"path": "../reviewer_appendix_campaign_20260731/EXPERIMENT_PLAN.json", "lines": "75-137,171-243", "supports": "optimizer, method registry, NativeGrover-d, target locks, and inference rules"},
+    {"path": "../reviewer_appendix_campaign_20260731/EXPERIMENT_PLAN_V3.json", "lines": "21-72", "supports": "three independent no-continuation restarts and prior campaign seed registry"}
+  ]
+}

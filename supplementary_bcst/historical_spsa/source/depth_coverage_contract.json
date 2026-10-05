@@ -1,0 +1,95 @@
+{
+  "schema": "n30-degree6-paper-facing-depth-coverage-correction-v1",
+  "status": "frozen_before_new_wide_depth_outcomes",
+  "correction_reason": "The completed six-seed confirmation at p=26 through p=32 establishes fixed-band robustness but does not bracket the cost-optimal depth. Existing broader precursor scans place several method optima outside that band, and the six-seed costs often continue improving at p=32.",
+  "scope": {
+    "N": 30,
+    "layout": [6, 6, 6, 6, 6],
+    "block_weight": 2,
+    "objective": "6150 frozen signed continuous six-variable interactions; every interaction is the selected pair from each of three distinct blocks",
+    "weights": "independent Uniform[-0.5,0.5]",
+    "objective_identity_must_match_completed_paper_facing_instances": true,
+    "optimizer": "SPSA",
+    "local_simulation_allowed": false
+  },
+  "tuning": {
+    "seeds": [900, 901],
+    "role": "wide-depth tuning only; confirmation seeds 101 through 106 remain excluded from depth selection",
+    "initial_depth_grid": [1, 2, 3, 4, 5, 6, 8, 9, 10, 12, 16, 20, 24, 26, 27, 28, 29, 30, 31, 32, 36, 42, 48, 54, 60, 72, 84, 96],
+    "history_rule": "Within each method and configuration, optimize depths in ascending order. One of five starts receives the preceding optimized solution through the existing continuation rule; four starts remain independent.",
+    "optimizer_budget": {
+      "restarts": 5,
+      "updates": 120,
+      "sequential_restarts": true,
+      "spsa_alpha": 0.602,
+      "spsa_gamma": 0.101,
+      "spsa_stability_fraction": 0.1,
+      "spsa_calibration_directions": 8,
+      "spsa_directions_per_update": 1,
+      "patience": 60,
+      "dtype": "complex64",
+      "expected_objective_calls_per_trial": 1291
+    },
+    "configurations": [
+      "lp_selected",
+      "ordinary_selected",
+      "ordinary_initial_calibration",
+      "separated_selected",
+      "separated_initial_calibration",
+      "same_state_warm_selected",
+      "same_state_warm_initial_calibration"
+    ],
+    "selection_rule": {
+      "per_configuration": "For each target, minimize the geometric mean of integer RTS99 times terminal resource units over tuning seeds 900 and 901.",
+      "learned_projector": "Use the minimum-cost depth of lp_selected separately for each target.",
+      "native_direct": "Use the minimum-cost configuration-depth pair over both ordinary and both separated-angle configurations separately for each target.",
+      "same_state_warm": "Use the minimum-cost configuration-depth pair over both same-state warm configurations separately for each target.",
+      "target_use_boundary": "Targets are used only for depth selection on the frozen tuning seeds, never for optimizer stopping, hyperparameter calibration, instance generation, or confirmation-seed selection."
+    },
+    "second_seed_pruning": {
+      "sequence": "Complete the entire initial depth grid on seed 900 first. Freeze and save a pruning decision before launching any seed-901 optimization.",
+      "unit": "configuration-depth pair",
+      "obviously_bad_rule": "For one configuration, prune a depth from seed 901 only when its seed-900 Target-A cost is at least 5 times that configuration's best seed-900 Target-A cost and its Target-B cost is also at least 5 times that configuration's best seed-900 Target-B cost.",
+      "retention_rule": "Retain every configuration-depth pair that is not obviously bad. Always retain each target's seed-900 minimum and the nearest tested lower and higher depths, although those points are already protected by the fivefold rule.",
+      "decision_artifact": "SEED900_DEPTH_PRUNING_DECISION.json",
+      "no_seed901_launch_before_decision_artifact": true,
+      "interpretation": "Pruning is computational triage only. Seed-900 results at pruned depths remain in the published tuning curve and are not discarded."
+    }
+  },
+  "refinement": {
+    "local_depth_rule": "For every configuration whose target-A or target-B tuning minimum is not already surrounded by tested depths within two layers, add the missing depths at selected_depth minus 2 and selected_depth plus 2 when positive.",
+    "upper_boundary_rule": "If a configuration-target minimum is p=96, or the p=96 cost is within 10 percent of its current minimum and the p=84 to p=96 trend is nonincreasing, extend that configuration to p=112 and p=128.",
+    "second_upper_boundary_rule": "If the same condition remains true at p=128, extend to p=160 and p=192.",
+    "claim_guardrail": "If a cost minimum remains at the final upper boundary after p=192, report the depth optimum as unresolved and do not claim a depth-optimized comparison for that method-target pair."
+  },
+  "confirmation_correction": {
+    "seeds": [101, 102, 103, 104, 105, 106],
+    "launch_after_tuning": true,
+    "depths": "For each method family and target, run the union of the frozen tuning-selected depth and its nearest completed lower and higher tuning depths. A single trial may serve both targets.",
+    "comparison": "Compare each family at its own tuning-selected configuration and depth. Keep the original same-depth p=26 through p=32 analysis as a separate robustness result.",
+    "no_confirmation_outcome_based_depth_changes": true
+  },
+  "adam_evidence": {
+    "existing_wide_depth_source": "The completed N=30 Adam full grid on the exact same objective already spans depths 1 through 60, ordinary and separated-angle direct block-XY, same-state warm block-XY, and penalty multipliers 1,2,3,4,6,8 on seeds 900 through 902.",
+    "required_report_use": "Use that target-blind frozen-grid evidence to select Adam depths before any corrected six-seed Adam comparison; do not imply that the p=26 through p=32 Adam band is depth-optimal."
+  },
+  "primary_metric": {
+    "name": "integer RTS99 multiplied by terminal resource units",
+    "includes": [
+      "complete within-block XY mixer overhead",
+      "learned-projector Stage-1 replay and unreplay",
+      "Stage-1 preparation where applicable",
+      "one terminal objective verification"
+    ],
+    "optimizer_queries": "reported separately and never substituted for the primary metric"
+  },
+  "reporting": {
+    "retain_original_fixed_band_result": true,
+    "rename_original_result": "seven-depth fixed-band robustness comparison",
+    "forbidden_original_description": "optimal-depth comparison",
+    "publish_tuning_curves": true,
+    "publish_boundary_checks": true,
+    "publish_selected_depths_before_corrected_confirmation_outcomes": true,
+    "preserve_negative_or contradictory depth findings": true
+  }
+}

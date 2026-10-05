@@ -1,0 +1,500 @@
+{
+  "confirmation": {
+    "availability": {
+      "learned_projector": {
+        "complete": true,
+        "configuration": "lp_selected",
+        "depth": 4,
+        "missing_cells": []
+      },
+      "native_direct": {
+        "complete": true,
+        "configuration": "ordinary_initial_calibration",
+        "depth": 2,
+        "missing_cells": []
+      },
+      "same_state_warm": {
+        "complete": true,
+        "configuration": "same_state_warm_initial_calibration",
+        "depth": 1,
+        "missing_cells": []
+      }
+    },
+    "comparisons": {
+      "native_direct": {
+        "bootstrap_95_ci": [
+          2.135930569855203,
+          4.953645879596242
+        ],
+        "learned_projector_wins": 6,
+        "ratio_over_learned_projector": 3.140687677106414,
+        "seed_ratios": {
+          "101": 8.654530626315353,
+          "102": 1.9980393010420776,
+          "103": 3.5425098872685585,
+          "104": 1.7416642522738446,
+          "105": 3.6943979594967793,
+          "106": 2.4349036053358573
+        }
+      },
+      "same_state_warm": {
+        "bootstrap_95_ci": [
+          1.4576113606980123,
+          2.803227873975896
+        ],
+        "learned_projector_wins": 6,
+        "ratio_over_learned_projector": 1.9814274930316536,
+        "seed_ratios": {
+          "101": 4.2919844118835755,
+          "102": 2.4142619007556423,
+          "103": 2.031764167405639,
+          "104": 1.4798710530684882,
+          "105": 1.7177808366462997,
+          "106": 1.1307371624439686
+        }
+      }
+    },
+    "families": {
+      "learned_projector": {
+        "configuration": "lp_selected",
+        "depth": 4,
+        "geometric_mean_RTS99": 4136.981620748104,
+        "geometric_mean_cost": 1743433630.9172473,
+        "geometric_mean_success_probability": 0.0011126603666733895,
+        "seed_rows": [
+          {
+            "RTS99": 1598,
+            "cost": 1104921120,
+            "seed": 101,
+            "success_probability": 0.002879192354157567,
+            "terminal_RU": 691440,
+            "trial_sha256": "9ad81b091abacf7fb437a1019b9d569acffb8db8548e86a39a3065b7ea18ccfd"
+          },
+          {
+            "RTS99": 4144,
+            "cost": 2865327360,
+            "seed": 102,
+            "success_probability": 0.0011108710896223783,
+            "terminal_RU": 691440,
+            "trial_sha256": "e16dd7c86c8c7a4d79e31790844710bb67f0906f152d405c39d0655d69167be6"
+          },
+          {
+            "RTS99": 3903,
+            "cost": 2698690320,
+            "seed": 103,
+            "success_probability": 0.0011793981539085507,
+            "terminal_RU": 691440,
+            "trial_sha256": "0b64564c8184021fddf29390cd8482121fca1799e2f4700a9b2f121cb394bea3"
+          },
+          {
+            "RTS99": 6638,
+            "cost": 4589778720,
+            "seed": 104,
+            "success_probability": 0.0006935636629350483,
+            "terminal_RU": 691440,
+            "trial_sha256": "08dd58a866779777e189b0661428d8f6d4ff78cab4d0b66b3b954e1987ed16c1"
+          },
+          {
+            "RTS99": 4463,
+            "cost": 3085896720,
+            "seed": 105,
+            "success_probability": 0.0010314245009794831,
+            "terminal_RU": 691440,
+            "trial_sha256": "d549ddc989e8ef7132d64bd988e442a6bf9b1ecb3206a058ddb5cae358835d35"
+          },
+          {
+            "RTS99": 6547,
+            "cost": 4526857680,
+            "seed": 106,
+            "success_probability": 0.000703164841979742,
+            "terminal_RU": 691440,
+            "trial_sha256": "b944e879f1d32b0757f3914085d3fc033c360a5f007ef82e0ac59a975f6a388e"
+          }
+        ],
+        "terminal_RU": 691440
+      },
+      "native_direct": {
+        "configuration": "ordinary_initial_calibration",
+        "depth": 2,
+        "geometric_mean_RTS99": 22122.900956649268,
+        "geometric_mean_cost": 4745735753.276364,
+        "geometric_mean_success_probability": 0.00020814523208016134,
+        "seed_rows": [
+          {
+            "RTS99": 23548,
+            "cost": 9563078280,
+            "seed": 101,
+            "success_probability": 0.0001955530169652775,
+            "terminal_RU": 406110,
+            "trial_sha256": "9aa6397cd428b3d747b56c3c281efae2c0c6bb5459c693ad4d8b489b3ae69244"
+          },
+          {
+            "RTS99": 14098,
+            "cost": 5725338780,
+            "seed": 102,
+            "success_probability": 0.00032661145087331533,
+            "terminal_RU": 406110,
+            "trial_sha256": "517ed0c00cec92e12f566319a871da2fcf566e385b5f48f659441eaf8f9c1b29"
+          },
+          {
+            "RTS99": 23542,
+            "cost": 9560641620,
+            "seed": 103,
+            "success_probability": 0.0001956017076736316,
+            "terminal_RU": 406110,
+            "trial_sha256": "c0f16c014233084338af597b50abbf78c1bfbb33f71844302ad55997e979982f"
+          },
+          {
+            "RTS99": 19685,
+            "cost": 7994275350,
+            "seed": 104,
+            "success_probability": 0.000233918268349953,
+            "terminal_RU": 406110,
+            "trial_sha256": "c96973b6af022360dc3aae1f0c2ced71cc9fc4653c81c3f3b8d4b111f2e98b30"
+          },
+          {
+            "RTS99": 28074,
+            "cost": 11401132140,
+            "seed": 105,
+            "success_probability": 0.00016402584151364863,
+            "terminal_RU": 406110,
+            "trial_sha256": "3d4af509d23878202d8c490c990cab47c48006b5bdc184628579b2620e7f3006"
+          },
+          {
+            "RTS99": 27143,
+            "cost": 11023043730,
+            "seed": 106,
+            "success_probability": 0.00016964998212642968,
+            "terminal_RU": 406110,
+            "trial_sha256": "19e49898b34990d7c57f49e1524ef7a42d755f9eb6bf8d4762b4651a0f78f3c9"
+          }
+        ],
+        "terminal_RU": 406110
+      },
+      "same_state_warm": {
+        "configuration": "same_state_warm_initial_calibration",
+        "depth": 1,
+        "geometric_mean_RTS99": 20841.23921973802,
+        "geometric_mean_cost": 8403299378.970183,
+        "geometric_mean_success_probability": 0.0002209451359317224,
+        "seed_rows": [
+          {
+            "RTS99": 17438,
+            "cost": 4742525670,
+            "seed": 101,
+            "success_probability": 0.00026406231336295605,
+            "terminal_RU": 271965,
+            "trial_sha256": "cac8bbe335d964886d46308a4d83fd359bb6aba996ea1c4b6c7cdee382571b05"
+          },
+          {
+            "RTS99": 25437,
+            "cost": 6917973705,
+            "seed": 102,
+            "success_probability": 0.00018102968169841915,
+            "terminal_RU": 271965,
+            "trial_sha256": "9d579f0fd975fa2c718f32338b40bdc1bb64f5590669c2c7cacbd20f282ecfa9"
+          },
+          {
+            "RTS99": 20162,
+            "cost": 5483358330,
+            "seed": 103,
+            "success_probability": 0.00022838801669422537,
+            "terminal_RU": 271965,
+            "trial_sha256": "a3df0794fd44e57c1f90bdb35d44ce6e9e3de7e4ec4655710d992a36b1d52a50"
+          },
+          {
+            "RTS99": 24976,
+            "cost": 6792597840,
+            "seed": 104,
+            "success_probability": 0.0001843702921178192,
+            "terminal_RU": 271965,
+            "trial_sha256": "31d406936aaff47bdb6d77be670ebe9d029796fdab35b0e4b96ea43e6a76ff13"
+          },
+          {
+            "RTS99": 19492,
+            "cost": 5301141780,
+            "seed": 105,
+            "success_probability": 0.00023624292225576937,
+            "terminal_RU": 271965,
+            "trial_sha256": "183d1af854b82148c06edd619f1160403af8d0791774bc23a13408be61ca6986"
+          },
+          {
+            "RTS99": 18822,
+            "cost": 5118925230,
+            "seed": 106,
+            "success_probability": 0.0002446399594191462,
+            "terminal_RU": 271965,
+            "trial_sha256": "17b6c4bb8b20b4c84e33ca359d687c8d665c36e73f4d32f9ca5837cfa4339f75"
+          }
+        ],
+        "terminal_RU": 271965
+      }
+    },
+    "status": "complete_from_existing_trials"
+  },
+  "counts": {
+    "confirmation_trials": 186,
+    "paired_configuration_depth_cells": 112,
+    "tuning_trials": 309
+  },
+  "created_at_utc": "2026-07-30T05:49:30.402510+00:00",
+  "files": {
+    "confirmation_rows": {
+      "path": "/public/home/ac4fba2wzz/bcst_degree6_size_scaling_20260730_v1/exact_ground_reanalysis_v1/exact_ground_confirmation_rows.csv",
+      "sha256": "f6ebc7f5afd667098a394125986d24c1a0c7420a2fda4ad3b09b98c082aaafb1"
+    },
+    "tuning_rows": {
+      "path": "/public/home/ac4fba2wzz/bcst_degree6_size_scaling_20260730_v1/exact_ground_reanalysis_v1/exact_ground_tuning_rows.csv",
+      "sha256": "70f27c249c08cdf113be21f1445d7dbfa463f295c226c125bb76f0267ba91764"
+    }
+  },
+  "important_limitation": "The original seed-901 pruning rule was frozen for Targets A and B, not for the post-hoc exact-ground target. Selection is therefore exploratory even when all selected confirmation cells already exist.",
+  "local_simulation_used": false,
+  "no_optimization_rerun": true,
+  "schema": "n30-degree6-existing-exact-ground-reanalysis-v1",
+  "status": "exploratory_existing_trial_reanalysis",
+  "target": {
+    "accepted_state_count": 1,
+    "ground_unique_for_every_extracted_seed": true,
+    "label": "exact_ground"
+  },
+  "tuning_selection": {
+    "learned_projector": {
+      "at_lower_boundary": false,
+      "at_upper_boundary": false,
+      "configuration": "lp_selected",
+      "depth": 4,
+      "tested_depths_for_selected_configuration": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        12,
+        16,
+        20,
+        24,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        36,
+        42,
+        48,
+        54,
+        60
+      ],
+      "top_candidates": [
+        {
+          "configuration": "lp_selected",
+          "depth": 4,
+          "two_seed_geometric_mean_cost": 1743433630.9172473
+        },
+        {
+          "configuration": "lp_selected",
+          "depth": 5,
+          "two_seed_geometric_mean_cost": 2069552984.6833177
+        },
+        {
+          "configuration": "lp_selected",
+          "depth": 1,
+          "two_seed_geometric_mean_cost": 2119953204.7885158
+        },
+        {
+          "configuration": "lp_selected",
+          "depth": 28,
+          "two_seed_geometric_mean_cost": 2147081126.2274895
+        },
+        {
+          "configuration": "lp_selected",
+          "depth": 29,
+          "two_seed_geometric_mean_cost": 2221158269.7877593
+        },
+        {
+          "configuration": "lp_selected",
+          "depth": 30,
+          "two_seed_geometric_mean_cost": 2246909255.527446
+        },
+        {
+          "configuration": "lp_selected",
+          "depth": 31,
+          "two_seed_geometric_mean_cost": 2319426705.598421
+        },
+        {
+          "configuration": "lp_selected",
+          "depth": 32,
+          "two_seed_geometric_mean_cost": 2391944155.6693945
+        },
+        {
+          "configuration": "lp_selected",
+          "depth": 27,
+          "two_seed_geometric_mean_cost": 2413076737.67557
+        },
+        {
+          "configuration": "lp_selected",
+          "depth": 2,
+          "two_seed_geometric_mean_cost": 2520091817.152955
+        }
+      ],
+      "two_seed_geometric_mean_cost": 1743433630.9172473
+    },
+    "native_direct": {
+      "at_lower_boundary": false,
+      "at_upper_boundary": false,
+      "configuration": "ordinary_initial_calibration",
+      "depth": 2,
+      "tested_depths_for_selected_configuration": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        12,
+        16,
+        20,
+        24,
+        26,
+        27,
+        28,
+        29
+      ],
+      "top_candidates": [
+        {
+          "configuration": "ordinary_initial_calibration",
+          "depth": 2,
+          "two_seed_geometric_mean_cost": 4745735753.276364
+        },
+        {
+          "configuration": "ordinary_initial_calibration",
+          "depth": 3,
+          "two_seed_geometric_mean_cost": 6237687338.843705
+        },
+        {
+          "configuration": "ordinary_selected",
+          "depth": 5,
+          "two_seed_geometric_mean_cost": 6413951096.298361
+        },
+        {
+          "configuration": "ordinary_selected",
+          "depth": 4,
+          "two_seed_geometric_mean_cost": 6602703548.048247
+        },
+        {
+          "configuration": "ordinary_selected",
+          "depth": 2,
+          "two_seed_geometric_mean_cost": 7315594235.334051
+        },
+        {
+          "configuration": "ordinary_initial_calibration",
+          "depth": 9,
+          "two_seed_geometric_mean_cost": 7469702515.505693
+        },
+        {
+          "configuration": "ordinary_selected",
+          "depth": 6,
+          "two_seed_geometric_mean_cost": 7639953130.747058
+        },
+        {
+          "configuration": "ordinary_selected",
+          "depth": 3,
+          "two_seed_geometric_mean_cost": 7684903385.042892
+        },
+        {
+          "configuration": "ordinary_initial_calibration",
+          "depth": 4,
+          "two_seed_geometric_mean_cost": 7797397144.790217
+        },
+        {
+          "configuration": "ordinary_selected",
+          "depth": 7,
+          "two_seed_geometric_mean_cost": 8044742336.484419
+        }
+      ],
+      "two_seed_geometric_mean_cost": 4745735753.276364
+    },
+    "same_state_warm": {
+      "at_lower_boundary": true,
+      "at_upper_boundary": false,
+      "configuration": "same_state_warm_initial_calibration",
+      "depth": 1,
+      "tested_depths_for_selected_configuration": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        12,
+        16,
+        20
+      ],
+      "top_candidates": [
+        {
+          "configuration": "same_state_warm_initial_calibration",
+          "depth": 1,
+          "two_seed_geometric_mean_cost": 8403299378.970183
+        },
+        {
+          "configuration": "same_state_warm_selected",
+          "depth": 1,
+          "two_seed_geometric_mean_cost": 9330744794.02801
+        },
+        {
+          "configuration": "same_state_warm_initial_calibration",
+          "depth": 4,
+          "two_seed_geometric_mean_cost": 11844614993.703093
+        },
+        {
+          "configuration": "same_state_warm_initial_calibration",
+          "depth": 3,
+          "two_seed_geometric_mean_cost": 12046817059.386738
+        },
+        {
+          "configuration": "same_state_warm_initial_calibration",
+          "depth": 2,
+          "two_seed_geometric_mean_cost": 12462097627.683483
+        },
+        {
+          "configuration": "same_state_warm_selected",
+          "depth": 2,
+          "two_seed_geometric_mean_cost": 13880756335.087463
+        },
+        {
+          "configuration": "same_state_warm_initial_calibration",
+          "depth": 5,
+          "two_seed_geometric_mean_cost": 14465520264.263092
+        },
+        {
+          "configuration": "same_state_warm_initial_calibration",
+          "depth": 6,
+          "two_seed_geometric_mean_cost": 17532106669.318546
+        },
+        {
+          "configuration": "same_state_warm_selected",
+          "depth": 3,
+          "two_seed_geometric_mean_cost": 18111750589.133904
+        },
+        {
+          "configuration": "same_state_warm_selected",
+          "depth": 4,
+          "two_seed_geometric_mean_cost": 19975578459.29024
+        }
+      ],
+      "two_seed_geometric_mean_cost": 8403299378.970183
+    }
+  }
+}

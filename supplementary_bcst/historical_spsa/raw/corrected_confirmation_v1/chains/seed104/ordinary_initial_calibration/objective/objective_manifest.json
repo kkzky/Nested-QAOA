@@ -1,0 +1,50 @@
+{
+  "N": 30,
+  "campaign": "bcst_signed_continuous_hyper4_20260726_v1",
+  "eligible_support_pool_count": 9450,
+  "full_support_order_sha256": "c5d008275a8c2b4836012e2aeb168a1388e6786ebb0e1bd38c0f690d28443743",
+  "instance_seed": 104,
+  "interaction_order_in_blocks": 3,
+  "layout": [
+    6,
+    6,
+    6,
+    6,
+    6
+  ],
+  "objective_model": "block_state_p3",
+  "objective_sha256": "f2d88bf13ad9cadfb4f3b27cf74034b4324ce01cd6136dd9e60927a4a2dd9180",
+  "objective_sign_convention": "energy equals minus saved coefficient times active monomial",
+  "polynomial_degree": 6,
+  "range_a": 0.5,
+  "rng_algorithm": "sha256-domain-separated-seed-pcg64dxsm-v1",
+  "rng_domain_prefix": "bcst-block-state-pspin-v1",
+  "schema": "bcst-signed-continuous-block-state-pspin-objective-v1",
+  "scout_raw_support_u64_sha256": "2bfde28a05bf9bb03d3a1f63963af36401f1d292b6a46dc30047ddcd096f74ac",
+  "scout_raw_weight_f64_sha256": "4b8bc24ab281b464accbcc051635c47c4460e5fcc164606dce79375705f96e14",
+  "selected_term_count": 6150,
+  "selection_provenance": "lowest polynomial degree passing the predeclared method-neutral landscape rule; no QAOA outcome used",
+  "stream_seeds": {
+    "magnitude_seed": 208596264137339400145566727321646833037,
+    "optimizer_seed": 4245729445247745414,
+    "sign_seed": 208596264137339400145566727321646833037,
+    "support_seed": 6176172916790485921399848563253729047
+  },
+  "support_algorithm": "all-conflict-feasible-active-three-block-state-indicators-sorted-then-frozen-shuffle-v1",
+  "support_sha256": "d90523a43339e107a72d36d073f2b5dbce8226b915f15b428614e77a1e57d7c0",
+  "target_manifest_sha256": "d5e75f5001906ca9b71405c5f6bdc9f284df48b080284df0adfdc6674390b01b",
+  "term_count": 6150,
+  "term_density": 0.6507936507936508,
+  "term_density_fraction": "41/63",
+  "weight_empirical": {
+    "max": 0.4998702751189964,
+    "mean": 4.7589486884905095e-05,
+    "min": -0.49973867714891496,
+    "negative_count": 3101,
+    "positive_count": 3049,
+    "rms": 0.2898968768253473,
+    "std": 0.2898968729192009,
+    "zero_count": 0
+  },
+  "weight_family": "signed_cont_uniform"
+}

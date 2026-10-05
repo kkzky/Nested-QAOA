@@ -1,0 +1,50 @@
+{
+  "N": 30,
+  "campaign": "bcst_signed_continuous_hyper4_20260726_v1",
+  "eligible_support_pool_count": 9450,
+  "full_support_order_sha256": "e423ed5ee253b36cc464e9b106b90c658b36ea0da267c6301e6804d2fac16ec6",
+  "instance_seed": 101,
+  "interaction_order_in_blocks": 3,
+  "layout": [
+    6,
+    6,
+    6,
+    6,
+    6
+  ],
+  "objective_model": "block_state_p3",
+  "objective_sha256": "cd2d85e949db92a57624b2f6dfcc85c1f62255992b99d018b5d9d034170c40c0",
+  "objective_sign_convention": "energy equals minus saved coefficient times active monomial",
+  "polynomial_degree": 6,
+  "range_a": 0.5,
+  "rng_algorithm": "sha256-domain-separated-seed-pcg64dxsm-v1",
+  "rng_domain_prefix": "bcst-block-state-pspin-v1",
+  "schema": "bcst-signed-continuous-block-state-pspin-objective-v1",
+  "scout_raw_support_u64_sha256": "fa86b6ea53764609499050f6b9cbb27c96553912d0b35dd0bc89104917938707",
+  "scout_raw_weight_f64_sha256": "ca2097cb8d4b3a41181a4822f0bd990d52df0bc384cad5cf86573ea140e07c75",
+  "selected_term_count": 6150,
+  "selection_provenance": "lowest polynomial degree passing the predeclared method-neutral landscape rule; no QAOA outcome used",
+  "stream_seeds": {
+    "magnitude_seed": 220676542127140566580604731596103474329,
+    "optimizer_seed": 1345166434308489299,
+    "sign_seed": 220676542127140566580604731596103474329,
+    "support_seed": 119596573942255607105573215479166446074
+  },
+  "support_algorithm": "all-conflict-feasible-active-three-block-state-indicators-sorted-then-frozen-shuffle-v1",
+  "support_sha256": "77c618121f1fae6e6b1bc22b0445cd097ba0ff7b55f8958f9a2d4392fdfff13b",
+  "target_manifest_sha256": "9886fa4d2f8f1b06441d65008277a04851d8a35b0e21cfd6011b9cbd2ec760fd",
+  "term_count": 6150,
+  "term_density": 0.6507936507936508,
+  "term_density_fraction": "41/63",
+  "weight_empirical": {
+    "max": 0.4999854661417231,
+    "mean": 0.001315993531432156,
+    "min": -0.49933397997454587,
+    "negative_count": 3088,
+    "positive_count": 3062,
+    "rms": 0.28973512497191983,
+    "std": 0.2897321362975105,
+    "zero_count": 0
+  },
+  "weight_family": "signed_cont_uniform"
+}

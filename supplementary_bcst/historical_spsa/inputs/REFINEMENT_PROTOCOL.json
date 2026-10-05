@@ -1,0 +1,44 @@
+{
+  "aggregation": "geometric_mean_across_seeds_900_901",
+  "boundary_rules": {
+    "at_128": "Add p=160,192 if the same boundary condition persists from p=112 to p=128.",
+    "at_192": "If the minimum remains at p=192, label the upper boundary unresolved and do not call it an optimal depth.",
+    "at_96": "Add p=112,128 if p=96 is the minimum, or if p=96 is within 10% of the minimum and the p=84 to p=96 trend is nonincreasing."
+  },
+  "configurations": [
+    "lp_selected",
+    "ordinary_selected",
+    "ordinary_initial_calibration",
+    "separated_selected",
+    "separated_initial_calibration",
+    "same_state_warm_selected",
+    "same_state_warm_initial_calibration"
+  ],
+  "frozen_at_utc": "2026-07-29T20:54:58.053618+00:00",
+  "frozen_hashes": {
+    "N30_OBJECTIVE_IDENTITY_REFERENCE.json": "8cdb68cadcde5d666d446d57cbac1b6c874952dae700367534ff461430dbb570",
+    "controller": "e7135e4752018d20787178c1535dcf5ac500867bac39f90625ea98c01668466c",
+    "depth_coverage_contract.json": "45621fa3f95edc0d0cb2260bd1e84cfc2aa3c124cabd52b075095c0a6d3916d6",
+    "paper_facing_contract.json": "85a3c6e4d1d2b67a25b3c23f70451f815be9a47a73e3b7704a561b9f9462fdde",
+    "run_depth_coverage.py": "dd04d95f844a54090989c506d1b462f7df3da2602ee36e9be0a2cc46b67d0405",
+    "source/hyper4_continuous_runner.py": "9c1f777aaa150970b29f2e1bf2bbe7acc3fb60245ac8b0a8e883bdab4300fb5e"
+  },
+  "initial_complete": "/public/home/ac4fba2wzz/bcst_degree6_size_scaling_20260730_v1/depth_coverage_v2/INITIAL_WIDE_DEPTH_COMPLETE.json",
+  "initial_complete_sha256": "88c54d41f327b1292959e300436aee5024dc8f4a725b58750f56a8469a67de3c",
+  "local_refinement_rule": "Iteratively add any missing p*-2 and p*+2 for each configuration-target minimum, except below physical p=1 and above the declared final p=192 upper boundary.",
+  "local_simulation_used": false,
+  "new_cell_rule": "Run only absent seed/configuration/depth cells. Seed the one allowed continuation from the nearest valid shallower trial; retain four independent starts.",
+  "primary_metric": "integer_RTS99_times_terminal_RU",
+  "pruning_audit": "/public/home/ac4fba2wzz/bcst_degree6_size_scaling_20260730_v1/depth_coverage_v2/SEED900_DEPTH_PRUNING_PRELAUNCH_AUDIT.json",
+  "pruning_audit_sha256": "c3ffdfac5b51bd10271dbef5d3fde59f23086473ded9ef1ccc20e8b5272d493e",
+  "schema": "n30-degree6-depth-refinement-protocol-v1",
+  "seeds": [
+    900,
+    901
+  ],
+  "status": "frozen_before_refinement_outcomes",
+  "targets": [
+    "A",
+    "B"
+  ]
+}

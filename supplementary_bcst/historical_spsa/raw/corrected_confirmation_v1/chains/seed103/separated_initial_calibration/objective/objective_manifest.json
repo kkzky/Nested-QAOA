@@ -1,0 +1,50 @@
+{
+  "N": 30,
+  "campaign": "bcst_signed_continuous_hyper4_20260726_v1",
+  "eligible_support_pool_count": 9450,
+  "full_support_order_sha256": "a7b06b224ecae2dfcd3382152f2222e2a53eedcf4528bc093fb2e25ab478aa19",
+  "instance_seed": 103,
+  "interaction_order_in_blocks": 3,
+  "layout": [
+    6,
+    6,
+    6,
+    6,
+    6
+  ],
+  "objective_model": "block_state_p3",
+  "objective_sha256": "fa144a0214ce7705e4a8015f11dcb578ef2f608bd7fd19bd0fa93324cab1d93a",
+  "objective_sign_convention": "energy equals minus saved coefficient times active monomial",
+  "polynomial_degree": 6,
+  "range_a": 0.5,
+  "rng_algorithm": "sha256-domain-separated-seed-pcg64dxsm-v1",
+  "rng_domain_prefix": "bcst-block-state-pspin-v1",
+  "schema": "bcst-signed-continuous-block-state-pspin-objective-v1",
+  "scout_raw_support_u64_sha256": "c318f68a8edee25611f6cf13b5d6d6a9b8e70675f29f650316d9b8009f521919",
+  "scout_raw_weight_f64_sha256": "e5b6017dbd68a2fb588c792e3edd3f6dbbd2a0d169546625d33495d03c049ddc",
+  "selected_term_count": 6150,
+  "selection_provenance": "lowest polynomial degree passing the predeclared method-neutral landscape rule; no QAOA outcome used",
+  "stream_seeds": {
+    "magnitude_seed": 74915765123021789302594946703277637373,
+    "optimizer_seed": 5510352210008226966,
+    "sign_seed": 74915765123021789302594946703277637373,
+    "support_seed": 113413082644768318159519026461276704554
+  },
+  "support_algorithm": "all-conflict-feasible-active-three-block-state-indicators-sorted-then-frozen-shuffle-v1",
+  "support_sha256": "6d6bb83747945cacf06dc50a2103f8f4c9b116cb57de510c1bb9b06cd8699c33",
+  "target_manifest_sha256": "b2c6a08429fbd4108f58c21ffb87b0d547350efbcbf38117aaa23fe352dec1af",
+  "term_count": 6150,
+  "term_density": 0.6507936507936508,
+  "term_density_fraction": "41/63",
+  "weight_empirical": {
+    "max": 0.4998889179222983,
+    "mean": -0.00038123486175142563,
+    "min": -0.4999814253733197,
+    "negative_count": 3092,
+    "positive_count": 3058,
+    "rms": 0.28740147571219193,
+    "std": 0.2874012228601782,
+    "zero_count": 0
+  },
+  "weight_family": "signed_cont_uniform"
+}

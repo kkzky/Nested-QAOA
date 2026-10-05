@@ -1,0 +1,139 @@
+{
+  "depth_plan_by_configuration": {
+    "lp_selected": [
+      4,
+      20,
+      26,
+      30,
+      36
+    ],
+    "ordinary_initial_calibration": [
+      2,
+      20,
+      26,
+      30,
+      36
+    ],
+    "ordinary_selected": [
+      20,
+      26,
+      30,
+      36
+    ],
+    "same_state_warm_initial_calibration": [
+      1,
+      20,
+      26,
+      30,
+      36
+    ],
+    "same_state_warm_selected": [
+      20,
+      26,
+      30,
+      36
+    ],
+    "separated_initial_calibration": [
+      20,
+      26,
+      30,
+      36
+    ],
+    "separated_selected": [
+      20,
+      26,
+      30,
+      36
+    ]
+  },
+  "fixed_common_depths": [
+    26,
+    30,
+    36
+  ],
+  "fixed_depth_description": "Exactly p=26,30,36; common-depth robustness, never described as an optimal-depth comparison.",
+  "frozen_at_utc": "2026-07-29T20:56:16.394498+00:00",
+  "frozen_hashes": {
+    "N30_OBJECTIVE_IDENTITY_REFERENCE.json": "8cdb68cadcde5d666d446d57cbac1b6c874952dae700367534ff461430dbb570",
+    "controller": "5ea8f49137b70a244f61538fcdb54a7b1e57e5fe2a731d93b8158279a3bb4d4b",
+    "depth_coverage_contract.json": "45621fa3f95edc0d0cb2260bd1e84cfc2aa3c124cabd52b075095c0a6d3916d6",
+    "paper_facing_contract.json": "85a3c6e4d1d2b67a25b3c23f70451f815be9a47a73e3b7704a561b9f9462fdde",
+    "run_depth_coverage.py": "dd04d95f844a54090989c506d1b462f7df3da2602ee36e9be0a2cc46b67d0405",
+    "source/hyper4_continuous_runner.py": "9c1f777aaa150970b29f2e1bf2bbe7acc3fb60245ac8b0a8e883bdab4300fb5e"
+  },
+  "history_depth": 20,
+  "legacy_invalid_trials_reused": false,
+  "local_simulation_used": false,
+  "optimized_selection": {
+    "learned_projector": {
+      "A": {
+        "configuration": "lp_selected",
+        "geometric_mean_cost": 186111708.04739824,
+        "physical_lower_boundary": false,
+        "selected_depth": 4,
+        "upper_boundary_unresolved": false
+      },
+      "B": {
+        "configuration": "lp_selected",
+        "geometric_mean_cost": 789808519.6385382,
+        "physical_lower_boundary": false,
+        "selected_depth": 4,
+        "upper_boundary_unresolved": false
+      }
+    },
+    "native_direct": {
+      "A": {
+        "configuration": "ordinary_initial_calibration",
+        "geometric_mean_cost": 647410672.8326399,
+        "physical_lower_boundary": false,
+        "selected_depth": 2,
+        "upper_boundary_unresolved": false
+      },
+      "B": {
+        "configuration": "ordinary_initial_calibration",
+        "geometric_mean_cost": 2303004228.6963506,
+        "physical_lower_boundary": false,
+        "selected_depth": 2,
+        "upper_boundary_unresolved": false
+      }
+    },
+    "same_state_warm": {
+      "A": {
+        "configuration": "same_state_warm_initial_calibration",
+        "geometric_mean_cost": 973544977.8031195,
+        "physical_lower_boundary": true,
+        "selected_depth": 1,
+        "upper_boundary_unresolved": false
+      },
+      "B": {
+        "configuration": "same_state_warm_initial_calibration",
+        "geometric_mean_cost": 3594602589.4464827,
+        "physical_lower_boundary": true,
+        "selected_depth": 1,
+        "upper_boundary_unresolved": false
+      }
+    }
+  },
+  "optimizer": {
+    "budget_tag": "paper_facing_corrected_confirmation_v1",
+    "continuation_starts": 1,
+    "independent_starts": 4,
+    "name": "spsa",
+    "objective_calls_per_trial": 1291,
+    "starts": 5,
+    "updates_per_start": 120
+  },
+  "schema": "n30-degree6-corrected-confirmation-contract-v1",
+  "seeds": [
+    101,
+    102,
+    103,
+    104,
+    105,
+    106
+  ],
+  "status": "frozen_before_confirmation_outcomes",
+  "tuning_selection_path": "/public/home/ac4fba2wzz/bcst_degree6_size_scaling_20260730_v1/depth_refinement_v1/FINAL_TUNING_SELECTION.json",
+  "tuning_selection_sha256": "97d7333ddc4d2cb600ee1a5764f3b09fb3e05dcf5894153f0584271b6f361af5",
+  "workers": 2
+}

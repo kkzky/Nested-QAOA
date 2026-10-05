@@ -1,0 +1,95 @@
+{
+  "algorithm": "feasible-energy-stable-packed-bitstring-v1",
+  "ground_degeneracy": 1,
+  "ground_tolerance": 1e-12,
+  "minimum_feasible_energy": -3.2342493534088135,
+  "targets": {
+    "exact_ground": {
+      "bitstrings": [
+        "001001010100100010010001000110"
+      ],
+      "count": 1,
+      "indices": [
+        265202
+      ],
+      "label": "exact_ground",
+      "sha256": "3d6a6de9be9b47af69b95a05facef34d158604e6015bfd6d956ef51c3f46a99a",
+      "threshold_energy": -3.2342493534088135,
+      "uniform_feasible_probability": 0.00015220700152207003,
+      "uniform_feasible_samples_99": 30254,
+      "uniform_product_probability": 1.3168724279835392e-06,
+      "uniform_product_samples_99": 3497049
+    },
+    "manuscript_fraction": {
+      "bitstrings": [
+        "001001010100100010010001000110",
+        "100010010100001010000101011000",
+        "011000100001001010010100000011",
+        "110000000011001100010001000110"
+      ],
+      "count": 4,
+      "indices": [
+        265202,
+        612383,
+        35172,
+        265289
+      ],
+      "label": "manuscript_fraction",
+      "sha256": "585280e8460e0b99d5ab3a3cf10187bb02256198ff027d51f0f0431c726f5230",
+      "threshold_energy": -2.7041070461273193,
+      "uniform_feasible_probability": 0.0006088280060882801,
+      "uniform_feasible_samples_99": 7562,
+      "uniform_product_probability": 5.267489711934157e-06,
+      "uniform_product_samples_99": 874261
+    },
+    "target_a_sqrt": {
+      "bitstrings": [
+        "001001010100100010010001000110",
+        "100010010100001010000101011000",
+        "011000100001001010010100000011",
+        "110000000011001100010001000110",
+        "010010101000000101010010000101",
+        "010010101000000101101000000101",
+        "010010101000000101100010000101",
+        "100010010100101000000101011000"
+      ],
+      "count": 8,
+      "indices": [
+        265202,
+        612383,
+        35172,
+        265289,
+        74677,
+        94927,
+        78052,
+        613958
+      ],
+      "label": "target_a_sqrt",
+      "sha256": "17e5a67f645c45fc9127ffbf221dbe576a8aa177e76396a57b750fff38ddbfe5",
+      "threshold_energy": -2.471101999282837,
+      "uniform_feasible_probability": 0.0012176560121765602,
+      "uniform_feasible_samples_99": 3780,
+      "uniform_product_probability": 1.0534979423868313e-05,
+      "uniform_product_samples_99": 437130
+    },
+    "target_b_k2": {
+      "bitstrings": [
+        "001001010100100010010001000110",
+        "100010010100001010000101011000"
+      ],
+      "count": 2,
+      "indices": [
+        265202,
+        612383
+      ],
+      "label": "target_b_k2",
+      "sha256": "ab53fd019efb5ca24d6804383e9c69bac423e3fd727a4ca81f7eac4a5f7bfc21",
+      "threshold_energy": -2.921531915664673,
+      "uniform_feasible_probability": 0.00030441400304414006,
+      "uniform_feasible_samples_99": 15126,
+      "uniform_product_probability": 2.6337448559670783e-06,
+      "uniform_product_samples_99": 1748524
+    }
+  },
+  "tie_break": "ascending zero-padded packed bitstring"
+}

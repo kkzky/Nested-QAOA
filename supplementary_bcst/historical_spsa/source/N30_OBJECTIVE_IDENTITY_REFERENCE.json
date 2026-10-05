@@ -1,0 +1,56 @@
+{
+  "schema": "bcst-degree6-N30-objective-identity-reference-v1",
+  "source": "completed N=30 two-seed pilot and six-seed confirmation",
+  "eligible_support_pool_count": 9450,
+  "selected_term_count": 6150,
+  "rows": [
+    {
+      "seed": 101,
+      "support_sha256": "77c618121f1fae6e6b1bc22b0445cd097ba0ff7b55f8958f9a2d4392fdfff13b",
+      "objective_sha256": "cd2d85e949db92a57624b2f6dfcc85c1f62255992b99d018b5d9d034170c40c0",
+      "target_manifest_sha256": "9886fa4d2f8f1b06441d65008277a04851d8a35b0e21cfd6011b9cbd2ec760fd"
+    },
+    {
+      "seed": 102,
+      "support_sha256": "558d2c968a8a49fb5acbf1c4cdd2a1c754da3e424b8eb6ec558c015d2af8f301",
+      "objective_sha256": "e2ee22fc18adbfe56c8dd6506ce855dd7b99418411be1f5d27ee80ebe7a39f44",
+      "target_manifest_sha256": "2afbecec5d2a53a77dc265d445b50deea88cea98bb5a7cae0193fc18ebda5800"
+    },
+    {
+      "seed": 103,
+      "support_sha256": "6d6bb83747945cacf06dc50a2103f8f4c9b116cb57de510c1bb9b06cd8699c33",
+      "objective_sha256": "fa144a0214ce7705e4a8015f11dcb578ef2f608bd7fd19bd0fa93324cab1d93a",
+      "target_manifest_sha256": "b2c6a08429fbd4108f58c21ffb87b0d547350efbcbf38117aaa23fe352dec1af"
+    },
+    {
+      "seed": 104,
+      "support_sha256": "d90523a43339e107a72d36d073f2b5dbce8226b915f15b428614e77a1e57d7c0",
+      "objective_sha256": "f2d88bf13ad9cadfb4f3b27cf74034b4324ce01cd6136dd9e60927a4a2dd9180",
+      "target_manifest_sha256": "d5e75f5001906ca9b71405c5f6bdc9f284df48b080284df0adfdc6674390b01b"
+    },
+    {
+      "seed": 105,
+      "support_sha256": "09fd8ba79f1b1f3629ee879cbdd6c0a22d6114fb31ed05f3f0b7dd13c96c2a40",
+      "objective_sha256": "3179ee5cd7222617e0b13d8dc63ca445c5efe755fdb23ed600856bae1a9a69d2",
+      "target_manifest_sha256": "ff1c634c04037a0f0880918273cf9f171c31aa48975c6f9ca0c66a85466e9991"
+    },
+    {
+      "seed": 106,
+      "support_sha256": "111f96af573dd8474251fc89cd248eebbe10a3c373b93d972fbb507a14b08c74",
+      "objective_sha256": "aa996c97ad86e83fb04636c87abf852e279949e08e9b0d36fd342f03af373e7b",
+      "target_manifest_sha256": "204355f1f5b1b8359cba9fac8d7356e81d2e0224a77cb0bd7ddbab82dfaff591"
+    },
+    {
+      "seed": 900,
+      "support_sha256": "f72de130e00b0616b8577a2a4e1830362f2363e62be05411c9aa6b31766e3150",
+      "objective_sha256": "7bd9674b95ee4a40b6b62221324bee35a0ada37f3906f02555de56ca6a080e90",
+      "target_manifest_sha256": "49ea10626fac775dc2c5c97a4721ce79f961f0ce8c18884b12b4e920d7131beb"
+    },
+    {
+      "seed": 901,
+      "support_sha256": "c9f315c4fdbc6035ae37ca1e3d7399c7afa2a4c05391a349a78f0ef54e19ba78",
+      "objective_sha256": "078c8346b8ad5cbbbe59c75aede18f382739eb0caf3a635ef4c45d8f8d7f4dd6",
+      "target_manifest_sha256": "fcc403ba4e624f789f820f696ad49dbaf01fb00182ff8c906a3d557a1196ff29"
+    }
+  ]
+}

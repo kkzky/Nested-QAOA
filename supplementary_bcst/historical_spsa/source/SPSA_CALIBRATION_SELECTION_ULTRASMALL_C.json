@@ -1,0 +1,835 @@
+{
+  "completed_unix": 1785268042.2015557,
+  "contract": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_source\\p3_spsa_ultrasmall_c_boundary_contract.json",
+  "contract_sha256": "3f3b06b510e2a51062572c9edc4576bc4c7732934def3cea6daa38ab8583f851",
+  "final_selection": {
+    "direct_block_xy": {
+      "algorithm": "Std-XY",
+      "eligible_penalties_at_95pct_of_maximum": [
+        6,
+        8
+      ],
+      "maximum_feasible_probability": 0.6458650827407837,
+      "penalty_selection_rule": "smallest penalty with feasible probability at least 95 percent of the method maximum",
+      "selected_penalty": 6,
+      "selected_protocol": {
+        "c": 0.005,
+        "expected_energy": 0.5595556497573853,
+        "feasible_probability": 0.6458650827407837,
+        "max_step_norm": 0.25,
+        "objective_calls_total": 565,
+        "protocol": "c0p005_target0p05",
+        "target_step": 0.05,
+        "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_boundary_extension\\results\\c0p005_target0p05\\direct_block_xy_penalty_6\\trials\\24da6b76cf028bd35bb2b0c5.json",
+        "trial_sha256": "c35360c16c54a093ddb53cf85d2d1e002f4c67e30e6470bc4ddab4ac9c9ce47f"
+      }
+    },
+    "lp_projector": {
+      "algorithm": "XY-LP-QAOA",
+      "eligible_penalties_at_95pct_of_maximum": [
+        4
+      ],
+      "maximum_feasible_probability": 0.9737500548362732,
+      "penalty_selection_rule": "fixed at 4",
+      "selected_penalty": 4,
+      "selected_protocol": {
+        "c": 0.05,
+        "expected_energy": -1.372977375984192,
+        "feasible_probability": 0.9737500548362732,
+        "max_step_norm": 0.35,
+        "objective_calls_total": 565,
+        "protocol": "c0p05_target0p05",
+        "target_step": 0.05,
+        "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_local\\results\\c0p05_target0p05\\lp_projector_penalty_4\\trials\\c6885a1ad1e08af637c64beb.json",
+        "trial_sha256": "2cc3eb3819d1a134b299c8b6b7c3ea0c83085eb01c00e7151351247034374b6b"
+      }
+    }
+  },
+  "numerical_floor_c": 0.0001,
+  "objective_identity": {
+    "objective_sha256": "7bd9674b95ee4a40b6b62221324bee35a0ada37f3906f02555de56ca6a080e90",
+    "support_sha256": "f72de130e00b0616b8577a2a4e1830362f2363e62be05411c9aa6b31766e3150",
+    "target_manifest_sha256": "49ea10626fac775dc2c5c97a4721ce79f961f0ce8c18884b12b4e920d7131beb"
+  },
+  "original_selection": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_boundary_extension\\SPSA_CALIBRATION_SELECTION_EXTENDED.json",
+  "original_selection_sha256": "830e5ab75249fb6567fa60e2b3caac3ce31ed19726c695a18544bf42262fb776",
+  "prior_selection_sha256": "830e5ab75249fb6567fa60e2b3caac3ce31ed19726c695a18544bf42262fb776",
+  "schema": "n30-three-block-interaction-spsa-calibration-ultrasmall-c-selection-v1",
+  "selected_at_numerical_floor": false,
+  "selected_per_method_and_penalty": {
+    "direct_block_xy": {
+      "1": {
+        "algorithm": "Std-XY",
+        "candidates": [
+          {
+            "c": 0.0001,
+            "expected_energy": -0.42145270109176636,
+            "feasible_probability": 0.2748970687389374,
+            "max_step_norm": 0.25,
+            "objective_calls_total": 565,
+            "protocol": "c0p0001_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_ultrasmall_c\\results\\c0p0001_target0p05\\direct_block_xy_penalty_1\\trials\\0fe47bbd98c2cdf5628cc4a1.json",
+            "trial_sha256": "d859bff6f21ccff734b2a3c858885c5d63e2bfb3b4a1f3c3ee84e4f777b52c28"
+          },
+          {
+            "c": 0.002,
+            "expected_energy": -0.12237141281366348,
+            "feasible_probability": 0.23761609196662903,
+            "max_step_norm": 0.25,
+            "objective_calls_total": 565,
+            "protocol": "c0p002_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_ultrasmall_c\\results\\c0p002_target0p05\\direct_block_xy_penalty_1\\trials\\0fe47bbd98c2cdf5628cc4a1.json",
+            "trial_sha256": "ec585b91be609464a404f34e28241b4564d56301d64a418408aadac79a86b104"
+          },
+          {
+            "c": 0.02,
+            "expected_energy": -0.11547021567821503,
+            "feasible_probability": 0.129533052444458,
+            "max_step_norm": 0.25,
+            "objective_calls_total": 565,
+            "protocol": "c0p02_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_local\\results\\c0p02_target0p05\\direct_block_xy_penalty_1\\trials\\74fa4776f5a61eae0bb06215.json",
+            "trial_sha256": "56c817a06afefd018b7cf492150671dbe556ab8dfe63825715e9280d282d95b5"
+          },
+          {
+            "c": 0.001,
+            "expected_energy": -0.10644479840993881,
+            "feasible_probability": 0.18020090460777283,
+            "max_step_norm": 0.25,
+            "objective_calls_total": 565,
+            "protocol": "c0p001_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_ultrasmall_c\\results\\c0p001_target0p05\\direct_block_xy_penalty_1\\trials\\0fe47bbd98c2cdf5628cc4a1.json",
+            "trial_sha256": "025f43536026aa6ba4c374f2cc916f1c7ff3a36192f55aba029fb1f4c9ba4916"
+          },
+          {
+            "c": 0.0005,
+            "expected_energy": -0.10422832518815994,
+            "feasible_probability": 0.18819618225097656,
+            "max_step_norm": 0.25,
+            "objective_calls_total": 565,
+            "protocol": "c0p0005_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_ultrasmall_c\\results\\c0p0005_target0p05\\direct_block_xy_penalty_1\\trials\\0fe47bbd98c2cdf5628cc4a1.json",
+            "trial_sha256": "ec332d5927fd3f6b2c70583e1d06fe3b8277906f706776fbd4f427699be5fe4d"
+          },
+          {
+            "c": 0.0002,
+            "expected_energy": -0.1002710685133934,
+            "feasible_probability": 0.19823826849460602,
+            "max_step_norm": 0.25,
+            "objective_calls_total": 565,
+            "protocol": "c0p0002_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_ultrasmall_c\\results\\c0p0002_target0p05\\direct_block_xy_penalty_1\\trials\\0fe47bbd98c2cdf5628cc4a1.json",
+            "trial_sha256": "747e1db047f87e7ec4e157ec14085b73dd37a28e3bd5e3da3692acda474a5c8e"
+          },
+          {
+            "c": 0.005,
+            "expected_energy": -0.014351599849760532,
+            "feasible_probability": 0.22580495476722717,
+            "max_step_norm": 0.25,
+            "objective_calls_total": 565,
+            "protocol": "c0p005_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_boundary_extension\\results\\c0p005_target0p05\\direct_block_xy_penalty_1\\trials\\0fe47bbd98c2cdf5628cc4a1.json",
+            "trial_sha256": "2bb6efa18e830a4a3b7db39a4e0b7a06687957077a0f84235c65042803bd7ff3"
+          },
+          {
+            "c": 0.1,
+            "expected_energy": 0.03282882645726204,
+            "feasible_probability": 0.16730237007141113,
+            "max_step_norm": 0.5,
+            "objective_calls_total": 565,
+            "protocol": "c0p10_target0p10",
+            "target_step": 0.1,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_local\\results\\c0p10_target0p10\\direct_block_xy_penalty_1\\trials\\74fa4776f5a61eae0bb06215.json",
+            "trial_sha256": "48a03a6dd2c299edc2830bc6d92116c7a127de8bcc7ba8c67daf2bb54ab1963d"
+          },
+          {
+            "c": 0.01,
+            "expected_energy": 0.128273144364357,
+            "feasible_probability": 0.12706217169761658,
+            "max_step_norm": 0.25,
+            "objective_calls_total": 565,
+            "protocol": "c0p01_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_boundary_extension\\results\\c0p01_target0p05\\direct_block_xy_penalty_1\\trials\\0fe47bbd98c2cdf5628cc4a1.json",
+            "trial_sha256": "d8abd809ff206b3c453d08801ca59ffe90b57485ec4f2ba43737464fc9b44f0e"
+          },
+          {
+            "c": 0.05,
+            "expected_energy": 0.48897773027420044,
+            "feasible_probability": 0.050952326506376266,
+            "max_step_norm": 0.35,
+            "objective_calls_total": 565,
+            "protocol": "c0p05_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_local\\results\\c0p05_target0p05\\direct_block_xy_penalty_1\\trials\\74fa4776f5a61eae0bb06215.json",
+            "trial_sha256": "d4b4aeae8a06f113dbd9b024d597021281dead6360edcea2e721328810dad22c"
+          }
+        ],
+        "penalty": 1,
+        "selected": {
+          "c": 0.0001,
+          "expected_energy": -0.42145270109176636,
+          "feasible_probability": 0.2748970687389374,
+          "max_step_norm": 0.25,
+          "objective_calls_total": 565,
+          "protocol": "c0p0001_target0p05",
+          "target_step": 0.05,
+          "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_ultrasmall_c\\results\\c0p0001_target0p05\\direct_block_xy_penalty_1\\trials\\0fe47bbd98c2cdf5628cc4a1.json",
+          "trial_sha256": "d859bff6f21ccff734b2a3c858885c5d63e2bfb3b4a1f3c3ee84e4f777b52c28"
+        },
+        "selection_rule": "minimum expected penalized energy at depth 12"
+      },
+      "2": {
+        "algorithm": "Std-XY",
+        "candidates": [
+          {
+            "c": 0.01,
+            "expected_energy": 0.018752405419945717,
+            "feasible_probability": 0.38944488763809204,
+            "max_step_norm": 0.25,
+            "objective_calls_total": 565,
+            "protocol": "c0p01_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_boundary_extension\\results\\c0p01_target0p05\\direct_block_xy_penalty_2\\trials\\7ad30decf8bbf44a86651d94.json",
+            "trial_sha256": "cb11444abf1dcb9d68e8ead7dab0d8e0949098049ac030bb3073db3f14b0827d"
+          },
+          {
+            "c": 0.1,
+            "expected_energy": 0.05019690468907356,
+            "feasible_probability": 0.3501211404800415,
+            "max_step_norm": 0.5,
+            "objective_calls_total": 565,
+            "protocol": "c0p10_target0p10",
+            "target_step": 0.1,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_local\\results\\c0p10_target0p10\\direct_block_xy_penalty_2\\trials\\ae758aa7d639a937632d9714.json",
+            "trial_sha256": "38bc1820604ee413be4a92fdea3fa2a56aeb32c9b9aa661e50cf8f499be118e0"
+          },
+          {
+            "c": 0.002,
+            "expected_energy": 0.16607938706874847,
+            "feasible_probability": 0.3092397451400757,
+            "max_step_norm": 0.25,
+            "objective_calls_total": 565,
+            "protocol": "c0p002_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_ultrasmall_c\\results\\c0p002_target0p05\\direct_block_xy_penalty_2\\trials\\7ad30decf8bbf44a86651d94.json",
+            "trial_sha256": "67bea868e25e17366979d596d603c460ba2f3da7f2e2f92b4104f532be88ca62"
+          },
+          {
+            "c": 0.02,
+            "expected_energy": 0.20100973546504974,
+            "feasible_probability": 0.2787989377975464,
+            "max_step_norm": 0.25,
+            "objective_calls_total": 565,
+            "protocol": "c0p02_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_local\\results\\c0p02_target0p05\\direct_block_xy_penalty_2\\trials\\ae758aa7d639a937632d9714.json",
+            "trial_sha256": "9376d21b489c1d6a21d561ea1c2f10097f5d9826f92500320e1641c883097227"
+          },
+          {
+            "c": 0.005,
+            "expected_energy": 0.3149074912071228,
+            "feasible_probability": 0.2727729082107544,
+            "max_step_norm": 0.25,
+            "objective_calls_total": 565,
+            "protocol": "c0p005_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_boundary_extension\\results\\c0p005_target0p05\\direct_block_xy_penalty_2\\trials\\7ad30decf8bbf44a86651d94.json",
+            "trial_sha256": "e7eca50af3d4de0537b363ce82095d4bed6ed40ed568dda782a877e33e631d26"
+          },
+          {
+            "c": 0.0001,
+            "expected_energy": 0.31896135210990906,
+            "feasible_probability": 0.26237934827804565,
+            "max_step_norm": 0.25,
+            "objective_calls_total": 565,
+            "protocol": "c0p0001_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_ultrasmall_c\\results\\c0p0001_target0p05\\direct_block_xy_penalty_2\\trials\\7ad30decf8bbf44a86651d94.json",
+            "trial_sha256": "d2934c4f0c6c554c39526f4d39484d93f0094d4465806f50fa5ab8f903d550da"
+          },
+          {
+            "c": 0.0005,
+            "expected_energy": 0.4167255461215973,
+            "feasible_probability": 0.24467773735523224,
+            "max_step_norm": 0.25,
+            "objective_calls_total": 565,
+            "protocol": "c0p0005_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_ultrasmall_c\\results\\c0p0005_target0p05\\direct_block_xy_penalty_2\\trials\\7ad30decf8bbf44a86651d94.json",
+            "trial_sha256": "92d955170ab1bd6482c67be3729eb3c10a8a234becd7e3fb28e40410ee60bd79"
+          },
+          {
+            "c": 0.05,
+            "expected_energy": 0.42786073684692383,
+            "feasible_probability": 0.2125735878944397,
+            "max_step_norm": 0.35,
+            "objective_calls_total": 565,
+            "protocol": "c0p05_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_local\\results\\c0p05_target0p05\\direct_block_xy_penalty_2\\trials\\ae758aa7d639a937632d9714.json",
+            "trial_sha256": "95df404563c3902f0f967404ae13244c9c4c714673637b580220b58d680571cf"
+          },
+          {
+            "c": 0.001,
+            "expected_energy": 0.5111563801765442,
+            "feasible_probability": 0.2594974935054779,
+            "max_step_norm": 0.25,
+            "objective_calls_total": 565,
+            "protocol": "c0p001_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_ultrasmall_c\\results\\c0p001_target0p05\\direct_block_xy_penalty_2\\trials\\7ad30decf8bbf44a86651d94.json",
+            "trial_sha256": "4248f57d4fbc2b1d364449c5a022728926e2b6117fafe566474aa9f08490de93"
+          },
+          {
+            "c": 0.0002,
+            "expected_energy": 0.5175780057907104,
+            "feasible_probability": 0.16832482814788818,
+            "max_step_norm": 0.25,
+            "objective_calls_total": 565,
+            "protocol": "c0p0002_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_ultrasmall_c\\results\\c0p0002_target0p05\\direct_block_xy_penalty_2\\trials\\7ad30decf8bbf44a86651d94.json",
+            "trial_sha256": "f9110bb8fd802d0b720ade5ff03a7a13d8b8d3801ca6a22d240e64f7888643fa"
+          }
+        ],
+        "penalty": 2,
+        "selected": {
+          "c": 0.01,
+          "expected_energy": 0.018752405419945717,
+          "feasible_probability": 0.38944488763809204,
+          "max_step_norm": 0.25,
+          "objective_calls_total": 565,
+          "protocol": "c0p01_target0p05",
+          "target_step": 0.05,
+          "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_boundary_extension\\results\\c0p01_target0p05\\direct_block_xy_penalty_2\\trials\\7ad30decf8bbf44a86651d94.json",
+          "trial_sha256": "cb11444abf1dcb9d68e8ead7dab0d8e0949098049ac030bb3073db3f14b0827d"
+        },
+        "selection_rule": "minimum expected penalized energy at depth 12"
+      },
+      "3": {
+        "algorithm": "Std-XY",
+        "candidates": [
+          {
+            "c": 0.002,
+            "expected_energy": 0.2965898811817169,
+            "feasible_probability": 0.47570985555648804,
+            "max_step_norm": 0.25,
+            "objective_calls_total": 565,
+            "protocol": "c0p002_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_ultrasmall_c\\results\\c0p002_target0p05\\direct_block_xy_penalty_3\\trials\\a26072c1b36c2c06df333388.json",
+            "trial_sha256": "c419b43e530b4dfc1311e2b4f9e3cd74d20c76e8ed2ac0a33d1ed89a3d2caf3c"
+          },
+          {
+            "c": 0.02,
+            "expected_energy": 0.4335053265094757,
+            "feasible_probability": 0.363224059343338,
+            "max_step_norm": 0.25,
+            "objective_calls_total": 565,
+            "protocol": "c0p02_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_local\\results\\c0p02_target0p05\\direct_block_xy_penalty_3\\trials\\1dcf7b408e621bd7145c1499.json",
+            "trial_sha256": "599b32eb259ac34ceffa9a60c17352225f65f22ad503b0ec68a6dc70f63e8cce"
+          },
+          {
+            "c": 0.005,
+            "expected_energy": 0.5749762654304504,
+            "feasible_probability": 0.3702026903629303,
+            "max_step_norm": 0.25,
+            "objective_calls_total": 565,
+            "protocol": "c0p005_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_boundary_extension\\results\\c0p005_target0p05\\direct_block_xy_penalty_3\\trials\\a26072c1b36c2c06df333388.json",
+            "trial_sha256": "b99f444b4c4b30810c0267e72b446d7ea1c073355ec1c6722a67521fa676726e"
+          },
+          {
+            "c": 0.001,
+            "expected_energy": 0.5935240387916565,
+            "feasible_probability": 0.3496580421924591,
+            "max_step_norm": 0.25,
+            "objective_calls_total": 565,
+            "protocol": "c0p001_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_ultrasmall_c\\results\\c0p001_target0p05\\direct_block_xy_penalty_3\\trials\\a26072c1b36c2c06df333388.json",
+            "trial_sha256": "dc9078298272bd88590988c00d9a3bac9b5f0707ea3a3eaa685559e5536ae12a"
+          },
+          {
+            "c": 0.0005,
+            "expected_energy": 0.6082109808921814,
+            "feasible_probability": 0.35555171966552734,
+            "max_step_norm": 0.25,
+            "objective_calls_total": 565,
+            "protocol": "c0p0005_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_ultrasmall_c\\results\\c0p0005_target0p05\\direct_block_xy_penalty_3\\trials\\a26072c1b36c2c06df333388.json",
+            "trial_sha256": "d8d4bc50ccc8bf44201d6f68c07ea405319da381467d3c106a90d2b8f7497a18"
+          },
+          {
+            "c": 0.01,
+            "expected_energy": 0.6325008273124695,
+            "feasible_probability": 0.3633776605129242,
+            "max_step_norm": 0.25,
+            "objective_calls_total": 565,
+            "protocol": "c0p01_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_boundary_extension\\results\\c0p01_target0p05\\direct_block_xy_penalty_3\\trials\\a26072c1b36c2c06df333388.json",
+            "trial_sha256": "3b59a2abb1ac831d36f1b806c2cf1e17232c56e2b239f0547d8a9adbab161b8c"
+          },
+          {
+            "c": 0.0002,
+            "expected_energy": 0.6344466805458069,
+            "feasible_probability": 0.38176169991493225,
+            "max_step_norm": 0.25,
+            "objective_calls_total": 565,
+            "protocol": "c0p0002_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_ultrasmall_c\\results\\c0p0002_target0p05\\direct_block_xy_penalty_3\\trials\\a26072c1b36c2c06df333388.json",
+            "trial_sha256": "233d13d2d9834e4651e7df95c9d79de969cad33e66af26dabaa7c896fe225531"
+          },
+          {
+            "c": 0.0001,
+            "expected_energy": 0.639592707157135,
+            "feasible_probability": 0.3571443259716034,
+            "max_step_norm": 0.25,
+            "objective_calls_total": 565,
+            "protocol": "c0p0001_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_ultrasmall_c\\results\\c0p0001_target0p05\\direct_block_xy_penalty_3\\trials\\a26072c1b36c2c06df333388.json",
+            "trial_sha256": "e996d9604b6e677a2df934127c5213163b030fa43eb57a9e1e5bf4e0814a7c45"
+          },
+          {
+            "c": 0.1,
+            "expected_energy": 0.7685371041297913,
+            "feasible_probability": 0.3015666902065277,
+            "max_step_norm": 0.5,
+            "objective_calls_total": 565,
+            "protocol": "c0p10_target0p10",
+            "target_step": 0.1,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_local\\results\\c0p10_target0p10\\direct_block_xy_penalty_3\\trials\\1dcf7b408e621bd7145c1499.json",
+            "trial_sha256": "b7ff960d67768dc86d329c184e45a8814c03d5bff2e851ba2b987b2952db14cb"
+          },
+          {
+            "c": 0.05,
+            "expected_energy": 0.7717087268829346,
+            "feasible_probability": 0.3209608197212219,
+            "max_step_norm": 0.35,
+            "objective_calls_total": 565,
+            "protocol": "c0p05_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_local\\results\\c0p05_target0p05\\direct_block_xy_penalty_3\\trials\\1dcf7b408e621bd7145c1499.json",
+            "trial_sha256": "8259b125dbba90bcc2318ac8e88556cbadc12422120a770d05029ce27e7fc0f5"
+          }
+        ],
+        "penalty": 3,
+        "selected": {
+          "c": 0.002,
+          "expected_energy": 0.2965898811817169,
+          "feasible_probability": 0.47570985555648804,
+          "max_step_norm": 0.25,
+          "objective_calls_total": 565,
+          "protocol": "c0p002_target0p05",
+          "target_step": 0.05,
+          "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_ultrasmall_c\\results\\c0p002_target0p05\\direct_block_xy_penalty_3\\trials\\a26072c1b36c2c06df333388.json",
+          "trial_sha256": "c419b43e530b4dfc1311e2b4f9e3cd74d20c76e8ed2ac0a33d1ed89a3d2caf3c"
+        },
+        "selection_rule": "minimum expected penalized energy at depth 12"
+      },
+      "4": {
+        "algorithm": "Std-XY",
+        "candidates": [
+          {
+            "c": 0.001,
+            "expected_energy": 0.4804581105709076,
+            "feasible_probability": 0.41256797313690186,
+            "max_step_norm": 0.25,
+            "objective_calls_total": 565,
+            "protocol": "c0p001_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_ultrasmall_c\\results\\c0p001_target0p05\\direct_block_xy_penalty_4\\trials\\84e5e330e7fc4201a4efb2ae.json",
+            "trial_sha256": "a26b6a4c063d0cada1039732f92dddc59e6fe4d32335dbfc8997040e48a10b08"
+          },
+          {
+            "c": 0.002,
+            "expected_energy": 0.4977854788303375,
+            "feasible_probability": 0.4873315095901489,
+            "max_step_norm": 0.25,
+            "objective_calls_total": 565,
+            "protocol": "c0p002_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_ultrasmall_c\\results\\c0p002_target0p05\\direct_block_xy_penalty_4\\trials\\84e5e330e7fc4201a4efb2ae.json",
+            "trial_sha256": "a3f9b12c56bf42fdfefe0a89103b61a4a60ed5d7d2718b2d9390df5b905a33f5"
+          },
+          {
+            "c": 0.01,
+            "expected_energy": 0.5260127782821655,
+            "feasible_probability": 0.4535353183746338,
+            "max_step_norm": 0.25,
+            "objective_calls_total": 565,
+            "protocol": "c0p01_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_boundary_extension\\results\\c0p01_target0p05\\direct_block_xy_penalty_4\\trials\\84e5e330e7fc4201a4efb2ae.json",
+            "trial_sha256": "5a869d54db935bf8c4de602ac3c7c9fa1a258be3fc730e3a725e4676da866c8b"
+          },
+          {
+            "c": 0.02,
+            "expected_energy": 0.532033383846283,
+            "feasible_probability": 0.47278743982315063,
+            "max_step_norm": 0.25,
+            "objective_calls_total": 565,
+            "protocol": "c0p02_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_local\\results\\c0p02_target0p05\\direct_block_xy_penalty_4\\trials\\b5c0296fe25f532062a10f44.json",
+            "trial_sha256": "793c6e8f3e9e79f311dfa5d20a000bdd7b19f0d622ce40a03dbf12a1b4679efd"
+          },
+          {
+            "c": 0.005,
+            "expected_energy": 0.5547035932540894,
+            "feasible_probability": 0.4320441484451294,
+            "max_step_norm": 0.25,
+            "objective_calls_total": 565,
+            "protocol": "c0p005_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_boundary_extension\\results\\c0p005_target0p05\\direct_block_xy_penalty_4\\trials\\84e5e330e7fc4201a4efb2ae.json",
+            "trial_sha256": "893f46ecad49d77c32504c554699e6af181baecf2ac753476b5876f71062bdba"
+          },
+          {
+            "c": 0.0001,
+            "expected_energy": 0.5737708806991577,
+            "feasible_probability": 0.46077293157577515,
+            "max_step_norm": 0.25,
+            "objective_calls_total": 565,
+            "protocol": "c0p0001_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_ultrasmall_c\\results\\c0p0001_target0p05\\direct_block_xy_penalty_4\\trials\\84e5e330e7fc4201a4efb2ae.json",
+            "trial_sha256": "c63b1a4e61beb16ae75c3ef6d8014197e0ed26c848f751ccf8b120bde35634da"
+          },
+          {
+            "c": 0.0002,
+            "expected_energy": 0.5865899324417114,
+            "feasible_probability": 0.4571864902973175,
+            "max_step_norm": 0.25,
+            "objective_calls_total": 565,
+            "protocol": "c0p0002_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_ultrasmall_c\\results\\c0p0002_target0p05\\direct_block_xy_penalty_4\\trials\\84e5e330e7fc4201a4efb2ae.json",
+            "trial_sha256": "dd360f4365c19c2a1f74a5e20500bcfb24771351e6bfbdc505afe39b00c06554"
+          },
+          {
+            "c": 0.0005,
+            "expected_energy": 0.5983182787895203,
+            "feasible_probability": 0.4078921675682068,
+            "max_step_norm": 0.25,
+            "objective_calls_total": 565,
+            "protocol": "c0p0005_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_ultrasmall_c\\results\\c0p0005_target0p05\\direct_block_xy_penalty_4\\trials\\84e5e330e7fc4201a4efb2ae.json",
+            "trial_sha256": "d227c9546dc3bd8631aac3c159d620a7cdc99517131fa88110c2204f4ebe6727"
+          },
+          {
+            "c": 0.05,
+            "expected_energy": 0.6817179918289185,
+            "feasible_probability": 0.5088366270065308,
+            "max_step_norm": 0.35,
+            "objective_calls_total": 565,
+            "protocol": "c0p05_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_local\\results\\c0p05_target0p05\\direct_block_xy_penalty_4\\trials\\b5c0296fe25f532062a10f44.json",
+            "trial_sha256": "8ef5a37f60fabc408007d198a9aac12d9e928a20d9b40a6cd749dfbec938865d"
+          },
+          {
+            "c": 0.1,
+            "expected_energy": 1.935446858406067,
+            "feasible_probability": 0.09570431709289551,
+            "max_step_norm": 0.5,
+            "objective_calls_total": 565,
+            "protocol": "c0p10_target0p10",
+            "target_step": 0.1,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_local\\results\\c0p10_target0p10\\direct_block_xy_penalty_4\\trials\\b5c0296fe25f532062a10f44.json",
+            "trial_sha256": "2aadfdfdcfe6e4a1bd6636ac4b6babf0cb01eb97d40c39d8996e01c8c522b087"
+          }
+        ],
+        "penalty": 4,
+        "selected": {
+          "c": 0.001,
+          "expected_energy": 0.4804581105709076,
+          "feasible_probability": 0.41256797313690186,
+          "max_step_norm": 0.25,
+          "objective_calls_total": 565,
+          "protocol": "c0p001_target0p05",
+          "target_step": 0.05,
+          "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_ultrasmall_c\\results\\c0p001_target0p05\\direct_block_xy_penalty_4\\trials\\84e5e330e7fc4201a4efb2ae.json",
+          "trial_sha256": "a26b6a4c063d0cada1039732f92dddc59e6fe4d32335dbfc8997040e48a10b08"
+        },
+        "selection_rule": "minimum expected penalized energy at depth 12"
+      },
+      "6": {
+        "algorithm": "Std-XY",
+        "candidates": [
+          {
+            "c": 0.005,
+            "expected_energy": 0.5595556497573853,
+            "feasible_probability": 0.6458650827407837,
+            "max_step_norm": 0.25,
+            "objective_calls_total": 565,
+            "protocol": "c0p005_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_boundary_extension\\results\\c0p005_target0p05\\direct_block_xy_penalty_6\\trials\\24da6b76cf028bd35bb2b0c5.json",
+            "trial_sha256": "c35360c16c54a093ddb53cf85d2d1e002f4c67e30e6470bc4ddab4ac9c9ce47f"
+          },
+          {
+            "c": 0.002,
+            "expected_energy": 0.8195001482963562,
+            "feasible_probability": 0.6260837316513062,
+            "max_step_norm": 0.25,
+            "objective_calls_total": 565,
+            "protocol": "c0p002_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_ultrasmall_c\\results\\c0p002_target0p05\\direct_block_xy_penalty_6\\trials\\24da6b76cf028bd35bb2b0c5.json",
+            "trial_sha256": "80d418c7c4fecbc6bd7acc63dcdc98f4cd7a4ee6141fa4c23f7b51760e8ab81a"
+          },
+          {
+            "c": 0.001,
+            "expected_energy": 0.8265632390975952,
+            "feasible_probability": 0.6233251094818115,
+            "max_step_norm": 0.25,
+            "objective_calls_total": 565,
+            "protocol": "c0p001_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_ultrasmall_c\\results\\c0p001_target0p05\\direct_block_xy_penalty_6\\trials\\24da6b76cf028bd35bb2b0c5.json",
+            "trial_sha256": "9f87d07c1b7c6be3ad096ba7d1255d6a7420d9877cfbb9b218c0f2fb075abdee"
+          },
+          {
+            "c": 0.0002,
+            "expected_energy": 0.8330170512199402,
+            "feasible_probability": 0.6199356317520142,
+            "max_step_norm": 0.25,
+            "objective_calls_total": 565,
+            "protocol": "c0p0002_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_ultrasmall_c\\results\\c0p0002_target0p05\\direct_block_xy_penalty_6\\trials\\24da6b76cf028bd35bb2b0c5.json",
+            "trial_sha256": "5de61422f996cbbacc2b678cabb52b3039b9f542852f4560f2d58b86c5e6cde3"
+          },
+          {
+            "c": 0.0005,
+            "expected_energy": 0.8499428629875183,
+            "feasible_probability": 0.6023451685905457,
+            "max_step_norm": 0.25,
+            "objective_calls_total": 565,
+            "protocol": "c0p0005_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_ultrasmall_c\\results\\c0p0005_target0p05\\direct_block_xy_penalty_6\\trials\\24da6b76cf028bd35bb2b0c5.json",
+            "trial_sha256": "d5d881ca5f38ab28fc6bcec67616e096468182f217ebdd2a2b7b7c0e0880d106"
+          },
+          {
+            "c": 0.0001,
+            "expected_energy": 0.8503385782241821,
+            "feasible_probability": 0.6030157804489136,
+            "max_step_norm": 0.25,
+            "objective_calls_total": 565,
+            "protocol": "c0p0001_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_ultrasmall_c\\results\\c0p0001_target0p05\\direct_block_xy_penalty_6\\trials\\24da6b76cf028bd35bb2b0c5.json",
+            "trial_sha256": "cd7a21443aff098d6ce7a0c2820408ed1aedaff32811d3ac66f55ba003a88c29"
+          },
+          {
+            "c": 0.01,
+            "expected_energy": 0.9171982407569885,
+            "feasible_probability": 0.5891342759132385,
+            "max_step_norm": 0.25,
+            "objective_calls_total": 565,
+            "protocol": "c0p01_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_boundary_extension\\results\\c0p01_target0p05\\direct_block_xy_penalty_6\\trials\\24da6b76cf028bd35bb2b0c5.json",
+            "trial_sha256": "3daa6333906bed6b51108bb22692f7a5de887ba6230ac5ab23a61e766cc3b805"
+          },
+          {
+            "c": 0.02,
+            "expected_energy": 1.6610027551651,
+            "feasible_probability": 0.45107465982437134,
+            "max_step_norm": 0.25,
+            "objective_calls_total": 565,
+            "protocol": "c0p02_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_local\\results\\c0p02_target0p05\\direct_block_xy_penalty_6\\trials\\6c61620ce02e9f7c39582a30.json",
+            "trial_sha256": "d232253c94c4601bb2a3d0a8c6c1e8c36ec62eb76016cd53fad58e284aee9422"
+          },
+          {
+            "c": 0.1,
+            "expected_energy": 2.1828625202178955,
+            "feasible_probability": 0.17599833011627197,
+            "max_step_norm": 0.5,
+            "objective_calls_total": 565,
+            "protocol": "c0p10_target0p10",
+            "target_step": 0.1,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_local\\results\\c0p10_target0p10\\direct_block_xy_penalty_6\\trials\\6c61620ce02e9f7c39582a30.json",
+            "trial_sha256": "6a0460299d5852df425a458f1e0028d3df94bab8fc1e5ce654e285bbca8e952f"
+          },
+          {
+            "c": 0.05,
+            "expected_energy": 2.2490386962890625,
+            "feasible_probability": 0.3298323154449463,
+            "max_step_norm": 0.35,
+            "objective_calls_total": 565,
+            "protocol": "c0p05_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_local\\results\\c0p05_target0p05\\direct_block_xy_penalty_6\\trials\\6c61620ce02e9f7c39582a30.json",
+            "trial_sha256": "d786495b93df8a35aeed891a51eb0a67a0db9e2c24416135b586b8129e2cddac"
+          }
+        ],
+        "penalty": 6,
+        "selected": {
+          "c": 0.005,
+          "expected_energy": 0.5595556497573853,
+          "feasible_probability": 0.6458650827407837,
+          "max_step_norm": 0.25,
+          "objective_calls_total": 565,
+          "protocol": "c0p005_target0p05",
+          "target_step": 0.05,
+          "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_boundary_extension\\results\\c0p005_target0p05\\direct_block_xy_penalty_6\\trials\\24da6b76cf028bd35bb2b0c5.json",
+          "trial_sha256": "c35360c16c54a093ddb53cf85d2d1e002f4c67e30e6470bc4ddab4ac9c9ce47f"
+        },
+        "selection_rule": "minimum expected penalized energy at depth 12"
+      },
+      "8": {
+        "algorithm": "Std-XY",
+        "candidates": [
+          {
+            "c": 0.005,
+            "expected_energy": 1.2925785779953003,
+            "feasible_probability": 0.6336768865585327,
+            "max_step_norm": 0.25,
+            "objective_calls_total": 565,
+            "protocol": "c0p005_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_boundary_extension\\results\\c0p005_target0p05\\direct_block_xy_penalty_8\\trials\\f6d6a3f40248c512b6b085be.json",
+            "trial_sha256": "f44314c6c2268729e86ba6a123718afde1c48ef1d6f51815c690c9975085341d"
+          },
+          {
+            "c": 0.001,
+            "expected_energy": 1.3393884897232056,
+            "feasible_probability": 0.4837997853755951,
+            "max_step_norm": 0.25,
+            "objective_calls_total": 565,
+            "protocol": "c0p001_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_ultrasmall_c\\results\\c0p001_target0p05\\direct_block_xy_penalty_8\\trials\\f6d6a3f40248c512b6b085be.json",
+            "trial_sha256": "cfe2b376c417a41d977fee5cd52f5126c258f73abb10d8b3769e50caed827519"
+          },
+          {
+            "c": 0.0005,
+            "expected_energy": 1.342647910118103,
+            "feasible_probability": 0.48171281814575195,
+            "max_step_norm": 0.25,
+            "objective_calls_total": 565,
+            "protocol": "c0p0005_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_ultrasmall_c\\results\\c0p0005_target0p05\\direct_block_xy_penalty_8\\trials\\f6d6a3f40248c512b6b085be.json",
+            "trial_sha256": "409a23e8adc6b8cd02b1a73309ced4d4cd38a432e3d18cd3ac70b29921a9e83e"
+          },
+          {
+            "c": 0.02,
+            "expected_energy": 1.784928321838379,
+            "feasible_probability": 0.5617414712905884,
+            "max_step_norm": 0.25,
+            "objective_calls_total": 565,
+            "protocol": "c0p02_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_local\\results\\c0p02_target0p05\\direct_block_xy_penalty_8\\trials\\6face667e97a4f998ff15f85.json",
+            "trial_sha256": "142e218ff579d31d83b6f546028a10ffa383902e8255bd3328c7680b6bc4e81b"
+          },
+          {
+            "c": 0.002,
+            "expected_energy": 1.94485342502594,
+            "feasible_probability": 0.4026702642440796,
+            "max_step_norm": 0.25,
+            "objective_calls_total": 565,
+            "protocol": "c0p002_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_ultrasmall_c\\results\\c0p002_target0p05\\direct_block_xy_penalty_8\\trials\\f6d6a3f40248c512b6b085be.json",
+            "trial_sha256": "265820269181ed668c83f0cbcecf8ef973f8e9047ef49e724f45e795c7b732d5"
+          },
+          {
+            "c": 0.0002,
+            "expected_energy": 1.992554783821106,
+            "feasible_probability": 0.3953501582145691,
+            "max_step_norm": 0.25,
+            "objective_calls_total": 565,
+            "protocol": "c0p0002_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_ultrasmall_c\\results\\c0p0002_target0p05\\direct_block_xy_penalty_8\\trials\\f6d6a3f40248c512b6b085be.json",
+            "trial_sha256": "308be8d3de730d20d86f605e3802e91748f8f571cbcbb060f397334cd4a4e422"
+          },
+          {
+            "c": 0.0001,
+            "expected_energy": 1.9952595233917236,
+            "feasible_probability": 0.3949458599090576,
+            "max_step_norm": 0.25,
+            "objective_calls_total": 565,
+            "protocol": "c0p0001_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_ultrasmall_c\\results\\c0p0001_target0p05\\direct_block_xy_penalty_8\\trials\\f6d6a3f40248c512b6b085be.json",
+            "trial_sha256": "4547d77c31281c8f045804b19e0e3fb0c65fe810d4a4f8817bf9c51d807031bb"
+          },
+          {
+            "c": 0.05,
+            "expected_energy": 2.218937635421753,
+            "feasible_probability": 0.42466238141059875,
+            "max_step_norm": 0.35,
+            "objective_calls_total": 565,
+            "protocol": "c0p05_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_local\\results\\c0p05_target0p05\\direct_block_xy_penalty_8\\trials\\6face667e97a4f998ff15f85.json",
+            "trial_sha256": "36d5e56570dc27a4785fdcb51b3b367e2d0b1117e202cac1f029fff4de4a5d21"
+          },
+          {
+            "c": 0.01,
+            "expected_energy": 2.4007368087768555,
+            "feasible_probability": 0.2800092399120331,
+            "max_step_norm": 0.25,
+            "objective_calls_total": 565,
+            "protocol": "c0p01_target0p05",
+            "target_step": 0.05,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_boundary_extension\\results\\c0p01_target0p05\\direct_block_xy_penalty_8\\trials\\f6d6a3f40248c512b6b085be.json",
+            "trial_sha256": "80ff443b4a09770a1fa701785b253d12d74c2ed45af712e5e238282ed4775364"
+          },
+          {
+            "c": 0.1,
+            "expected_energy": 2.6491360664367676,
+            "feasible_probability": 0.2358027696609497,
+            "max_step_norm": 0.5,
+            "objective_calls_total": 565,
+            "protocol": "c0p10_target0p10",
+            "target_step": 0.1,
+            "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_local\\results\\c0p10_target0p10\\direct_block_xy_penalty_8\\trials\\6face667e97a4f998ff15f85.json",
+            "trial_sha256": "33ee04d33a2829bb1e2e921561f5dc791f454faa8d1fcf38dd371af41f5d5980"
+          }
+        ],
+        "penalty": 8,
+        "selected": {
+          "c": 0.005,
+          "expected_energy": 1.2925785779953003,
+          "feasible_probability": 0.6336768865585327,
+          "max_step_norm": 0.25,
+          "objective_calls_total": 565,
+          "protocol": "c0p005_target0p05",
+          "target_step": 0.05,
+          "trial": "C:\\Users\\15957\\Documents\\Codex\\2026-07-26\\g\\work\\n30_p3_spsa_calibration_boundary_extension\\results\\c0p005_target0p05\\direct_block_xy_penalty_8\\trials\\f6d6a3f40248c512b6b085be.json",
+          "trial_sha256": "f44314c6c2268729e86ba6a123718afde1c48ef1d6f51815c690c9975085341d"
+        },
+        "selection_rule": "minimum expected penalized energy at depth 12"
+      }
+    }
+  },
+  "selection_depth": 12,
+  "selection_seed": 900,
+  "status": "complete",
+  "success_probabilities_used_for_selection": false
+}

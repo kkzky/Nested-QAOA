@@ -1,0 +1,519 @@
+{
+  "schema": "bcst-unique-strengthened-validation-plan-v1",
+  "campaign_id": "bcst_unique_strengthened_validation_20260810",
+  "status": "frozen_before_execution",
+  "scientific_question": "On fifteen new prespecified instances at each of N=25 and N=30, do the already selected unique-ground operating depths reproduce the LP-QAOA advantage, and how do lower-depth LP circuits compare with closest-RU deep Direct-XY controls and direct-depth stress arms?",
+  "scope": {
+    "problem_family": "strict-hierarchy BCST",
+    "sizes": [25, 30],
+    "primary_target": "unique_ground_state",
+    "secondary_targets": ["best_two_states", "best_eight_states"],
+    "primary_metric": "integer_RTS99_times_terminal_RU",
+    "paper_editing_authorized": false,
+    "numerical_results_only": true
+  },
+  "construction": {
+    "identity": "the same five-block, exactly-two-selected-label BCST construction used by main.tex",
+    "blocks": 5,
+    "selected_labels_per_block": 2,
+    "local_cardinality_basis": {
+      "25": {
+        "block_size": 5,
+        "basis_dimension": 100000,
+        "conflict_feasible_state_count": 120,
+        "degree4_term_count": 225,
+        "degree6_term_count": 14
+      },
+      "30": {
+        "block_size": 6,
+        "basis_dimension": 759375,
+        "conflict_feasible_state_count": 6570,
+        "degree4_term_count": 788,
+        "degree6_term_count": 49
+      }
+    },
+    "fine_objective": "C_obj^(s)(x)=-sum_{T in T4^(s)} w_T product_{u in T} x_u - sum_{T in T6^(s)} w_T product_{u in T} x_u",
+    "objective_sign_convention": "The signed w_T values are reward coefficients. The diagonal cost Hamiltonian is their negative, exactly matching bcst_v2.instance_core._exact_objective_diagonal; minimizing C_obj therefore maximizes the selected signed reward sum.",
+    "support_rule": "select exactly one half of the eligible degree-four pool and one sixteenth as many degree-six terms",
+    "weight_rule": "w_T=(2*z_T+1-2^53)/2^54, where z_T is the 53-bit integer extracted from SHA-256(N, problem_seed, |T|, T)",
+    "ground_definition": "the single lowest-C_obj conflict-feasible computational-basis state",
+    "unique_ground_requirement": {
+      "required_degeneracy": 1,
+      "seed_list_frozen_before_check": true,
+      "replacement_policy": "No performance-based replacement. If a frozen seed is invalid or non-unique, stop that size stratum and issue a versioned contract amendment with a deterministic next-seed rule before any algorithm result is inspected."
+    },
+    "construction_hash_requirement": "record canonical instance hash, support hash, weight hash, feasible-set hash, ordered objective hash, exact ground energy, exact degeneracy, and ground-state hash for every seed"
+  },
+  "stage1": {
+    "depth_p1": 12,
+    "initial_state": "uniform product of the five exactly-two-excitation block states",
+    "phase_and_loss": "conflict Hamiltonian H_C",
+    "mixer": "complete within-block XY mixer H_XY",
+    "state_symbol": "phi",
+    "shared_within_size": true,
+    "identity_rule": "LP, same-Stage-1-state Direct-XY, Stage-1-only, and all reanalyzed same-state causal arms at a fixed N must consume the identical serialized phi amplitude vector",
+    "reuse_rule": "Reuse the already frozen paper-campaign Stage-1 state only after amplitude hash, normalization, feasible mass, construction version, p1=12, and resource-accounting compatibility pass. Do not regenerate Stage 1 merely to improve the unique-ground result.",
+    "failure_rule": "If either frozen Stage-1 state is absent or incompatible, block the corresponding size. Regeneration requires a new versioned contract and cannot be selected using target outcomes.",
+    "legacy_import_contract": {
+      "source_campaign": "lp_qaoa_reviewer_appendix_v3_20260731",
+      "source_plan_sha256": "20476043ADF7233C5CD721E620EC4CD620CA58C5BECFD1A192BD0495C25BAF08",
+      "source_manifest_path": "/public/home/ac4fba2wzz/lp_reviewer_appendix_v3_20260731/reviewer_appendix_campaign_20260731/SCIENTIFIC_SOURCE_MANIFEST_V3_20260731.json",
+      "source_manifest_sha256": "8AD9CEC580DE73197DC292B78CA84CE35E0827946A009533E45881EFA7E5A44F",
+      "source_queue_sha256": "E9B64EDC7C4AF10C9CB403F484E3066BF45870558F1DF36097B7F04211F1EFDB",
+      "adopted_budget_both_sizes": 400,
+      "import_mode": "read-only exact-hash binding; no legacy-plan relaxation and no broad search for alternative Stage-1 states",
+      "25": {
+        "cell_id": "stage1_N25_seed840025000_b400",
+        "problem_seed": 840025000,
+        "source_problem_seed": 840025000,
+        "depth": 12,
+        "adopted_budget": 400,
+        "legacy_plan_sha256": "20476043ADF7233C5CD721E620EC4CD620CA58C5BECFD1A192BD0495C25BAF08",
+        "source_manifest_path": "/public/home/ac4fba2wzz/lp_reviewer_appendix_v3_20260731/reviewer_appendix_campaign_20260731/SCIENTIFIC_SOURCE_MANIFEST_V3_20260731.json",
+        "source_manifest_sha256": "8AD9CEC580DE73197DC292B78CA84CE35E0827946A009533E45881EFA7E5A44F",
+        "remote_artifact_root": "/public/home/ac4fba2wzz/lp_reviewer_appendix_v3_20260731/run/stages/stage1_budget_400_800_v3/cells/stage1_N25_seed840025000_b400/attempt-0001/artifacts",
+        "record_path": "/public/home/ac4fba2wzz/lp_reviewer_appendix_v3_20260731/run/stages/stage1_budget_400_800_v3/cells/stage1_N25_seed840025000_b400/attempt-0001/artifacts/target_blind_record.json",
+        "record_sha256": "AF610B2BC5B91ED15E34DA1C0148954C0323D471D1532D2A33C514BD207087F1",
+        "state_path": "/public/home/ac4fba2wzz/lp_reviewer_appendix_v3_20260731/run/stages/stage1_budget_400_800_v3/cells/stage1_N25_seed840025000_b400/attempt-0001/artifacts/selected_state.npy",
+        "state_file_sha256": "F53EF4B2A10C21A94869EE582F539E5C0ACA21DA8B43228AAED2908F597626A7",
+        "state_amplitude_sha256": "E2602B02EEBEF1340F190A29D861A9EDD653D7185A17018DE90DE40DCD1E72DB",
+        "complete_path": "/public/home/ac4fba2wzz/lp_reviewer_appendix_v3_20260731/run/stages/stage1_budget_400_800_v3/cells/stage1_N25_seed840025000_b400/attempt-0001/artifacts/COMPLETE.json",
+        "complete_sha256": "38131BE7C0BD8FCA90DBE3A977C453A7FC4D85FECEAC544871D04D9A4D1A45DA",
+        "decision_path": "/public/home/ac4fba2wzz/lp_reviewer_appendix_v3_20260731/run/decisions/stage1_N25_budget_and_regeneration_v3.json",
+        "decision_sha256": "50CFE87AD328127B82335CE85A8068D610F956AC7D46B3DCEC5297F92EB0CB82",
+        "decision_snapshot_path": "../reviewer_appendix_campaign_20260731/remote_evidence/epoch_a_decisions_snapshot_20260801/stage1_N25_budget_and_regeneration_v3.json",
+        "decision_snapshot_sha256": "50CFE87AD328127B82335CE85A8068D610F956AC7D46B3DCEC5297F92EB0CB82",
+        "kdf_checkpoint_zero_sha256": [
+          "81F7FCE6DAD1FEAFB279B4179AE3F592ECB8982211221E5B911F3B51092A0C9F",
+          "98BFC427191D926F4FB4C4208598F9E363B253E0B37075AC01D5438ED443F57F",
+          "092E1384B5A72D759452AD28472306E94B3A0A46E241BC51F22FC37B15C85EB3"
+        ],
+        "decision_recorded_adopted_reason": "adopt_400",
+        "decision_recorded_optimizer_inconclusive": false
+      },
+      "30": {
+        "cell_id": "stage1_N30_seed840030000_b400",
+        "problem_seed": 840030000,
+        "source_problem_seed": 840030000,
+        "depth": 12,
+        "adopted_budget": 400,
+        "legacy_plan_sha256": "20476043ADF7233C5CD721E620EC4CD620CA58C5BECFD1A192BD0495C25BAF08",
+        "source_manifest_path": "/public/home/ac4fba2wzz/lp_reviewer_appendix_v3_20260731/reviewer_appendix_campaign_20260731/SCIENTIFIC_SOURCE_MANIFEST_V3_20260731.json",
+        "source_manifest_sha256": "8AD9CEC580DE73197DC292B78CA84CE35E0827946A009533E45881EFA7E5A44F",
+        "remote_artifact_root": "/public/home/ac4fba2wzz/lp_reviewer_appendix_v3_20260731/run/stages/stage1_budget_400_800_v3/cells/stage1_N30_seed840030000_b400/attempt-0001/artifacts",
+        "record_path": "/public/home/ac4fba2wzz/lp_reviewer_appendix_v3_20260731/run/stages/stage1_budget_400_800_v3/cells/stage1_N30_seed840030000_b400/attempt-0001/artifacts/target_blind_record.json",
+        "record_sha256": "2DA5156244B53B017AC0DEAB211980E666D440E4A940669B22E61E9851237FAD",
+        "state_path": "/public/home/ac4fba2wzz/lp_reviewer_appendix_v3_20260731/run/stages/stage1_budget_400_800_v3/cells/stage1_N30_seed840030000_b400/attempt-0001/artifacts/selected_state.npy",
+        "state_file_sha256": "A23FDCE25167E7B6356427F803137E37A3C647649E43BC39A608BA5C935B2CC0",
+        "state_amplitude_sha256": "ADF2AD4423773E3C36F85CB9E74EA1E4ED0E9EC619D06D5A248D3DA7AB65B007",
+        "complete_path": "/public/home/ac4fba2wzz/lp_reviewer_appendix_v3_20260731/run/stages/stage1_budget_400_800_v3/cells/stage1_N30_seed840030000_b400/attempt-0001/artifacts/COMPLETE.json",
+        "complete_sha256": "41BC69B91AB957DC69C4DA637D62CE48E8A261722D1090E710061710253D04AE",
+        "decision_path": "/public/home/ac4fba2wzz/lp_reviewer_appendix_v3_20260731/run/decisions/stage1_N30_budget_and_regeneration_v3.json",
+        "decision_sha256": "B294F698A0DB69B1FA46482C17EA31C69859F7A3A31B4EC453EF4627944AF5B1",
+        "decision_snapshot_path": "../reviewer_appendix_campaign_20260731/remote_evidence/epoch_a_decisions_snapshot_20260801/stage1_N30_budget_and_regeneration_v3.json",
+        "decision_snapshot_sha256": "B294F698A0DB69B1FA46482C17EA31C69859F7A3A31B4EC453EF4627944AF5B1",
+        "kdf_checkpoint_zero_sha256": [
+          "9D4A9F3C3E52E28BB95DD9D1252BA16793472EECA3E42A2EE416C83FF0BF6966",
+          "40094C929A68550DE213FC8B6AB90D1406E3D39DFF62EBEF838C040237FFDB31",
+          "041DDFFF6DD6F16D5ADAE63662B5E38AFFF2B03BEBA06A61179F140CD5E4C59C"
+        ],
+        "decision_recorded_adopted_reason": "adopt_400",
+        "decision_recorded_optimizer_inconclusive": false
+      },
+      "fail_closed_rule": "No phi-consuming scientific cell may start unless both exact remote COMPLETE SHA-256 values are resolved into a versioned immutable contract and every decision, record, state-file, amplitude, source-plan, source-manifest, and COMPLETE hash matches exactly."
+    },
+    "stage1_only": {
+      "role": "recorded diagnostic and registered comparator component",
+      "stage2_depth": null,
+      "stage2_optimizer": null,
+      "selected_state": "the frozen phi without Stage-2 optimization"
+    }
+  },
+  "seed_domains": {
+    "stage1_state_sources": {
+      "25": 840025000,
+      "30": 840030000
+    },
+    "fresh_depth_tuning": {
+      "25": [840025021, 840025022],
+      "30": [840030021, 840030022],
+      "role": "source-campaign provenance only; no tuning cell is run or selected in this validation-only campaign"
+    },
+    "fresh_heldout_validation": {
+      "25": [840025401, 840025402, 840025403, 840025404, 840025405, 840025406, 840025407, 840025408, 840025409, 840025410, 840025411, 840025412, 840025413, 840025414, 840025415],
+      "30": [840030401, 840030402, 840030403, 840030404, 840030405, 840030406, 840030407, 840030408, 840030409, 840030410, 840030411, 840030412, 840030413, 840030414, 840030415]
+    },
+    "freshness_gate": {
+      "local_literal_collision_audit": "required before launch",
+      "remote_artifact_collision_audit": "required before launch",
+      "tuning_validation_disjoint": true,
+      "optimizer_KDF_namespaces_disjoint": true,
+      "replacement_or_relabeling_after_results": false
+    }
+  },
+  "resource_model": {
+    "symbols": {
+      "B": "five initial block-state preparations",
+      "C": "conflict separator",
+      "X": "complete within-block XY mixer",
+      "O": "final objective separator or terminal objective verification",
+      "S": "N-qubit selective phase used by a global projector reflection",
+      "P1": "B+p1*(C+X)"
+    },
+    "constants": {
+      "25": {"B": 5, "C": 25, "X": 50, "O": 3458, "S": 625, "P1": 905},
+      "30": {"B": 5, "C": 30, "X": 75, "O": 12110, "S": 900, "P1": 1265}
+    },
+    "terminal_evaluation_rule": "Every reported replay includes one final O, including Stage-1-only.",
+    "stage1_replay_rule": "Every replay of an algorithm initialized from phi includes the full one-shot P1 preparation cost.",
+    "exact_integer_accounting": true
+  },
+  "methods": {
+    "learned_projector": {
+      "display_name": "XY--LP-QAOA",
+      "role": "focal method",
+      "initial_state": "frozen phi",
+      "phase_and_loss": "normalized final-objective Hamiltonian H_obj",
+      "mixer": "global learned-projector mixer I-|phi><phi|",
+      "angles_per_layer": 2,
+      "Adam_updates": {"25": 800, "30": 800},
+      "terminal_RU_formula": "P1+p*(O+2*P1+S)+O"
+    },
+    "stage1_only": {
+      "display_name": "Stage-1-only",
+      "role": "diagnostic and component of best-Stage-1-use envelope",
+      "initial_state": "frozen phi",
+      "phase_and_loss": null,
+      "mixer": null,
+      "angles_per_layer": 0,
+      "Adam_updates": {"25": null, "30": null},
+      "terminal_RU_formula": "P1+O"
+    },
+    "same_stage1_state_direct": {
+      "display_name": "Warm-start block-XY / same-Stage-1-state Direct-XY",
+      "role": "same-state local-mixer baseline",
+      "initial_state": "the identical frozen phi used by learned_projector",
+      "phase_and_loss": "combined conflict-plus-objective Hamiltonian H_D",
+      "mixer": "complete within-block XY mixer H_XY",
+      "angles_per_layer": 2,
+      "Adam_updates": {"25": 400, "30": 400},
+      "terminal_RU_formula": "P1+p*(C+O+X)+O"
+    },
+    "decoupled_native_direct": {
+      "display_name": "Block-XY (separate phases) / dXY",
+      "role": "native decoupled Direct-XY baseline",
+      "initial_state": "native product-shell uniform state s",
+      "phase": "independent conflict and final-objective phase angles",
+      "loss": "combined conflict-plus-objective Hamiltonian H_D",
+      "mixer": "complete within-block XY mixer H_XY",
+      "angles_per_layer": 3,
+      "Adam_updates": {"25": 400, "30": 400},
+      "terminal_RU_formula": "B+p*(C+O+X)+O"
+    },
+    "ordinary_native_direct": {
+      "display_name": "Block-XY (combined phase) / StdXY",
+      "role": "native ordinary Direct-XY baseline",
+      "initial_state": "native product-shell uniform state s",
+      "phase_and_loss": "combined conflict-plus-objective Hamiltonian H_D",
+      "mixer": "complete within-block XY mixer H_XY",
+      "angles_per_layer": 2,
+      "Adam_updates": {"25": 800, "30": 400},
+      "terminal_RU_formula": "B+p*(C+O+X)+O"
+    },
+    "native_grover_d": {
+      "display_name": "Native global-reference-projector QAOA (NativeGrover-d)",
+      "role": "native known-state global-projector baseline",
+      "initial_state": "native product-shell uniform state s",
+      "projector_reference": "the same native product-shell state s",
+      "phase": "independent conflict and final-objective phase angles",
+      "loss": "combined conflict-plus-objective Hamiltonian H_D",
+      "mixer": "global reflection generator I-|s><s|; this is not the learned-projector mixer",
+      "angles_per_layer": 3,
+      "Adam_updates": {"25": 400, "30": 400},
+      "terminal_RU_formula": "B+p*(C+O+2*B+S)+O",
+      "interpretation_limit": "This is an end-to-end algorithm comparison; it does not isolate learned-reference value because initialization, phase parameterization, and reference all differ."
+    }
+  },
+  "validation_only_strengthening": {
+    "selection_status": "all seeds, methods, depths, budgets, categories, and logical-resource values frozen before any new optimizer or target evaluation",
+    "no_depth_tuning": true,
+    "no_adaptive_arm_activation": true,
+    "no_target_based_selection": true,
+    "source_campaign_binding": {
+      "campaign_id": "bcst_unique_primary_campaign_20260809",
+      "plan_path": "inputs/SOURCE_EXPERIMENT_PLAN_V1.json",
+      "plan_sha256": "DB9D8EDD7713CACEA7A43C5BD5F06B2003169E92FB0DAD53A13482C8CBD36247",
+      "final_depth_selection_path": "inputs/SOURCE_FINAL_DEPTH_SELECTION.json",
+      "final_depth_selection_sha256": "9EFA827A4EB894A61B2FE7E8F4B18B3FB4D27172B6834D4A446D4DBF5D2B727F",
+      "final_results_path": "inputs/SOURCE_FINAL_RESULTS.json",
+      "final_results_sha256": "515B0F39CEE719B22EFAE2CC7F3CC921236C3D9D33F02C526840D3B5CD832B31",
+      "coverage_certificate_path": "inputs/SOURCE_COVERAGE_CERTIFICATE.json",
+      "coverage_certificate_sha256": "D8B24C873611C6ED866D90AF0BDEA9406D1E8B156149103A8289AA76D1EF428D",
+      "complete_path": "inputs/SOURCE_COMPLETE.json",
+      "complete_sha256": "43076DA3F86891312913D3B45D36A621A90FAB8FC00338A4DC20C94C0E1CECE0"
+    },
+    "categories": ["core_selected", "direct_depth_scan", "matched_ru"],
+    "configuration_identity": "A physical configuration is uniquely identified by (N, method, depth, Adam_updates). Multiple scientific categories may reference the same physical configuration, which is optimized exactly once per seed.",
+    "fixed_configurations": [
+      {"configuration_id": "N25_LP_p12", "N": 25, "method": "learned_projector", "depth": 12, "Adam_updates": 800, "terminal_RU": 75079, "categories": ["core_selected", "matched_ru"]},
+      {"configuration_id": "N25_Stage1Only", "N": 25, "method": "stage1_only", "depth": null, "Adam_updates": null, "terminal_RU": 4363, "categories": ["core_selected"]},
+      {"configuration_id": "N25_Warm_p1", "N": 25, "method": "same_stage1_state_direct", "depth": 1, "Adam_updates": 400, "terminal_RU": 7896, "categories": ["core_selected"]},
+      {"configuration_id": "N25_dXY_p16", "N": 25, "method": "decoupled_native_direct", "depth": 16, "Adam_updates": 400, "terminal_RU": 59991, "categories": ["core_selected", "direct_depth_scan"]},
+      {"configuration_id": "N25_StdXY_p12", "N": 25, "method": "ordinary_native_direct", "depth": 12, "Adam_updates": 800, "terminal_RU": 45859, "categories": ["core_selected", "direct_depth_scan"]},
+      {"configuration_id": "N25_NativeGrover_p64", "N": 25, "method": "native_grover_d", "depth": 64, "Adam_updates": 400, "terminal_RU": 267015, "categories": ["core_selected"]},
+      {"configuration_id": "N25_Warm_p20", "N": 25, "method": "same_stage1_state_direct", "depth": 20, "Adam_updates": 400, "terminal_RU": 75023, "categories": ["matched_ru"]},
+      {"configuration_id": "N25_dXY_p20", "N": 25, "method": "decoupled_native_direct", "depth": 20, "Adam_updates": 400, "terminal_RU": 74123, "categories": ["matched_ru", "direct_depth_scan"]},
+      {"configuration_id": "N25_StdXY_p20", "N": 25, "method": "ordinary_native_direct", "depth": 20, "Adam_updates": 800, "terminal_RU": 74123, "categories": ["matched_ru", "direct_depth_scan"]},
+      {"configuration_id": "N25_dXY_p64", "N": 25, "method": "decoupled_native_direct", "depth": 64, "Adam_updates": 400, "terminal_RU": 229575, "categories": ["direct_depth_scan"]},
+      {"configuration_id": "N25_StdXY_p64", "N": 25, "method": "ordinary_native_direct", "depth": 64, "Adam_updates": 800, "terminal_RU": 229575, "categories": ["direct_depth_scan"]},
+      {"configuration_id": "N30_LP_p80", "N": 30, "method": "learned_projector", "depth": 80, "Adam_updates": 800, "terminal_RU": 1256575, "categories": ["core_selected"]},
+      {"configuration_id": "N30_Stage1Only", "N": 30, "method": "stage1_only", "depth": null, "Adam_updates": null, "terminal_RU": 13375, "categories": ["core_selected"]},
+      {"configuration_id": "N30_Warm_p1", "N": 30, "method": "same_stage1_state_direct", "depth": 1, "Adam_updates": 400, "terminal_RU": 25590, "categories": ["core_selected"]},
+      {"configuration_id": "N30_dXY_p64", "N": 30, "method": "decoupled_native_direct", "depth": 64, "Adam_updates": 400, "terminal_RU": 793875, "categories": ["core_selected", "direct_depth_scan"]},
+      {"configuration_id": "N30_StdXY_p4", "N": 30, "method": "ordinary_native_direct", "depth": 4, "Adam_updates": 400, "terminal_RU": 60975, "categories": ["core_selected", "direct_depth_scan"]},
+      {"configuration_id": "N30_NativeGrover_p16", "N": 30, "method": "native_grover_d", "depth": 16, "Adam_updates": 400, "terminal_RU": 220915, "categories": ["core_selected"]},
+      {"configuration_id": "N30_LP_p64", "N": 30, "method": "learned_projector", "depth": 64, "Adam_updates": 800, "terminal_RU": 1007935, "categories": ["matched_ru"]},
+      {"configuration_id": "N30_Warm_p82", "N": 30, "method": "same_stage1_state_direct", "depth": 82, "Adam_updates": 400, "terminal_RU": 1015005, "categories": ["matched_ru"]},
+      {"configuration_id": "N30_dXY_p82", "N": 30, "method": "decoupled_native_direct", "depth": 82, "Adam_updates": 400, "terminal_RU": 1013745, "categories": ["matched_ru", "direct_depth_scan"]},
+      {"configuration_id": "N30_StdXY_p82", "N": 30, "method": "ordinary_native_direct", "depth": 82, "Adam_updates": 400, "terminal_RU": 1013745, "categories": ["matched_ru", "direct_depth_scan"]},
+      {"configuration_id": "N30_dXY_p96", "N": 30, "method": "decoupled_native_direct", "depth": 96, "Adam_updates": 400, "terminal_RU": 1184755, "categories": ["direct_depth_scan"]},
+      {"configuration_id": "N30_StdXY_p96", "N": 30, "method": "ordinary_native_direct", "depth": 96, "Adam_updates": 400, "terminal_RU": 1184755, "categories": ["direct_depth_scan"]}
+    ],
+    "core_selected_source_depths": {
+      "25": {"learned_projector": 12, "same_stage1_state_direct": 1, "decoupled_native_direct": 16, "ordinary_native_direct": 12, "native_grover_d": 64},
+      "30": {"learned_projector": 80, "same_stage1_state_direct": 1, "decoupled_native_direct": 64, "ordinary_native_direct": 4, "native_grover_d": 16}
+    },
+    "matched_ru_groups": [
+      {"N": 25, "focal_configuration_id": "N25_LP_p12", "focal_RU": 75079, "comparator_configuration_ids": ["N25_Warm_p20", "N25_StdXY_p20", "N25_dXY_p20"], "absolute_RU_differences": {"N25_Warm_p20": 56, "N25_StdXY_p20": 956, "N25_dXY_p20": 956}},
+      {"N": 30, "focal_configuration_id": "N30_LP_p64", "focal_RU": 1007935, "comparator_configuration_ids": ["N30_Warm_p82", "N30_StdXY_p82", "N30_dXY_p82"], "absolute_RU_differences": {"N30_Warm_p82": 7070, "N30_StdXY_p82": 5810, "N30_dXY_p82": 5810}}
+    ],
+    "direct_depth_scan": {
+      "25": {"ordinary_native_direct": ["N25_StdXY_p12", "N25_StdXY_p20", "N25_StdXY_p64"], "decoupled_native_direct": ["N25_dXY_p16", "N25_dXY_p20", "N25_dXY_p64"]},
+      "30": {"ordinary_native_direct": ["N30_StdXY_p4", "N30_StdXY_p82", "N30_StdXY_p96"], "decoupled_native_direct": ["N30_dXY_p64", "N30_dXY_p82", "N30_dXY_p96"]}
+    },
+    "expected_physical_counts": {"configurations": {"25": 11, "30": 12}, "optimized_cells": 315, "stage1_only_readouts": 30, "total_cells": 345},
+    "reporting_rule": "Report every configuration and seed, every health status, and every category. Core-selected claims use only core_selected. Matched-RU claims use only the prespecified groups. Direct-depth scans are descriptive stress tests and never replace the source-selected core operating depths."
+  },
+  "trainability_panel": {
+    "probe_bundle_count": 120,
+    "problem_seeds_per_size": 15,
+    "methods": ["learned_projector", "same_stage1_state_direct", "ordinary_native_direct", "decoupled_native_direct"],
+    "method_configurations": {"25": {"learned_projector": "N25_LP_p12", "same_stage1_state_direct": "N25_Warm_p20", "ordinary_native_direct": "N25_StdXY_p20", "decoupled_native_direct": "N25_dXY_p20"}, "30": {"learned_projector": "N30_LP_p64", "same_stage1_state_direct": "N30_Warm_p82", "ordinary_native_direct": "N30_StdXY_p82", "decoupled_native_direct": "N30_dXY_p82"}},
+    "probes_per_cell": 64,
+    "angle_KDF": "SHA-256 counter-mode KDF namespaced by campaign plan SHA-256, N, problem_seed, configuration_id, method, depth, probe_index, parameter_family and component_index; map the first 53 bits to the open midpoint grid -pi+(2z+1)*pi/2^53, giving deterministic uniform[-pi,pi] angles without endpoint mass",
+    "target_blind": true,
+    "normalization": "For each instance and method, compute the exact spectral range max(H_train)-min(H_train) over the complete local-cardinality basis. Divide loss values and every gradient component by this same positive range. Record the range and its exact source-diagonal hash.",
+    "optimizer_trace_reuse": "Reuse the matched-configuration validation optimizer records. Analyze every integer checkpoint from 0 through 400 inclusive for all three restarts; do not launch or truncate a second optimizer.",
+    "checkpoints": {"first": 0, "last": 400, "stride": 1, "include_all_three_restarts": true},
+    "required_metrics": [
+      "per-instance/method variance of normalized initial loss across 64 probes",
+      "per-instance/method/per-parameter variance and RMS of normalized gradient components across 64 probes",
+      "method-level geometric means across 15 seeds with seed-separated values",
+      "independent-cohort N30/N25 contrasts with independent bootstrap for loss variance, gradient variance and gradient RMS",
+      "instantaneous normalized optimizer loss, best-so-far normalized optimizer loss, and normalized gradient RMS learning curves at every checkpoint 0 through 400 for every restart",
+      "best-so-far normalized loss curve, selected-checkpoint distribution, final-versus-initial improvement, restart winner counts and between-restart dispersion"
+    ],
+    "claim_guards": {
+      "target_probability_or_ground_identity_used": false,
+      "probe_resampling_after_results": false,
+      "optimizer_rerun_for_trainability": false,
+      "cross_size_pairing": "none; N=25 and N=30 are independent prespecified cohorts and cross-size contrasts use an independent-cohort bootstrap",
+      "zero_range_policy": "fail the affected method/instance before probes; never clip or replace the spectral range",
+      "nonfinite_policy": "retain and fail the exact bundle; never drop a probe",
+      "report_all_methods_and_seeds": true,
+      "meaningful_descent_definition": "For each restart, D400=(L0-best_loss_through_400)/spectral_range and meaningful_descent iff D400>=0.001.",
+      "reference_and_convergence_definition": "For each graph/method, Lref is the minimum loss attained across all three restarts through update 400. A restart converges iff it has meaningful descent and (best_loss_through_400-Lref)/max(L0-Lref,1e-12)<=0.05.",
+      "multiple_comparison_rule": "For each inferential metric family, apply Holm adjustment to the one-sided bootstrap p-values across the six LP-versus-comparator method-by-size contrasts before evaluating its claim gate.",
+      "landscape_variance_gate": "For LP versus each comparator at each N, both normalized loss-variance and normalized gradient-variance ratios LP/comparator must have directional point estimate >1 and Holm-adjusted one-sided bootstrap p<0.05.",
+      "optimization_gate": "Both LP-minus-comparator converged-restart-rate difference and comparator-minus-LP remaining-gap-AUC difference must have directional point estimate >0 and Holm-adjusted one-sided bootstrap p<0.05.",
+      "stronger_trainability_gate": "The normalized gradient-variance ratio has point estimate >1 and Holm-adjusted one-sided bootstrap p<0.05, and both convergence and remaining-gap-AUC differences have point estimate >0 and Holm-adjusted one-sided bootstrap p<0.05.",
+      "gradient_RMS_role": "Report paired gradient-RMS ratios and complete learning curves, but do not silently substitute gradient RMS for the prespecified gradient-variance gate.",
+      "inferential_label": "prespecified finite-size strengthened-validation contrasts; N30/N25 comparisons are two-size finite contrasts only and never asymptotic barren-plateau claims"
+    }
+  },
+  "optimizer": {
+    "name": "Adam",
+    "learning_rate": 0.035,
+    "beta1": 0.9,
+    "beta2": 0.999,
+    "epsilon": 1e-8,
+    "precision": "complex128 state evolution and exact reverse-mode gradients",
+    "independent_restarts_per_optimized_cell": 3,
+    "continuation": false,
+    "layerwise_continuation": false,
+    "cross_depth_parameter_transfer": false,
+    "cross_method_parameter_transfer": false,
+    "optimizer_state_transfer": false,
+    "early_stopping": false,
+    "angle_wrapping": false,
+    "exact_step_rule": "Each restart executes exactly the method-size Adam update count.",
+    "checkpoint_rule": "At checkpoint zero and every central iterate, record parameters, expected training energy, gradient, gradient norm, cumulative-best energy, parameter hash, and gradient hash. Replay and hash the quantum state only for the finally selected restart/checkpoint; per-checkpoint state evolution files or state hashes are not required.",
+    "initializer_freeze_representation": "For every possible cell and each of its three restarts, freeze the deterministic KDF namespace, KDF inputs, initializer-generation rule, and resulting initializer hash before target opening. The contract does not require storing large initializer-vector files when the vector can be reproduced exactly and its hash revalidated.",
+    "restart_selection": "Select the lowest expected training-energy incumbent over checkpoint zero and every iterate across the three independent restarts; exact ties select the earlier checkpoint and then lower restart index.",
+    "forbidden_selection_inputs": [
+      "unique-ground identity",
+      "unique-ground probability",
+      "best-two probability",
+      "best-eight probability",
+      "RTS99",
+      "terminal logical cost"
+    ],
+    "zero_angle_state": "diagnostic only and never a fourth restart"
+  },
+  "depth_tuning": {
+    "executed_in_this_campaign": false,
+    "role": "source-campaign provenance only; the exact source-selected core depths are imported and no new result can change them",
+    "applies_to": ["learned_projector", "same_stage1_state_direct", "decoupled_native_direct", "ordinary_native_direct", "native_grover_d"],
+    "applies_at_sizes": [25, 30],
+    "base_grid": [1, 2, 4, 8, 12, 16, 24, 36],
+    "first_boundary_extension": [48, 64],
+    "second_boundary_extension": [80, 96],
+    "lp_N30_capped_extension": [112, 128],
+    "all_possible_specs_and_KDF_initializer_hashes_frozen_before_any_tuning_target_is_opened": true,
+    "base_to_first_rule": "Run [48,64] iff p=36 is the finite base-grid minimum or cost(p=36)<=1.10*base_min and cost(p=36)<=cost(p=24).",
+    "first_to_second_rule": "Run [80,96] iff p=64 is the finite tested-grid minimum or cost(p=64)<=1.10*tested_min and cost(p=64)<=cost(p=48).",
+    "lp_N30_second_to_capped_rule": "For learned_projector at N=30 only, run [112,128] iff p=96 is the finite tested-grid minimum or cost(p=96)<=1.10*tested_min and cost(p=96)<=cost(p=80).",
+    "optimizer_inconclusive_candidate_rule": "For learned_projector only, a depth is selection- and extension-ineligible if either tuning seed has optimizer_inconclusive health; if no healthy finite LP depth exists, block that stratum. For same_stage1_state_direct, decoupled_native_direct, ordinary_native_direct, and native_grover_d, every finite cost remains selection- and extension-eligible regardless of optimizer health. Always disclose every candidate's per-seed health, all inconclusive candidate depths, and whether the selected depth passed health; never censor or block a finite baseline solely because its optimizer health is inconclusive.",
+    "cost_for_extension_and_selection": "the exact product of the two tuning-seed integer unique-ground RTS99*RU costs; product comparison is performed with arbitrary-precision integers",
+    "zero_probability_rule": "If P_unique=0 on either tuning seed, that depth has infinite selection cost.",
+    "depth_selection_rule": "After all deterministically triggered extensions finish and lock, choose the finite depth with minimum two-seed integer cost product; exact ties choose shallower depth.",
+    "other_strata_upper_cap_rule": "If a non-LP-N30 stratum triggers at p=96, freeze the lowest tested-cost depth for descriptive validation but mark the stratum depth-capped and prohibit an unqualified near-optimal-depth claim.",
+    "lp_N30_upper_cap_rule": "If learned_projector at N=30 triggers at p=128, freeze the lowest tested-cost depth but mark it depth-capped; describe it only as the lowest-cost depth on the capped tested grid.",
+    "budget_rule": "Every depth is optimized at the method-size budget registered in methods; no result from another budget may be substituted.",
+    "separation_rule": "Depth tuning uses only fresh_depth_tuning seeds. No heldout-validation target or result may affect depth selection."
+  },
+  "no_target_leakage_ordering": [
+    {"order": 1, "action": "Upload and hash-bind the complete validation-only controller/source/input package and source-campaign decision chain. During zero-worker preflight, deterministically materialize and freeze all 345 physical validation specs, all three restart initializer hashes for each of the 315 optimized cells, all 120 trainability probe-bundle specs, and the category/configuration registry before any scientific worker starts."},
+    {"order": 2, "action": "Generate all thirty canonical validation instances. A separate exact-target oracle verifies unique degeneracy and seals target identities; optimizer workers cannot read the oracle."},
+    {"order": 3, "action": "Run every prespecified fixed-configuration cell target-blind using training energy only. Atomically lock all 345 outputs; no arm or seed can be omitted because of health or target performance."},
+    {"order": 4, "action": "Run or resume and analyze all 120 target-blind trainability probe bundles, each containing 64 frozen angle probes for one method/seed/size, and bind them to the matched-configuration optimizer records without reading target identities."},
+    {"order": 5, "action": "Only after the complete validation lock and target-blind trainability analysis, open the sealed targets and compute unique-ground, best-two, best-eight, feasible-mass, RTS99, cost, category summaries, paired contrasts, and bootstrap intervals."},
+    {"order": 6, "action": "Publish numerical results and verification certificates only. Never alter the source-selected core depths, add arms, replace seeds, or edit the paper in response to results."}
+  ],
+  "health_gates": {
+    "optimized_cell_required": [
+      "finite normalized selected state",
+      "finite selected training energy",
+      "finite selected gradient norm",
+      "selected energy no worse than checkpoint zero within 1e-9",
+      "selected energy no worse than the separately evaluated zero-angle diagnostic within 1e-9",
+      "all three restart records complete",
+      "no continuation or transfer",
+      "selected checkpoint reproducible from stored parameters",
+      "exact terminal RU matches the method formula",
+      "depth and budget match the frozen stratum decision"
+    ],
+    "stage1_only_required": [
+      "finite normalized frozen phi",
+      "verified phi amplitude hash",
+      "finite conflict energy",
+      "exact P1+O resource accounting"
+    ],
+    "not_a_health_gate": "Low or zero target probability is a scientific outcome and never an optimization-health failure.",
+    "failure_policy": "Rerun only the identical failed cell from its same frozen spec and restart vectors when failure is operational. Never change method, seed, depth, budget, or initializer in response to target results. Persistent scientific optimizer failure is reported as optimizer-inconclusive."
+  },
+  "success_and_terminal_schema": {
+    "per_seed_method_record_required_fields": [
+      "campaign_id",
+      "plan_sha256",
+      "cell_id",
+      "configuration_id",
+      "categories",
+      "N",
+      "problem_seed",
+      "instance_sha256",
+      "method",
+      "depth",
+      "Adam_updates",
+      "restart_count",
+      "restart_initial_vector_sha256s",
+      "selected_restart",
+      "selected_checkpoint",
+      "selected_parameter_sha256",
+      "selected_state_sha256",
+      "selected_training_energy",
+      "selected_gradient_norm",
+      "selected_by_training_energy_only",
+      "health_status",
+      "ground_energy_exact",
+      "ground_degeneracy",
+      "ground_state_sha256",
+      "feasible_mass",
+      "unique_probability_unconditional",
+      "unique_probability_conditional_on_feasibility",
+      "best2_probability_unconditional",
+      "best8_probability_unconditional",
+      "terminal_RU_decimal",
+      "unique_RTS99",
+      "unique_total_logical_cost",
+      "best2_RTS99",
+      "best2_total_logical_cost",
+      "best8_RTS99",
+      "best8_total_logical_cost",
+      "locked_record_sha256"
+    ],
+    "probability_definition": "P_success(T)=sum_{z in T}|<z|psi>|^2 from the exact terminal state; the primary unique probability is unconditional.",
+    "RTS99_definition": "For 0<P<1, ceil(log(0.01)/log(1-P)); for P=1, 1; for P=0, infinite.",
+    "integer_encoding": "Finite RTS99, RU, and total cost are base-10 strings. Infinite quantities are objects with kind='infinite' and reason='zero_success_probability'.",
+    "rounding_rule": "Compute RTS99 and cost from unrounded probability. Display rounding never enters selection, aggregation, or contrasts.",
+    "terminal_cost_definition": "exact integer RTS99 multiplied by exact integer terminal RU"
+  },
+  "validation_and_analysis": {
+    "validation_instances_per_size": 15,
+    "optimized_methods": ["learned_projector", "same_stage1_state_direct", "decoupled_native_direct", "ordinary_native_direct", "native_grover_d"],
+    "readout_methods": ["stage1_only"],
+    "primary_comparisons_per_size": [
+      "min(stage1_only,same_stage1_state_direct) / learned_projector",
+      "min(ordinary_native_direct,decoupled_native_direct) / learned_projector",
+      "native_grover_d / learned_projector"
+    ],
+    "secondary_named_comparisons_per_size": [
+      "stage1_only / learned_projector",
+      "same_stage1_state_direct / learned_projector",
+      "ordinary_native_direct / learned_projector",
+      "decoupled_native_direct / learned_projector"
+    ],
+    "aggregation": "Geometric means across the fifteen prespecified paired seeds at each N; never pool N=25 and N=30.",
+    "infinite_cost_aggregation": "If any required per-seed cost is infinite, the geometric-mean cost and any comparator/LP ratio are represented with an explicit extended-real status rather than clipped.",
+    "paired_outputs": [
+      "all fifteen seed-separated outcomes",
+      "geometric-mean probability, RTS99, RU, and total logical cost",
+      "per-seed comparator/LP cost ratios",
+      "geometric-mean comparator/LP ratio",
+      "LP win count out of fifteen",
+      "100000-resample deterministic paired-bootstrap 95% interval for the geometric-mean ratio"
+    ],
+    "bootstrap_seed": 20260809,
+    "strong_result_rule": "Apply independently to each named core or matched-RU comparison and each N: comparator/LP geometric-mean cost ratio >=1.25, paired-bootstrap 95% lower bound >1, and LP wins at least 12 of 15 paired seeds.",
+    "negative_result_policy": "Report null, negative, depth-capped, or optimizer-inconclusive results without changing targets, cohorts, depths, methods, budgets, or thresholds."
+  },
+  "excluded_legacy_supplements": {
+    "historical_fixed_angle_gradient_panel": "not packaged and not executed",
+    "historical_unique_ground_reanalysis": "not packaged and not executed",
+    "reason": "This isolated campaign contains only the 345-cell strengthened fixed-depth validation and its 120 target-blind trainability probe bundles."
+  },
+  "execution_contract": {
+    "full_remote_package_before_launch": true,
+    "package_contents": "source, immutable validation contract, source-campaign decision chain, exact fixed configuration/category matrix, deterministic spec/KDF generator, post-lock evaluator, aggregation code, freeze/verification tools, and tests",
+    "preflight_spec_materialization": "The zero-optimizer remote preflight deterministically materializes, hashes, and freezes all 345 physical validation specs, the three initializer hashes for each of the 315 optimized cells, and all 120 trainability probe-bundle specs before any scientific optimizer, probe, or target evaluation.",
+    "remote_autonomy": "The remote controller must execute or resume the immutable 345-cell validation queue and 120-bundle probe queue, lock both, evaluate sealed targets, and aggregate all categories without a desktop connection.",
+    "maximum_concurrent_optimizer_cells": 4,
+    "restarts_within_a_cell": "sequential",
+    "atomic_state_transitions": true,
+    "resumable_idempotent_queue": true,
+    "completed_cell_policy": "A completed cell is skipped only when its spec hash, output hash, and success certificate all validate.",
+    "paper_files_must_not_be_modified": ["main.tex", "main.pdf", "paper figures", "captions", "manuscript prose"]
+  },
+  "source_basis": [
+    {"path": "../main.tex", "lines": "939-951", "supports": "BCST logical-resource model"},
+    {"path": "../main.tex", "lines": "966-983", "supports": "success, RTS99, cost, restart selection, and geometric-mean aggregation"},
+    {"path": "../main.tex", "lines": "998-1009", "supports": "construction, objective, targets, p1=12, and method definitions"},
+    {"path": "../main.tex", "lines": "1011-1037", "supports": "paper BCST cohort registry and SPSA robustness scope"},
+    {"path": "../main.tex", "lines": "1063-1143", "supports": "matched comparison methods, budgets, depths, seeds, and existing unique-ground outcomes"},
+    {"path": "../main.tex", "lines": "1145-1186", "supports": "N=30 LP capped depth grid and tuning seeds"},
+    {"path": "../main.tex", "lines": "1192-1213", "supports": "causal ablation definitions and resource substitutions"},
+    {"path": "../main.tex", "lines": "1275-1304", "supports": "fixed-angle gradient panel"},
+    {"path": "../reviewer_appendix_campaign_20260731/EXPERIMENT_PLAN.json", "lines": "75-137,171-243", "supports": "optimizer, method registry, NativeGrover-d, target locks, and inference rules"},
+    {"path": "../reviewer_appendix_campaign_20260731/EXPERIMENT_PLAN_V3.json", "lines": "21-72", "supports": "three independent no-continuation restarts and prior campaign seed registry"}
+  ]
+}

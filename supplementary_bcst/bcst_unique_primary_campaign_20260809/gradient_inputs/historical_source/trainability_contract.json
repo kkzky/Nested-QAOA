@@ -1,0 +1,92 @@
+{
+  "schema": "n30-degree6-paper-facing-trainability-contract-v1",
+  "status": "frozen_before_trainability_outcomes",
+  "classification": "trainability addendum to the completed exploratory paper-facing degree-six objective experiment",
+  "problem": {
+    "N": 30,
+    "layout": [6, 6, 6, 6, 6],
+    "selected_per_block": 2,
+    "objective": "6150 frozen products of six binary variables with independent Uniform[-0.5, 0.5] weights",
+    "stage1_checkpoint": "the exact frozen p1=12 checkpoint used in the completed paper-facing experiment",
+    "no_instance_resampling": true,
+    "artificial_measurement_noise": false
+  },
+  "phases": {
+    "pilot": {
+      "seeds": [900, 901],
+      "role": "runtime, memory, and numerical-stability validation only"
+    },
+    "confirmation": {
+      "seeds": [101, 102, 103, 104, 105, 106],
+      "role": "the exact six fresh frozen confirmation instances used in the completed SPSA experiment"
+    }
+  },
+  "depths": [26, 29, 32],
+  "random_initializations_per_seed_depth_configuration": 12,
+  "primary_configurations": {
+    "lp_selected": {
+      "algorithm": "XY-LP-QAOA",
+      "penalty_kappa": 4
+    },
+    "ordinary_selected": {
+      "algorithm": "Std-XY",
+      "penalty_kappa": 6
+    },
+    "separated_selected": {
+      "algorithm": "d-XY",
+      "penalty_kappa": 8
+    },
+    "same_state_warm_selected": {
+      "algorithm": "Warm-XY",
+      "penalty_kappa": 3
+    }
+  },
+  "penalty_sensitivity_at_depth_29": {
+    "ordinary_initial_calibration": {
+      "algorithm": "Std-XY",
+      "penalty_kappa": 8
+    },
+    "separated_initial_calibration": {
+      "algorithm": "d-XY",
+      "penalty_kappa": 6
+    },
+    "same_state_warm_initial_calibration": {
+      "algorithm": "Warm-XY",
+      "penalty_kappa": 2
+    }
+  },
+  "initialization_points": {
+    "random": "method-neutral common objective-angle and mixer-angle streams; the separated-angle method receives one additional independent conflict-angle stream",
+    "deterministic_linear_ramp": "the same ramp form used by the optimizer implementation",
+    "paper_history_identity": "identity embedding of the immediately preceding optimized SPSA solution",
+    "paper_history_interpolation": "linear interpolation of the immediately preceding optimized SPSA solution",
+    "paper_final": "the selected final SPSA angles from the exact completed paper-facing trial"
+  },
+  "exact_gradient_observables": {
+    "training_loss": "the exact method-native optimized energy",
+    "shared_final_objective": "the exact expected 6150-term final objective for every method",
+    "conflict_energy": "the exact expected conflict Hamiltonian",
+    "target_a_log_probability": "the exact gradient of log(Target-A probability)",
+    "normalization": [
+      "per-parameter RMS",
+      "training-loss RMS divided by the full-shell standard deviation of the method-native Hamiltonian",
+      "final-objective RMS divided by the full-shell standard deviation of the shared final objective"
+    ],
+    "alignment": [
+      "cosine between the native training-loss gradient and final-objective gradient",
+      "cosine between conflict and final-objective gradients",
+      "cosine between native descent and increasing Target-A log-probability"
+    ]
+  },
+  "precision": {
+    "primary_dtype": "complex64",
+    "audit_dtype": "complex128",
+    "audit_scope": "pilot seed 900, depths 26 and 32, deterministic ramp plus two random points per primary configuration",
+    "interpretation": "the complex64 result is accepted only if finite and not pinned to its numerical floor; discrepancies are reported rather than silently discarded"
+  },
+  "claim_limits": {
+    "fixed_N": "This addendum tests depth-dependent conditioning at N=30; it does not by itself prove or disprove exponential barren-plateau scaling with N.",
+    "gradient_evidence": "Optimization performance and SPSA finite-difference traces are kept distinct from exact autodifferentiated gradient evidence.",
+    "stage1_only_is_a_benchmark": false
+  }
+}

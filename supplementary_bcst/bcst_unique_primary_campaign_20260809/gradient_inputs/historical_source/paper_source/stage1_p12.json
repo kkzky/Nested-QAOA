@@ -1,0 +1,79 @@
+{
+  "N": 30,
+  "betas": [
+    0.5830802321434021,
+    -0.14146986603736877,
+    -0.1035299152135849,
+    -0.0548664852976799,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "budget_tag": "phaseA_screening",
+  "campaign": "bcst_signed_continuous_hyper4_20260726_v1",
+  "conflict_energy": 0.07015302032232285,
+  "device": "cuda",
+  "dtype": "complex64",
+  "feasible_cond_entropy": 8.767413139343262,
+  "feasible_effective_support": 6421.539332386863,
+  "feasible_ipr_effective_support": 6263.458984375,
+  "feasible_mass": 0.940852701663971,
+  "fidelity_to_exact_feasible_uniform": 0.921726644039154,
+  "gammas": [
+    -0.24674952030181885,
+    0.8889092803001404,
+    1.3673925399780273,
+    1.5867286920547485,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "initializer": "identity+interpolate_p=10",
+  "iterations": 19,
+  "layout": [
+    6,
+    6,
+    6,
+    6,
+    6
+  ],
+  "optimizer": {
+    "continuation": true,
+    "learning_rate": 0.055,
+    "name": "Adam",
+    "patience": 18,
+    "restarts": 3,
+    "sequential_restarts": false,
+    "steps": 85
+  },
+  "optimizer_seed": 7703380162492308658,
+  "optimizer_seed_effective": 568647902,
+  "p1": 12,
+  "restart_energies": [
+    0.7486291527748108,
+    0.07015299797058105,
+    1.2126418352127075
+  ],
+  "schema": "bcst-stage1-depth-checkpoint-v1",
+  "selected_restart": 1,
+  "source_hashes": {
+    "base_runner": "cde24f55d7ccd089f14867c2e0cc2a890e50d112dbd17ee4fb46294ef9e7f246",
+    "campaign_core": "886c291d060e2b8563ed5bf5326c4cd43c8e735c58787b4015ce830dec8cc7ea",
+    "campaign_runner": "422b6d73a04124a66159160af892ca949b358b204abb5a70513af89a9ed3da5f",
+    "engine_helper": "84d71f96a05f097ea0c3c1600d987bb9dda6279c1d742b1e4f087850e65379a2",
+    "independent_validator": "f57b1d42ddd54c100e9407b6bb06d62cee34107d7994f2882bf591c7dc34a7a5",
+    "resource_model": "756aa3c793c1fe406e44d241efdde7e0efe0b92d7379a2d5effa1fe9586c7b83"
+  },
+  "state_norm": 1.0000001192092896,
+  "wall_time_sec": 6.942723098676652
+}

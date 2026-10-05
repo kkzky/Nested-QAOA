@@ -1,0 +1,41 @@
+{
+  "schema": "n30-degree6-restart-protocol-correction-v1",
+  "status": "frozen_before_corrected_depth_selection",
+  "scope": "paper-facing N=30 SPSA tuning, refinement, and confirmation",
+  "validity_failure": {
+    "old_base_runner_sha256": "66e25f1f28f47e0a269effd52c7c62a7cfb429fb76ea45c19d1b25e03eb09b21",
+    "observed_deeper_depth_roles": [
+      "deterministic_linear_ramp",
+      "random_shared_stream",
+      "random_shared_stream",
+      "continuation",
+      "continuation"
+    ],
+    "reason": "The old engine assigned two continuation restarts, leaving only three independent starts and contradicting the frozen handoff requirement."
+  },
+  "corrected_protocol": {
+    "starts": 5,
+    "continuation_starts": 1,
+    "independent_starts": 4,
+    "independent_start_roles": [
+      "deterministic_linear_ramp",
+      "random_shared_stream",
+      "random_shared_stream",
+      "random_shared_stream"
+    ],
+    "continuation_rule": "Use one identity-preserving zero-angle append of the nearest preceding shallower optimized solution.",
+    "new_base_runner_sha256": "9c1f777aaa150970b29f2e1bf2bbe7acc3fb60245ac8b0a8e883bdab4300fb5e"
+  },
+  "unchanged_frozen_hashes": {
+    "run_depth_coverage.py": "dd04d95f844a54090989c506d1b462f7df3da2602ee36e9be0a2cc46b67d0405",
+    "depth_coverage_contract.json": "45621fa3f95edc0d0cb2260bd1e84cfc2aa3c124cabd52b075095c0a6d3916d6",
+    "paper_facing_contract.json": "85a3c6e4d1d2b67a25b3c23f70451f815be9a47a73e3b7704a561b9f9462fdde",
+    "N30_OBJECTIVE_IDENTITY_REFERENCE.json": "8cdb68cadcde5d666d446d57cbac1b6c874952dae700367534ff461430dbb570"
+  },
+  "disposition": {
+    "invalid_tree": "/public/home/ac4fba2wzz/bcst_degree6_size_scaling_20260730_v1/depth_coverage_v2_invalid_two_continuation_20260730T0340",
+    "invalid_tree_use": "Preserve as negative validity evidence; exclude from pruning, selection, confirmation, ratios, and headline results.",
+    "corrected_tree": "/public/home/ac4fba2wzz/bcst_degree6_size_scaling_20260730_v1/depth_coverage_v2",
+    "local_simulation_used": false
+  }
+}
