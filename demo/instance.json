@@ -1,0 +1,17 @@
+{
+  "name": "Three-site, four-channel BCST",
+  "site_names": ["A", "B", "C"],
+  "channels": 4,
+  "cardinalities": [1, 2, 1],
+  "adjacency_edges": [[0, 1], [1, 2]],
+  "channel_quotas": [1, 1, 1, 1],
+  "assignment_costs": [[5, 8, 11, 16], [18, 11, 16, 2], [20, 1, 6, 11]],
+  "intermodulation_weight": 256,
+  "constraint_weight": 1024,
+  "phase_scale": 256,
+  "lp_depths": [3, 2, 4],
+  "xy_depth": 4,
+  "optimizer_seed": 20260929,
+  "restarts": 3,
+  "max_iterations": 160
+}

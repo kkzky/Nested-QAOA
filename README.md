@@ -2,6 +2,13 @@
 
 Paths are relative to the repository root.
 
+## Small CPU demonstration
+
+`demo/` runs a 12-qubit BCST example with LP-QAOA and block-XY QAOA,
+optimizes their angles, and prints results in the terminal.
+Double-click `demo/run_demo.cmd` on Windows, or run `python demo/launch_demo.py`.
+Only NumPy and SciPy are needed. See `demo/README.md` for the input and settings.
+
 ## Environment and running the experiments
 
 Reference environment: Python 3.12.7, NumPy 2.1.2 and PyTorch 2.7.0
