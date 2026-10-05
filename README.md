@@ -1,8 +1,8 @@
-# Paper experiments, figures and tables
+# Code and Data of numerical simulations
 
-Paths are relative to the repository root.
+This is an index of where to find corresponding materials for the numerical simulations in the paper "Learned-projector QAOA for hierarchical optimization" https://arxiv.org/abs/2609.28888v1.
 
-## Small CPU demonstration
+## A small scale demonstration
 
 `demo/` runs a 12-qubit BCST example with LP-QAOA and block-XY QAOA,
 optimizes their angles, and prints results in the terminal.
@@ -13,11 +13,10 @@ Only NumPy and SciPy are needed. See `demo/README.md` for the input and settings
 
 Reference environment: Python 3.12.7, NumPy 2.1.2 and PyTorch 2.7.0
 with CUDA 11.8. The recorded GPU was an NVIDIA A800 with 80 GB memory.
-Matplotlib is also imported by the numerical modules; its compatible installation
-range is listed in `requirements.txt`, rather than an unrecorded original version.
-The state-vector experiments require a CUDA-capable GPU with sufficient memory;
+Matplotlib is also imported by the numerical modules. Its compatible installation
+range is listed in `requirements.txt`.
+The state-vector experiments require a CUDA-capable GPU with sufficient memory.
 the largest jobs use tens of GB. Run the commands below from the repository root.
-They run the full numerical jobs, not reduced demonstration examples.
 
 ```sh
 python -m venv .venv
@@ -32,7 +31,7 @@ python -m pip install -r requirements.txt
 The runners read the frozen preparations in `main_bcst/data/inputs/`, the
 coefficient tables in `main_bcst/data/raw/baselines/`, and the input records in
 `main_bcst/data/runtime_inputs/`. Realization seeds are listed in
-`main_bcst/data/current/per_realization.json`; final-stage depths and optimizer
+`main_bcst/data/current/per_realization.json`, final-stage depths and optimizer
 settings are stored in the corresponding result records.
 
 ```sh
@@ -49,7 +48,7 @@ set `LPQAOA_OUTPUT` to select another location. The baseline runner writes to
 Other baseline method keys are `xy_combined`, `no_feasibility`, `warm_xy` and
 `uniform_projector`. Pass the desired seeds and depths to run additional cells.
 The current occupation-product RU rules are implemented in
-`main_bcst/code/resource_accounting.py`; saved costs use these same rules.
+`main_bcst/code/resource_accounting.py`.
 
 ### Additional BCST and gradients
 
@@ -67,17 +66,15 @@ python supplementary_bcst/historical_spsa/source/campaign_runner.py scan --help
 For the other Adam cells, select their saved job specifications from the input
 and raw-data directories indexed below. SPSA configurations, initial angles and
 stage-1 checkpoints are in `supplementary_bcst/historical_spsa/inputs/` and
-`supplementary_bcst/historical_spsa/raw/`; pass the stored instance, schedule,
+`supplementary_bcst/historical_spsa/raw/`. Pass the stored instance, schedule,
 depths, optimizer settings and checkpoint to the `scan` subcommand.
 Gradient inputs are the saved angles in `FROZEN_ANGLE_INPUT_MANIFEST.json`, with
 the associated instance and stage-1 records under `gradient_inputs/`.
-The gradient command evaluates those settings without optimizing or resampling.
+
 
 ### SBM
 
-The configuration files list every argument used for each graph. Select a
-zero-based task index and a new output file. This preserves the saved graph,
-depths, restart count and optimizer configuration.
+The configuration files list every argument used for each graph. 
 
 ```sh
 python sbm/run_saved_task.py --config sbm/config/main_runtime_tasks.json --index 0 --output runs/sbm_seed100.json
