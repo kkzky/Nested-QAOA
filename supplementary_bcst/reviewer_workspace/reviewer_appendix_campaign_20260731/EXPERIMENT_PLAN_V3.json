@@ -22,7 +22,7 @@
     "randomness.seed_domains.depth_and_budget_tuning_N30": [840030011, 840030012],
     "budget_audit.terminal_progress": "on the selected restart, normalized cumulative-best energy drop over the final 20 percent is at least 0.01",
     "budget_audit.selected_checkpoint_final10_percent": "diagnostic warning only",
-    "execution.remote_root": "/public/home/ac4fba2wzz/lp_reviewer_appendix_v3_20260731",
+    "execution.remote_root": "lp_reviewer_appendix_v3_20260731",
     "execution.source_package": "appendix_v3"
   },
   "effective_seed_domains": {

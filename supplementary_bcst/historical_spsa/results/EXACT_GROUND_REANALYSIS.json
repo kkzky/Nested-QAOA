@@ -240,11 +240,11 @@
   "created_at_utc": "2026-07-30T05:49:30.402510+00:00",
   "files": {
     "confirmation_rows": {
-      "path": "/public/home/ac4fba2wzz/bcst_degree6_size_scaling_20260730_v1/exact_ground_reanalysis_v1/exact_ground_confirmation_rows.csv",
+      "path": "supplementary_bcst/historical_spsa/results/exact_ground_confirmation_rows.csv",
       "sha256": "f6ebc7f5afd667098a394125986d24c1a0c7420a2fda4ad3b09b98c082aaafb1"
     },
     "tuning_rows": {
-      "path": "/public/home/ac4fba2wzz/bcst_degree6_size_scaling_20260730_v1/exact_ground_reanalysis_v1/exact_ground_tuning_rows.csv",
+      "path": "supplementary_bcst/historical_spsa/results/exact_ground_tuning_rows.csv",
       "sha256": "70f27c249c08cdf113be21f1445d7dbfa463f295c226c125bb76f0267ba91764"
     }
   },

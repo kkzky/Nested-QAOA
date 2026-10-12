@@ -33,9 +33,9 @@
     "N30_OBJECTIVE_IDENTITY_REFERENCE.json": "8cdb68cadcde5d666d446d57cbac1b6c874952dae700367534ff461430dbb570"
   },
   "disposition": {
-    "invalid_tree": "/public/home/ac4fba2wzz/bcst_degree6_size_scaling_20260730_v1/depth_coverage_v2_invalid_two_continuation_20260730T0340",
+    "invalid_tree": "bcst_degree6_size_scaling_20260730_v1/depth_coverage_v2_invalid_two_continuation_20260730T0340",
     "invalid_tree_use": "Preserve as negative validity evidence; exclude from pruning, selection, confirmation, ratios, and headline results.",
-    "corrected_tree": "/public/home/ac4fba2wzz/bcst_degree6_size_scaling_20260730_v1/depth_coverage_v2",
+    "corrected_tree": "supplementary_bcst/historical_spsa/raw/depth_coverage_v2",
     "local_simulation_used": false
   }
 }

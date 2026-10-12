@@ -42,6 +42,10 @@ coefficient tables in `main_bcst/data/raw/baselines/`, and the input records in
 `main_bcst/data/current/per_realization.json`, final-stage depths and optimizer
 settings are stored in the corresponding result records.
 
+Input references beginning with `main_bcst/`, `supplementary_bcst/` or `sbm/`
+are relative to the repository root. Historical provenance references retain
+experiment-relative paths.
+
 ```sh
 python main_bcst/code/BCST_Q_native2_complete_20260917/worker.py --method three_stage --seeds 2026091100 --depths 11
 python main_bcst/code/BCST_Q_native2_complete_20260917/worker.py --method two_stage --seeds 2026091100 --depths 40

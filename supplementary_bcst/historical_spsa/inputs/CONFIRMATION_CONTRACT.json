@@ -133,7 +133,7 @@
     106
   ],
   "status": "frozen_before_confirmation_outcomes",
-  "tuning_selection_path": "/public/home/ac4fba2wzz/bcst_degree6_size_scaling_20260730_v1/depth_refinement_v1/FINAL_TUNING_SELECTION.json",
+  "tuning_selection_path": "bcst_degree6_size_scaling_20260730_v1/depth_refinement_v1/FINAL_TUNING_SELECTION.json",
   "tuning_selection_sha256": "97d7333ddc4d2cb600ee1a5764f3b09fb3e05dcf5894153f0584271b6f361af5",
   "workers": 2
 }
