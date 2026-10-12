@@ -59,175 +59,175 @@
         "configuration": "lp_selected",
         "depth": 4,
         "geometric_mean_RTS99": 4136.981620748104,
-        "geometric_mean_cost": 1743433630.9172473,
+        "geometric_mean_cost": 2860660736.0230055,
         "geometric_mean_success_probability": 0.0011126603666733895,
         "seed_rows": [
           {
             "RTS99": 1598,
-            "cost": 1104921120,
+            "cost": 1104993030,
             "seed": 101,
             "success_probability": 0.002879192354157567,
-            "terminal_RU": 691440,
+            "terminal_RU": 691485,
             "trial_sha256": "9ad81b091abacf7fb437a1019b9d569acffb8db8548e86a39a3065b7ea18ccfd"
           },
           {
             "RTS99": 4144,
-            "cost": 2865327360,
+            "cost": 2865513840,
             "seed": 102,
             "success_probability": 0.0011108710896223783,
-            "terminal_RU": 691440,
+            "terminal_RU": 691485,
             "trial_sha256": "e16dd7c86c8c7a4d79e31790844710bb67f0906f152d405c39d0655d69167be6"
           },
           {
             "RTS99": 3903,
-            "cost": 2698690320,
+            "cost": 2698865955,
             "seed": 103,
             "success_probability": 0.0011793981539085507,
-            "terminal_RU": 691440,
+            "terminal_RU": 691485,
             "trial_sha256": "0b64564c8184021fddf29390cd8482121fca1799e2f4700a9b2f121cb394bea3"
           },
           {
             "RTS99": 6638,
-            "cost": 4589778720,
+            "cost": 4590077430,
             "seed": 104,
             "success_probability": 0.0006935636629350483,
-            "terminal_RU": 691440,
+            "terminal_RU": 691485,
             "trial_sha256": "08dd58a866779777e189b0661428d8f6d4ff78cab4d0b66b3b954e1987ed16c1"
           },
           {
             "RTS99": 4463,
-            "cost": 3085896720,
+            "cost": 3086097555,
             "seed": 105,
             "success_probability": 0.0010314245009794831,
-            "terminal_RU": 691440,
+            "terminal_RU": 691485,
             "trial_sha256": "d549ddc989e8ef7132d64bd988e442a6bf9b1ecb3206a058ddb5cae358835d35"
           },
           {
             "RTS99": 6547,
-            "cost": 4526857680,
+            "cost": 4527152295,
             "seed": 106,
             "success_probability": 0.000703164841979742,
-            "terminal_RU": 691440,
+            "terminal_RU": 691485,
             "trial_sha256": "b944e879f1d32b0757f3914085d3fc033c360a5f007ef82e0ac59a975f6a388e"
           }
         ],
-        "terminal_RU": 691440
+        "terminal_RU": 691485
       },
       "native_direct": {
         "configuration": "ordinary_initial_calibration",
         "depth": 2,
         "geometric_mean_RTS99": 22122.900956649268,
-        "geometric_mean_cost": 4745735753.276364,
+        "geometric_mean_cost": 8984441922.009619,
         "geometric_mean_success_probability": 0.00020814523208016134,
         "seed_rows": [
           {
             "RTS99": 23548,
-            "cost": 9563078280,
+            "cost": 9563196020,
             "seed": 101,
             "success_probability": 0.0001955530169652775,
-            "terminal_RU": 406110,
+            "terminal_RU": 406115,
             "trial_sha256": "9aa6397cd428b3d747b56c3c281efae2c0c6bb5459c693ad4d8b489b3ae69244"
           },
           {
             "RTS99": 14098,
-            "cost": 5725338780,
+            "cost": 5725409270,
             "seed": 102,
             "success_probability": 0.00032661145087331533,
-            "terminal_RU": 406110,
+            "terminal_RU": 406115,
             "trial_sha256": "517ed0c00cec92e12f566319a871da2fcf566e385b5f48f659441eaf8f9c1b29"
           },
           {
             "RTS99": 23542,
-            "cost": 9560641620,
+            "cost": 9560759330,
             "seed": 103,
             "success_probability": 0.0001956017076736316,
-            "terminal_RU": 406110,
+            "terminal_RU": 406115,
             "trial_sha256": "c0f16c014233084338af597b50abbf78c1bfbb33f71844302ad55997e979982f"
           },
           {
             "RTS99": 19685,
-            "cost": 7994275350,
+            "cost": 7994373775,
             "seed": 104,
             "success_probability": 0.000233918268349953,
-            "terminal_RU": 406110,
+            "terminal_RU": 406115,
             "trial_sha256": "c96973b6af022360dc3aae1f0c2ced71cc9fc4653c81c3f3b8d4b111f2e98b30"
           },
           {
             "RTS99": 28074,
-            "cost": 11401132140,
+            "cost": 11401272510,
             "seed": 105,
             "success_probability": 0.00016402584151364863,
-            "terminal_RU": 406110,
+            "terminal_RU": 406115,
             "trial_sha256": "3d4af509d23878202d8c490c990cab47c48006b5bdc184628579b2620e7f3006"
           },
           {
             "RTS99": 27143,
-            "cost": 11023043730,
+            "cost": 11023179445,
             "seed": 106,
             "success_probability": 0.00016964998212642968,
-            "terminal_RU": 406110,
+            "terminal_RU": 406115,
             "trial_sha256": "19e49898b34990d7c57f49e1524ef7a42d755f9eb6bf8d4762b4651a0f78f3c9"
           }
         ],
-        "terminal_RU": 406110
+        "terminal_RU": 406115
       },
       "same_state_warm": {
         "configuration": "same_state_warm_initial_calibration",
         "depth": 1,
         "geometric_mean_RTS99": 20841.23921973802,
-        "geometric_mean_cost": 8403299378.970183,
+        "geometric_mean_cost": 5668191830.592151,
         "geometric_mean_success_probability": 0.0002209451359317224,
         "seed_rows": [
           {
             "RTS99": 17438,
-            "cost": 4742525670,
+            "cost": 4742612860,
             "seed": 101,
             "success_probability": 0.00026406231336295605,
-            "terminal_RU": 271965,
+            "terminal_RU": 271970,
             "trial_sha256": "cac8bbe335d964886d46308a4d83fd359bb6aba996ea1c4b6c7cdee382571b05"
           },
           {
             "RTS99": 25437,
-            "cost": 6917973705,
+            "cost": 6918100890,
             "seed": 102,
             "success_probability": 0.00018102968169841915,
-            "terminal_RU": 271965,
+            "terminal_RU": 271970,
             "trial_sha256": "9d579f0fd975fa2c718f32338b40bdc1bb64f5590669c2c7cacbd20f282ecfa9"
           },
           {
             "RTS99": 20162,
-            "cost": 5483358330,
+            "cost": 5483459140,
             "seed": 103,
             "success_probability": 0.00022838801669422537,
-            "terminal_RU": 271965,
+            "terminal_RU": 271970,
             "trial_sha256": "a3df0794fd44e57c1f90bdb35d44ce6e9e3de7e4ec4655710d992a36b1d52a50"
           },
           {
             "RTS99": 24976,
-            "cost": 6792597840,
+            "cost": 6792722720,
             "seed": 104,
             "success_probability": 0.0001843702921178192,
-            "terminal_RU": 271965,
+            "terminal_RU": 271970,
             "trial_sha256": "31d406936aaff47bdb6d77be670ebe9d029796fdab35b0e4b96ea43e6a76ff13"
           },
           {
             "RTS99": 19492,
-            "cost": 5301141780,
+            "cost": 5301239240,
             "seed": 105,
             "success_probability": 0.00023624292225576937,
-            "terminal_RU": 271965,
+            "terminal_RU": 271970,
             "trial_sha256": "183d1af854b82148c06edd619f1160403af8d0791774bc23a13408be61ca6986"
           },
           {
             "RTS99": 18822,
-            "cost": 5118925230,
+            "cost": 5119019340,
             "seed": 106,
             "success_probability": 0.0002446399594191462,
-            "terminal_RU": 271965,
+            "terminal_RU": 271970,
             "trial_sha256": "17b6c4bb8b20b4c84e33ca359d687c8d665c36e73f4d32f9ca5837cfa4339f75"
           }
         ],
-        "terminal_RU": 271965
+        "terminal_RU": 271970
       }
     },
     "status": "complete_from_existing_trials"

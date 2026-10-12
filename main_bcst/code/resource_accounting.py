@@ -8,7 +8,7 @@ def monomial_RU(degree):
     return 1 if degree==2 else 4*degree-2
 
 def components(two_body_RU=1):
-    return dict(initial=5,C=30,Q=30*2+60*two_body_RU,
+    return dict(initial=5,C=30*two_body_RU,Q=30*2+60*two_body_RU,
         O=30*2+240*10+720*18,XY=75,selective_phase=900,
         shared_Q_O_unary=30*2)
 
