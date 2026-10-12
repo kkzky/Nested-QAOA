@@ -26,6 +26,14 @@ python -m pip install torch==2.7.0 --index-url https://download.pytorch.org/whl/
 python -m pip install -r requirements.txt
 ```
 
+### Tested operating systems
+
+The code has been tested on 64-bit Windows 11 (CPU demonstration) and Ubuntu 22.04.3 LTS (GPU simulations).
+
+### Installation time
+
+With Python already installed and a stable broadband connection, dependency installation is estimated to take approximately 1–5 minutes for the CPU demonstration and 5–20 minutes for the GPU experiments.
+
 ### Main BCST
 
 The runners read the frozen preparations in `main_bcst/data/inputs/`, the
